@@ -57,39 +57,204 @@ def save_json(path, data):
 
 
 # ══════════════════════════════════════════════════════════════════
-# ١. استخراج فهرس الكتاب
+# ١. استخراج فهرس الكتاب الكامل (مع الفصول الداخلية)
 # ══════════════════════════════════════════════════════════════════
+def parse_hid(hid: str) -> tuple:
+    """استخرج idfrom و idto من hid string"""
+    idfrom = re.search(r'idfrom=(\d+)', hid)
+    idto   = re.search(r'idto=(\d+)',   hid)
+    return (
+        int(idfrom.group(1)) if idfrom else None,
+        int(idto.group(1))   if idto   else None,
+    )
+
+def fetch_subtree(node_id: str, level: int = 1) -> list:
+    """جلب الفصول الداخلية لـ node عبر AJAX"""
+    # نجرب نمطين شائعين لروابط الشجرة
+    urls = [
+        f"{BASE_URL}/ar/library/maktaba/nindex.php?id={node_id}&bookid={BOOK_ID}&page=roottreedetail",
+        f"{BASE_URL}/ar/library/maktaba/nindex.php?id={node_id}&bookid={BOOK_ID}&page=treedetail",
+    ]
+    items = []
+    for url in urls:
+        soup, _ = fetch(url)
+        if not soup:
+            continue
+        found = False
+        for inp in soup.find_all("input", id=re.compile("^HidParam")):
+            nid  = inp["id"].replace("HidParam","")
+            hid  = inp.get("value","")
+            # ابحث عن العنصر المرتبط
+            label = soup.find(id=nid) or soup.find(attrs={"data-id": nid})
+            text  = label.get_text(strip=True)[:120] if label else f"قسم {nid}"
+            if hid and nid:
+                items.append({"id": nid, "level": level, "text": text, "hid": hid})
+                found = True
+        if found:
+            break
+        time.sleep(0.3)
+    return items
+
 def build_toc() -> list:
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     soup, _ = fetch(url)
     if not soup:
         return []
 
+    # ── المستوى الأول من HidParam ─────────────────────────────────
     hid = {}
     for inp in soup.find_all("input", id=re.compile("^HidParam")):
-        nid = inp["id"].replace("HidParam", "")
-        hid[nid] = inp.get("value", "")
+        nid = inp["id"].replace("HidParam","")
+        hid[nid] = inp.get("value","")
 
     toc = []
-    for el in soup.find_all(class_=["tree_label", "plusbutton", "BookDetail_1"]):
+    seen = set()
+
+    for el in soup.find_all(class_=["tree_label","plusbutton","BookDetail_1"]):
         nid   = el.get("id") or el.get("data-id")
         text  = el.get_text(strip=True)[:120]
-        level = el.get("data-level", "1")
-        if nid and text:
-            toc.append({
-                "id":    nid,
-                "level": level,
-                "text":  text,
-                "hid":   hid.get(nid, ""),
-            })
+        level = int(el.get("data-level", 1))
+        h     = hid.get(nid,"")
+        if nid and text and nid not in seen and h:
+            seen.add(nid)
+            toc.append({"id": nid, "level": level, "text": text, "hid": h})
 
-    save_json("output/toc.json", toc)
-    print(f"✓ فهرس: {len(toc)} عنصر → output/toc.json")
-    return toc
+    print(f"  المستوى الأول: {len(toc)} عنصر")
+
+    # ── جلب الفصول الداخلية لكل عنصر رئيسي ──────────────────────
+    expanded = []
+    for item in toc:
+        expanded.append(item)
+        idfrom, idto = parse_hid(item["hid"])
+        # إذا النطاق كبير → يحتوي فصول داخلية
+        if idfrom and idto and (idto - idfrom) > 5:
+            print(f"  ↳ جلب فصول '{item['text'][:40]}' (id={item['id']})...")
+            children = fetch_subtree(item["id"], item["level"] + 1)
+            print(f"    {len(children)} فصل داخلي")
+            for ch in children:
+                if ch["id"] not in seen:
+                    seen.add(ch["id"])
+                    expanded.append(ch)
+            time.sleep(0.5)
+
+    # ── ترتيب حسب idfrom ─────────────────────────────────────────
+    def sort_key(x):
+        fr, _ = parse_hid(x["hid"])
+        return fr or 0
+
+    expanded.sort(key=sort_key)
+
+    save_json("output/toc.json", expanded)
+    print(f"✓ فهرس كامل: {len(expanded)} عنصر → output/toc.json")
+    return expanded
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٢. جلب محتوى node واحد
+# ١ب. جلب المحتوى بـ idfrom/idto (الطريقة الصحيحة)
+# ══════════════════════════════════════════════════════════════════
+def fetch_section_by_range(nid: str, idfrom: int, idto: int, title: str) -> dict | None:
+    cache = f"output/sections/{nid}.json"
+    if os.path.exists(cache):
+        return load_json(cache, None)
+
+    url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+           f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
+    soup, raw = fetch(url)
+    if not soup or len(raw) < 200:
+        return None
+
+    # احذف عناصر الموقع
+    for sel in REMOVE_SELECTORS:
+        for el in soup.select(sel):
+            el.decompose()
+
+    # استهدف container النص
+    container = (
+        soup.find(class_="bookcontenttxt") or
+        soup.find(class_="right-side")     or
+        soup.find(class_="nass")           or
+        soup.find(id="updates")            or
+        soup.body
+    )
+    if not container:
+        return None
+
+    seen, paragraphs = set(), []
+    for tag in container.find_all(["p","h1","h2","h3","b","span"]):
+        txt = tag.get_text(strip=True)
+        if len(txt) < 8 or txt in seen or txt in REPEATED_TEXTS:
+            continue
+        # تجاهل نصوص التنقل
+        if any(w in txt for w in ["التالي","السابق","الصفحة","فهرس"]):
+            continue
+        seen.add(txt)
+        cls = " ".join(tag.get("class",[]))
+
+        if "﴿" in txt or "﴾" in txt:
+            kind = "quran"
+        elif any(c in cls for c in ["hadith","hadithatt"]):
+            kind = "hadith"
+        elif tag.name in ["h1","h2","h3"] or (tag.name=="b" and len(txt)<80):
+            kind = "heading"
+        else:
+            kind = "text"
+
+        paragraphs.append({"kind": kind, "text": txt})
+
+    if not paragraphs:
+        return None
+
+    result = {
+        "node_id":    nid,
+        "title":      title,
+        "idfrom":     idfrom,
+        "idto":       idto,
+        "paragraphs": paragraphs,
+        "has_quran":  any(p["kind"]=="quran"  for p in paragraphs),
+        "has_hadith": any(p["kind"]=="hadith" for p in paragraphs),
+    }
+    save_json(cache, result)
+    return result
+
+
+# ══════════════════════════════════════════════════════════════════
+# عناصر يجب حذفها من الصفحة
+# ══════════════════════════════════════════════════════════════════
+REMOVE_SELECTORS = [
+    # تنقل الموقع
+    "header", "footer", "nav",
+    ".navbar", ".breadcrumb", ".topPath",
+    # أزرار التنقل بين الصفحات
+    ".nextpage", ".prvpage", ".pagination",
+    # الحواشي والتعليقات الجانبية
+    ".hasiyaTextArea", ".hashiya", ".scienceArea",
+    ".sciencetabs", ".footnotecontent",
+    # تبويبات الآيات والأحاديث الجانبية
+    "#modaltabsinfo", ".qurantab", ".hadithtab",
+    ".alamtab", ".treetab",
+    "#quran-ajax-content", "#hadith-ajax-content",
+    "#names-ajax-content", "#subjnames-ajax-content",
+    # شجرة الفهرس الجانبية
+    ".book-index", "#bookIndexScroll", ".plusbutton",
+    ".BookDetail_1", ".tree_label",
+    # عناصر الموقع العامة
+    ".islamweb-font", ".dropdown", ".modal",
+    "script", "style", "noscript",
+    # أرقام الصفحات وأدوات الخط
+    ".dropdown-menu", "#hidden-font-content",
+    ".book-content > div:first-child",   # header الكتاب المتكرر
+]
+
+# نصوص تتكرر في كل صفحة — نحذفها
+REPEATED_TEXTS = {
+    "فهرس الكتاب", "السابق", "التالي", "إسلام ويب",
+    "المكتبة الإسلامية", "تم نسخ الرابط",
+    "إتحاف السادة المتقين بشرح إحياء علوم الدين",
+    "مرتضى الزبيدي", "محمد بن محمد الحسيني الزبيدي",
+}
+
+# ══════════════════════════════════════════════════════════════════
+# ٢. جلب محتوى node واحد — نظيف
 # ══════════════════════════════════════════════════════════════════
 def fetch_section(nid: int) -> dict | None:
     cache = f"output/sections/{nid}.json"
@@ -102,48 +267,30 @@ def fetch_section(nid: int) -> dict | None:
     if not soup:
         return None
 
-    text_all = soup.get_text(strip=True)
-    if len(text_all) < 50:
+    # ── ١. احذف العناصر غير المطلوبة ─────────────────────────────
+    for sel in REMOVE_SELECTORS:
+        for el in soup.select(sel):
+            el.decompose()
+
+    # ── ٢. استهدف container النص الرئيسي ─────────────────────────
+    # .bookcontenttxt هو الـ div الذي يحمل النص حسب bookcontents.js
+    container = (
+        soup.find(class_="bookcontenttxt") or
+        soup.find(class_="right-side")     or
+        soup.find(class_="nass")           or
+        soup.find("article")               or
+        soup.find(id="updates")            or
+        soup.body
+    )
+    if not container:
         return None
 
-    # العنوان
-    title_el = soup.find(["h1","h2","h3","b","strong"])
+    # ── ٣. العنوان ───────────────────────────────────────────────
+    title_el = container.find(["h1","h2","h3"])
     title    = title_el.get_text(strip=True)[:120] if title_el else f"قسم {nid}"
 
-    # الفقرات مع الأنماط
+    # ── ٤. استخرج الفقرات النظيفة ────────────────────────────────
     seen, paragraphs = set(), []
-    for tag in soup.find_all(["p","div","span","b","h1","h2","h3"]):
-        txt = tag.get_text(strip=True)
-        if len(txt) < 8 or txt in seen:
-            continue
-        seen.add(txt)
-        cls = " ".join(tag.get("class", []))
-
-        if "﴿" in txt or "﴾" in txt:
-            kind = "quran"
-        elif any(c in cls for c in ["hadith","hadithatt"]):
-            kind = "hadith"
-        elif any(c in cls for c in ["names","namesatt"]):
-            kind = "name"
-        elif tag.name in ["h1","h2","h3"] or (tag.name == "b" and len(txt) < 80):
-            kind = "heading"
-        else:
-            kind = "text"
-
-        paragraphs.append({"kind": kind, "text": txt, "tag": tag.name})
-
-    if not paragraphs:
-        return None
-
-    result = {
-        "node_id":    nid,
-        "title":      title,
-        "paragraphs": paragraphs,
-        "has_quran":  any(p["kind"] == "quran"  for p in paragraphs),
-        "has_hadith": any(p["kind"] == "hadith" for p in paragraphs),
-    }
-    save_json(cache, result)
-    return result
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -321,8 +468,35 @@ if __name__ == "__main__":
 
     if mode == "test":
         build_toc()
+
+        # ── تشخيص: اطبع HTML الخام لأول 5 nodes ──────────────────
+        print("\n=== تشخيص nindex.php (أول 5 nodes) ===")
+        for nid in range(1, 6):
+            url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+                   f"?id={nid}&bookid={BOOK_ID}&page=bookpages")
+            soup, raw = fetch(url)
+            txt = soup.get_text(strip=True)[:200] if soup else "FAILED"
+            print(f"\n  ── node {nid} ──")
+            print(f"  URL    : {url}")
+            print(f"  الحجم  : {len(raw)} حرف")
+            print(f"  النص   : {txt[:150]}")
+            print(f"  آيات   : {'✅' if '﴿' in raw else '❌'}")
+            # احفظ HTML الخام للفحص
+            with open(f"output/raw_node_{nid}.html","w",encoding="utf-8") as f:
+                f.write(raw)
+            time.sleep(1)
+
+        print("\n=== scan أول 30 ===")
         phase_scan(1, 30)
-        phase_build()
+
+        valid = load_json("output/valid_nodes.json", [])
+        print(f"\n  nodes صالحة: {len(valid)}")
+
+        if valid:
+            phase_build()
+        else:
+            print("\n⚠ لا توجد nodes صالحة — راجع output/raw_node_1.html")
+            print("  تحقق: هل nindex.php يعيد المحتوى أم صفحة فارغة؟")
 
     elif mode == "scan":
         build_toc()
