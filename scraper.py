@@ -325,8 +325,14 @@ def phase_scan(end_idx=None):
     print(f"=== SCAN {start}→{end} ({len(toc)} في الفهرس) ===")
 
     for idx in range(start, min(end, len(toc))):
-        item   = toc[idx]
-        result = fetch_section(item)
+        item = toc[idx]
+        try:
+            result = fetch_section(item)
+        except Exception as e:
+            import traceback
+            print(f"  ✗ خطأ في idx={idx} id={item.get('id')} : {e}")
+            traceback.print_exc()
+            result = None
 
         if result and result["paragraphs"]:
             q  = "✅" if result["has_quran"] else ("📖" if result["has_hadith"] else "🔶")
