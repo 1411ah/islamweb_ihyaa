@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2",
+    "level": "1",
+    "text": "مقدمة",
+    "hid": "&bookid=411&idfrom=1&idto=1"
+  },
+  {
+    "id": "3",
+    "level": "1",
+    "text": "بيان الكتب التي منها أخذت",
+    "hid": "&bookid=411&idfrom=2&idto=2"
+  },
+  {
+    "id": "4",
+    "level": "1",
+    "text": "الأحوال المتعلقة بمصنف هذا الكتاب",
+    "hid": "&bookid=411&idfrom=3&idto=41"
+  },
+  {
+    "id": "30",
+    "level": "1",
+    "text": "ربع العبادات",
+    "hid": "&bookid=411&idfrom=42&idto=3967"
+  },
+  {
+    "id": "805",
+    "level": "1",
+    "text": "ربع العادات",
+    "hid": "&bookid=411&idfrom=3968&idto=7165"
+  },
+  {
+    "id": "1301",
+    "level": "1",
+    "text": "ركن المنجيات",
+    "hid": "&bookid=411&idfrom=7166&idto=8667"
+  }
+]
