@@ -374,6 +374,10 @@ def phase_build():
     if not valid:
         print("✗ valid_nodes.json فارغ"); return
 
+    # توافق مع النسخ القديمة التي تحتوي أرقاماً بدل قواميس
+    if valid and isinstance(valid[0], int):
+        valid = [{"id": str(v), "title": f"قسم {v}", "level": 1} for v in valid]
+
     toc_data = load_json("output/toc.json", [])
     print(f"=== BUILD EPUB: {len(valid)} فصل ===")
 
