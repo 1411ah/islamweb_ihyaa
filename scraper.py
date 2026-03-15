@@ -93,12 +93,14 @@ def build_toc() -> list:
     # <label class="plusbutton tree_label" data-level=1 data-id="4"
     #        data-idfrom=3 data-idto=41>عنوان</label>
 
-    for el in soup.find_all(
-        lambda t: t.name in ["span","label"] and
-        "tree_label" in t.get("class",[]) and
-        t.get("data-id")
-    ):
-        node_id = el.get("data-id","").strip()
+    from bs4 import Tag
+
+    for el in soup.find_all(["span","label"]):
+        if not isinstance(el, Tag):
+            continue
+        if "tree_label" not in el.get("class", []):
+            continue
+        node_id = el.get("data-id", "").strip()
         level   = int(el.get("data-level", 1))
         idfrom  = el.get("data-idfrom")
         idto    = el.get("data-idto")
