@@ -177,12 +177,19 @@ def phase_scan(start=1, end=LAST_ID):
             print(f"  ⬜ {nid:5d} | فارغ")
             empty_streak += 1
 
-        # حفظ التقدم كل 50 node
+        # حفظ التقدم كل 50 node + commit للريبو
         if nid % 50 == 0:
             progress["last"] = nid
             save_json(progress_file, progress)
             save_json(valid_file, sorted(valid))
             print(f"  💾 تقدم محفوظ عند {nid} | صالح: {len(valid)}")
+            # commit تلقائي أثناء التشغيل
+            os.system(
+                f'git add output/ && '
+                f'git diff --cached --quiet || '
+                f'git commit -m "scan checkpoint {nid}/{LAST_ID}" && '
+                f'git push'
+            )
 
         time.sleep(DELAY)
 
