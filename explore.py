@@ -1,21 +1,17 @@
 """
-explore.py — المرحلة الثانية
-الهدف: اكتشاف API الخفي الذي يحمّل نص الكتاب
+explore.py — المرحلة الثالثة
+الهدف: فتح bookcontents.js وملفات JS الأخرى لاكتشاف API الحقيقي
 """
 
 import requests
 from bs4 import BeautifulSoup
-import json
-import os
-import time
+import json, os, re, time
 
 BASE_URL = "https://www.islamweb.net"
 BOOK_ID  = 411
 HEADERS  = {
     "User-Agent": "Mozilla/5.0 (compatible; research-bot/1.0)",
-    "Accept": "application/json, text/html, */*",
     "Accept-Language": "ar,en;q=0.9",
-    "X-Requested-With": "XMLHttpRequest",
     "Referer": f"https://www.islamweb.net/ar/library/content/{BOOK_ID}/1/",
 }
 SESSION = requests.Session()
@@ -23,146 +19,114 @@ SESSION.headers.update(HEADERS)
 os.makedirs("output", exist_ok=True)
 
 
-# ── ١. تتبع redirect صفحة رقم ─────────────────────────────────────────────
-def follow_pageno_redirect(page_no: int = 1):
-    """pageno_redirect.php يعطينا URL الحقيقي للصفحة"""
-    url = (
-        f"{BASE_URL}/ar/library/pageno_redirect.php"
-        f"?part=1&bk_no={BOOK_ID}&pageno={page_no}"
-    )
-    print(f"\n[pageno_redirect] page {page_no}")
-    r = SESSION.get(url, timeout=15, allow_redirects=True)
-    print(f"  Status: {r.status_code}")
-    print(f"  Final URL: {r.url}")
-    print(f"  Content (أول 300): {r.text[:300]}")
+# ── ١. تحميل وتحليل ملفات JS ──────────────────────────────────────────────
+JS_FILES = [
+    "/ar/library/bookcontents.js?v=6.112",
+    "/ar/js/ajax.js",
+    "/ar/library/maktaba/javascript/tab.js?v=2.6",
+]
 
-    # احفظ
-    with open(f"output/redirect_page{page_no}.html", "w", encoding="utf-8") as f:
-        f.write(r.text)
-    return r.url, r.text
-
-
-# ── ٢. اختبار نقاط API محتملة ─────────────────────────────────────────────
-def probe_api_endpoints():
-    candidates = [
-        # نمط ajax شائع
-        f"{BASE_URL}/ar/library/ajax.php?bk_no={BOOK_ID}&part=1&idfrom=1&idto=50",
-        f"{BASE_URL}/ar/library/index.php?page=content&bk_no={BOOK_ID}&part=1&idfrom=1",
-        # API مباشر
-        f"{BASE_URL}/api/library/content?bk_no={BOOK_ID}&part=1&page=1",
-        f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/?idfrom=1&idto=50&format=json",
-        # نمط getpage
-        f"{BASE_URL}/ar/library/getpage.php?bk_no={BOOK_ID}&part=1&page=1",
-        f"{BASE_URL}/ar/library/getpage.php?bk_no={BOOK_ID}&part=1&idfrom=1&idto=50",
-        # idfrom/idto مباشرة
-        f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/?idfrom=1&idto=1",
-        f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/?idfrom=1&idto=100",
-    ]
-
-    results = []
-    for url in candidates:
+def fetch_and_analyze_js():
+    for path in JS_FILES:
+        url = BASE_URL + path
+        print(f"\n{'='*60}")
+        print(f"JS: {url}")
         try:
-            r = SESSION.get(url, timeout=10)
-            txt = r.text[:500]
-            has_arabic = any("\u0600" <= c <= "\u06ff" for c in txt)
-            has_quran  = "﴿" in txt or "﴾" in txt
-            is_json    = txt.strip().startswith("{") or txt.strip().startswith("[")
+            r = SESSION.get(url, timeout=15)
+            content = r.text
+            # احفظ الملف كاملاً
+            fname = path.split("/")[-1].split("?")[0]
+            with open(f"output/{fname}", "w", encoding="utf-8") as f:
+                f.write(content)
+            print(f"✓ حجم: {len(content)} حرف — محفوظ في output/{fname}")
 
-            info = {
-                "url":        url,
-                "status":     r.status_code,
-                "length":     len(r.text),
-                "has_arabic": has_arabic,
-                "has_quran":  has_quran,
-                "is_json":    is_json,
-                "preview":    txt,
+            # ابحث عن أنماط URL/API
+            patterns = {
+                "URLs":        r'["\']([^"\']*\.php[^"\']*)["\']',
+                "ajax url":    r'url\s*:\s*["\']([^"\']+)["\']',
+                "fetch":       r'fetch\(["\']([^"\']+)["\']',
+                "idfrom":      r'.{0,50}idfrom.{0,50}',
+                "idto":        r'.{0,50}idto.{0,50}',
+                "bk_no":       r'.{0,50}bk_no.{0,50}',
+                "part":        r'.{0,50}["\']part["\'].{0,50}',
+                "data:":       r'data\s*:\s*\{[^}]{0,200}\}',
             }
-            results.append(info)
-
-            mark = "✅" if has_quran else ("🔶" if has_arabic else "❌")
-            print(f"{mark} [{r.status_code}] len={len(r.text):6d} | {url}")
-            if has_quran:
-                print(f"   >>> آيات موجودة! معاينة: {txt[:200]}")
-            time.sleep(0.5)
+            for label, pat in patterns.items():
+                matches = re.findall(pat, content)
+                if matches:
+                    print(f"\n  [{label}] — {len(matches)} نتيجة:")
+                    for m in matches[:5]:
+                        print(f"    {m[:120]}")
 
         except Exception as e:
-            print(f"❌ خطأ: {url} => {e}")
-            results.append({"url": url, "error": str(e)})
-
-    with open("output/api_probe.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
-    print("\n✓ النتائج في output/api_probe.json")
-    return results
+            print(f"✗ خطأ: {e}")
+        time.sleep(0.5)
 
 
-# ── ٣. تحليل JS داخل الصفحة بحثاً عن API ────────────────────────────────
-def find_api_in_js():
+# ── ٢. استخراج كل ajax calls من HTML الصفحة ──────────────────────────────
+def extract_inline_ajax():
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/?idfrom=1&idto=8667"
     r = SESSION.get(url, timeout=15)
     soup = BeautifulSoup(r.text, "lxml")
 
-    print("\n[Scripts في الصفحة]")
-    api_hints = []
+    print(f"\n{'='*60}")
+    print("الـ ajax calls في inline scripts:")
+    all_js = ""
     for script in soup.find_all("script"):
-        src = script.get("src", "")
-        txt = script.string or ""
+        if not script.get("src") and script.string:
+            all_js += script.string + "\n"
 
-        if src:
-            print(f"  external: {src}")
+    # احفظ كل JS المضمّن
+    with open("output/inline_scripts.js", "w", encoding="utf-8") as f:
+        f.write(all_js)
+    print(f"✓ حجم inline JS: {len(all_js)} حرف — محفوظ في output/inline_scripts.js")
 
-        # ابحث عن كلمات مفتاحية في JS المضمّن
-        keywords = ["ajax", "fetch", "idfrom", "idto", "getpage", "api", "content", "xhr"]
-        for kw in keywords:
-            if kw.lower() in txt.lower():
-                # استخرج السطر الذي يحتوي الكلمة
-                for line in txt.splitlines():
-                    if kw.lower() in line.lower() and len(line.strip()) > 5:
-                        api_hints.append({"keyword": kw, "line": line.strip()[:200]})
+    # استخرج كتل ajax كاملة
+    ajax_blocks = re.findall(r'\$\.ajax\(\{.*?\}\)', all_js, re.DOTALL)
+    print(f"\nعدد كتل $.ajax: {len(ajax_blocks)}")
+    for i, block in enumerate(ajax_blocks):
+        print(f"\n  [كتلة {i+1}]:\n{block[:400]}")
 
-    print(f"\n[API hints مكتشفة: {len(api_hints)}]")
-    for h in api_hints[:20]:
-        print(f"  [{h['keyword']}] {h['line']}")
-
-    with open("output/js_api_hints.json", "w", encoding="utf-8") as f:
-        json.dump(api_hints, f, ensure_ascii=False, indent=2)
-    print("\n✓ النتائج في output/js_api_hints.json")
-    return api_hints
+    # ابحث عن متغيرات مرتبطة بالكتاب
+    book_vars = re.findall(r'.{0,80}(?:bk_no|idfrom|idto|bookid|part_no).{0,80}', all_js)
+    print(f"\n[متغيرات الكتاب في inline JS]:")
+    for v in book_vars[:15]:
+        print(f"  {v.strip()}")
 
 
-# ── ٤. فحص idfrom/idto — هل هي معرّفات نصية؟ ────────────────────────────
-def probe_idfrom_idto():
-    """اختبر نطاقات مختلفة لـ idfrom/idto"""
-    print("\n[فحص نطاقات idfrom/idto]")
-    tests = [
-        (1, 1), (1, 5), (1, 10),
-        (100, 110), (500, 510), (1000, 1010),
+# ── ٣. اختبار bookcontents.js API مباشرة ─────────────────────────────────
+def probe_bookcontents_api():
+    """بعد تحليل bookcontents.js نجرب endpoints محتملة"""
+    candidates = [
+        f"{BASE_URL}/ar/library/maktaba/bookcontent.php?bk_no={BOOK_ID}&part=1&idfrom=1&idto=50",
+        f"{BASE_URL}/ar/library/maktaba/getbookcontent.php?bk_no={BOOK_ID}&part=1&idfrom=1",
+        f"{BASE_URL}/ar/library/maktaba/content.php?bk_no={BOOK_ID}&part=1&idfrom=1&idto=50",
+        f"{BASE_URL}/ar/library/bookajax.php?bk_no={BOOK_ID}&part=1&idfrom=1&idto=50",
+        f"{BASE_URL}/ar/library/maktaba/javascript/../bookcontent.php?bk_no={BOOK_ID}&part=1",
     ]
-    for fr, to in tests:
-        url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/?idfrom={fr}&idto={to}"
+    print(f"\n{'='*60}")
+    print("اختبار endpoints إضافية:")
+    for url in candidates:
         r = SESSION.get(url, timeout=10)
-        soup = BeautifulSoup(r.text, "lxml")
-        # أطول div
-        divs = soup.find_all("div")
-        best = max(divs, key=lambda d: len(d.get_text(strip=True)), default=None)
-        txt = best.get_text(strip=True)[:200] if best else ""
-        has_quran = "﴿" in r.text
-        print(f"  idfrom={fr:5d} idto={to:5d} | quran={'✅' if has_quran else '❌'} | {txt[:80]}")
-        time.sleep(0.8)
+        has_arabic = any("\u0600" <= c <= "\u06ff" for c in r.text[:500])
+        has_quran  = "﴿" in r.text
+        mark = "✅" if has_quran else ("🔶" if has_arabic else "❌")
+        print(f"  {mark} [{r.status_code}] len={len(r.text):6d} | {url.split('islamweb.net')[1][:70]}")
+        if has_quran:
+            print(f"     >>> {r.text[:300]}")
+        time.sleep(0.5)
 
 
 # ── التشغيل ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("=== ١. تتبع redirect ===")
-    follow_pageno_redirect(1)
-    follow_pageno_redirect(2)
+    print("=== ١. تحليل ملفات JS ===")
+    fetch_and_analyze_js()
 
-    print("\n=== ٢. اختبار API endpoints ===")
-    probe_api_endpoints()
+    print("\n=== ٢. استخراج inline ajax ===")
+    extract_inline_ajax()
 
-    print("\n=== ٣. تحليل JavaScript ===")
-    find_api_in_js()
-
-    print("\n=== ٤. فحص نطاقات idfrom/idto ===")
-    probe_idfrom_idto()
+    print("\n=== ٣. اختبار endpoints إضافية ===")
+    probe_bookcontents_api()
 
     print("\n✅ اكتمل — انظر output/")
+    print("الملف الأهم للمراجعة: output/bookcontents.js")
