@@ -1,14 +1,21 @@
-name: Run Islamweb Scraper
+name: Scrape & Build EPUB
 
 on:
-  workflow_dispatch:   # تشغيل يدوي بزر من GitHub
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'test = أول 30 | full = كامل'
+        required: true
+        default: 'test'
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write     # ← لازم للـ commit
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -17,13 +24,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 lxml
+        run: pip install requests beautifulsoup4 lxml ebooklib
 
-      - name: Run explorer
-        run: python explore.py
+      - name: Run scraper
+        run: python scraper.py ${{ github.event.inputs.mode }}
 
-      - name: Save output as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: scraper-output
-          path: output/
+      - name: Commit output to repo
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git diff --cached --quiet || git commit -m "scraper output: ${{ github.event.inputs.mode }} [$(date +'%Y-%m-%d %H:%M')]"
+          git push
