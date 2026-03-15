@@ -1,253 +1,268 @@
 """
 scraper.py
-- يستخرج شجرة الفهرس الكاملة
-- يجلب محتوى كل section
-- يبني EPUB مع التنسيق
-- يحفظ النتائج في output/ (يُرفع للريبو تلقائياً)
+الاستخدام:
+  python scraper.py scan        ← المرحلة ١: اكتشاف nodes الصالحة
+  python scraper.py build       ← المرحلة ٢: بناء EPUB من valid_nodes.json
+  python scraper.py test        ← اختبار أول 30 node فقط
+  python scraper.py resume      ← استكمال scan متوقف
 """
 
 import requests
 from bs4 import BeautifulSoup
 from ebooklib import epub
-import json, os, re, time, urllib.parse
+import json, os, re, time, sys
 
-BASE_URL  = "https://www.islamweb.net"
-BOOK_ID   = 411
-FIRST_ID  = 1
-LAST_ID   = 8173
-PART      = 1
-DELAY     = 1.2        # ثانية بين الطلبات
-HEADERS   = {
+BASE_URL = "https://www.islamweb.net"
+BOOK_ID  = 411
+LAST_ID  = 8173
+DELAY    = 1.2
+HEADERS  = {
     "User-Agent":      "Mozilla/5.0 (compatible; research-bot/1.0)",
     "Accept-Language": "ar,en;q=0.9",
+    "X-Requested-With": "XMLHttpRequest",
     "Referer":         f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/",
 }
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
-os.makedirs("output", exist_ok=True)
+
 os.makedirs("output/sections", exist_ok=True)
 
 
 # ══════════════════════════════════════════════════════════════════
-# ١. جلب صفحة وإعادة BeautifulSoup
+# أدوات مشتركة
 # ══════════════════════════════════════════════════════════════════
-def fetch(url: str, retries=3) -> BeautifulSoup | None:
+def fetch(url: str, retries=3):
     for attempt in range(retries):
         try:
             r = SESSION.get(url, timeout=20)
             r.raise_for_status()
             return BeautifulSoup(r.text, "lxml"), r.text
         except Exception as e:
-            print(f"  ⚠ محاولة {attempt+1} فشلت: {e}")
-            time.sleep(3)
+            wait = 5 * (attempt + 1)
+            print(f"  ⚠ محاولة {attempt+1} فشلت ({e}) — انتظار {wait}s")
+            time.sleep(wait)
     return None, ""
 
 
+def load_json(path, default):
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return default
+
+
+def save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 # ══════════════════════════════════════════════════════════════════
-# ٢. استخراج شجرة الفهرس (TOC)
+# ١. استخراج فهرس الكتاب
 # ══════════════════════════════════════════════════════════════════
 def build_toc() -> list:
-    """
-    يجلب الصفحة الرئيسية ويستخرج:
-    - .plusbutton  → فصول رئيسية
-    - .BookDetail_1 → sections أوراق
-    - HidParam inputs → parameters كل node
-    """
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     soup, _ = fetch(url)
     if not soup:
-        print("✗ فشل جلب الفهرس")
         return []
 
-    toc = []
-
-    # HidParam inputs
     hid = {}
     for inp in soup.find_all("input", id=re.compile("^HidParam")):
         nid = inp["id"].replace("HidParam", "")
         hid[nid] = inp.get("value", "")
 
-    # tree_label + plusbutton
+    toc = []
     for el in soup.find_all(class_=["tree_label", "plusbutton", "BookDetail_1"]):
         nid   = el.get("id") or el.get("data-id")
-        level = el.get("data-level", "?")
-        text  = el.get_text(strip=True)
-        href  = el.get("data-href", "")
+        text  = el.get_text(strip=True)[:120]
+        level = el.get("data-level", "1")
         if nid and text:
             toc.append({
-                "id":      nid,
-                "level":   level,
-                "text":    text[:120],
-                "href":    href,
-                "hid":     hid.get(nid, ""),
-                "source":  el.get("class", [""])[0],
+                "id":    nid,
+                "level": level,
+                "text":  text,
+                "hid":   hid.get(nid, ""),
             })
 
-    # إضافة first/last كـ anchor معروف
-    toc.insert(0, {"id": str(FIRST_ID), "level": "0", "text": "مقدمة",          "href": "", "hid": "", "source": "manual"})
-    toc.append(   {"id": str(LAST_ID),  "level": "0", "text": "آخر صفحة",       "href": "", "hid": "", "source": "manual"})
-
-    with open("output/toc.json", "w", encoding="utf-8") as f:
-        json.dump(toc, f, ensure_ascii=False, indent=2)
-    print(f"✓ شجرة الفهرس: {len(toc)} عنصر → output/toc.json")
+    save_json("output/toc.json", toc)
+    print(f"✓ فهرس: {len(toc)} عنصر → output/toc.json")
     return toc
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٣. جلب محتوى section واحد عبر nindex.php
+# ٢. جلب محتوى node واحد
 # ══════════════════════════════════════════════════════════════════
-def fetch_section(node_id: str, hid_param: str = "") -> dict | None:
-    cache = f"output/sections/{node_id}.json"
+def fetch_section(nid: int) -> dict | None:
+    cache = f"output/sections/{nid}.json"
     if os.path.exists(cache):
-        with open(cache, encoding="utf-8") as f:
-            return json.load(f)
+        return load_json(cache, None)
 
-    url  = f"{BASE_URL}/ar/library/maktaba/nindex.php?id={node_id}{hid_param}&bookid={BOOK_ID}&page=bookpages"
+    url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+           f"?id={nid}&bookid={BOOK_ID}&page=bookpages")
     soup, raw = fetch(url)
     if not soup:
         return None
 
-    # استخرج العنوان
-    title_el = soup.find(["h1","h2","h3","b","strong"])
-    title    = title_el.get_text(strip=True) if title_el else f"قسم {node_id}"
+    text_all = soup.get_text(strip=True)
+    if len(text_all) < 50:
+        return None
 
-    # استخرج الفقرات مع الأنماط
-    paragraphs = []
+    # العنوان
+    title_el = soup.find(["h1","h2","h3","b","strong"])
+    title    = title_el.get_text(strip=True)[:120] if title_el else f"قسم {nid}"
+
+    # الفقرات مع الأنماط
+    seen, paragraphs = set(), []
     for tag in soup.find_all(["p","div","span","b","h1","h2","h3"]):
         txt = tag.get_text(strip=True)
-        if len(txt) < 10:
+        if len(txt) < 8 or txt in seen:
             continue
+        seen.add(txt)
         cls = " ".join(tag.get("class", []))
 
-        # كشف النوع
         if "﴿" in txt or "﴾" in txt:
             kind = "quran"
         elif any(c in cls for c in ["hadith","hadithatt"]):
             kind = "hadith"
         elif any(c in cls for c in ["names","namesatt"]):
             kind = "name"
-        elif tag.name in ["h1","h2","h3"] or (len(txt) < 80 and tag.name == "b"):
+        elif tag.name in ["h1","h2","h3"] or (tag.name == "b" and len(txt) < 80):
             kind = "heading"
         else:
             kind = "text"
 
-        paragraphs.append({"kind": kind, "text": txt, "tag": tag.name, "class": cls})
+        paragraphs.append({"kind": kind, "text": txt, "tag": tag.name})
 
-    # فلتر التكرار
-    seen = set()
-    unique = []
-    for p in paragraphs:
-        if p["text"] not in seen:
-            seen.add(p["text"])
-            unique.append(p)
-
-    # كشف pagination: التالي/السابق
-    next_url = prev_url = None
-    for a in soup.find_all("a", class_=["nextpage","prvpage"]):
-        href = a.get("data-url","")
-        if "nextpage" in " ".join(a.get("class",[])):
-            next_url = href
-        else:
-            prev_url = href
+    if not paragraphs:
+        return None
 
     result = {
-        "node_id":    node_id,
+        "node_id":    nid,
         "title":      title,
-        "url":        url,
-        "paragraphs": unique,
-        "next_url":   next_url,
-        "prev_url":   prev_url,
-        "has_quran":  any(p["kind"]=="quran"  for p in unique),
-        "has_hadith": any(p["kind"]=="hadith" for p in unique),
+        "paragraphs": paragraphs,
+        "has_quran":  any(p["kind"] == "quran"  for p in paragraphs),
+        "has_hadith": any(p["kind"] == "hadith" for p in paragraphs),
     }
-
-    with open(cache, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    save_json(cache, result)
     return result
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٤. اكتشاف كل sections عبر scan نطاق محدود (للاختبار أولاً)
+# ٣. المرحلة ١ — scan: اكتشاف الـ nodes الصالحة
 # ══════════════════════════════════════════════════════════════════
-def scan_range(start=1, end=50, step=1) -> list:
-    """مسح نطاق من node IDs لاكتشاف الـ sections الفعلية"""
-    valid = []
-    print(f"\n=== مسح IDs {start}→{end} ===")
-    for nid in range(start, end+1, step):
-        result = fetch_section(str(nid))
+def phase_scan(start=1, end=LAST_ID):
+    progress_file = "output/scan_progress.json"
+    valid_file    = "output/valid_nodes.json"
+
+    progress = load_json(progress_file, {"last": start - 1})
+    valid    = load_json(valid_file, [])
+    valid_set = set(valid)
+
+    start = progress["last"] + 1
+    print(f"=== SCAN: {start} → {end} ===")
+    print(f"  nodes صالحة حتى الآن: {len(valid)}")
+
+    empty_streak = 0  # عدّاد الـ nodes الفارغة المتتالية
+
+    for nid in range(start, end + 1):
+        result = fetch_section(nid)
+
         if result and result["paragraphs"]:
             q = "✅" if result["has_quran"] else ("📖" if result["has_hadith"] else "🔶")
-            print(f"  {q} id={nid:5d} | {result['title'][:50]:50s} | فقرات={len(result['paragraphs'])}")
-            valid.append(nid)
+            print(f"  {q} {nid:5d} | {result['title'][:55]:55s} | ف={len(result['paragraphs'])}")
+            if nid not in valid_set:
+                valid.append(nid)
+                valid_set.add(nid)
+            empty_streak = 0
         else:
-            print(f"  ⬜ id={nid:5d} | فارغ")
+            print(f"  ⬜ {nid:5d} | فارغ")
+            empty_streak += 1
+
+        # حفظ التقدم كل 50 node
+        if nid % 50 == 0:
+            progress["last"] = nid
+            save_json(progress_file, progress)
+            save_json(valid_file, sorted(valid))
+            print(f"  💾 تقدم محفوظ عند {nid} | صالح: {len(valid)}")
+
         time.sleep(DELAY)
 
-    print(f"\n✓ sections صالحة: {len(valid)}/{end-start+1}")
+    # حفظ نهائي
+    progress["last"] = end
+    save_json(progress_file, progress)
+    save_json(valid_file, sorted(valid))
+    print(f"\n✅ SCAN اكتمل | nodes صالحة: {len(valid)} من {end}")
     return valid
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٥. بناء EPUB
+# ٤. المرحلة ٢ — build: بناء EPUB
 # ══════════════════════════════════════════════════════════════════
 EPUB_CSS = """
-@charset "UTF-8";
 body    { font-family: 'Traditional Arabic', serif; direction: rtl;
-          text-align: right; line-height: 2; margin: 1em 1.5em; }
+          text-align: right; line-height: 2.2; margin: 1em 1.5em; }
 h1      { color: #8B0000; border-bottom: 2px solid #8B0000; margin-top: 1.5em; }
 h2      { color: #5A3E1B; margin-top: 1.2em; }
-.quran  { color: #006400; font-size: 1.1em; margin: 0.8em 0; padding: 0.5em;
-          border-right: 4px solid #006400; background: #f0fff0; }
+.quran  { color: #006400; font-size: 1.1em; margin: 0.8em 0;
+          padding: 0.5em; border-right: 4px solid #006400; background: #f0fff0; }
 .hadith { color: #4B0082; margin: 0.8em 0; padding: 0.5em;
           border-right: 4px solid #4B0082; background: #f5f0ff; }
-.name   { color: #8B0000; }
+.name   { color: #8B4513; font-weight: bold; }
 .text   { margin: 0.5em 0; }
 """
 
-def build_epub(toc: list, valid_ids: list) -> str:
+def phase_build():
+    valid = load_json("output/valid_nodes.json", [])
+    if not valid:
+        print("✗ valid_nodes.json فارغ — شغّل scan أولاً")
+        return
+
+    toc_data = load_json("output/toc.json", [])
+    toc_map  = {item["id"]: item for item in toc_data}
+
+    print(f"=== BUILD EPUB: {len(valid)} فصل ===")
+
     book = epub.EpubBook()
     book.set_identifier(f"islamweb-{BOOK_ID}")
     book.set_title("إتحاف السادة المتقين بشرح إحياء علوم الدين")
     book.set_language("ar")
     book.add_author("مرتضى الزبيدي")
 
-    css = epub.EpubItem(
+    css_item = epub.EpubItem(
         uid="style", file_name="style/main.css",
         media_type="text/css", content=EPUB_CSS
     )
-    book.add_item(css)
+    book.add_item(css_item)
 
-    chapters   = []
-    spine      = ["nav"]
-    toc_items  = []
-
-    # صفحة غلاف
-    cover_html = epub.EpubHtml(
-        title="الغلاف", file_name="cover.xhtml", lang="ar"
-    )
-    cover_html.content = """<html><body dir="rtl">
-    <h1 style="text-align:center;color:#8B0000;margin-top:3em">
+    # غلاف
+    cover = epub.EpubHtml(title="الغلاف", file_name="cover.xhtml", lang="ar")
+    cover.content = """<html><body dir="rtl" style="text-align:center">
+    <h1 style="color:#8B0000;margin-top:3em">
         إتحاف السادة المتقين<br/>بشرح إحياء علوم الدين
     </h1>
-    <p style="text-align:center;font-size:1.2em">مرتضى الزبيدي</p>
+    <p style="font-size:1.3em">الإمام مرتضى الزبيدي</p>
     </body></html>"""
-    cover_html.add_item(css)
-    book.add_item(cover_html)
-    chapters.append(cover_html)
-    spine.append(cover_html)
+    cover.add_item(css_item)
+    book.add_item(cover)
 
-    # الفصول
-    for nid in valid_ids:
-        cache = f"output/sections/{nid}.json"
-        if not os.path.exists(cache):
+    chapters  = [cover]
+    spine     = ["nav", cover]
+    toc_items = []
+
+    # بناء TOC هرمي من toc_data
+    toc_by_level = {}
+    for item in toc_data:
+        lvl = str(item.get("level","1"))
+        toc_by_level.setdefault(lvl, []).append(item["id"])
+
+    for i, nid in enumerate(valid):
+        sec = load_json(f"output/sections/{nid}.json", None)
+        if not sec:
             continue
-        with open(cache, encoding="utf-8") as f:
-            sec = json.load(f)
 
-        # بناء HTML الفصل
+        # HTML الفصل
         body = f'<h1>{sec["title"]}</h1>\n'
         for p in sec["paragraphs"]:
-            t = p["text"].replace("<","&lt;").replace(">","&gt;")
+            t = p["text"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
             if p["kind"] == "quran":
                 body += f'<p class="quran">{t}</p>\n'
             elif p["kind"] == "hadith":
@@ -255,60 +270,64 @@ def build_epub(toc: list, valid_ids: list) -> str:
             elif p["kind"] == "heading":
                 body += f'<h2>{t}</h2>\n'
             elif p["kind"] == "name":
-                body += f'<span class="name">{t}</span> '
+                body += f'<span class="name">{t}</span>\n'
             else:
                 body += f'<p class="text">{t}</p>\n'
 
         ch = epub.EpubHtml(
             title=sec["title"],
-            file_name=f"chap_{nid}.xhtml",
+            file_name=f"s{nid}.xhtml",
             lang="ar"
         )
         ch.content = f'<html><body dir="rtl">{body}</body></html>'
-        ch.add_item(css)
+        ch.add_item(css_item)
         book.add_item(ch)
         chapters.append(ch)
         spine.append(ch)
-        toc_items.append(epub.Link(f"chap_{nid}.xhtml", sec["title"], f"chap{nid}"))
+        toc_items.append(epub.Link(f"s{nid}.xhtml", sec["title"], f"s{nid}"))
+
+        if i % 100 == 0:
+            print(f"  📄 {i}/{len(valid)} — {sec['title'][:50]}")
 
     book.toc   = toc_items
     book.spine = spine
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
 
-    path = f"output/ithaf_alsada.epub"
-    epub.write_epub(path, book)
-    print(f"\n✓ EPUB محفوظ: {path}")
-    return path
+    out = "output/ithaf_alsada.epub"
+    epub.write_epub(out, book)
+
+    size_mb = os.path.getsize(out) / 1024 / 1024
+    print(f"\n✅ EPUB جاهز: {out} ({size_mb:.1f} MB)")
+    print(f"   فصول: {len(chapters)-1} | آيات: {sum(1 for v in valid if load_json(f'output/sections/{v}.json',{}).get('has_quran'))}")
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٦. التشغيل الرئيسي
+# ٥. التشغيل
 # ══════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
-    import sys
     mode = sys.argv[1] if len(sys.argv) > 1 else "test"
 
-    print("=== ١. بناء الفهرس ===")
-    toc = build_toc()
+    print(f"{'='*55}")
+    print(f"  إتحاف السادة المتقين — mode={mode}")
+    print(f"{'='*55}\n")
 
     if mode == "test":
-        # اختبار: مسح أول 30 node فقط
-        print("\n=== ٢. مسح اختباري (أول 30) ===")
-        valid = scan_range(1, 30)
+        build_toc()
+        phase_scan(1, 30)
+        phase_build()
+
+    elif mode == "scan":
+        build_toc()
+        phase_scan(1, LAST_ID)
+
+    elif mode == "resume":
+        phase_scan(1, LAST_ID)   # يكمل من آخر نقطة
+
+    elif mode == "build":
+        phase_build()
 
     elif mode == "full":
-        # استخراج كامل (698 صفحة × ~1.2 ث ≈ 14 دقيقة)
-        print("\n=== ٢. مسح كامل 1→8173 ===")
-        valid = scan_range(1, LAST_ID, step=1)
-
-    else:
-        valid = [int(x) for x in mode.split(",")]
-
-    if valid:
-        print(f"\n=== ٣. بناء EPUB ({len(valid)} فصل) ===")
-        build_epub(toc, valid)
-    else:
-        print("✗ لا توجد sections صالحة")
-
-    print("\n✅ اكتمل")
+        build_toc()
+        phase_scan(1, LAST_ID)
+        phase_build()
