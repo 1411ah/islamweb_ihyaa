@@ -1,6 +1,6 @@
 """
-explore.py — المرحلة الرابعة
-النص موجود في HTML — نحدد مكانه بدقة
+explore.py — المرحلة الخامسة
+قراءة bookcontents.js كاملاً واكتشاف API الحقيقي
 """
 
 import requests
@@ -12,133 +12,67 @@ BOOK_ID  = 411
 HEADERS  = {
     "User-Agent": "Mozilla/5.0 (compatible; research-bot/1.0)",
     "Accept-Language": "ar,en;q=0.9",
+    "Referer": f"https://www.islamweb.net/ar/library/content/{BOOK_ID}/1/",
 }
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 os.makedirs("output", exist_ok=True)
 
-# ── ١. تتبع الـ slug الحقيقي للصفحات ─────────────────────────────────────
-def get_page_slugs(pages=[1,2,3,4,5]):
-    print("=== slugs الصفحات ===")
-    slugs = {}
-    for p in pages:
-        url = (f"{BASE_URL}/ar/library/pageno_redirect.php"
-               f"?part=1&bk_no={BOOK_ID}&pageno={p}")
-        r = SESSION.get(url, timeout=15, allow_redirects=True)
-        slugs[p] = r.url
-        print(f"  صفحة {p} => {r.url}")
-        time.sleep(0.5)
-    with open("output/slugs.json","w",encoding="utf-8") as f:
-        json.dump(slugs, f, ensure_ascii=False, indent=2)
-    return slugs
 
-# ── ٢. تحديد container النص بدقة ──────────────────────────────────────────
-TARGET = "الذنوب والمعاصي تضر"
+# ── ١. تحميل bookcontents.js كاملاً ──────────────────────────────────────
+def fetch_bookcontents_js():
+    url = f"{BASE_URL}/ar/library/bookcontents.js?v=6.112"
+    r = SESSION.get(url, timeout=15)
+    with open("output/bookcontents.js", "w", encoding="utf-8") as f:
+        f.write(r.text)
+    print(f"✓ bookcontents.js: {len(r.text)} حرف")
+    print("\n=== المحتوى الكامل ===")
+    print(r.text)  # نطبع كل شيء
+    return r.text
 
-def find_text_container():
+
+# ── ٢. تحميل tab.js و ajax.js ─────────────────────────────────────────────
+def fetch_other_js():
+    files = [
+        "/ar/js/ajax.js",
+        "/ar/library/maktaba/javascript/tab.js?v=2.6",
+    ]
+    for path in files:
+        url = BASE_URL + path
+        r = SESSION.get(url, timeout=15)
+        fname = path.split("/")[-1].split("?")[0]
+        with open(f"output/{fname}", "w", encoding="utf-8") as f:
+            f.write(r.text)
+        print(f"\n=== {fname} ({len(r.text)} حرف) ===")
+        print(r.text[:3000])
+
+
+# ── ٣. استخراج inline JS من الصفحة كاملاً ───────────────────────────────
+def fetch_inline_js():
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     r = SESSION.get(url, timeout=15)
     soup = BeautifulSoup(r.text, "lxml")
 
-    # احفظ HTML الكامل للفحص
-    with open("output/full_page.html","w",encoding="utf-8") as f:
-        f.write(r.text)
-    print(f"✓ HTML الكامل محفوظ ({len(r.text)} حرف)")
+    all_inline = ""
+    for script in soup.find_all("script"):
+        if not script.get("src") and script.string:
+            all_inline += f"\n// --- script block ---\n{script.string}"
 
-    # ابحث عن العنصر الأصغر الذي يحتوي النص المستهدف
-    print(f"\n[البحث عن '{TARGET}']")
-    found = []
-    for tag in soup.find_all(True):
-        if TARGET in (tag.string or ""):
-            found.append({
-                "tag":    tag.name,
-                "id":     tag.get("id",""),
-                "class":  tag.get("class",[]),
-                "text":   tag.get_text(strip=True)[:200],
-            })
+    with open("output/inline_scripts.js", "w", encoding="utf-8") as f:
+        f.write(all_inline)
+    print(f"\n=== inline scripts ({len(all_inline)} حرف) ===")
+    print(all_inline)
 
-    # إن لم يكن في string، ابحث في get_text مع تحقق أن الأبناء لا يحتوونه
-    if not found:
-        for tag in soup.find_all(True):
-            txt = tag.get_text(strip=True)
-            if TARGET in txt:
-                # تحقق أن أبناءه لا يحتوونه (أي هذا أصغر حاوية)
-                children_have = any(
-                    TARGET in (c.get_text(strip=True) if hasattr(c,'get_text') else "")
-                    for c in tag.children
-                )
-                if not children_have:
-                    found.append({
-                        "tag":   tag.name,
-                        "id":    tag.get("id",""),
-                        "class": tag.get("class",[]),
-                        "text":  txt[:200],
-                    })
 
-    print(f"  عدد العناصر التي تحتوي النص: {len(found)}")
-    for el in found[:10]:
-        print(f"  <{el['tag']}> id='{el['id']}' class={el['class']}")
-        print(f"    {el['text'][:100]}")
-
-    # ── طريقة بديلة: ابحث في HTML الخام عن السياق ──
-    print(f"\n[السياق في HTML الخام]")
-    idx = r.text.find(TARGET)
-    if idx >= 0:
-        context = r.text[max(0,idx-300):idx+300]
-        print(context)
-        with open("output/text_context.html","w",encoding="utf-8") as f:
-            f.write(context)
-        print("✓ السياق محفوظ في output/text_context.html")
-    else:
-        print("  ✗ النص غير موجود في HTML الخام — محمّل بـ JS")
-        # تحقق من وجوده في JavaScript
-        js_idx = r.text.find("الذنوب")
-        if js_idx >= 0:
-            print(f"  🔶 موجود في JS عند index {js_idx}:")
-            print(r.text[max(0,js_idx-200):js_idx+200])
-
-    return found
-
-# ── ٣. بعد معرفة الـ container — استخراج نص صفحات متعددة ────────────────
-def extract_text_from_pages(container_selector: dict, pages=5):
-    """
-    container_selector مثال:
-      {"type":"id",    "value":"bookText"}
-      {"type":"class", "value":"nass"}
-    """
-    print(f"\n=== استخراج النص بـ {container_selector} ===")
-    results = {}
-    for p in range(1, pages+1):
-        url = (f"{BASE_URL}/ar/library/pageno_redirect.php"
-               f"?part=1&bk_no={BOOK_ID}&pageno={p}")
-        r = SESSION.get(url, timeout=15, allow_redirects=True)
-        soup = BeautifulSoup(r.text, "lxml")
-
-        t = container_selector["type"]
-        v = container_selector["value"]
-        el = soup.find(id=v) if t=="id" else soup.find(class_=v)
-
-        if el:
-            txt = el.get_text(separator="\n", strip=True)
-            results[p] = txt[:300]
-            print(f"  صفحة {p}: {txt[:80]}")
-        else:
-            print(f"  صفحة {p}: ✗ لم يُعثر على {container_selector}")
-        time.sleep(1)
-
-    with open("output/extracted_text.json","w",encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
-    print("✓ النتائج في output/extracted_text.json")
-
-# ── التشغيل ────────────────────────────────────────────────────────────────
+# ── التشغيل ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("=== ١. slugs الصفحات ===")
-    get_page_slugs([1,2,3,4,5])
+    print("=== ١. bookcontents.js ===")
+    fetch_bookcontents_js()
 
-    print("\n=== ٢. تحديد حاوية النص ===")
-    find_text_container()
+    print("\n=== ٢. ملفات JS أخرى ===")
+    fetch_other_js()
 
-    # بعد معرفة الـ container من النتائج، فعّل هذا السطر:
-    # extract_text_from_pages({"type":"class","value":"nass"})
+    print("\n=== ٣. inline scripts ===")
+    fetch_inline_js()
 
-    print("\n✅ اكتمل — الملف الأهم: output/text_context.html")
+    print("\n✅ اكتمل")
