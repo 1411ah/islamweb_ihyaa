@@ -1,0 +1,29 @@
+name: Run Islamweb Scraper
+
+on:
+  workflow_dispatch:   # تشغيل يدوي بزر من GitHub
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Run explorer
+        run: python explore.py
+
+      - name: Save output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-output
+          path: output/
