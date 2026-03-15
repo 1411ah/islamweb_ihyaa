@@ -85,37 +85,43 @@ def build_toc() -> list:
     toc  = []
     seen = set()
 
-    # البنية: <a id="{node_id}" href="/ar/library/content/411/{idfrom}/{slug}">
-    pattern = re.compile(rf"/library/content/{BOOK_ID}/(\d+)/")
+    # البنية الحقيقية:
+    # <span class="tree_label" data-level=1 data-id="4" data-idfrom=3 data-idto=41>
+    #   <a href="...">عنوان</a>   أو النص مباشرة
+    # </span>
+    # أو:
+    # <label class="plusbutton tree_label" data-level=1 data-id="4"
+    #        data-idfrom=3 data-idto=41>عنوان</label>
 
-    for a in soup.find_all("a", id=True, href=pattern):
-        node_id = a.get("id","").strip()
-        href    = a.get("href","")
-        text    = a.get_text(strip=True)
+    for el in soup.find_all(
+        lambda t: t.name in ["span","label"] and
+        "tree_label" in t.get("class",[]) and
+        t.get("data-id")
+    ):
+        node_id = el.get("data-id","").strip()
+        level   = int(el.get("data-level", 1))
+        idfrom  = el.get("data-idfrom")
+        idto    = el.get("data-idto")
 
-        if not node_id.isdigit() or not text:
+        # النص: من <a> الداخلي أو من النص المباشر
+        a_inner = el.find("a")
+        text    = a_inner.get_text(strip=True) if a_inner else el.get_text(strip=True)
+        text    = text.strip()
+
+        if not node_id.isdigit() or not text or not idfrom:
             continue
-
-        m = pattern.search(href)
-        idfrom = int(m.group(1)) if m else int(node_id)
-
-        # تجاهل روابط التالي/السابق
         if any(w in text for w in ["التالي","السابق"]):
             continue
-
         if node_id in seen:
             continue
         seen.add(node_id)
 
-        # مستوى الشجرة من المسافة البادئة أو data-level
-        level = int(a.get("data-level", 1))
-
         toc.append({
             "id":     node_id,
-            "idfrom": idfrom,
+            "idfrom": int(idfrom),
+            "idto":   int(idto) if idto else int(idfrom),
             "level":  level,
             "text":   text[:120],
-            "href":   href,
         })
 
     # ترتيب تصاعدي حسب idfrom
@@ -124,7 +130,7 @@ def build_toc() -> list:
     # طباعة الشجرة
     for item in toc:
         indent = "  " * (item["level"] - 1)
-        print(f"  {indent}├─ [{item['idfrom']:5d}] {item['text'][:60]}")
+        print(f"  {indent}├─ [{item['idfrom']:5d}→{item['idto']:5d}] {item['text'][:55]}")
 
     save_json("output/toc.json", toc)
     print(f"\n✓ فهرس: {len(toc)} عنصر → output/toc.json")
