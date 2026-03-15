@@ -4,15 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'test = أول 30 | full = كامل'
+        description: 'test | scan | resume | build | full'
         required: true
         default: 'test'
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 350       # أقل من حد GitHub 6 ساعات
     permissions:
-      contents: write     # ← لازم للـ commit
+      contents: write
 
     steps:
       - name: Checkout
@@ -34,5 +35,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
-          git diff --cached --quiet || git commit -m "scraper output: ${{ github.event.inputs.mode }} [$(date +'%Y-%m-%d %H:%M')]"
+          git diff --cached --quiet || git commit -m "[${{ github.event.inputs.mode }}] $(date +'%Y-%m-%d %H:%M')"
           git push
