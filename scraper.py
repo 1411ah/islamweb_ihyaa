@@ -25,6 +25,25 @@ HEADERS  = {
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
+# ── تفعيل نسخة التشكيل (islamweb_font_1) ────────────────────────
+def set_tashkeel_cookie():
+    """
+    الموقع يستخدم cookie اسمها cval لتحديد النسخة:
+      cval=1 → بتشكيل
+      cval=2 → بدون تشكيل
+    """
+    # أولاً: نزور الصفحة الرئيسية لتأسيس الـ session
+    SESSION.get(f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة", timeout=15)
+    # ثانياً: نضبط الـ cookie عبر endpoint الموقع
+    SESSION.get(
+        f"{BASE_URL}/ar/set_cookie.php",
+        params={"cval": 1},
+        timeout=10
+    )
+    # ثالثاً: نضيف الـ cookie يدوياً للتأكيد
+    SESSION.cookies.set("cval", "1", domain="www.islamweb.net")
+    print("✓ cookie التشكيل مضبوطة (cval=1)")
+
 os.makedirs("output/sections", exist_ok=True)
 
 
@@ -59,94 +78,153 @@ def save_json(path, data):
 # ══════════════════════════════════════════════════════════════════
 # ١. استخراج فهرس الكتاب الكامل (مع الفصول الداخلية)
 # ══════════════════════════════════════════════════════════════════
-def parse_hid(hid: str) -> tuple:
-    """استخرج idfrom و idto من hid string"""
-    idfrom = re.search(r'idfrom=(\d+)', hid)
-    idto   = re.search(r'idto=(\d+)',   hid)
-    return (
-        int(idfrom.group(1)) if idfrom else None,
-        int(idto.group(1))   if idto   else None,
-    )
-
-def fetch_subtree(node_id: str, level: int = 1) -> list:
-    """جلب الفصول الداخلية لـ node عبر AJAX"""
-    # نجرب نمطين شائعين لروابط الشجرة
-    urls = [
-        f"{BASE_URL}/ar/library/maktaba/nindex.php?id={node_id}&bookid={BOOK_ID}&page=roottreedetail",
-        f"{BASE_URL}/ar/library/maktaba/nindex.php?id={node_id}&bookid={BOOK_ID}&page=treedetail",
-    ]
-    items = []
-    for url in urls:
-        soup, _ = fetch(url)
-        if not soup:
-            continue
-        found = False
-        for inp in soup.find_all("input", id=re.compile("^HidParam")):
-            nid  = inp["id"].replace("HidParam","")
-            hid  = inp.get("value","")
-            # ابحث عن العنصر المرتبط
-            label = soup.find(id=nid) or soup.find(attrs={"data-id": nid})
-            text  = label.get_text(strip=True)[:120] if label else f"قسم {nid}"
-            if hid and nid:
-                items.append({"id": nid, "level": level, "text": text, "hid": hid})
-                found = True
-        if found:
-            break
-        time.sleep(0.3)
-    return items
-
 def build_toc() -> list:
+    """
+    يبني الفهرس الكامل من breadcrumbs صفحات الكتاب
+    البنية: /ar/library/content/411/{NODE_ID}/{SLUG}
+    """
+    print("=== بناء الفهرس من breadcrumbs ===")
+
+    # ── ١. جلب الصفحة الرئيسية لاستخراج كل الروابط الداخلية ─────
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     soup, _ = fetch(url)
     if not soup:
         return []
 
-    # ── المستوى الأول من HidParam ─────────────────────────────────
-    hid = {}
+    toc = []
+    seen_ids = set()
+
+    # ── ٢. استخرج breadcrumb من الصفحة الحالية ───────────────────
+    def extract_breadcrumb(s) -> list:
+        crumbs = []
+        for li in s.find_all(
+            lambda t: t.name in ["li","div"] and
+            t.get("itemprop") == "itemListElement"
+        ):
+            a = li.find("a", itemprop="item")
+            span = li.find("span", itemprop="name")
+            pos_meta = li.find("meta", itemprop="position")
+
+            if not span:
+                continue
+
+            text = span.get_text(strip=True)
+            pos  = int(pos_meta["content"]) if pos_meta else 0
+
+            # استخرج NODE_ID من الرابط
+            node_id = None
+            href    = ""
+            if a:
+                href = a.get("href","")
+                # /ar/library/content/411/3968/ربع-العادات
+                m = re.search(r'/content/\d+/(\d+)/', href)
+                if m:
+                    node_id = m.group(1)
+
+            crumbs.append({
+                "pos":     pos,
+                "text":    text,
+                "node_id": node_id,
+                "href":    href,
+            })
+        return sorted(crumbs, key=lambda x: x["pos"])
+
+    # ── ٣. جلب قائمة كل الروابط في الصفحة الرئيسية ──────────────
+    all_links = set()
+    for a in soup.find_all("a", href=re.compile(f"/library/content/{BOOK_ID}/")):
+        href = a["href"]
+        m = re.search(r'/content/\d+/(\d+)/', href)
+        if m:
+            nid = m.group(1)
+            if nid not in seen_ids:
+                all_links.add((nid, href))
+
+    print(f"  روابط مكتشفة في الصفحة الرئيسية: {len(all_links)}")
+
+    # ── ٤. لكل رابط، جلب الصفحة واستخراج breadcrumb ──────────────
+    # نبدأ بالروابط الرئيسية المعروفة من hid
+    known_nodes = []
     for inp in soup.find_all("input", id=re.compile("^HidParam")):
         nid = inp["id"].replace("HidParam","")
-        hid[nid] = inp.get("value","")
+        hid = inp.get("value","")
+        idfrom = re.search(r'idfrom=(\d+)', hid)
+        if idfrom and nid not in seen_ids:
+            known_nodes.append((nid, hid))
+            seen_ids.add(nid)
 
-    toc = []
-    seen = set()
+    print(f"  nodes من HidParam: {len(known_nodes)}")
 
-    for el in soup.find_all(class_=["tree_label","plusbutton","BookDetail_1"]):
-        nid   = el.get("id") or el.get("data-id")
-        text  = el.get_text(strip=True)[:120]
-        level = int(el.get("data-level", 1))
-        h     = hid.get(nid,"")
-        if nid and text and nid not in seen and h:
-            seen.add(nid)
-            toc.append({"id": nid, "level": level, "text": text, "hid": h})
+    for nid, hid in known_nodes:
+        idfrom = re.search(r'idfrom=(\d+)', hid)
+        idto   = re.search(r'idto=(\d+)',   hid)
+        if not idfrom:
+            continue
 
-    print(f"  المستوى الأول: {len(toc)} عنصر")
+        fr = int(idfrom.group(1))
+        to = int(idto.group(1)) if idto else fr
 
-    # ── جلب الفصول الداخلية لكل عنصر رئيسي ──────────────────────
-    expanded = []
+        # جلب الصفحة لاستخراج breadcrumb
+        page_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{fr}/"
+        s, _ = fetch(page_url)
+        if s:
+            crumbs = extract_breadcrumb(s)
+            level  = len(crumbs)
+            text   = crumbs[-1]["text"] if crumbs else f"قسم {nid}"
+
+            toc.append({
+                "id":      nid,
+                "level":   level,
+                "text":    text,
+                "idfrom":  fr,
+                "idto":    to,
+                "breadcrumb": [c["text"] for c in crumbs],
+            })
+            print(f"  {'  ' * level}{'└─' if level > 1 else '├─'} {text[:60]}")
+        time.sleep(0.5)
+
+    # ── ٥. إضافة روابط الـ dropdown (أرقام الصفحات) ──────────────
+    # الموقع عنده 698 صفحة → نسحب عينة لاكتشاف عناوين إضافية
+    sample_pages = list(range(1, 698, 20))  # كل 20 صفحة
+    print(f"\n  جلب عينة {len(sample_pages)} صفحة لاكتشاف العناوين...")
+
+    for pageno in sample_pages:
+        page_url = (f"{BASE_URL}/ar/library/pageno_redirect.php"
+                    f"?part=1&bk_no={BOOK_ID}&pageno={pageno}")
+        s, _ = fetch(page_url)
+        if not s:
+            continue
+        crumbs = extract_breadcrumb(s)
+        if not crumbs:
+            continue
+
+        # أضف كل مستوى في breadcrumb إذا لم يكن موجوداً
+        for c in crumbs:
+            if c["node_id"] and c["node_id"] not in seen_ids:
+                seen_ids.add(c["node_id"])
+                m = re.search(r'/content/\d+/(\d+)/', c["href"])
+                nid = m.group(1) if m else c["node_id"]
+                toc.append({
+                    "id":    nid,
+                    "level": c["pos"],
+                    "text":  c["text"],
+                    "idfrom": int(nid),
+                    "idto":   int(nid),
+                    "breadcrumb": [x["text"] for x in crumbs[:c["pos"]]],
+                })
+        time.sleep(0.5)
+
+    # ── ٦. ترتيب وحفظ ─────────────────────────────────────────────
+    toc.sort(key=lambda x: x["idfrom"])
+    # إزالة التكرار
+    seen_final, final_toc = set(), []
     for item in toc:
-        expanded.append(item)
-        idfrom, idto = parse_hid(item["hid"])
-        # إذا النطاق كبير → يحتوي فصول داخلية
-        if idfrom and idto and (idto - idfrom) > 5:
-            print(f"  ↳ جلب فصول '{item['text'][:40]}' (id={item['id']})...")
-            children = fetch_subtree(item["id"], item["level"] + 1)
-            print(f"    {len(children)} فصل داخلي")
-            for ch in children:
-                if ch["id"] not in seen:
-                    seen.add(ch["id"])
-                    expanded.append(ch)
-            time.sleep(0.5)
+        if item["id"] not in seen_final:
+            seen_final.add(item["id"])
+            final_toc.append(item)
 
-    # ── ترتيب حسب idfrom ─────────────────────────────────────────
-    def sort_key(x):
-        fr, _ = parse_hid(x["hid"])
-        return fr or 0
-
-    expanded.sort(key=sort_key)
-
-    save_json("output/toc.json", expanded)
-    print(f"✓ فهرس كامل: {len(expanded)} عنصر → output/toc.json")
-    return expanded
+    save_json("output/toc.json", final_toc)
+    print(f"\n✓ فهرس كامل: {len(final_toc)} عنصر → output/toc.json")
+    return final_toc
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -162,6 +240,18 @@ def fetch_section_by_range(nid: str, idfrom: int, idto: int, title: str) -> dict
     soup, raw = fetch(url)
     if not soup or len(raw) < 200:
         return None
+
+    # تحقق أن النص مشكّل (يحتوي حركات)
+    has_tashkeel = any(
+        "\u064b" <= c <= "\u065f"   # نطاق حركات التشكيل
+        for c in raw[:2000]
+    )
+    if not has_tashkeel:
+        # أعد ضبط الـ cookie وحاول مرة أخرى
+        set_tashkeel_cookie()
+        soup, raw = fetch(url)
+        if not soup:
+            return None
 
     # احذف عناصر الموقع
     for sel in REMOVE_SELECTORS:
@@ -179,27 +269,99 @@ def fetch_section_by_range(nid: str, idfrom: int, idto: int, title: str) -> dict
     if not container:
         return None
 
-    seen, paragraphs = set(), []
-    for tag in container.find_all(["p","h1","h2","h3","b","span"]):
-        txt = tag.get_text(strip=True)
-        if len(txt) < 8 or txt in seen or txt in REPEATED_TEXTS:
-            continue
-        # تجاهل نصوص التنقل
-        if any(w in txt for w in ["التالي","السابق","الصفحة","فهرس"]):
-            continue
-        seen.add(txt)
-        cls = " ".join(tag.get("class",[]))
+def clean_and_extract(soup) -> list:
+    """
+    يستخرج النص النظيف من pagebody/bookcontent-dic
+    مع تحويل الأنماط الصحيحة
+    """
+    # ── الحاوية الرئيسية ──────────────────────────────────────────
+    container = (
+        soup.find(id="pagebody") or
+        soup.find(class_="bookcontent-dic") or
+        soup.find(class_="bookcontenttxt") or
+        soup.body
+    )
+    if not container:
+        return []
 
-        if "﴿" in txt or "﴾" in txt:
+    # ── ١. احذف العناصر غير المطلوبة ─────────────────────────────
+    for sel in [
+        "script", "style", "noscript",
+        ".hashiya_title",           # عنوان حاشية فارغ
+        ".quranatt", ".hadithatt",  # روابط تفسير مخفية
+        ".namesatt", ".mainsubjatt",
+    ]:
+        for el in container.select(sel):
+            el.decompose()
+
+    # ── ٢. احذف أرقام الصفحات  [ ص: 414 ] ───────────────────────
+    for font in container.find_all("font"):
+        txt = font.get_text()
+        if "ص:" in txt or font.get("color") == "blue":
+            font.decompose()
+
+    # ── ٣. فك روابط التفسير (onclick) واترك النص ─────────────────
+    for a in container.find_all("a", onclick=True):
+        a.replace_with(a.get_text())
+
+    # ── ٤. تحويل الآيات → ﴿ نص ﴾ ───────────────────────────────
+    for span in container.find_all("span", class_="quran"):
+        txt = span.get_text(strip=True)
+        if txt:
+            span.replace_with(f" ﴿{txt}﴾ ")
+
+    # ── ٥. تحويل الأحاديث المصنّفة → (( نص )) ───────────────────
+    for span in container.find_all("span", class_="hadith"):
+        txt = span.get_text(strip=True)
+        if txt:
+            span.replace_with(f" (({txt})) ")
+
+    # ── ٦. تحويل النصوص الخضراء → (( نص )) ──────────────────────
+    for span in container.find_all("span", style=lambda s: s and "color:green" in s):
+        txt = span.get_text(strip=True)
+        if txt:
+            span.replace_with(f" (({txt})) ")
+
+    # ── ٧. إزالة الـ spans المخفية المتبقية ──────────────────────
+    for span in container.find_all("span", style=lambda s: s and "display:none" in s):
+        span.decompose()
+
+    # ── ٨. استخرج النص كتدفق متواصل ─────────────────────────────
+    for br in container.find_all("br"):
+        br.replace_with("\n")
+
+    raw = container.get_text(separator="\n")
+
+    # ── ٩. نظّف وصنّف السطور ─────────────────────────────────────
+    seen, paragraphs = set(), []
+
+    for line in raw.splitlines():
+        txt = line.strip()
+        if len(txt) < 5:
+            continue
+        if txt in seen or txt in REPEATED_TEXTS:
+            continue
+        if any(w in txt for w in ["التالي","السابق","فهرس الكتاب","إسلام ويب"]):
+            continue
+        # تجاهل بقايا أرقام صفحات
+        import re as _re
+        if _re.fullmatch(r'[\[\]\d\s:]+', txt):
+            continue
+
+        seen.add(txt)
+
+        if "﴿" in txt and "﴾" in txt:
             kind = "quran"
-        elif any(c in cls for c in ["hadith","hadithatt"]):
+        elif txt.startswith("((") or txt.endswith("))"):
             kind = "hadith"
-        elif tag.name in ["h1","h2","h3"] or (tag.name=="b" and len(txt)<80):
+        elif len(txt) < 100 and txt.endswith(":"):
             kind = "heading"
         else:
             kind = "text"
 
         paragraphs.append({"kind": kind, "text": txt})
+
+    return paragraphs
 
     if not paragraphs:
         return None
@@ -423,8 +585,6 @@ def phase_build():
                 body += f'<p class="hadith">{t}</p>\n'
             elif p["kind"] == "heading":
                 body += f'<h2>{t}</h2>\n'
-            elif p["kind"] == "name":
-                body += f'<span class="name">{t}</span>\n'
             else:
                 body += f'<p class="text">{t}</p>\n'
 
@@ -465,6 +625,9 @@ if __name__ == "__main__":
     print(f"{'='*55}")
     print(f"  إتحاف السادة المتقين — mode={mode}")
     print(f"{'='*55}\n")
+
+    # ── أول شيء: ضبط cookie التشكيل ──────────────────────────────
+    set_tashkeel_cookie()
 
     if mode == "test":
         build_toc()
