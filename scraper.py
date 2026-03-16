@@ -71,6 +71,55 @@ def has_tashkeel(text: str) -> bool:
 # ══════════════════════════════════════════════════════════════════
 # ١. بناء الفهرس من #bookIndexScroll .tree_label
 # ══════════════════════════════════════════════════════════════════
+def fetch_subtree(node_id: str, idfrom: int, idto: int,
+                  level: int, seen: set) -> list:
+    """جلب الفصول الداخلية لعنوان رئيسي بشكل تكراري"""
+    url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+           f"?id={node_id}&treeLevel={level}&bookid={BOOK_ID}"
+           f"&page=bookssubtree&searchtext=&showexact=")
+    soup, _ = fetch(url)
+    if not soup:
+        return []
+
+    items = []
+    for el in soup.find_all(["span", "label"]):
+        if not isinstance(el, Tag):
+            continue
+        if "tree_label" not in (el.get("class") or []):
+            continue
+
+        nid    = (el.get("data-id") or "").strip()
+        fr     = el.get("data-idfrom")
+        to     = el.get("data-idto")
+        lvl    = int(el.get("data-level") or level + 1)
+        a_in   = el.find("a")
+        text   = (a_in.get_text(strip=True) if a_in
+                  else el.get_text(strip=True)).strip()
+        text   = re.sub(r'(التالي|السابق)', '', text).strip()
+
+        if not nid.isdigit() or not text or not fr or nid in seen:
+            continue
+        seen.add(nid)
+
+        items.append({
+            "id":     nid,
+            "idfrom": int(fr),
+            "idto":   int(to) if to else int(fr),
+            "level":  lvl,
+            "text":   text[:120],
+        })
+
+        # إذا له أبناء → اجلبهم تكرارياً
+        node_val = int(to) if to else int(fr)
+        if node_val - int(fr) > 1:
+            children = fetch_subtree(nid, int(fr), node_val,
+                                     lvl, seen)
+            items.extend(children)
+        time.sleep(0.3)
+
+    return items
+
+
 def build_toc() -> list:
     print("=== بناء الفهرس ===")
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
@@ -81,9 +130,10 @@ def build_toc() -> list:
     toc  = []
     seen = set()
 
-    # استهدف فقط شجرة الفهرس الجانبية
     index_scroll = soup.find(id="bookIndexScroll") or soup
 
+    # ── المستوى الأول ─────────────────────────────────────────────
+    top_level = []
     for el in index_scroll.find_all(["span", "label"]):
         if not isinstance(el, Tag):
             continue
@@ -94,13 +144,10 @@ def build_toc() -> list:
         idfrom  = el.get("data-idfrom")
         idto    = el.get("data-idto")
         level   = int(el.get("data-level") or 1)
-
-        # النص من <a> الداخلي أو مباشرة
         a_inner = el.find("a")
         text    = (a_inner.get_text(strip=True) if a_inner
                    else el.get_text(strip=True)).strip()
-        # إزالة أي بقايا تنقل
-        text = re.sub(r'(التالي|السابق)', '', text).strip()
+        text    = re.sub(r'(التالي|السابق)', '', text).strip()
 
         if not node_id.isdigit() or not text or not idfrom:
             continue
@@ -108,22 +155,39 @@ def build_toc() -> list:
             continue
         seen.add(node_id)
 
-        toc.append({
+        item = {
             "id":     node_id,
             "idfrom": int(idfrom),
             "idto":   int(idto) if idto else int(idfrom),
             "level":  level,
             "text":   text[:120],
-        })
+        }
+        top_level.append(item)
+        toc.append(item)
+
+    print(f"  المستوى الأول: {len(top_level)} عنصر")
+
+    # ── جلب الفصول الداخلية لكل عنصر رئيسي ──────────────────────
+    for item in top_level:
+        if item["idto"] - item["idfrom"] < 2:
+            continue
+        print(f"  ↳ جلب فصول: {item['text'][:45]}...")
+        children = fetch_subtree(
+            item["id"], item["idfrom"], item["idto"],
+            item["level"], seen
+        )
+        toc.extend(children)
+        print(f"    +{len(children)} فصل")
+        time.sleep(0.5)
 
     toc.sort(key=lambda x: x["idfrom"])
 
     for item in toc:
         indent = "  " * (item["level"] - 1)
-        print(f"  {indent}├─ [{item['idfrom']:5d}→{item['idto']:5d}] {item['text'][:55]}")
+        print(f"  {indent}├─ [{item['idfrom']:5d}→{item['idto']:5d}] {item['text'][:50]}")
 
     save_json("output/toc.json", toc)
-    print(f"\n✓ فهرس: {len(toc)} عنصر")
+    print(f"\n✓ فهرس كامل: {len(toc)} عنصر")
     return toc
 
 
