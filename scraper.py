@@ -405,17 +405,16 @@ def phase_build():
     book.add_item(css_item)
 
     cover = epub.EpubHtml(title="الغلاف", file_name="cover.xhtml", lang="ar")
-    cover.content = """<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" dir="rtl">
-<head><title>الغلاف</title></head>
-<body dir="rtl" style="text-align:center">
-    <h1 style="color:#8B0000;margin-top:3em">
-        إتحاف السادة المتقين<br/>بشرح إحياء علوم الدين
-    </h1>
-    <p style="font-size:1.3em">الإمام مرتضى الزبيدي</p>
-</body>
-</html>"""
+    cover.content = (
+        '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">'
+        '<head><meta charset="utf-8"/><title>الغلاف</title></head>'
+        '<body dir="rtl" style="text-align:center">'
+        '<h1 style="color:#8B0000;margin-top:3em">'
+        'إتحاف السادة المتقين<br/>بشرح إحياء علوم الدين'
+        '</h1>'
+        '<p style="font-size:1.3em">الإمام مرتضى الزبيدي</p>'
+        '</body></html>'
+    )
     cover.add_item(css_item)
     book.add_item(cover)
 
@@ -459,12 +458,13 @@ def phase_build():
             file_name=f"s{v['id']}.xhtml",
             lang="ar"
         )
-        ch.content = f'''<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" dir="rtl">
-<head><title>{sec["title"]}</title></head>
-<body dir="rtl">{body}</body>
-</html>'''
+        ch.content = (
+            f'<html xmlns="http://www.w3.org/1999/xhtml" '
+            f'xml:lang="ar" lang="ar" dir="rtl">'
+            f'<head><meta charset="utf-8"/>'
+            f'<title>{sec["title"]}</title></head>'
+            f'<body dir="rtl">{body}</body></html>'
+        )
         ch.add_item(css_item)
         book.add_item(ch)
         chapters.append(ch)
