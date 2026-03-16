@@ -1,0 +1,18 @@
+{
+  "node_id": "2223",
+  "title": "قسم 2223",
+  "idfrom": 2223,
+  "idto": 2223,
+  "paragraphs": [
+    {
+      "kind": "text",
+      "text": "وَفِي حَدِيثٍ شَاذٍّ"
+    },
+    {
+      "kind": "text",
+      "text": "سَبْعَ عَشْرَةَ رَكْعَةً"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
