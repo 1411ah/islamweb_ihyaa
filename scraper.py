@@ -69,11 +69,10 @@ def has_tashkeel(text: str) -> bool:
 
 
 # ══════════════════════════════════════════════════════════════════
-# ١. بناء الفهرس من #bookIndexScroll .tree_label
+# ١. بناء الفهرس — مع جلب الفصول الداخلية تكرارياً
 # ══════════════════════════════════════════════════════════════════
 def fetch_subtree(node_id: str, idfrom: int, idto: int,
                   level: int, seen: set) -> list:
-    """جلب الفصول الداخلية لعنوان رئيسي بشكل تكراري"""
     url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
            f"?id={node_id}&treeLevel={level}&bookid={BOOK_ID}"
            f"&page=bookssubtree&searchtext=&showexact=")
@@ -88,32 +87,31 @@ def fetch_subtree(node_id: str, idfrom: int, idto: int,
         if "tree_label" not in (el.get("class") or []):
             continue
 
-        nid    = (el.get("data-id") or "").strip()
-        fr     = el.get("data-idfrom")
-        to     = el.get("data-idto")
-        lvl    = int(el.get("data-level") or level + 1)
-        a_in   = el.find("a")
-        text   = (a_in.get_text(strip=True) if a_in
-                  else el.get_text(strip=True)).strip()
-        text   = re.sub(r'(التالي|السابق)', '', text).strip()
+        nid  = (el.get("data-id") or "").strip()
+        fr   = el.get("data-idfrom")
+        to   = el.get("data-idto")
+        lvl  = int(el.get("data-level") or level + 1)
+        a_in = el.find("a")
+        text = (a_in.get_text(strip=True) if a_in
+                else el.get_text(strip=True)).strip()
+        text = re.sub(r'(التالي|السابق)', '', text).strip()
 
         if not nid.isdigit() or not text or not fr or nid in seen:
             continue
         seen.add(nid)
 
-        items.append({
+        item = {
             "id":     nid,
             "idfrom": int(fr),
             "idto":   int(to) if to else int(fr),
             "level":  lvl,
             "text":   text[:120],
-        })
+        }
+        items.append(item)
 
-        # إذا له أبناء → اجلبهم تكرارياً
-        node_val = int(to) if to else int(fr)
-        if node_val - int(fr) > 1:
-            children = fetch_subtree(nid, int(fr), node_val,
-                                     lvl, seen)
+        node_to = int(to) if to else int(fr)
+        if node_to - int(fr) > 1:
+            children = fetch_subtree(nid, int(fr), node_to, lvl, seen)
             items.extend(children)
         time.sleep(0.3)
 
@@ -129,10 +127,8 @@ def build_toc() -> list:
 
     toc  = []
     seen = set()
-
     index_scroll = soup.find(id="bookIndexScroll") or soup
 
-    # ── المستوى الأول ─────────────────────────────────────────────
     top_level = []
     for el in index_scroll.find_all(["span", "label"]):
         if not isinstance(el, Tag):
@@ -167,11 +163,10 @@ def build_toc() -> list:
 
     print(f"  المستوى الأول: {len(top_level)} عنصر")
 
-    # ── جلب الفصول الداخلية لكل عنصر رئيسي ──────────────────────
     for item in top_level:
         if item["idto"] - item["idfrom"] < 2:
             continue
-        print(f"  ↳ جلب فصول: {item['text'][:45]}...")
+        print(f"  ↳ {item['text'][:45]}...")
         children = fetch_subtree(
             item["id"], item["idfrom"], item["idto"],
             item["level"], seen
@@ -195,15 +190,15 @@ def build_toc() -> list:
 # ٢. استخراج النص من #pagebody_thaskeel
 # ══════════════════════════════════════════════════════════════════
 def clean_and_extract(soup) -> tuple:
-    """يعيد (paragraphs, footnotes)"""
+    """يعيد (paragraphs, footnotes_unused)"""
 
-    # ── أولاً: احذف عناصر التنقل من كامل الصفحة ─────────────────
+    # احذف عناصر التنقل من كامل الصفحة أولاً
     for el in soup.find_all("h1", class_="booktitle"):
         el.decompose()
     for el in soup.find_all("u", class_=["ul", "ur"]):
         el.decompose()
 
-    # ── الحاوية: pagebody_thaskeel (مشكّل) ───────────────────────
+    # الحاوية: pagebody_thaskeel (مشكّل) أولاً
     container = (
         soup.find(id="pagebody_thaskeel") or
         soup.find(id="pagebody")          or
@@ -213,14 +208,14 @@ def clean_and_extract(soup) -> tuple:
     if not container:
         return [], []
 
-    # ── حذف عناصر الموقع من الحاوية ──────────────────────────────
+    # حذف عناصر الموقع
     for sel in ["script", "style", "noscript",
                 ".hashiya_title", ".quranatt", ".hadithatt",
                 ".namesatt", ".mainsubjatt"]:
         for el in container.select(sel):
             el.decompose()
 
-    # ── النصوص المتوسطة (شعر/مقتبسات) ──────────────────────────
+    # النصوص المتوسطة (شعر/مقتبسات) → علامة خاصة
     for p in container.find_all("p", align="center"):
         if not isinstance(p, Tag):
             continue
@@ -228,12 +223,13 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             p.replace_with(f"\n⟪CENTER⟫{txt}⟪/CENTER⟫\n")
 
-    # ── تحويل أرقام الصفحات إلى فاصل مرئي ──────────────────────
+    # تحويل أرقام الصفحات → فاصل مرئي
     for font in container.find_all("font"):
         if not isinstance(font, Tag):
             continue
-        txt = font.get_text()
-        if (font.get("color") or "") == "blue" and "ص:" in txt:
+        txt   = font.get_text()
+        color = font.get("color") or ""
+        if color == "blue" and "ص:" in txt:
             m = re.search(r'ص:\s*(\d+)', txt)
             if m:
                 font.replace_with(f"\n【 الجزء 1 ـ صفحة {m.group(1)} 】\n")
@@ -242,29 +238,21 @@ def clean_and_extract(soup) -> tuple:
         elif "ص:" in txt:
             font.decompose()
 
-    # ── فك روابط التفسير ─────────────────────────────────────────
+    # فك روابط التفسير
     for a in container.find_all("a", onclick=True):
         a.replace_with(a.get_text())
 
-    # ── mainsubj → حواشي مرقّمة ───────────────────────────────────
-    footnotes  = []
-    fn_counter = [0]
-    fn_map     = {}
-
+    # mainsubj → حذف الرابط الداخلي فقط، إبقاء النص
     for span in container.find_all("span", class_="mainsubj"):
         if not isinstance(span, Tag):
             continue
         txt = span.get_text(strip=True)
-        if not txt:
+        if txt:
+            span.replace_with(f" {txt} ")
+        else:
             span.decompose()
-            continue
-        if txt not in fn_map:
-            fn_counter[0] += 1
-            fn_map[txt]    = fn_counter[0]
-            footnotes.append({"num": fn_counter[0], "text": txt})
-        span.replace_with(f"[{fn_map[txt]}]")
 
-    # ── آيات قرآنية → ﴿ نص ﴾ ─────────────────────────────────────
+    # آيات قرآنية → ﴿ نص ﴾
     for span in container.find_all("span", class_="quran"):
         if not isinstance(span, Tag):
             continue
@@ -272,7 +260,7 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             span.replace_with(f" ﴿ {txt} ﴾ ")
 
-    # ── أحاديث → (( نص )) ────────────────────────────────────────
+    # أحاديث → (( نص ))
     for span in container.find_all("span", class_="hadith"):
         if not isinstance(span, Tag):
             continue
@@ -280,7 +268,7 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             span.replace_with(f" (( {txt} )) ")
 
-    # ── النصوص الخضراء → (( نص )) ────────────────────────────────
+    # النصوص الخضراء → (( نص ))
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -290,7 +278,7 @@ def clean_and_extract(soup) -> tuple:
             if txt:
                 span.replace_with(f" (( {txt} )) ")
 
-    # ── أسماء الأعلام بدون class → (نص) ─────────────────────────
+    # أسماء الأعلام بدون class → (نص)
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -303,7 +291,7 @@ def clean_and_extract(soup) -> tuple:
             else:
                 span.decompose()
 
-    # ── إزالة spans المخفية المتبقية ─────────────────────────────
+    # إزالة spans المخفية المتبقية
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -311,7 +299,7 @@ def clean_and_extract(soup) -> tuple:
         if "display:none" in style:
             span.decompose()
 
-    # ── استخراج النص ─────────────────────────────────────────────
+    # استخراج النص
     for br in container.find_all("br"):
         br.replace_with("\n")
 
@@ -345,7 +333,7 @@ def clean_and_extract(soup) -> tuple:
 
         paragraphs.append({"kind": kind, "text": txt})
 
-    return paragraphs, footnotes
+    return paragraphs, []
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -373,7 +361,7 @@ def fetch_section(item: dict) -> dict | None:
         if not soup:
             return None
 
-    paragraphs, footnotes = clean_and_extract(soup)
+    paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
         return None
 
@@ -383,7 +371,6 @@ def fetch_section(item: dict) -> dict | None:
         "idfrom":     idfrom,
         "idto":       idto,
         "paragraphs": paragraphs,
-        "footnotes":  footnotes,
         "has_quran":  any(p["kind"] == "quran"  for p in paragraphs),
         "has_hadith": any(p["kind"] == "hadith" for p in paragraphs),
     }
@@ -419,14 +406,13 @@ def phase_scan(end_idx=None):
             result = None
 
         if result and result["paragraphs"]:
-            q  = "✅" if result["has_quran"] else ("📖" if result["has_hadith"] else "🔶")
-            fn = f" | ح={len(result['footnotes'])}" if result.get("footnotes") else ""
-            print(f"  {q} {idx:4d} | {result['title'][:50]:50s}{fn}")
+            q = "✅" if result["has_quran"] else ("📖" if result["has_hadith"] else "🔶")
+            print(f"  {q} {idx:4d} | {result['title'][:55]}")
             if item["id"] not in valid_set:
                 valid.append({"id": item["id"], "title": item["text"], "level": item["level"]})
                 valid_set.add(item["id"])
         else:
-            print(f"  ⬜ {idx:4d} | {item['text'][:50]}")
+            print(f"  ⬜ {idx:4d} | {item['text'][:55]}")
 
         if idx % 50 == 0:
             progress["last_idx"] = idx
@@ -451,20 +437,19 @@ def phase_scan(end_idx=None):
 # ٥. BUILD EPUB
 # ══════════════════════════════════════════════════════════════════
 EPUB_CSS = """
-body     { font-family:'Traditional Arabic',serif; direction:rtl;
-           text-align:right; line-height:2.2; margin:1em 1.5em; }
-h1       { color:#8B0000; border-bottom:2px solid #8B0000; margin-top:1.5em; }
-h2       { color:#5A3E1B; margin-top:1.2em; }
-.quran   { color:#006400; font-size:1.1em; margin:.8em 0; padding:.5em;
-           border-right:4px solid #006400; background:#f0fff0; }
-.hadith  { color:#4B0082; margin:.8em 0; padding:.5em;
-           border-right:4px solid #4B0082; background:#f5f0ff; }
-.text    { margin:.5em 0; }
-.center    { text-align:center; font-style:italic; margin:1em 2em;
-             color:#4a0080; border-right:none; }
-.pagebreak { text-align:center; color:#8B0000; font-size:.85em;
-             border-top:1px solid #ccc; border-bottom:1px solid #ccc;
-             margin:1em 0; padding:.3em 0; }
+body      { font-family:'Traditional Arabic',serif; direction:rtl;
+            text-align:right; line-height:2.2; margin:1em 1.5em; }
+h1        { color:#8B0000; border-bottom:2px solid #8B0000; margin-top:1.5em; }
+h2        { color:#5A3E1B; margin-top:1.2em; }
+.quran    { color:#006400; font-size:1.1em; margin:.8em 0; padding:.5em;
+            border-right:4px solid #006400; background:#f0fff0; }
+.hadith   { color:#4B0082; margin:.8em 0; padding:.5em;
+            border-right:4px solid #4B0082; background:#f5f0ff; }
+.text     { margin:.5em 0; }
+.center   { text-align:center; font-style:italic; margin:1em 2em; color:#4a0080; }
+.pagebreak{ text-align:center; color:#8B0000; font-size:.85em;
+            border-top:1px solid #ccc; border-bottom:1px solid #ccc;
+            margin:1em 0; padding:.3em 0; }
 """
 
 def phase_build():
@@ -475,6 +460,7 @@ def phase_build():
     if valid and isinstance(valid[0], int):
         valid = [{"id": str(v), "title": f"قسم {v}", "level": 1} for v in valid]
 
+    toc_data = load_json("output/toc.json", [])
     print(f"=== BUILD EPUB: {len(valid)} فصل ===")
 
     book = epub.EpubBook()
@@ -503,9 +489,10 @@ def phase_build():
     cover.add_item(css_item)
     book.add_item(cover)
 
-    chapters = [cover]
-    spine    = ["nav", cover]
-    toc_epub = []
+    chapters  = [cover]
+    spine     = ["nav", cover]
+    toc_epub  = []
+    id_to_ch  = {}
 
     for i, v in enumerate(valid):
         sec = load_json(f"output/sections/{v['id']}.json", None)
@@ -519,13 +506,8 @@ def phase_build():
                  .replace("<", "&lt;")
                  .replace(">", "&gt;"))
             if p["kind"] == "center":
-                t_clean = (p["text"]
-                           .replace("⟪CENTER⟫", "")
-                           .replace("⟪/CENTER⟫", "")
-                           .replace("&", "&amp;")
-                           .replace("<", "&lt;")
-                           .replace(">", "&gt;"))
-                body += f'<p class="center">{t_clean}</p>\n'
+                t_c = t.replace("⟪CENTER⟫","").replace("⟪/CENTER⟫","")
+                body += f'<p class="center">{t_c}</p>\n'
             elif p["kind"] == "pagebreak":
                 body += f'<p class="pagebreak">{t}</p>\n'
             elif p["kind"] == "quran":
@@ -536,10 +518,6 @@ def phase_build():
                 body += f'<h2>{t}</h2>\n'
             else:
                 body += f'<p class="text">{t}</p>\n'
-
-        # الحواشي محذوفة كلياً
-
-
 
         ch = epub.EpubHtml(
             title=sec["title"],
@@ -558,40 +536,33 @@ def phase_build():
         chapters.append(ch)
         spine.append(ch)
         toc_epub.append(epub.Link(f"s{v['id']}.xhtml", sec["title"], f"s{v['id']}"))
+        id_to_ch[v["id"]] = ch
 
         if i % 100 == 0:
             print(f"  📄 {i}/{len(valid)}")
 
-    # ── بناء TOC هرمي ─────────────────────────────────────────────
-    toc_data  = load_json("output/toc.json", [])
-    id_to_ch  = {v["id"]: ch for v, ch in zip(valid, chapters[1:])}
-
-    def build_epub_toc(items, ch_map):
-        result  = []
-        stack   = []   # (level, epub.Section)
+    # فهرس هرمي
+    def build_epub_toc(items):
+        result, stack = [], []
         for item in items:
-            ch = ch_map.get(item["id"])
-            if not ch:
+            if item["id"] not in id_to_ch:
                 continue
             lnk = epub.Link(f"s{item['id']}.xhtml", item["title"], f"s{item['id']}")
             lvl = item.get("level", 1)
-            if lvl == 1:
-                sec = (lnk, [])
-                result.append(sec)
-                stack = [(1, sec)]
+            entry = (lnk, [])
+            if lvl == 1 or not stack:
+                result.append(entry)
+                stack = [(lvl, entry)]
             else:
-                while stack and stack[-1][0] >= lvl:
+                while len(stack) > 1 and stack[-1][0] >= lvl:
                     stack.pop()
-                if stack:
-                    stack[-1][1][1].append((lnk, []))
-                    stack.append((lvl, stack[-1][1][1][-1]))
-                else:
-                    result.append((lnk, []))
+                stack[-1][1][1].append(entry)
+                stack.append((lvl, entry))
         return result
 
     valid_map  = {v["id"]: v for v in valid}
     toc_items  = [valid_map[t["id"]] for t in toc_data if t["id"] in valid_map]
-    book.toc   = build_epub_toc(toc_items, id_to_ch) or toc_epub
+    book.toc   = build_epub_toc(toc_items) or toc_epub
     book.spine = spine
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
@@ -615,17 +586,13 @@ if __name__ == "__main__":
         toc = build_toc()
         phase_scan(end_idx=min(30, len(toc)))
         phase_build()
-
     elif mode == "scan":
         build_toc()
         phase_scan()
-
     elif mode == "resume":
         phase_scan()
-
     elif mode == "build":
         phase_build()
-
     elif mode == "full":
         build_toc()
         phase_scan()
