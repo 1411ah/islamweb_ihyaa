@@ -156,13 +156,6 @@ def clean_and_extract(soup) -> tuple:
         for el in container.select(sel):
             el.decompose()
 
-    # ── حذف أرقام الصفحات [ ص: N ] ──────────────────────────────
-    for font in container.find_all("font"):
-        if not isinstance(font, Tag):
-            continue
-        if (font.get("color") or "") == "blue" or "ص:" in font.get_text():
-            font.decompose()
-
     # ── فك روابط التفسير ─────────────────────────────────────────
     for a in container.find_all("a", onclick=True):
         a.replace_with(a.get_text())
@@ -210,19 +203,6 @@ def clean_and_extract(soup) -> tuple:
             txt = span.get_text(strip=True).strip('"\'\u201c\u201d\u00ab\u00bb')
             if txt:
                 span.replace_with(f" (( {txt} )) ")
-
-    # ── أسماء الأعلام بدون class → (نص) ─────────────────────────
-    for span in list(container.find_all("span")):
-        if not isinstance(span, Tag):
-            continue
-        cls   = span.get("class") or []
-        style = (span.get("style") or "").replace(" ", "")
-        if not cls and "display:none" not in style:
-            txt = span.get_text(strip=True)
-            if txt:
-                span.replace_with(f" ({txt}) ")
-            else:
-                span.decompose()
 
     # ── إزالة spans المخفية المتبقية ─────────────────────────────
     for span in list(container.find_all("span")):
