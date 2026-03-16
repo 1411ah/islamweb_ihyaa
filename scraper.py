@@ -361,13 +361,28 @@ def fetch_section(item: dict) -> dict | None:
         if not soup:
             return None
 
+    # ── استخرج العنوان الحقيقي من breadcrumb الصفحة ──────────────
+    real_title = title  # افتراضي من toc أو "قسم N"
+    # breadcrumb: آخر عنصر في itemprop="itemListElement" هو العنوان الحقيقي
+    crumbs = soup.find_all(
+        lambda t: isinstance(t, Tag) and
+        t.get("itemprop") == "itemListElement"
+    )
+    if crumbs:
+        last = crumbs[-1]
+        span = last.find("span", itemprop="name")
+        if span:
+            txt = span.get_text(strip=True)
+            if txt and txt not in REPEATED_TEXTS:
+                real_title = txt
+
     paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
         return None
 
     result = {
         "node_id":    nid,
-        "title":      title,
+        "title":      real_title,
         "idfrom":     idfrom,
         "idto":       idto,
         "paragraphs": paragraphs,
@@ -378,58 +393,78 @@ def fetch_section(item: dict) -> dict | None:
     return result
 
 
-# ══════════════════════════════════════════════════════════════════
-# ٤. SCAN
-# ══════════════════════════════════════════════════════════════════
-def phase_scan(end_idx=None):
-    toc = load_json("output/toc.json", [])
-    if not toc:
-        print("✗ toc.json فارغ"); return []
+FIRST_ID = 1
+LAST_ID  = 8173
 
+# ══════════════════════════════════════════════════════════════════
+# ٤. SCAN — يمر على كل node ID من 1 إلى 8173
+# ══════════════════════════════════════════════════════════════════
+def phase_scan(end_id=None):
     progress_file = "output/scan_progress.json"
     valid_file    = "output/valid_nodes.json"
-    progress  = load_json(progress_file, {"last_idx": -1})
+    progress  = load_json(progress_file, {"last_id": FIRST_ID - 1})
     valid     = load_json(valid_file, [])
     valid_set = set(v["id"] for v in valid)
 
-    start = progress["last_idx"] + 1
-    end   = end_idx or len(toc)
-    print(f"=== SCAN {start}→{end} ({len(toc)} في الفهرس) ===")
+    start = progress["last_id"] + 1
+    end   = end_id or LAST_ID
+    total = end - start + 1
+    print(f"=== SCAN IDs {start}→{end} ({total} طلب) ===")
 
-    for idx in range(start, min(end, len(toc))):
-        item = toc[idx]
+    for nid in range(start, end + 1):
+        item = {
+            "id":     str(nid),
+            "idfrom": nid,
+            "idto":   nid,
+            "level":  1,
+            "text":   f"قسم {nid}",
+        }
+
+        # حاول جلب العنوان من toc.json إن وُجد
+        toc = load_json("output/toc.json", [])
+        toc_map = {int(t["id"]): t for t in toc}
+        if nid in toc_map:
+            item = toc_map[nid]
+
         try:
             result = fetch_section(item)
         except Exception as e:
-            print(f"  ✗ خطأ idx={idx} id={item.get('id')}: {e}")
+            print(f"  ✗ id={nid}: {e}")
             traceback.print_exc()
             result = None
 
         if result and result["paragraphs"]:
             q = "✅" if result["has_quran"] else ("📖" if result["has_hadith"] else "🔶")
-            print(f"  {q} {idx:4d} | {result['title'][:55]}")
-            if item["id"] not in valid_set:
-                valid.append({"id": item["id"], "title": item["text"], "level": item["level"]})
-                valid_set.add(item["id"])
+            print(f"  {q} {nid:5d} | {result['title'][:55]}")
+            if str(nid) not in valid_set:
+                valid.append({
+                    "id":    str(nid),
+                    "title": result["title"],  # العنوان الحقيقي من الصفحة
+                    "level": item.get("level", 1),
+                })
+                valid_set.add(str(nid))
         else:
-            print(f"  ⬜ {idx:4d} | {item['text'][:55]}")
+            print(f"  ⬜ {nid:5d}")
 
-        if idx % 50 == 0:
-            progress["last_idx"] = idx
+        # حفظ كل 50 node
+        if nid % 50 == 0:
+            progress["last_id"] = nid
             save_json(progress_file, progress)
             save_json(valid_file, valid)
+            pct = round((nid - start) / total * 100)
+            print(f"  💾 checkpoint {nid}/{end} ({pct}%) | صالح: {len(valid)}")
             os.system(
                 'git config user.name "github-actions[bot]" && '
                 'git config user.email "github-actions[bot]@users.noreply.github.com" && '
                 'git add output/ && git diff --cached --quiet || '
-                f'git commit -m "scan checkpoint {idx}/{len(toc)}" && git push'
+                f'git commit -m "scan {nid}/{end} ({pct}%)" && git push'
             )
         time.sleep(DELAY)
 
-    progress["last_idx"] = end - 1
+    progress["last_id"] = end
     save_json(progress_file, progress)
     save_json(valid_file, valid)
-    print(f"\n✅ SCAN | صالح: {len(valid)}/{len(toc)}")
+    print(f"\n✅ SCAN اكتمل | صالح: {len(valid)}/{total}")
     return valid
 
 
@@ -583,8 +618,8 @@ if __name__ == "__main__":
     set_tashkeel_cookie()
 
     if mode == "test":
-        toc = build_toc()
-        phase_scan(end_idx=min(30, len(toc)))
+        build_toc()
+        phase_scan(end_id=FIRST_ID + 29)
         phase_build()
     elif mode == "scan":
         build_toc()
