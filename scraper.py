@@ -156,6 +156,13 @@ def clean_and_extract(soup) -> tuple:
         for el in container.select(sel):
             el.decompose()
 
+    # ── حذف أرقام الصفحات [ ص: N ] ──────────────────────────────
+    for font in container.find_all("font"):
+        if not isinstance(font, Tag):
+            continue
+        if (font.get("color") or "") == "blue" or "ص:" in font.get_text():
+            font.decompose()
+
     # ── فك روابط التفسير ─────────────────────────────────────────
     for a in container.find_all("a", onclick=True):
         a.replace_with(a.get_text())
@@ -203,6 +210,19 @@ def clean_and_extract(soup) -> tuple:
             txt = span.get_text(strip=True).strip('"\'\u201c\u201d\u00ab\u00bb')
             if txt:
                 span.replace_with(f" (( {txt} )) ")
+
+    # ── أسماء الأعلام بدون class → (نص) ─────────────────────────
+    for span in list(container.find_all("span")):
+        if not isinstance(span, Tag):
+            continue
+        cls   = span.get("class") or []
+        style = (span.get("style") or "").replace(" ", "")
+        if not cls and "display:none" not in style:
+            txt = span.get_text(strip=True)
+            if txt:
+                span.replace_with(f" ({txt}) ")
+            else:
+                span.decompose()
 
     # ── إزالة spans المخفية المتبقية ─────────────────────────────
     for span in list(container.find_all("span")):
@@ -357,9 +377,9 @@ h2       { color:#5A3E1B; margin-top:1.2em; }
 .hadith  { color:#4B0082; margin:.8em 0; padding:.5em;
            border-right:4px solid #4B0082; background:#f5f0ff; }
 .text    { margin:.5em 0; }
-.footnotes { border-top:1px solid #ccc; margin-top:2em; padding-top:.5em;
-             font-size:.9em; color:#555; }
-.fn-item { margin:.3em 0; }
+.footnotes  { border-top:2px solid #8B0000; margin-top:2em; padding-top:.8em; }
+.fn-title   { font-weight:bold; color:#8B0000; margin-bottom:.5em; }
+.fn-item    { font-size:.9em; color:#444; margin:.4em 0; line-height:1.8; }
 """
 
 def phase_build():
@@ -385,12 +405,17 @@ def phase_build():
     book.add_item(css_item)
 
     cover = epub.EpubHtml(title="الغلاف", file_name="cover.xhtml", lang="ar")
-    cover.content = """<html><body dir="rtl" style="text-align:center">
+    cover.content = """<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" dir="rtl">
+<head><title>الغلاف</title></head>
+<body dir="rtl" style="text-align:center">
     <h1 style="color:#8B0000;margin-top:3em">
         إتحاف السادة المتقين<br/>بشرح إحياء علوم الدين
     </h1>
     <p style="font-size:1.3em">الإمام مرتضى الزبيدي</p>
-    </body></html>"""
+</body>
+</html>"""
     cover.add_item(css_item)
     book.add_item(cover)
 
@@ -420,6 +445,7 @@ def phase_build():
 
         if sec.get("footnotes"):
             body += '<div class="footnotes">\n'
+            body += '<p class="fn-title">الحواشي والمصطلحات</p>\n'
             for fn in sec["footnotes"]:
                 t = (fn["text"]
                      .replace("&", "&amp;")
@@ -433,7 +459,12 @@ def phase_build():
             file_name=f"s{v['id']}.xhtml",
             lang="ar"
         )
-        ch.content = f'<html><body dir="rtl">{body}</body></html>'
+        ch.content = f'''<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" dir="rtl">
+<head><title>{sec["title"]}</title></head>
+<body dir="rtl">{body}</body>
+</html>'''
         ch.add_item(css_item)
         book.add_item(ch)
         chapters.append(ch)
@@ -443,7 +474,36 @@ def phase_build():
         if i % 100 == 0:
             print(f"  📄 {i}/{len(valid)}")
 
-    book.toc   = toc_epub
+    # ── بناء TOC هرمي ─────────────────────────────────────────────
+    toc_data  = load_json("output/toc.json", [])
+    id_to_ch  = {v["id"]: ch for v, ch in zip(valid, chapters[1:])}
+
+    def build_epub_toc(items, ch_map):
+        result  = []
+        stack   = []   # (level, epub.Section)
+        for item in items:
+            ch = ch_map.get(item["id"])
+            if not ch:
+                continue
+            lnk = epub.Link(f"s{item['id']}.xhtml", item["title"], f"s{item['id']}")
+            lvl = item.get("level", 1)
+            if lvl == 1:
+                sec = (lnk, [])
+                result.append(sec)
+                stack = [(1, sec)]
+            else:
+                while stack and stack[-1][0] >= lvl:
+                    stack.pop()
+                if stack:
+                    stack[-1][1][1].append((lnk, []))
+                    stack.append((lvl, stack[-1][1][1][-1]))
+                else:
+                    result.append((lnk, []))
+        return result
+
+    valid_map  = {v["id"]: v for v in valid}
+    toc_items  = [valid_map[t["id"]] for t in toc_data if t["id"] in valid_map]
+    book.toc   = build_epub_toc(toc_items, id_to_ch) or toc_epub
     book.spine = spine
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
