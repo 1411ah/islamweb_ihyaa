@@ -220,11 +220,26 @@ def clean_and_extract(soup) -> tuple:
         for el in container.select(sel):
             el.decompose()
 
-    # ── حذف أرقام الصفحات [ ص: N ] ──────────────────────────────
+    # ── النصوص المتوسطة (شعر/مقتبسات) ──────────────────────────
+    for p in container.find_all("p", align="center"):
+        if not isinstance(p, Tag):
+            continue
+        txt = p.get_text(strip=True)
+        if txt:
+            p.replace_with(f"\n⟪CENTER⟫{txt}⟪/CENTER⟫\n")
+
+    # ── تحويل أرقام الصفحات إلى فاصل مرئي ──────────────────────
     for font in container.find_all("font"):
         if not isinstance(font, Tag):
             continue
-        if (font.get("color") or "") == "blue" or "ص:" in font.get_text():
+        txt = font.get_text()
+        if (font.get("color") or "") == "blue" and "ص:" in txt:
+            m = re.search(r'ص:\s*(\d+)', txt)
+            if m:
+                font.replace_with(f"\n【 الجزء 1 ـ صفحة {m.group(1)} 】\n")
+            else:
+                font.decompose()
+        elif "ص:" in txt:
             font.decompose()
 
     # ── فك روابط التفسير ─────────────────────────────────────────
@@ -315,7 +330,11 @@ def clean_and_extract(soup) -> tuple:
             continue
         seen.add(txt)
 
-        if "﴿" in txt and "﴾" in txt:
+        if txt.startswith("⟪CENTER⟫") and txt.endswith("⟪/CENTER⟫"):
+            kind = "center"
+        elif txt.startswith("【") and txt.endswith("】"):
+            kind = "pagebreak"
+        elif "﴿" in txt and "﴾" in txt:
             kind = "quran"
         elif "(( " in txt and " ))" in txt:
             kind = "hadith"
@@ -441,9 +460,11 @@ h2       { color:#5A3E1B; margin-top:1.2em; }
 .hadith  { color:#4B0082; margin:.8em 0; padding:.5em;
            border-right:4px solid #4B0082; background:#f5f0ff; }
 .text    { margin:.5em 0; }
-.footnotes  { border-top:2px solid #8B0000; margin-top:2em; padding-top:.8em; }
-.fn-title   { font-weight:bold; color:#8B0000; margin-bottom:.5em; }
-.fn-item    { font-size:.9em; color:#444; margin:.4em 0; line-height:1.8; }
+.center    { text-align:center; font-style:italic; margin:1em 2em;
+             color:#4a0080; border-right:none; }
+.pagebreak { text-align:center; color:#8B0000; font-size:.85em;
+             border-top:1px solid #ccc; border-bottom:1px solid #ccc;
+             margin:1em 0; padding:.3em 0; }
 """
 
 def phase_build():
@@ -497,7 +518,17 @@ def phase_build():
                  .replace("&", "&amp;")
                  .replace("<", "&lt;")
                  .replace(">", "&gt;"))
-            if p["kind"] == "quran":
+            if p["kind"] == "center":
+                t_clean = (p["text"]
+                           .replace("⟪CENTER⟫", "")
+                           .replace("⟪/CENTER⟫", "")
+                           .replace("&", "&amp;")
+                           .replace("<", "&lt;")
+                           .replace(">", "&gt;"))
+                body += f'<p class="center">{t_clean}</p>\n'
+            elif p["kind"] == "pagebreak":
+                body += f'<p class="pagebreak">{t}</p>\n'
+            elif p["kind"] == "quran":
                 body += f'<p class="quran">{t}</p>\n'
             elif p["kind"] == "hadith":
                 body += f'<p class="hadith">{t}</p>\n'
@@ -506,16 +537,9 @@ def phase_build():
             else:
                 body += f'<p class="text">{t}</p>\n'
 
-        if sec.get("footnotes"):
-            body += '<div class="footnotes">\n'
-            body += '<p class="fn-title">الحواشي والمصطلحات</p>\n'
-            for fn in sec["footnotes"]:
-                t = (fn["text"]
-                     .replace("&", "&amp;")
-                     .replace("<", "&lt;")
-                     .replace(">", "&gt;"))
-                body += f'<p class="fn-item">[{fn["num"]}] {t}</p>\n'
-            body += '</div>\n'
+        # الحواشي محذوفة كلياً
+
+
 
         ch = epub.EpubHtml(
             title=sec["title"],
