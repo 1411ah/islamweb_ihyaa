@@ -71,7 +71,36 @@ def has_tashkeel(text: str) -> bool:
 # ══════════════════════════════════════════════════════════════════
 # ١. بناء الفهرس — مع جلب الفصول الداخلية تكرارياً
 # ══════════════════════════════════════════════════════════════════
-def build_toc() -> list:
+def build_toc_from_scan() -> list:
+    """
+    بناء الفهرس من ملفات sections المحفوظة
+    كل section فيها العنوان الحقيقي من breadcrumb الصفحة
+    """
+    print("=== بناء الفهرس من بيانات الـ scan ===")
+    sections_dir = "output/sections"
+    if not os.path.exists(sections_dir):
+        return []
+
+    toc = []
+    for fname in sorted(os.listdir(sections_dir),
+                        key=lambda f: int(f.replace(".json","")) if f.replace(".json","").isdigit() else 0):
+        if not fname.endswith(".json"):
+            continue
+        nid = fname.replace(".json","")
+        sec = load_json(f"{sections_dir}/{fname}", None)
+        if not sec:
+            continue
+        toc.append({
+            "id":     nid,
+            "idfrom": sec.get("idfrom", int(nid)),
+            "idto":   sec.get("idto",   int(nid)),
+            "level":  1,   # مستوى افتراضي — يُحدَّث من breadcrumb
+            "text":   sec.get("title", f"قسم {nid}"),
+        })
+
+    print(f"✓ فهرس من scan: {len(toc)} عنصر")
+    save_json("output/toc_from_scan.json", toc)
+    return toc
     print("=== بناء الفهرس ===")
 
     # ── المستوى الأول من الصفحة الرئيسية ─────────────────────────
@@ -499,7 +528,9 @@ def phase_build():
     if valid and isinstance(valid[0], int):
         valid = [{"id": str(v), "title": f"قسم {v}", "level": 1} for v in valid]
 
-    toc_data = load_json("output/toc.json", [])
+    # استخدم toc_from_scan إن وُجد (أشمل)، وإلا toc.json
+    toc_data = (load_json("output/toc_from_scan.json", None) or
+                load_json("output/toc.json", []))
     print(f"=== BUILD EPUB: {len(valid)} فصل ===")
 
     book = epub.EpubBook()
@@ -624,6 +655,7 @@ if __name__ == "__main__":
     if mode == "test":
         build_toc()
         phase_scan(end_id=FIRST_ID + 29)
+        build_toc_from_scan()
         phase_build()
     elif mode == "scan":
         build_toc()
@@ -631,8 +663,10 @@ if __name__ == "__main__":
     elif mode == "resume":
         phase_scan()
     elif mode == "build":
+        build_toc_from_scan()
         phase_build()
     elif mode == "full":
         build_toc()
         phase_scan()
+        build_toc_from_scan()
         phase_build()
