@@ -4,27 +4,1911 @@
     "idfrom": 3,
     "idto": 41,
     "level": 1,
-    "text": "الأحوال المتعلقة بمصنف هذا الكتاب"
+    "text": "الأحوال المتعلقة بمصنف هذا الكتاب",
+    "dhref": "nindex.php?id=4&treeLevel=1&bookid=411&page=bookssubtree&searchtext=&showexact="
   },
   {
     "id": "30",
     "idfrom": 42,
     "idto": 3967,
     "level": 1,
-    "text": "ربع العبادات"
+    "text": "ربع العبادات",
+    "dhref": "nindex.php?id=30&treeLevel=1&bookid=411&page=bookssubtree&searchtext=&showexact="
+  },
+  {
+    "id": "31",
+    "idfrom": 42,
+    "idto": 428,
+    "level": 2,
+    "text": "كتاب العلم",
+    "dhref": "nindex.php?id=31&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "32",
+    "idfrom": 42,
+    "idto": 95,
+    "level": 3,
+    "text": "الباب الأول في فضل العلم والتعلم والتعليم وشواهده من العقل و",
+    "dhref": "nindex.php?id=32&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "36",
+    "idfrom": 96,
+    "idto": 168,
+    "level": 3,
+    "text": "الباب الثاني في بيان العلم المحمود والمذموم وأقسامهما وأحكام",
+    "dhref": "nindex.php?id=36&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "39",
+    "idfrom": 169,
+    "idto": 230,
+    "level": 3,
+    "text": "الباب الثالث فيما تعده العامة وتحسبه من العلوم المحمودة",
+    "dhref": "nindex.php?id=39&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "41",
+    "idfrom": 191,
+    "idto": 220,
+    "level": 4,
+    "text": "بيان ما بدل من ألفاظ العلوم",
+    "dhref": "nindex.php?id=41&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "47",
+    "idfrom": 231,
+    "idto": 264,
+    "level": 3,
+    "text": "الباب الرابع في سبب إقبال الخلق على علم الخلاف",
+    "dhref": "nindex.php?id=47&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "48",
+    "idfrom": 233,
+    "idto": 248,
+    "level": 4,
+    "text": "بيان التلبيس",
+    "dhref": "nindex.php?id=48&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "51",
+    "idfrom": 265,
+    "idto": 315,
+    "level": 3,
+    "text": "الباب الخامس في بيان آداب المتعلم والمعلم",
+    "dhref": "nindex.php?id=51&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "52",
+    "idfrom": 265,
+    "idto": 297,
+    "level": 4,
+    "text": "آداب المتعلم ووظائفه",
+    "dhref": "nindex.php?id=52&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "62",
+    "idfrom": 298,
+    "idto": 315,
+    "level": 4,
+    "text": "بيان وظائف المعلم المرشد",
+    "dhref": "nindex.php?id=62&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "72",
+    "idfrom": 316,
+    "idto": 400,
+    "level": 3,
+    "text": "الباب السادس في آفات العلم",
+    "dhref": "nindex.php?id=72&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "74",
+    "idfrom": 322,
+    "idto": 400,
+    "level": 4,
+    "text": "علامات علماء الآخرة",
+    "dhref": "nindex.php?id=74&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "81",
+    "idfrom": 401,
+    "idto": 425,
+    "level": 3,
+    "text": "الباب السابع في العقل وشرفه وحقيقته وأقسامه",
+    "dhref": "nindex.php?id=81&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "86",
+    "idfrom": 429,
+    "idto": 1020,
+    "level": 2,
+    "text": "كتاب قواعد العقائد",
+    "dhref": "nindex.php?id=86&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "88",
+    "idfrom": 430,
+    "idto": 458,
+    "level": 3,
+    "text": "مقدمة الكتاب",
+    "dhref": "nindex.php?id=88&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "89",
+    "idfrom": 430,
+    "idto": 438,
+    "level": 4,
+    "text": "الفصل الأول في ترجمة إمامي السنة أبي الحسن الأشعري وأبي منصو",
+    "dhref": "nindex.php?id=89&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "98",
+    "idfrom": 459,
+    "idto": 545,
+    "level": 3,
+    "text": "الفصل الأول في ترجمة عقيدة أهل السنة في كلمتي الشهادة",
+    "dhref": "nindex.php?id=98&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "99",
+    "idfrom": 489,
+    "idto": 508,
+    "level": 4,
+    "text": "بيان صفات المعاني",
+    "dhref": "nindex.php?id=99&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "108",
+    "idfrom": 525,
+    "idto": 543,
+    "level": 4,
+    "text": "بيان السمعيات",
+    "dhref": "nindex.php?id=108&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "120",
+    "idfrom": 652,
+    "idto": 941,
+    "level": 3,
+    "text": "الفصل الثالث بيان لوامع الأدلة للعقيدة التي ترجمناها بالقدس",
+    "dhref": "nindex.php?id=120&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "121",
+    "idfrom": 654,
+    "idto": 819,
+    "level": 4,
+    "text": "أركان الإيمان",
+    "dhref": "nindex.php?id=121&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "122",
+    "idfrom": 654,
+    "idto": 774,
+    "level": 5,
+    "text": "الركن الأول معرفة ذات الله عز وجل",
+    "dhref": "nindex.php?id=122&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "133",
+    "idfrom": 775,
+    "idto": 795,
+    "level": 5,
+    "text": "الركن الثاني العلم بصفات الله تعالى",
+    "dhref": "nindex.php?id=133&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "144",
+    "idfrom": 820,
+    "idto": 907,
+    "level": 4,
+    "text": "الركن الثالث العلم بأفعال الله تعالى ومداره على عشرة أصول",
+    "dhref": "nindex.php?id=144&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "156",
+    "idfrom": 908,
+    "idto": 941,
+    "level": 4,
+    "text": "الركن الرابع في السمعيات",
+    "dhref": "nindex.php?id=156&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "167",
+    "idfrom": 942,
+    "idto": 1008,
+    "level": 3,
+    "text": "الفصل الرابع في بيان الإيمان والإسلام وبيان ما بينهما من الا",
+    "dhref": "nindex.php?id=167&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "171",
+    "idfrom": 1009,
+    "idto": 1012,
+    "level": 3,
+    "text": "النوع الثاني من الفصول الثلاثة في ذكر ما له تعلق بالإيمان",
+    "dhref": "nindex.php?id=171&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "175",
+    "idfrom": 1013,
+    "idto": 1020,
+    "level": 3,
+    "text": "النوع الرابع من الفصول الثلاثة في بيان مسائل اعتقادية",
+    "dhref": "nindex.php?id=175&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "184",
+    "idfrom": 1021,
+    "idto": 1326,
+    "level": 2,
+    "text": "كتاب أسرار الطهارة ومهماتها",
+    "dhref": "nindex.php?id=184&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "199",
+    "idfrom": 1057,
+    "idto": 1103,
+    "level": 3,
+    "text": "القسم الأول في طهارة الخبث",
+    "dhref": "nindex.php?id=199&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "203",
+    "idfrom": 1104,
+    "idto": 1326,
+    "level": 3,
+    "text": "القسم الثاني في بيان طهارة الأحداث",
+    "dhref": "nindex.php?id=203&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "208",
+    "idfrom": 1182,
+    "idto": 1213,
+    "level": 4,
+    "text": "فضيلة الوضوء",
+    "dhref": "nindex.php?id=208&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "214",
+    "idfrom": 1214,
+    "idto": 1243,
+    "level": 4,
+    "text": "الأغسال المندوبة",
+    "dhref": "nindex.php?id=214&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "216",
+    "idfrom": 1244,
+    "idto": 1261,
+    "level": 4,
+    "text": "القسم الثالث من النظافة",
+    "dhref": "nindex.php?id=216&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "219",
+    "idfrom": 1262,
+    "idto": 1326,
+    "level": 4,
+    "text": "آداب دخول الحمام",
+    "dhref": "nindex.php?id=219&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "222",
+    "idfrom": 1327,
+    "idto": 2559,
+    "level": 2,
+    "text": "كتاب أسرار الصلاة ومهماتها",
+    "dhref": "nindex.php?id=222&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "225",
+    "idfrom": 1331,
+    "idto": 1387,
+    "level": 3,
+    "text": "الباب الأول في فضائل الصلوات",
+    "dhref": "nindex.php?id=225&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "233",
+    "idfrom": 1388,
+    "idto": 1574,
+    "level": 3,
+    "text": "الباب الثاني في كيفية الأعمال الظاهرة من الصلاة",
+    "dhref": "nindex.php?id=233&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "234",
+    "idfrom": 1388,
+    "idto": 1405,
+    "level": 4,
+    "text": "أدب القيام قبل الدخول في الصلاة",
+    "dhref": "nindex.php?id=234&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "239",
+    "idfrom": 1406,
+    "idto": 1432,
+    "level": 4,
+    "text": "القراءة في الصلاة",
+    "dhref": "nindex.php?id=239&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "243",
+    "idfrom": 1459,
+    "idto": 1499,
+    "level": 4,
+    "text": "السجود",
+    "dhref": "nindex.php?id=243&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "248",
+    "idfrom": 1500,
+    "idto": 1546,
+    "level": 4,
+    "text": "التشهد",
+    "dhref": "nindex.php?id=248&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "260",
+    "idfrom": 1547,
+    "idto": 1559,
+    "level": 4,
+    "text": "الفرائض والسنن",
+    "dhref": "nindex.php?id=260&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "267",
+    "idfrom": 1560,
+    "idto": 1572,
+    "level": 4,
+    "text": "سنن الصلاة",
+    "dhref": "nindex.php?id=267&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "274",
+    "idfrom": 1575,
+    "idto": 1732,
+    "level": 3,
+    "text": "الباب الثالث في الشروط الباطنة من أعمال القلب",
+    "dhref": "nindex.php?id=274&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "278",
+    "idfrom": 1619,
+    "idto": 1636,
+    "level": 4,
+    "text": "بيان تفصيل ما ينبغي أن يحضر في القلب عند مباشرة كل ركن",
+    "dhref": "nindex.php?id=278&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "291",
+    "idfrom": 1637,
+    "idto": 1722,
+    "level": 4,
+    "text": "تفصيل ما ينبغي أن يحضر في القلب عند كل شرط وركن على الترتيب",
+    "dhref": "nindex.php?id=291&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "299",
+    "idfrom": 1733,
+    "idto": 1837,
+    "level": 3,
+    "text": "الباب الرابع في الإمامة والقدوة",
+    "dhref": "nindex.php?id=299&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "301",
+    "idfrom": 1735,
+    "idto": 1740,
+    "level": 4,
+    "text": "وظائف الإمام قبل الصلاة",
+    "dhref": "nindex.php?id=301&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "304",
+    "idfrom": 1741,
+    "idto": 1753,
+    "level": 4,
+    "text": "فصل أيهم يقدم في الإمامة",
+    "dhref": "nindex.php?id=304&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "307",
+    "idfrom": 1754,
+    "idto": 1765,
+    "level": 4,
+    "text": "فصل إمامة الفاسق",
+    "dhref": "nindex.php?id=307&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "310",
+    "idfrom": 1766,
+    "idto": 1808,
+    "level": 4,
+    "text": "وظائف القراءة للإمام",
+    "dhref": "nindex.php?id=310&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "318",
+    "idfrom": 1809,
+    "idto": 1821,
+    "level": 4,
+    "text": "وظائف الإمام في أركان الصلاة",
+    "dhref": "nindex.php?id=318&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "324",
+    "idfrom": 1838,
+    "idto": 2075,
+    "level": 3,
+    "text": "الباب الخامس في فضل الجمعة وآدابها وسننها وشروطها",
+    "dhref": "nindex.php?id=324&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "327",
+    "idfrom": 1851,
+    "idto": 1858,
+    "level": 4,
+    "text": "بيان شروط الجمعة",
+    "dhref": "nindex.php?id=327&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "331",
+    "idfrom": 1859,
+    "idto": 1865,
+    "level": 4,
+    "text": "فصل الشرط لانعقاد أداء صلاة الجمعة بالثلاثة",
+    "dhref": "nindex.php?id=331&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "334",
+    "idfrom": 1866,
+    "idto": 1875,
+    "level": 4,
+    "text": "فصل إقامة الجمعة في مصر في مواضع",
+    "dhref": "nindex.php?id=334&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "337",
+    "idfrom": 1877,
+    "idto": 1891,
+    "level": 4,
+    "text": "فصل خطبة الجمعة هل هي شرط في صحة الصلاة وركن من أركانها أم ل",
+    "dhref": "nindex.php?id=337&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "344",
+    "idfrom": 1930,
+    "idto": 1936,
+    "level": 4,
+    "text": "بيان آداب الجمعة على ترتيب العادة",
+    "dhref": "nindex.php?id=344&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "351",
+    "idfrom": 2019,
+    "idto": 2075,
+    "level": 4,
+    "text": "بيان الآداب والسنن الخارجة عن الترتيب  الذي يعم جميع ا",
+    "dhref": "nindex.php?id=351&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "360",
+    "idfrom": 2076,
+    "idto": 2145,
+    "level": 3,
+    "text": "الباب السادس في ذكر مسائل متفرقة",
+    "dhref": "nindex.php?id=360&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "378",
+    "idfrom": 2146,
+    "idto": 2559,
+    "level": 3,
+    "text": "الباب السابع في النوافل من الصلوات",
+    "dhref": "nindex.php?id=378&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "380",
+    "idfrom": 2150,
+    "idto": 2559,
+    "level": 4,
+    "text": "أقسام النوافل باعتبار الأوقات",
+    "dhref": "nindex.php?id=380&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "381",
+    "idfrom": 2150,
+    "idto": 2258,
+    "level": 5,
+    "text": "القسم الأول ما يتكرر بتكرر الأيام والليالي",
+    "dhref": "nindex.php?id=381&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "403",
+    "idfrom": 2259,
+    "idto": 2286,
+    "level": 5,
+    "text": "القسم الثاني ما يتكرر بتكرر الأسابيع",
+    "dhref": "nindex.php?id=403&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "418",
+    "idfrom": 2287,
+    "idto": 2398,
+    "level": 5,
+    "text": "القسم الثالث ما يتكرر السنين",
+    "dhref": "nindex.php?id=418&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "437",
+    "idfrom": 2399,
+    "idto": 2559,
+    "level": 5,
+    "text": "القسم الرابع من النوافل ما يتعلق بأسباب عارضة ولا يتعلق بالم",
+    "dhref": "nindex.php?id=437&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "466",
+    "idfrom": 2560,
+    "idto": 2969,
+    "level": 2,
+    "text": "كتاب أسرار الزكاة",
+    "dhref": "nindex.php?id=466&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "472",
+    "idfrom": 2584,
+    "idto": 2775,
+    "level": 3,
+    "text": "الفصل الأول في أنواع الزكاة وأسباب وجوبها والزكوات باعتبار م",
+    "dhref": "nindex.php?id=472&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "473",
+    "idfrom": 2584,
+    "idto": 2641,
+    "level": 4,
+    "text": "النوع الأول زكاة النعم",
+    "dhref": "nindex.php?id=473&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "485",
+    "idfrom": 2688,
+    "idto": 2702,
+    "level": 4,
+    "text": "النوع السادس صدقة الفطر",
+    "dhref": "nindex.php?id=485&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "493",
+    "idfrom": 2704,
+    "idto": 2718,
+    "level": 4,
+    "text": "كيفية قسمة زكاة الفطر",
+    "dhref": "nindex.php?id=493&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "496",
+    "idfrom": 2719,
+    "idto": 2739,
+    "level": 4,
+    "text": "صدقة فطر العبد المشترك",
+    "dhref": "nindex.php?id=496&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "512",
+    "idfrom": 2740,
+    "idto": 2775,
+    "level": 4,
+    "text": "أحكام فقهية ومسائل شرعية",
+    "dhref": "nindex.php?id=512&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "543",
+    "idfrom": 2776,
+    "idto": 2882,
+    "level": 3,
+    "text": "الفصل الثاني في الأداء وشروطه الباطنة والظاهرة",
+    "dhref": "nindex.php?id=543&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "553",
+    "idfrom": 2819,
+    "idto": 2882,
+    "level": 4,
+    "text": "بيان دقائق الآداب الباطنة في الزكاة",
+    "dhref": "nindex.php?id=553&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "561",
+    "idfrom": 2869,
+    "idto": 2882,
+    "level": 5,
+    "text": "الوظيفة الثامنة أن يطلب لصدقته من تزكو به الصدقة",
+    "dhref": "nindex.php?id=561&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "568",
+    "idfrom": 2883,
+    "idto": 2943,
+    "level": 3,
+    "text": "الفصل الثالث في القابض للصدقة وأسباب استحقاقه ووظائف قبضه",
+    "dhref": "nindex.php?id=568&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "570",
+    "idfrom": 2890,
+    "idto": 2927,
+    "level": 4,
+    "text": "الأصناف الثمانية المستحقة للزكاة",
+    "dhref": "nindex.php?id=570&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "586",
+    "idfrom": 2928,
+    "idto": 2943,
+    "level": 4,
+    "text": "بيان وظائف القابض وهي خمسة",
+    "dhref": "nindex.php?id=586&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "592",
+    "idfrom": 2944,
+    "idto": 2969,
+    "level": 3,
+    "text": "الفصل الرابع في صدقة التطوع وفضلها وآداب أخذها وإعطائها",
+    "dhref": "nindex.php?id=592&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "598",
+    "idfrom": 2970,
+    "idto": 3146,
+    "level": 2,
+    "text": "كتاب أسرار الصوم",
+    "dhref": "nindex.php?id=598&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "601",
+    "idfrom": 2982,
+    "idto": 3108,
+    "level": 3,
+    "text": "الفصل الأول في الواجبات والسنن الظاهرة واللوازم بإفساده",
+    "dhref": "nindex.php?id=601&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "602",
+    "idfrom": 2982,
+    "idto": 3034,
+    "level": 4,
+    "text": "الواجبات الظاهرة للصوم",
+    "dhref": "nindex.php?id=602&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "608",
+    "idfrom": 3035,
+    "idto": 3066,
+    "level": 4,
+    "text": "لوازم الإفطار وموجباته",
+    "dhref": "nindex.php?id=608&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "612",
+    "idfrom": 3067,
+    "idto": 3108,
+    "level": 4,
+    "text": "سنن الصيام",
+    "dhref": "nindex.php?id=612&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "619",
+    "idfrom": 3109,
+    "idto": 3124,
+    "level": 3,
+    "text": "الفصل الثاني في أسرار الصوم وشروطه الباطنة",
+    "dhref": "nindex.php?id=619&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "626",
+    "idfrom": 3125,
+    "idto": 3146,
+    "level": 3,
+    "text": "الفصل الثالث في التطوع بالصيام وترتيب الأوراد فيها",
+    "dhref": "nindex.php?id=626&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "637",
+    "idfrom": 3147,
+    "idto": 3437,
+    "level": 2,
+    "text": "كتاب أسرار الحج",
+    "dhref": "nindex.php?id=637&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "639",
+    "idfrom": 3149,
+    "idto": 3251,
+    "level": 3,
+    "text": "الباب الأول فضائل الحج ومكة والمدينة",
+    "dhref": "nindex.php?id=639&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "640",
+    "idfrom": 3149,
+    "idto": 3172,
+    "level": 4,
+    "text": "الفصل الأول في فضائل الحج",
+    "dhref": "nindex.php?id=640&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "646",
+    "idfrom": 3173,
+    "idto": 3251,
+    "level": 4,
+    "text": "الفصل الثاني في ذكر شروط وجوب الحج وأركانه وواجباته ومحظورات",
+    "dhref": "nindex.php?id=646&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "652",
+    "idfrom": 3214,
+    "idto": 3251,
+    "level": 5,
+    "text": "محظورات الحج والعمرة",
+    "dhref": "nindex.php?id=652&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "664",
+    "idfrom": 3252,
+    "idto": 3392,
+    "level": 3,
+    "text": "الباب الثاني في ترتيب الأعمال الظاهرة من أول السفر",
+    "dhref": "nindex.php?id=664&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "678",
+    "idfrom": 3393,
+    "idto": 3437,
+    "level": 3,
+    "text": "الباب الثالث في الآداب الدقيقة والأعمال الباطنة",
+    "dhref": "nindex.php?id=678&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "681",
+    "idfrom": 3438,
+    "idto": 3534,
+    "level": 2,
+    "text": "كتاب آداب تلاوة القرآن",
+    "dhref": "nindex.php?id=681&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "683",
+    "idfrom": 3440,
+    "idto": 3445,
+    "level": 3,
+    "text": "الباب الأول في فضل القرآن وأهله وذم المقصرين في تلاوته",
+    "dhref": "nindex.php?id=683&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "686",
+    "idfrom": 3446,
+    "idto": 3480,
+    "level": 3,
+    "text": "الباب الثاني في ظاهر آداب التلاوة",
+    "dhref": "nindex.php?id=686&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "694",
+    "idfrom": 3501,
+    "idto": 3534,
+    "level": 3,
+    "text": "الباب الرابع في فهم القرآن وتفسيره بالرأي",
+    "dhref": "nindex.php?id=694&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "701",
+    "idfrom": 3535,
+    "idto": 3753,
+    "level": 2,
+    "text": "كتاب الأذكار والدعوات",
+    "dhref": "nindex.php?id=701&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "703",
+    "idfrom": 3537,
+    "idto": 3570,
+    "level": 3,
+    "text": "الباب الأول في فضيلة الذكر على الجملة",
+    "dhref": "nindex.php?id=703&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "709",
+    "idfrom": 3571,
+    "idto": 3627,
+    "level": 3,
+    "text": "الباب الثاني في آداب الدعاء وفضل بعض الأدعية المأثورة",
+    "dhref": "nindex.php?id=709&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "723",
+    "idfrom": 3628,
+    "idto": 3662,
+    "level": 3,
+    "text": "الباب الثالث في ذكر أدعية مأثورة",
+    "dhref": "nindex.php?id=723&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "740",
+    "idfrom": 3663,
+    "idto": 3671,
+    "level": 3,
+    "text": "الباب الرابع في ذكر أدعية مأثورة عن رسول الله صلى الله عليه",
+    "dhref": "nindex.php?id=740&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "744",
+    "idfrom": 3672,
+    "idto": 3751,
+    "level": 3,
+    "text": "الباب الخامس في الأدعية المأثورة عند كل حادث من الحوادث",
+    "dhref": "nindex.php?id=744&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "782",
+    "idfrom": 3754,
+    "idto": 3967,
+    "level": 2,
+    "text": "كتاب ترتيب الأوراد وتفصيل إحياء الليل",
+    "dhref": "nindex.php?id=782&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "784",
+    "idfrom": 3756,
+    "idto": 3899,
+    "level": 3,
+    "text": "الباب الأول في فضيلة الأوراد وترتيبها وأحكامها",
+    "dhref": "nindex.php?id=784&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "786",
+    "idfrom": 3760,
+    "idto": 3876,
+    "level": 4,
+    "text": "بيان أعداد الأوراد في الليل والنهار وترتيبها",
+    "dhref": "nindex.php?id=786&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "790",
+    "idfrom": 3900,
+    "idto": 3967,
+    "level": 3,
+    "text": "الباب الثاني في ذكر الأسباب الميسرة",
+    "dhref": "nindex.php?id=790&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "793",
+    "idfrom": 3922,
+    "idto": 3941,
+    "level": 4,
+    "text": "بيان الأسباب التي بها يتيسر بها على قيام الليل",
+    "dhref": "nindex.php?id=793&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "796",
+    "idfrom": 3942,
+    "idto": 3954,
+    "level": 4,
+    "text": "بيان طرق القسمة لأجزاء الليل",
+    "dhref": "nindex.php?id=796&treeLevel=4&bookid=411&page=bookssubtree"
   },
   {
     "id": "805",
     "idfrom": 3968,
     "idto": 7165,
     "level": 1,
-    "text": "ربع العادات"
+    "text": "ربع العادات",
+    "dhref": "nindex.php?id=805&treeLevel=1&bookid=411&page=bookssubtree&searchtext=&showexact="
+  },
+  {
+    "id": "806",
+    "idfrom": 3968,
+    "idto": 4184,
+    "level": 2,
+    "text": "كتاب آداب الأكل",
+    "dhref": "nindex.php?id=806&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "808",
+    "idfrom": 3972,
+    "idto": 4043,
+    "level": 3,
+    "text": "الباب الأول فيما لا بد للآكل من مراعاته وإن انفرد بالأكل",
+    "dhref": "nindex.php?id=808&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "814",
+    "idfrom": 4062,
+    "idto": 4077,
+    "level": 3,
+    "text": "الباب الثالث في آداب تقديم الطعام إلى الإخوان الزائرين",
+    "dhref": "nindex.php?id=814&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "818",
+    "idfrom": 4078,
+    "idto": 4184,
+    "level": 3,
+    "text": "الباب الرابع في آداب الضيافة",
+    "dhref": "nindex.php?id=818&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "827",
+    "idfrom": 4185,
+    "idto": 4442,
+    "level": 2,
+    "text": "كتاب آداب النكاح",
+    "dhref": "nindex.php?id=827&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "831",
+    "idfrom": 4191,
+    "idto": 4273,
+    "level": 3,
+    "text": "الباب الأول في الترغيب في النكاح والترغيب عنه",
+    "dhref": "nindex.php?id=831&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "834",
+    "idfrom": 4208,
+    "idto": 4258,
+    "level": 4,
+    "text": "فوائد النكاح",
+    "dhref": "nindex.php?id=834&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "840",
+    "idfrom": 4259,
+    "idto": 4273,
+    "level": 4,
+    "text": "آفات النكاح",
+    "dhref": "nindex.php?id=840&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "844",
+    "idfrom": 4274,
+    "idto": 4352,
+    "level": 3,
+    "text": "الباب الثاني فيما يراعي حالة العقد",
+    "dhref": "nindex.php?id=844&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "845",
+    "idfrom": 4274,
+    "idto": 4284,
+    "level": 4,
+    "text": "أركان عقد النكاح وشروطه",
+    "dhref": "nindex.php?id=845&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "852",
+    "idfrom": 4285,
+    "idto": 4301,
+    "level": 4,
+    "text": "آداب النكاح",
+    "dhref": "nindex.php?id=852&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "858",
+    "idfrom": 4332,
+    "idto": 4352,
+    "level": 4,
+    "text": "الخصال المطيبة للعيش بين الزوجين",
+    "dhref": "nindex.php?id=858&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "861",
+    "idfrom": 4353,
+    "idto": 4442,
+    "level": 3,
+    "text": "الباب الثالث في آداب المعاشرة",
+    "dhref": "nindex.php?id=861&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "872",
+    "idfrom": 4395,
+    "idto": 4404,
+    "level": 4,
+    "text": "الحادي عشر في الولادة",
+    "dhref": "nindex.php?id=872&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "880",
+    "idfrom": 4409,
+    "idto": 4420,
+    "level": 4,
+    "text": "شروط الطلاق",
+    "dhref": "nindex.php?id=880&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "884",
+    "idfrom": 4443,
+    "idto": 4655,
+    "level": 2,
+    "text": "كتاب آداب الكسب والمعاش",
+    "dhref": "nindex.php?id=884&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "887",
+    "idfrom": 4450,
+    "idto": 4597,
+    "level": 3,
+    "text": "الباب الثاني في علم الكسب بطريق البيع والربا والسلم والإجارة",
+    "dhref": "nindex.php?id=887&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "888",
+    "idfrom": 4450,
+    "idto": 4501,
+    "level": 4,
+    "text": "العقد الأول البيع",
+    "dhref": "nindex.php?id=888&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "893",
+    "idfrom": 4502,
+    "idto": 4511,
+    "level": 4,
+    "text": "العقد الثاني عقد الربا",
+    "dhref": "nindex.php?id=893&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "898",
+    "idfrom": 4562,
+    "idto": 4579,
+    "level": 4,
+    "text": "العقد الخامس القراض",
+    "dhref": "nindex.php?id=898&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "902",
+    "idfrom": 4598,
+    "idto": 4625,
+    "level": 3,
+    "text": "الباب الثالث في بيان العدل والمساواة واجتناب الظلم والتجاوز",
+    "dhref": "nindex.php?id=902&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "906",
+    "idfrom": 4642,
+    "idto": 4655,
+    "level": 3,
+    "text": "الباب الخامس في بيان شفقة الرجل على دينه وخوفه عليه فيما يخص",
+    "dhref": "nindex.php?id=906&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "914",
+    "idfrom": 4656,
+    "idto": 5023,
+    "level": 2,
+    "text": "كتاب الحلال والحرام",
+    "dhref": "nindex.php?id=914&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "917",
+    "idfrom": 4660,
+    "idto": 4734,
+    "level": 3,
+    "text": "الباب الأول في تفصيل الحلال والحرام",
+    "dhref": "nindex.php?id=917&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "919",
+    "idfrom": 4682,
+    "idto": 4700,
+    "level": 4,
+    "text": "أصناف الحلال والحرام",
+    "dhref": "nindex.php?id=919&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "922",
+    "idfrom": 4701,
+    "idto": 4710,
+    "level": 4,
+    "text": "درجات الحلال والحرام",
+    "dhref": "nindex.php?id=922&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "927",
+    "idfrom": 4711,
+    "idto": 4734,
+    "level": 4,
+    "text": "أمثلة الدرجات الأربع في الورع وشواهدها",
+    "dhref": "nindex.php?id=927&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "932",
+    "idfrom": 4735,
+    "idto": 4817,
+    "level": 3,
+    "text": "الباب الثاني في مراتب الشبهات ومثاراتها وتمييزها من الحرام",
+    "dhref": "nindex.php?id=932&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "933",
+    "idfrom": 4735,
+    "idto": 4801,
+    "level": 4,
+    "text": "أقسام الحلال والحرام",
+    "dhref": "nindex.php?id=933&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "942",
+    "idfrom": 4900,
+    "idto": 4942,
+    "level": 3,
+    "text": "الباب الخامس في إدرارات السلاطين وصلاتهم وما يحل منها وما يح",
+    "dhref": "nindex.php?id=942&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "944",
+    "idfrom": 4922,
+    "idto": 4931,
+    "level": 4,
+    "text": "درجات الورع في حق السلاطين",
+    "dhref": "nindex.php?id=944&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "950",
+    "idfrom": 4943,
+    "idto": 4988,
+    "level": 3,
+    "text": "الباب السادس فيما يحل من مخالطة السلاطين الظلمة وغيرهم",
+    "dhref": "nindex.php?id=950&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "955",
+    "idfrom": 4989,
+    "idto": 5023,
+    "level": 3,
+    "text": "الباب السابع ذكر مسائل متفرقة",
+    "dhref": "nindex.php?id=955&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "956",
+    "idfrom": 5015,
+    "idto": 5022,
+    "level": 4,
+    "text": "فصول ومسائل لها تعلق بالباب",
+    "dhref": "nindex.php?id=956&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "965",
+    "idfrom": 5024,
+    "idto": 5357,
+    "level": 2,
+    "text": "كتاب آداب الصحبة الأخوة والمعاشرة مع أصناف الخلق",
+    "dhref": "nindex.php?id=965&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "967",
+    "idfrom": 5026,
+    "idto": 5094,
+    "level": 3,
+    "text": "الباب الأول في فضيلة الألفة والأخوة وفي شروطها ودرجاتها وفوا",
+    "dhref": "nindex.php?id=967&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "971",
+    "idfrom": 5067,
+    "idto": 5080,
+    "level": 4,
+    "text": "بيان مراتب الذين يبغضون في الله وكيفيه معاملتهم",
+    "dhref": "nindex.php?id=971&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "974",
+    "idfrom": 5095,
+    "idto": 5218,
+    "level": 3,
+    "text": "الباب الثاني في حقوق الأخوة والصحبة",
+    "dhref": "nindex.php?id=974&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "984",
+    "idfrom": 5219,
+    "idto": 5357,
+    "level": 3,
+    "text": "الباب الثالث في حق المسلم والرحم والجوار والملك",
+    "dhref": "nindex.php?id=984&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "986",
+    "idfrom": 5227,
+    "idto": 5314,
+    "level": 4,
+    "text": "حقوق المسلم",
+    "dhref": "nindex.php?id=986&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "993",
+    "idfrom": 5358,
+    "idto": 5449,
+    "level": 2,
+    "text": "كتاب العزلة",
+    "dhref": "nindex.php?id=993&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "995",
+    "idfrom": 5360,
+    "idto": 5384,
+    "level": 3,
+    "text": "الباب الأول في نقل المذاهب والأقاويل في حكم العزلة والمخالطة",
+    "dhref": "nindex.php?id=995&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "999",
+    "idfrom": 5385,
+    "idto": 5449,
+    "level": 3,
+    "text": "الباب الثاني في بيان العزلة وغوائلها وكشف الحق عن فضلها",
+    "dhref": "nindex.php?id=999&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1000",
+    "idfrom": 5385,
+    "idto": 5412,
+    "level": 4,
+    "text": "فوائد العزلة",
+    "dhref": "nindex.php?id=1000&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1007",
+    "idfrom": 5413,
+    "idto": 5446,
+    "level": 4,
+    "text": "بيان ما ينشأ من آفات العزلة",
+    "dhref": "nindex.php?id=1007&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1008",
+    "idfrom": 5413,
+    "idto": 5446,
+    "level": 5,
+    "text": "فوائد الخلطة",
+    "dhref": "nindex.php?id=1008&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1018",
+    "idfrom": 5450,
+    "idto": 5600,
+    "level": 2,
+    "text": "كتاب آداب السفر",
+    "dhref": "nindex.php?id=1018&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1020",
+    "idfrom": 5452,
+    "idto": 5511,
+    "level": 3,
+    "text": "الباب الأول في الآداب من أول النهوض إلى آخر الرجوع وفي نية ا",
+    "dhref": "nindex.php?id=1020&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1021",
+    "idfrom": 5452,
+    "idto": 5475,
+    "level": 4,
+    "text": "الفصل الأول في فوائد السفر وفضله ونيته",
+    "dhref": "nindex.php?id=1021&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1023",
+    "idfrom": 5454,
+    "idto": 5467,
+    "level": 5,
+    "text": "أقسام الأسفار",
+    "dhref": "nindex.php?id=1023&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1029",
+    "idfrom": 5476,
+    "idto": 5511,
+    "level": 4,
+    "text": "الفصل الثاني في آداب المسافر",
+    "dhref": "nindex.php?id=1029&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1041",
+    "idfrom": 5512,
+    "idto": 5600,
+    "level": 3,
+    "text": "الباب الثاني فيما لا بد للمسافر من تعلمه من رخص السفر",
+    "dhref": "nindex.php?id=1041&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1043",
+    "idfrom": 5514,
+    "idto": 5575,
+    "level": 4,
+    "text": "القسم الأول العلم برخص السفر",
+    "dhref": "nindex.php?id=1043&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1045",
+    "idfrom": 5536,
+    "idto": 5550,
+    "level": 5,
+    "text": "الرخصة الثانية التيمم بالتراب",
+    "dhref": "nindex.php?id=1045&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1055",
+    "idfrom": 5601,
+    "idto": 5711,
+    "level": 2,
+    "text": "كتاب السماع والوجد",
+    "dhref": "nindex.php?id=1055&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1057",
+    "idfrom": 5605,
+    "idto": 5667,
+    "level": 3,
+    "text": "الباب الأول في ذكر اختلاف العلماء في إباحة السماع وكشف الحق",
+    "dhref": "nindex.php?id=1057&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1061",
+    "idfrom": 5642,
+    "idto": 5659,
+    "level": 4,
+    "text": "عوارض تحريم السماع",
+    "dhref": "nindex.php?id=1061&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1068",
+    "idfrom": 5668,
+    "idto": 5711,
+    "level": 3,
+    "text": "الباب الثاني آثار السماع وآدابه",
+    "dhref": "nindex.php?id=1068&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1069",
+    "idfrom": 5668,
+    "idto": 5711,
+    "level": 4,
+    "text": "تفاوت الدرجات في فهم المسموعات",
+    "dhref": "nindex.php?id=1069&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1072",
+    "idfrom": 5692,
+    "idto": 5711,
+    "level": 5,
+    "text": "المقام الثالث آداب السماع ظاهرا وباطنا وما يحمد من آثار الوج",
+    "dhref": "nindex.php?id=1072&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1082",
+    "idfrom": 5712,
+    "idto": 5828,
+    "level": 2,
+    "text": "كتاب الأمر بالمعروف والنهي عن المنكر",
+    "dhref": "nindex.php?id=1082&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1085",
+    "idfrom": 5720,
+    "idto": 5777,
+    "level": 3,
+    "text": "الباب الثاني في أركان الأمر بالمعروف وشروطه",
+    "dhref": "nindex.php?id=1085&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1086",
+    "idfrom": 5720,
+    "idto": 5743,
+    "level": 4,
+    "text": "الركن الأول المحتسب",
+    "dhref": "nindex.php?id=1086&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1088",
+    "idfrom": 5744,
+    "idto": 5751,
+    "level": 4,
+    "text": "الركن الثاني للحسبة ما فيه الحسبة",
+    "dhref": "nindex.php?id=1088&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1096",
+    "idfrom": 5778,
+    "idto": 5801,
+    "level": 3,
+    "text": "الباب الثالث في المنكرات المألوفة في العادات",
+    "dhref": "nindex.php?id=1096&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1103",
+    "idfrom": 5802,
+    "idto": 5828,
+    "level": 3,
+    "text": "الباب الرابع في أمر الأمراء والسلاطين",
+    "dhref": "nindex.php?id=1103&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1105",
+    "idfrom": 5829,
+    "idto": 6033,
+    "level": 2,
+    "text": "كتاب آداب المعيشة وأخلاق النبوة",
+    "dhref": "nindex.php?id=1105&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1120",
+    "idfrom": 6034,
+    "idto": 6146,
+    "level": 2,
+    "text": "كتاب عجائب القلب",
+    "dhref": "nindex.php?id=1120&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1129",
+    "idfrom": 6066,
+    "idto": 6078,
+    "level": 3,
+    "text": "بيان الفرق بين الإلهام والتعلم والفرق بين طريق",
+    "dhref": "nindex.php?id=1129&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1137",
+    "idfrom": 6147,
+    "idto": 6212,
+    "level": 2,
+    "text": "كتاب رياضة النفس وتهذيب الخلق ومعالجة أمراض القلب",
+    "dhref": "nindex.php?id=1137&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1150",
+    "idfrom": 6213,
+    "idto": 6292,
+    "level": 2,
+    "text": "كتاب كسر الشهوتين",
+    "dhref": "nindex.php?id=1150&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1153",
+    "idfrom": 6222,
+    "idto": 6241,
+    "level": 3,
+    "text": "بيان آفات الشبع وفوائد الجوع",
+    "dhref": "nindex.php?id=1153&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1170",
+    "idfrom": 6293,
+    "idto": 6465,
+    "level": 2,
+    "text": "كتاب آفات اللسان",
+    "dhref": "nindex.php?id=1170&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1189",
+    "idfrom": 6393,
+    "idto": 6432,
+    "level": 3,
+    "text": "الآفة الخامسة عشرة الغيبة",
+    "dhref": "nindex.php?id=1189&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1205",
+    "idfrom": 6466,
+    "idto": 6579,
+    "level": 2,
+    "text": "كتاب ذم الغضب والحقد والحسد",
+    "dhref": "nindex.php?id=1205&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1218",
+    "idfrom": 6538,
+    "idto": 6579,
+    "level": 3,
+    "text": "القول في ذم الحسد وفي حقيقته وأسبابه ومعالجته",
+    "dhref": "nindex.php?id=1218&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1226",
+    "idfrom": 6580,
+    "idto": 6668,
+    "level": 2,
+    "text": "كتاب ذم الدنيا",
+    "dhref": "nindex.php?id=1226&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1233",
+    "idfrom": 6669,
+    "idto": 6772,
+    "level": 2,
+    "text": "كتاب ذم البخل وحب المال",
+    "dhref": "nindex.php?id=1233&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1237",
+    "idfrom": 6681,
+    "idto": 6688,
+    "level": 3,
+    "text": "بيان تفصيل آفات المال وفوائده",
+    "dhref": "nindex.php?id=1237&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1250",
+    "idfrom": 6773,
+    "idto": 6914,
+    "level": 2,
+    "text": "كتاب ذم الجاه والرياء",
+    "dhref": "nindex.php?id=1250&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1275",
+    "idfrom": 6915,
+    "idto": 7033,
+    "level": 2,
+    "text": "كتاب ذم العجب والكبر",
+    "dhref": "nindex.php?id=1275&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1293",
+    "idfrom": 7034,
+    "idto": 7165,
+    "level": 2,
+    "text": "كتاب ذم الغرور",
+    "dhref": "nindex.php?id=1293&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1296",
+    "idfrom": 7060,
+    "idto": 7165,
+    "level": 3,
+    "text": "بيان أصناف المغترين وأقسام فرق كل صنف",
+    "dhref": "nindex.php?id=1296&treeLevel=3&bookid=411&page=bookssubtree"
   },
   {
     "id": "1301",
     "idfrom": 7166,
     "idto": 8667,
     "level": 1,
-    "text": "ركن المنجيات"
+    "text": "ركن المنجيات",
+    "dhref": "nindex.php?id=1301&treeLevel=1&bookid=411&page=bookssubtree&searchtext=&showexact="
+  },
+  {
+    "id": "1302",
+    "idfrom": 7166,
+    "idto": 7331,
+    "level": 2,
+    "text": "كتاب التوبة",
+    "dhref": "nindex.php?id=1302&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1304",
+    "idfrom": 7168,
+    "idto": 7199,
+    "level": 3,
+    "text": "الركن الأول في نفس التوبة",
+    "dhref": "nindex.php?id=1304&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1310",
+    "idfrom": 7200,
+    "idto": 7256,
+    "level": 3,
+    "text": "الركن الثاني فيما عنه التوبة وهي الذنوب صغائرها وكبائرها",
+    "dhref": "nindex.php?id=1310&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1314",
+    "idfrom": 7257,
+    "idto": 7299,
+    "level": 3,
+    "text": "الركن الثالث في دوام التوبة وشروطها ودوامها إلى آخر العمر",
+    "dhref": "nindex.php?id=1314&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1316",
+    "idfrom": 7281,
+    "idto": 7289,
+    "level": 4,
+    "text": "فصل في بيان أقسام العباد في دوام التوبة وانقطاعها",
+    "dhref": "nindex.php?id=1316&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1322",
+    "idfrom": 7300,
+    "idto": 7331,
+    "level": 3,
+    "text": "الركن الرابع في بيان السبب الباعث على دواء التوبة وطريق العل",
+    "dhref": "nindex.php?id=1322&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1325",
+    "idfrom": 7332,
+    "idto": 7565,
+    "level": 2,
+    "text": "كتاب الصبر والشكر",
+    "dhref": "nindex.php?id=1325&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1327",
+    "idfrom": 7334,
+    "idto": 7402,
+    "level": 3,
+    "text": "الشطر الأول في الصبر",
+    "dhref": "nindex.php?id=1327&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1335",
+    "idfrom": 7403,
+    "idto": 7565,
+    "level": 3,
+    "text": "الشطر الثاني من الكتاب في الشكر",
+    "dhref": "nindex.php?id=1335&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1336",
+    "idfrom": 7403,
+    "idto": 7456,
+    "level": 4,
+    "text": "الركن الأول في نفس الشكر",
+    "dhref": "nindex.php?id=1336&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1341",
+    "idfrom": 7457,
+    "idto": 7533,
+    "level": 4,
+    "text": "الركن الثاني من أركان الشكر",
+    "dhref": "nindex.php?id=1341&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1343",
+    "idfrom": 7487,
+    "idto": 7525,
+    "level": 5,
+    "text": "بيان وجه الأنموذج في كثرة نعم الله تعالى وتسلسلها وخروجها عن",
+    "dhref": "nindex.php?id=1343&treeLevel=5&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1353",
+    "idfrom": 7534,
+    "idto": 7565,
+    "level": 4,
+    "text": "الركن الثالث من كتاب الصبر والشكر فيما يشترك فيه الصبر والشك",
+    "dhref": "nindex.php?id=1353&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1357",
+    "idfrom": 7566,
+    "idto": 7670,
+    "level": 2,
+    "text": "كتاب الخوف والرجاء",
+    "dhref": "nindex.php?id=1357&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1359",
+    "idfrom": 7568,
+    "idto": 7598,
+    "level": 3,
+    "text": "الشطر الأول في الرجاء",
+    "dhref": "nindex.php?id=1359&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1362",
+    "idfrom": 7576,
+    "idto": 7598,
+    "level": 4,
+    "text": "بيان دواء الرجاء والسبيل الذي يحصل منه حال الرجاء ويغلب",
+    "dhref": "nindex.php?id=1362&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1364",
+    "idfrom": 7599,
+    "idto": 7670,
+    "level": 3,
+    "text": "الشطر الثاني في الخوف",
+    "dhref": "nindex.php?id=1364&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1374",
+    "idfrom": 7671,
+    "idto": 7808,
+    "level": 2,
+    "text": "كتاب الفقر والزهد",
+    "dhref": "nindex.php?id=1374&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1376",
+    "idfrom": 7673,
+    "idto": 7724,
+    "level": 3,
+    "text": "الشطر الأول من الكتاب في الفقر",
+    "dhref": "nindex.php?id=1376&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1387",
+    "idfrom": 7725,
+    "idto": 7808,
+    "level": 3,
+    "text": "الشطر الثاني من الكتاب في الزهد",
+    "dhref": "nindex.php?id=1387&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1393",
+    "idfrom": 7809,
+    "idto": 8025,
+    "level": 2,
+    "text": "كتاب التوحيد والتوكل",
+    "dhref": "nindex.php?id=1393&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1397",
+    "idfrom": 7888,
+    "idto": 8025,
+    "level": 3,
+    "text": "الشطر الثاني من الكتاب في أحوال التوكل وأعماله",
+    "dhref": "nindex.php?id=1397&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1400",
+    "idfrom": 7909,
+    "idto": 8025,
+    "level": 4,
+    "text": "الفصل الثالث في بيان أعمال المتوكلين",
+    "dhref": "nindex.php?id=1400&treeLevel=4&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1411",
+    "idfrom": 8026,
+    "idto": 8173,
+    "level": 2,
+    "text": "كتاب المحبة والشوق والأنس والرضا",
+    "dhref": "nindex.php?id=1411&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1434",
+    "idfrom": 8174,
+    "idto": 8272,
+    "level": 2,
+    "text": "كتاب النية والإخلاص والصدق",
+    "dhref": "nindex.php?id=1434&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1436",
+    "idfrom": 8176,
+    "idto": 8222,
+    "level": 3,
+    "text": "الباب الأول في النية وبيان فضيلة النية",
+    "dhref": "nindex.php?id=1436&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1447",
+    "idfrom": 8223,
+    "idto": 8250,
+    "level": 3,
+    "text": "الباب الثاني في الإخلاص",
+    "dhref": "nindex.php?id=1447&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1454",
+    "idfrom": 8251,
+    "idto": 8272,
+    "level": 3,
+    "text": "الباب الثالث في الصدق وفضيلته وحقيقته",
+    "dhref": "nindex.php?id=1454&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1457",
+    "idfrom": 8273,
+    "idto": 8328,
+    "level": 2,
+    "text": "كتاب المراقبة والمحاسبة",
+    "dhref": "nindex.php?id=1457&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1469",
+    "idfrom": 8329,
+    "idto": 8382,
+    "level": 2,
+    "text": "كتاب التفكر",
+    "dhref": "nindex.php?id=1469&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1477",
+    "idfrom": 8383,
+    "idto": 8667,
+    "level": 2,
+    "text": "كتاب ذكر الموت وما بعده",
+    "dhref": "nindex.php?id=1477&treeLevel=2&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1479",
+    "idfrom": 8385,
+    "idto": 8398,
+    "level": 3,
+    "text": "الباب الأول في ذكر الموت والترغيب في الإكثار من ذكره",
+    "dhref": "nindex.php?id=1479&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1487",
+    "idfrom": 8399,
+    "idto": 8411,
+    "level": 3,
+    "text": "الباب الثاني في طول الأمل وفضيلة قصر الأمل وسبب طوله وكيفية",
+    "dhref": "nindex.php?id=1487&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1492",
+    "idfrom": 8412,
+    "idto": 8446,
+    "level": 3,
+    "text": "الباب الثالث في سكرات الموت وشدته وما يستحب من الأحوال عنده",
+    "dhref": "nindex.php?id=1492&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1500",
+    "idfrom": 8447,
+    "idto": 8474,
+    "level": 3,
+    "text": "الباب الرابع في وفاة رسول الله صلى الله عليه وسلم",
+    "dhref": "nindex.php?id=1500&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1506",
+    "idfrom": 8475,
+    "idto": 8489,
+    "level": 3,
+    "text": "الباب الخامس في كلام المحتضرين من الخلفاء والأمراء والصالحين",
+    "dhref": "nindex.php?id=1506&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1512",
+    "idfrom": 8490,
+    "idto": 8516,
+    "level": 3,
+    "text": "الباب السادس في أقاويل العارفين على الجنائز والمقابر وحكم زي",
+    "dhref": "nindex.php?id=1512&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1517",
+    "idfrom": 8517,
+    "idto": 8555,
+    "level": 3,
+    "text": "الباب السابع في حقيقة الموت وما يلقاه الميت في القبر إلى نفخ",
+    "dhref": "nindex.php?id=1517&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1527",
+    "idfrom": 8556,
+    "idto": 8566,
+    "level": 3,
+    "text": "الباب الثامن فيما عرف من أحوال الموتى بالمكاشفة في المنام",
+    "dhref": "nindex.php?id=1527&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1531",
+    "idfrom": 8567,
+    "idto": 8667,
+    "level": 3,
+    "text": "بيان أحوال الميت من وقت نفخة الصور إلى آخر الاستقرار في الجن",
+    "dhref": "nindex.php?id=1531&treeLevel=3&bookid=411&page=bookssubtree"
+  },
+  {
+    "id": "1542",
+    "idfrom": 8603,
+    "idto": 8667,
+    "level": 4,
+    "text": "فصل في تفصيل الشفاعات",
+    "dhref": "nindex.php?id=1542&treeLevel=4&bookid=411&page=bookssubtree"
   }
 ]
