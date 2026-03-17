@@ -1,8 +1,8 @@
 """
-scraper.py — النسخة النهائية
-python scraper.py test    ← اختبار أول 30 فصل
-python scraper.py scan    ← مسح كامل
-python scraper.py resume  ← استكمال
+scraper.py
+python scraper.py test    ← اختبار أول 30 ID
+python scraper.py scan    ← مسح كامل 1→8173
+python scraper.py resume  ← استكمال من آخر نقطة
 python scraper.py build   ← بناء EPUB
 python scraper.py full    ← scan + build
 """
@@ -14,7 +14,9 @@ import json, os, re, time, sys, traceback
 
 BASE_URL = "https://www.islamweb.net"
 BOOK_ID  = 411
-DELAY    = 0.8  # قلّلنا من 1.2 إلى 0.8 → ~1.8 ساعة بدل 2.7
+FIRST_ID = 1
+LAST_ID  = 8173
+DELAY    = 0.8
 HEADERS  = {
     "User-Agent":       "Mozilla/5.0 (compatible; research-bot/1.0)",
     "Accept-Language":  "ar,en;q=0.9",
@@ -69,41 +71,10 @@ def has_tashkeel(text: str) -> bool:
 
 
 # ══════════════════════════════════════════════════════════════════
-# ١. بناء الفهرس — مع جلب الفصول الداخلية تكرارياً
+# ١. بناء الفهرس من الشجرة الجانبية (للإثراء فقط)
 # ══════════════════════════════════════════════════════════════════
-def build_toc_from_scan() -> list:
-    """
-    بناء الفهرس من ملفات sections المحفوظة
-    كل section فيها العنوان الحقيقي من breadcrumb الصفحة
-    """
-    print("=== بناء الفهرس من بيانات الـ scan ===")
-    sections_dir = "output/sections"
-    if not os.path.exists(sections_dir):
-        return []
-
-    toc = []
-    for fname in sorted(os.listdir(sections_dir),
-                        key=lambda f: int(f.replace(".json","")) if f.replace(".json","").isdigit() else 0):
-        if not fname.endswith(".json"):
-            continue
-        nid = fname.replace(".json","")
-        sec = load_json(f"{sections_dir}/{fname}", None)
-        if not sec:
-            continue
-        toc.append({
-            "id":     nid,
-            "idfrom": sec.get("idfrom", int(nid)),
-            "idto":   sec.get("idto",   int(nid)),
-            "level":  1,   # مستوى افتراضي — يُحدَّث من breadcrumb
-            "text":   sec.get("title", f"قسم {nid}"),
-        })
-
-    print(f"✓ فهرس من scan: {len(toc)} عنصر")
-    save_json("output/toc_from_scan.json", toc)
-    return toc
-    print("=== بناء الفهرس ===")
-
-    # ── المستوى الأول من الصفحة الرئيسية ─────────────────────────
+def build_toc() -> list:
+    print("=== بناء الفهرس من الشجرة ===")
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     soup, _ = fetch(url)
     if not soup:
@@ -148,32 +119,30 @@ def build_toc_from_scan() -> list:
 
     print(f"  المستوى الأول: {len(top_level)} عنصر")
 
-    # ── جلب الفصول الداخلية من data-href ─────────────────────────
+    # جلب الفصول الداخلية تكرارياً
     def crawl_node(item, depth=0):
         if depth > 6:
             return
-        dhref = item.get("dhref","")
+        dhref = item.get("dhref", "")
         if not dhref:
             return
-
-        sub_url = f"{BASE_URL}/ar/library/maktaba/{dhref}"
+        sub_url  = f"{BASE_URL}/ar/library/maktaba/{dhref}"
         sub_soup, _ = fetch(sub_url)
         if not sub_soup:
             return
-
-        # طبع HTML خام للتشخيص (أول 3 عناصر فقط)
         found = 0
-        for el in sub_soup.find_all(["span","label","a","li"]):
+        for el in sub_soup.find_all(["span", "label", "a", "li"]):
             if not isinstance(el, Tag):
                 continue
             nid = (el.get("data-id") or el.get("id") or "").strip()
             fr  = el.get("data-idfrom")
             to  = el.get("data-idto")
             dh  = el.get("data-href") or ""
-            txt = el.get_text(strip=True)[:60]
             lvl = int(el.get("data-level") or item["level"] + 1)
+            txt = el.get_text(strip=True)[:120]
+            txt = re.sub(r'(التالي|السابق)', '', txt).strip()
 
-            if not nid.isdigit() or not fr:
+            if not nid.isdigit() or not fr or not txt:
                 continue
             if nid in seen:
                 continue
@@ -184,54 +153,75 @@ def build_toc_from_scan() -> list:
                 "idfrom": int(fr),
                 "idto":   int(to) if to else int(fr),
                 "level":  lvl,
-                "text":   re.sub(r'(التالي|السابق)', '', txt).strip()[:120],
+                "text":   txt,
                 "dhref":  dh,
             }
             toc.append(child)
             found += 1
-
-            if dh and int(to or fr) - int(fr) > 1:
+            if dh and (int(to or fr) - int(fr)) > 1:
                 time.sleep(0.3)
                 crawl_node(child, depth + 1)
 
         print(f"  {'  '*depth}↳ {item['text'][:40]} → {found} فصل")
-        time.sleep(0.5)
+        time.sleep(0.4)
 
     for item in top_level:
         if item["idto"] - item["idfrom"] > 1:
             crawl_node(item)
 
     toc.sort(key=lambda x: x["idfrom"])
-
-    # إزالة التكرار
     seen_ids, final = set(), []
     for item in toc:
         if item["id"] not in seen_ids:
             seen_ids.add(item["id"])
             final.append(item)
 
-    for item in final:
-        indent = "  " * (item["level"] - 1)
-        print(f"  {indent}├─ [{item['idfrom']:5d}→{item['idto']:5d}] {item['text'][:50]}")
-
     save_json("output/toc.json", final)
-    print(f"\n✓ فهرس كامل: {len(final)} عنصر")
+    print(f"\n✓ فهرس الشجرة: {len(final)} عنصر")
     return final
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٢. استخراج النص من #pagebody_thaskeel
+# ٢. بناء الفهرس الكامل من ملفات sections بعد الـ scan
+# ══════════════════════════════════════════════════════════════════
+def build_toc_from_scan() -> list:
+    print("=== بناء الفهرس من بيانات الـ scan ===")
+    sections_dir = "output/sections"
+    if not os.path.exists(sections_dir):
+        return []
+
+    toc = []
+    files = sorted(
+        [f for f in os.listdir(sections_dir) if f.endswith(".json")],
+        key=lambda f: int(f.replace(".json", "")) if f.replace(".json", "").isdigit() else 0
+    )
+    for fname in files:
+        nid = fname.replace(".json", "")
+        sec = load_json(f"{sections_dir}/{fname}", None)
+        if not sec:
+            continue
+        toc.append({
+            "id":     nid,
+            "idfrom": sec.get("idfrom", int(nid)),
+            "idto":   sec.get("idto",   int(nid)),
+            "level":  1,
+            "text":   sec.get("title", f"قسم {nid}"),
+        })
+
+    save_json("output/toc_from_scan.json", toc)
+    print(f"✓ فهرس كامل من scan: {len(toc)} عنصر")
+    return toc
+
+
+# ══════════════════════════════════════════════════════════════════
+# ٣. استخراج النص من #pagebody_thaskeel
 # ══════════════════════════════════════════════════════════════════
 def clean_and_extract(soup) -> tuple:
-    """يعيد (paragraphs, footnotes_unused)"""
-
-    # احذف عناصر التنقل من كامل الصفحة أولاً
     for el in soup.find_all("h1", class_="booktitle"):
         el.decompose()
     for el in soup.find_all("u", class_=["ul", "ur"]):
         el.decompose()
 
-    # الحاوية: pagebody_thaskeel (مشكّل) أولاً
     container = (
         soup.find(id="pagebody_thaskeel") or
         soup.find(id="pagebody")          or
@@ -241,14 +231,13 @@ def clean_and_extract(soup) -> tuple:
     if not container:
         return [], []
 
-    # حذف عناصر الموقع
     for sel in ["script", "style", "noscript",
                 ".hashiya_title", ".quranatt", ".hadithatt",
                 ".namesatt", ".mainsubjatt"]:
         for el in container.select(sel):
             el.decompose()
 
-    # النصوص المتوسطة (شعر/مقتبسات) → علامة خاصة
+    # نصوص متوسطة (شعر/مقتبسات)
     for p in container.find_all("p", align="center"):
         if not isinstance(p, Tag):
             continue
@@ -256,7 +245,7 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             p.replace_with(f"\n⟪CENTER⟫{txt}⟪/CENTER⟫\n")
 
-    # تحويل أرقام الصفحات → فاصل مرئي
+    # أرقام الصفحات → فاصل مرئي
     for font in container.find_all("font"):
         if not isinstance(font, Tag):
             continue
@@ -275,7 +264,7 @@ def clean_and_extract(soup) -> tuple:
     for a in container.find_all("a", onclick=True):
         a.replace_with(a.get_text())
 
-    # mainsubj → حذف الرابط الداخلي فقط، إبقاء النص
+    # mainsubj → نص فقط
     for span in container.find_all("span", class_="mainsubj"):
         if not isinstance(span, Tag):
             continue
@@ -285,7 +274,7 @@ def clean_and_extract(soup) -> tuple:
         else:
             span.decompose()
 
-    # آيات قرآنية → ﴿ نص ﴾
+    # آيات قرآنية
     for span in container.find_all("span", class_="quran"):
         if not isinstance(span, Tag):
             continue
@@ -293,7 +282,7 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             span.replace_with(f" ﴿ {txt} ﴾ ")
 
-    # أحاديث → (( نص ))
+    # أحاديث
     for span in container.find_all("span", class_="hadith"):
         if not isinstance(span, Tag):
             continue
@@ -301,7 +290,7 @@ def clean_and_extract(soup) -> tuple:
         if txt:
             span.replace_with(f" (( {txt} )) ")
 
-    # النصوص الخضراء → (( نص ))
+    # النصوص الخضراء
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -311,7 +300,7 @@ def clean_and_extract(soup) -> tuple:
             if txt:
                 span.replace_with(f" (( {txt} )) ")
 
-    # أسماء الأعلام بدون class → (نص)
+    # أسماء الأعلام
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -324,7 +313,7 @@ def clean_and_extract(soup) -> tuple:
             else:
                 span.decompose()
 
-    # إزالة spans المخفية المتبقية
+    # spans مخفية متبقية
     for span in list(container.find_all("span")):
         if not isinstance(span, Tag):
             continue
@@ -332,13 +321,12 @@ def clean_and_extract(soup) -> tuple:
         if "display:none" in style:
             span.decompose()
 
-    # استخراج النص
     for br in container.find_all("br"):
         br.replace_with("\n")
 
     raw = container.get_text(separator="\n")
-
     seen, paragraphs = set(), []
+
     for line in raw.splitlines():
         txt = line.strip()
         if len(txt) < 5:
@@ -370,7 +358,7 @@ def clean_and_extract(soup) -> tuple:
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٣. جلب section
+# ٤. جلب section واحد
 # ══════════════════════════════════════════════════════════════════
 def fetch_section(item: dict) -> dict | None:
     nid    = item["id"]
@@ -394,16 +382,13 @@ def fetch_section(item: dict) -> dict | None:
         if not soup:
             return None
 
-    # ── استخرج العنوان الحقيقي من breadcrumb الصفحة ──────────────
-    real_title = title  # افتراضي من toc أو "قسم N"
-    # breadcrumb: آخر عنصر في itemprop="itemListElement" هو العنوان الحقيقي
-    crumbs = soup.find_all(
-        lambda t: isinstance(t, Tag) and
-        t.get("itemprop") == "itemListElement"
-    )
+    # العنوان الحقيقي من breadcrumb
+    real_title = title
+    crumbs = [t for t in soup.find_all(
+        lambda t: isinstance(t, Tag) and t.get("itemprop") == "itemListElement"
+    )]
     if crumbs:
-        last = crumbs[-1]
-        span = last.find("span", itemprop="name")
+        span = crumbs[-1].find("span", itemprop="name")
         if span:
             txt = span.get_text(strip=True)
             if txt and txt not in REPEATED_TEXTS:
@@ -426,11 +411,8 @@ def fetch_section(item: dict) -> dict | None:
     return result
 
 
-FIRST_ID = 1
-LAST_ID  = 8173
-
 # ══════════════════════════════════════════════════════════════════
-# ٤. SCAN — يمر على كل node ID من 1 إلى 8173
+# ٥. SCAN — يمر على كل ID من 1 إلى 8173
 # ══════════════════════════════════════════════════════════════════
 def phase_scan(end_id=None):
     progress_file = "output/scan_progress.json"
@@ -439,25 +421,26 @@ def phase_scan(end_id=None):
     valid     = load_json(valid_file, [])
     valid_set = set(v["id"] for v in valid)
 
+    # خريطة الفهرس للإثراء
+    toc_map = {int(t["id"]): t
+               for t in load_json("output/toc.json", [])}
+
     start = progress["last_id"] + 1
     end   = end_id or LAST_ID
     total = end - start + 1
     print(f"=== SCAN IDs {start}→{end} ({total} طلب) ===")
 
     for nid in range(start, end + 1):
-        item = {
+        item = toc_map.get(nid, {
             "id":     str(nid),
             "idfrom": nid,
             "idto":   nid,
             "level":  1,
             "text":   f"قسم {nid}",
-        }
-
-        # حاول جلب العنوان من toc.json إن وُجد
-        toc = load_json("output/toc.json", [])
-        toc_map = {int(t["id"]): t for t in toc}
-        if nid in toc_map:
-            item = toc_map[nid]
+        })
+        # تأكد أن id دائماً string
+        item = dict(item)
+        item["id"] = str(nid)
 
         try:
             result = fetch_section(item)
@@ -472,20 +455,19 @@ def phase_scan(end_id=None):
             if str(nid) not in valid_set:
                 valid.append({
                     "id":    str(nid),
-                    "title": result["title"],  # العنوان الحقيقي من الصفحة
+                    "title": result["title"],
                     "level": item.get("level", 1),
                 })
                 valid_set.add(str(nid))
         else:
             print(f"  ⬜ {nid:5d}")
 
-        # حفظ كل 50 node
         if nid % 50 == 0:
             progress["last_id"] = nid
             save_json(progress_file, progress)
             save_json(valid_file, valid)
-            pct = round((nid - start) / total * 100)
-            print(f"  💾 checkpoint {nid}/{end} ({pct}%) | صالح: {len(valid)}")
+            pct = round((nid - start + 1) / total * 100)
+            print(f"  💾 {nid}/{end} ({pct}%) | صالح: {len(valid)}")
             os.system(
                 'git config user.name "github-actions[bot]" && '
                 'git config user.email "github-actions[bot]@users.noreply.github.com" && '
@@ -502,7 +484,7 @@ def phase_scan(end_id=None):
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٥. BUILD EPUB
+# ٦. BUILD EPUB
 # ══════════════════════════════════════════════════════════════════
 EPUB_CSS = """
 body      { font-family:'Traditional Arabic',serif; direction:rtl;
@@ -528,9 +510,10 @@ def phase_build():
     if valid and isinstance(valid[0], int):
         valid = [{"id": str(v), "title": f"قسم {v}", "level": 1} for v in valid]
 
-    # استخدم toc_from_scan إن وُجد (أشمل)، وإلا toc.json
+    # فهرس من scan (أشمل) أو من الشجرة
     toc_data = (load_json("output/toc_from_scan.json", None) or
                 load_json("output/toc.json", []))
+
     print(f"=== BUILD EPUB: {len(valid)} فصل ===")
 
     book = epub.EpubBook()
@@ -559,10 +542,10 @@ def phase_build():
     cover.add_item(css_item)
     book.add_item(cover)
 
-    chapters  = [cover]
-    spine     = ["nav", cover]
-    toc_epub  = []
-    id_to_ch  = {}
+    chapters = [cover]
+    spine    = ["nav", cover]
+    toc_epub = []
+    id_to_ch = {}
 
     for i, v in enumerate(valid):
         sec = load_json(f"output/sections/{v['id']}.json", None)
@@ -576,8 +559,8 @@ def phase_build():
                  .replace("<", "&lt;")
                  .replace(">", "&gt;"))
             if p["kind"] == "center":
-                t_c = t.replace("⟪CENTER⟫","").replace("⟪/CENTER⟫","")
-                body += f'<p class="center">{t_c}</p>\n'
+                t2 = t.replace("⟪CENTER⟫","").replace("⟪/CENTER⟫","")
+                body += f'<p class="center">{t2}</p>\n'
             elif p["kind"] == "pagebreak":
                 body += f'<p class="pagebreak">{t}</p>\n'
             elif p["kind"] == "quran":
@@ -617,10 +600,10 @@ def phase_build():
         for item in items:
             if item["id"] not in id_to_ch:
                 continue
-            lnk = epub.Link(f"s{item['id']}.xhtml", item["title"], f"s{item['id']}")
-            lvl = item.get("level", 1)
+            lnk   = epub.Link(f"s{item['id']}.xhtml", item["title"], f"s{item['id']}")
+            lvl   = item.get("level", 1)
             entry = (lnk, [])
-            if lvl == 1 or not stack:
+            if not stack or lvl == 1:
                 result.append(entry)
                 stack = [(lvl, entry)]
             else:
@@ -630,8 +613,8 @@ def phase_build():
                 stack.append((lvl, entry))
         return result
 
-    valid_map  = {v["id"]: v for v in valid}
-    toc_items  = [valid_map[t["id"]] for t in toc_data if t["id"] in valid_map]
+    valid_map = {v["id"]: v for v in valid}
+    toc_items = [valid_map[t["id"]] for t in toc_data if t["id"] in valid_map]
     book.toc   = build_epub_toc(toc_items) or toc_epub
     book.spine = spine
     book.add_item(epub.EpubNcx())
@@ -644,7 +627,7 @@ def phase_build():
 
 
 # ══════════════════════════════════════════════════════════════════
-# ٦. التشغيل
+# ٧. التشغيل
 # ══════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "test"
