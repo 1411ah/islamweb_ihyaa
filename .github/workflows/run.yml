@@ -28,6 +28,8 @@ jobs:
         run: pip install requests beautifulsoup4 lxml ebooklib
 
       - name: Run scraper
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scraper.py ${{ github.event.inputs.mode }}
 
       - name: Commit output
