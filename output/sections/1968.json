@@ -1,6 +1,6 @@
 {
   "node_id": "1968",
-  "title": "قسم 1968",
+  "title": "فوائد مهمة",
   "idfrom": 1968,
   "idto": 1968,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

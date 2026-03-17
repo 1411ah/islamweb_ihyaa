@@ -1,6 +1,6 @@
 {
   "node_id": "4689",
-  "title": "قسم 4689",
+  "title": "القسم الأول الحرام لصفة في عينه",
   "idfrom": 4689,
   "idto": 4689,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

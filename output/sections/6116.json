@@ -1,6 +1,6 @@
 {
   "node_id": "6116",
-  "title": "قسم 6116",
+  "title": "بيان أن الوسواس هل يتصور أن ينقطع بالكلية عند الذكر أم لا",
   "idfrom": 6116,
   "idto": 6116,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7820",
-  "title": "قسم 7820",
+  "title": "الشطر الأول من الكتاب بيان حقيقة التوحيد الذي هو أصل المتوكل",
   "idfrom": 7820,
   "idto": 7820,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

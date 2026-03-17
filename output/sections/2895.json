@@ -1,6 +1,6 @@
 {
   "node_id": "2895",
-  "title": "قسم 2895",
+  "title": "الصنف الثاني المساكين",
   "idfrom": 2895,
   "idto": 2895,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

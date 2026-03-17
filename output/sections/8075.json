@@ -1,6 +1,6 @@
 {
   "node_id": "8075",
-  "title": "قسم 8075",
+  "title": "بيان السبب في قصور أفهام الخلق عن معرفة الله تعالى",
   "idfrom": 8075,
   "idto": 8075,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

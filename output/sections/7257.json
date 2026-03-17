@@ -1,6 +1,6 @@
 {
   "node_id": "7257",
-  "title": "قسم 7257",
+  "title": "علامات صحة التوبة",
   "idfrom": 7257,
   "idto": 7257,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

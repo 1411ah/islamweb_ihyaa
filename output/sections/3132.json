@@ -1,6 +1,6 @@
 {
   "node_id": "3132",
-  "title": "قسم 3132",
+  "title": "الصيام في شعبان",
   "idfrom": 3132,
   "idto": 3132,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

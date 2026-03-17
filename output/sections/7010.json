@@ -1,6 +1,6 @@
 {
   "node_id": "7010",
-  "title": "قسم 7010",
+  "title": "بيان ذم العجب وآفته",
   "idfrom": 7010,
   "idto": 7010,
   "paragraphs": [
@@ -214,5 +214,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

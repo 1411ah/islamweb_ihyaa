@@ -1,6 +1,6 @@
 {
   "node_id": "4098",
-  "title": "قسم 4098",
+  "title": "آداب إجابة الدعوة إلى الطعام",
   "idfrom": 4098,
   "idto": 4098,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

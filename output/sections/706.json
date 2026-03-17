@@ -1,6 +1,6 @@
 {
   "node_id": "706",
-  "title": "قسم 706",
+  "title": "الأصل السابع العلم بأن الله تعالى منزه الذات عن الاختصاص بالجهات",
   "idfrom": 706,
   "idto": 706,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

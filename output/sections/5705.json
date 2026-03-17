@@ -1,6 +1,6 @@
 {
   "node_id": "5705",
-  "title": "قسم 5705",
+  "title": "فصل فيما احتج به المبيحون للسماع",
   "idfrom": 5705,
   "idto": 5705,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

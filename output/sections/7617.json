@@ -1,6 +1,6 @@
 {
   "node_id": "7617",
-  "title": "قسم 7617",
+  "title": "بيان فضيلة الخوف والترغيب فيه",
   "idfrom": 7617,
   "idto": 7617,
   "paragraphs": [
@@ -182,5 +182,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

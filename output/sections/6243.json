@@ -1,6 +1,6 @@
 {
   "node_id": "6243",
-  "title": "قسم 6243",
+  "title": "بيان طريق الرياضة في كسر شهوة البطن",
   "idfrom": 6243,
   "idto": 6243,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "937",
-  "title": "قسم 937",
+  "title": "الأصل التاسع أن شرائط الإمامية العظمى المعبر عنها بالخلافة بعد الإسلام",
   "idfrom": 937,
   "idto": 937,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1727",
-  "title": "قسم 1727",
+  "title": "حكايات وأخبار في صلاة الخاشعين",
   "idfrom": 1727,
   "idto": 1727,
   "paragraphs": [
@@ -82,5 +82,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

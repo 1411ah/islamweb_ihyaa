@@ -1,6 +1,6 @@
 {
   "node_id": "1534",
-  "title": "قسم 1534",
+  "title": "المنهيات",
   "idfrom": 1534,
   "idto": 1534,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

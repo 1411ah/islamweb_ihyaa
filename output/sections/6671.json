@@ -1,6 +1,6 @@
 {
   "node_id": "6671",
-  "title": "قسم 6671",
+  "title": "الفصل الأول في بيان ذم المال وكراهة حبه",
   "idfrom": 6671,
   "idto": 6671,
   "paragraphs": [
@@ -174,5 +174,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

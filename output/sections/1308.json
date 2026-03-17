@@ -1,6 +1,6 @@
 {
   "node_id": "1308",
-  "title": "قسم 1308",
+  "title": "فصل في عشر خصال مكروهة في اللحية",
   "idfrom": 1308,
   "idto": 1308,
   "paragraphs": [
@@ -106,5 +106,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

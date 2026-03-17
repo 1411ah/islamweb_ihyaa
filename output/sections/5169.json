@@ -1,6 +1,6 @@
 {
   "node_id": "5169",
-  "title": "قسم 5169",
+  "title": "الحق الخامس العفو من الزلات والهفوات",
   "idfrom": 5169,
   "idto": 5169,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

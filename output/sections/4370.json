@@ -1,6 +1,6 @@
 {
   "node_id": "4370",
-  "title": "قسم 4370",
+  "title": "الأدب الثامن العدل بين الزوجات",
   "idfrom": 4370,
   "idto": 4370,
   "paragraphs": [
@@ -146,5 +146,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

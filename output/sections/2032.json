@@ -1,6 +1,6 @@
 {
   "node_id": "2032",
-  "title": "قسم 2032",
+  "title": "حسن المراقبة للساعة الشريفة",
   "idfrom": 2032,
   "idto": 2032,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

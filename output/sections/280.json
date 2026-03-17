@@ -1,6 +1,6 @@
 {
   "node_id": "280",
-  "title": "قسم 280",
+  "title": "الوظيفة الرابعة من الوظائف التسعة أن يحترز الخائض في العلم",
   "idfrom": 280,
   "idto": 280,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

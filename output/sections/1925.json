@@ -1,6 +1,6 @@
 {
   "node_id": "1925",
-  "title": "قسم 1925",
+  "title": "فصل هل يجب على الزمن الجمعة",
   "idfrom": 1925,
   "idto": 1925,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

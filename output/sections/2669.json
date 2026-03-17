@@ -1,6 +1,6 @@
 {
   "node_id": "2669",
-  "title": "قسم 2669",
+  "title": "النوع الرابع زكاة التجارة",
   "idfrom": 2669,
   "idto": 2669,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

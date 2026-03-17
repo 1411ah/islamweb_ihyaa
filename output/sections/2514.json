@@ -1,6 +1,6 @@
 {
   "node_id": "2514",
-  "title": "قسم 2514",
+  "title": "ركعتان عند دخول المنزل وعند الخروج منه",
   "idfrom": 2514,
   "idto": 2514,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

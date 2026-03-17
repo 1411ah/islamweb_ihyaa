@@ -1,6 +1,6 @@
 {
   "node_id": "7370",
-  "title": "قسم 7370",
+  "title": "بيان مظان الحاجة إلى الصبر",
   "idfrom": 7370,
   "idto": 7370,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

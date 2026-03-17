@@ -1,6 +1,6 @@
 {
   "node_id": "6440",
-  "title": "قسم 6440",
+  "title": "بيان حد النميمة وما يجب في ردها",
   "idfrom": 6440,
   "idto": 6440,
   "paragraphs": [
@@ -206,5 +206,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

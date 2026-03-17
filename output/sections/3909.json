@@ -1,6 +1,6 @@
 {
   "node_id": "3909",
-  "title": "قسم 3909",
+  "title": "فضيلة قيام الليل",
   "idfrom": 3909,
   "idto": 3909,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

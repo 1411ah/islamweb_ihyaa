@@ -1,6 +1,6 @@
 {
   "node_id": "2447",
-  "title": "قسم 2447",
+  "title": "فصل صلاة الاستسقاء في جماعة",
   "idfrom": 2447,
   "idto": 2447,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "496",
-  "title": "قسم 496",
+  "title": "الصفة الثالثة من صفات المعاني الإرادة",
   "idfrom": 496,
   "idto": 496,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

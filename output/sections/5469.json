@@ -1,6 +1,6 @@
 {
   "node_id": "5469",
-  "title": "قسم 5469",
+  "title": "أحكام النية في السفر",
   "idfrom": 5469,
   "idto": 5469,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

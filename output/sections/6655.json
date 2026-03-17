@@ -1,6 +1,6 @@
 {
   "node_id": "6655",
-  "title": "قسم 6655",
+  "title": "بيان ماهية الدنيا",
   "idfrom": 6655,
   "idto": 6655,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

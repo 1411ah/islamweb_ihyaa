@@ -1,6 +1,6 @@
 {
   "node_id": "6915",
-  "title": "قسم 6915",
+  "title": "مقدمة في الكبر والعجب",
   "idfrom": 6915,
   "idto": 6915,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

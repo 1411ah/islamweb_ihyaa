@@ -1,6 +1,6 @@
 {
   "node_id": "3217",
-  "title": "قسم 3217",
+  "title": "ما ينبغي للمحرم لبسه",
   "idfrom": 3217,
   "idto": 3217,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

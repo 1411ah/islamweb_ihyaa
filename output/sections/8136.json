@@ -1,6 +1,6 @@
 {
   "node_id": "8136",
-  "title": "قسم 8136",
+  "title": "بيان حقيقة الرضا وتصوره فيما يخالف الهوى",
   "idfrom": 8136,
   "idto": 8136,
   "paragraphs": [
@@ -150,5 +150,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

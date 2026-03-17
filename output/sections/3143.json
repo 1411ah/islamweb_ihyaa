@@ -1,6 +1,6 @@
 {
   "node_id": "3143",
-  "title": "قسم 3143",
+  "title": "أحوال المتطوع في الصيام",
   "idfrom": 3143,
   "idto": 3143,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5866",
-  "title": "قسم 5866",
+  "title": "بيان كلامه وضحكه صلى الله عليه وسلم",
   "idfrom": 5866,
   "idto": 5866,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

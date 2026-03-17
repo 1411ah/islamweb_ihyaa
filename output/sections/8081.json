@@ -1,6 +1,6 @@
 {
   "node_id": "8081",
-  "title": "قسم 8081",
+  "title": "بيان محبة الله للعبد ومعناها",
   "idfrom": 8081,
   "idto": 8081,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

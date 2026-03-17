@@ -1,6 +1,6 @@
 {
   "node_id": "6517",
-  "title": "قسم 6517",
+  "title": "فضيلة الحلم",
   "idfrom": 6517,
   "idto": 6517,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

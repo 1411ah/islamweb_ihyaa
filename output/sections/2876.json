@@ -1,6 +1,6 @@
 {
   "node_id": "2876",
-  "title": "قسم 2876",
+  "title": "الصفة الثالثة أن يكون من يعطيه مع كونه متقيا عالما",
   "idfrom": 2876,
   "idto": 2876,
   "paragraphs": [
@@ -86,5 +86,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

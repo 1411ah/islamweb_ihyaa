@@ -1,6 +1,6 @@
 {
   "node_id": "2075",
-  "title": "قسم 2075",
+  "title": "الانشغال بيوم الجمعة للآخرة والكف عن جميع أشغال الدنيا",
   "idfrom": 2075,
   "idto": 2075,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

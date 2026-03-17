@@ -1,6 +1,6 @@
 {
   "node_id": "2828",
-  "title": "قسم 2828",
+  "title": "الوظيفة الأولى فهم وجوب الزكاة",
   "idfrom": 2828,
   "idto": 2828,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

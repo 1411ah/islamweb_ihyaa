@@ -1,6 +1,6 @@
 {
   "node_id": "7744",
-  "title": "قسم 7744",
+  "title": "بيان فضيلة الزهد",
   "idfrom": 7744,
   "idto": 7744,
   "paragraphs": [
@@ -146,5 +146,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

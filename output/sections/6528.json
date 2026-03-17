@@ -1,6 +1,6 @@
 {
   "node_id": "6528",
-  "title": "قسم 6528",
+  "title": "فضيلة العفو",
   "idfrom": 6528,
   "idto": 6528,
   "paragraphs": [
@@ -294,5 +294,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

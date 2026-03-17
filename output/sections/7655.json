@@ -1,6 +1,6 @@
 {
   "node_id": "7655",
-  "title": "قسم 7655",
+  "title": "بيان أحوال الخائفين وأحوال الملائكة والأنبياء عليهم السلام في الخوف",
   "idfrom": 7655,
   "idto": 7655,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

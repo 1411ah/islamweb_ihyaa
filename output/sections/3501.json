@@ -1,6 +1,6 @@
 {
   "node_id": "3501",
-  "title": "قسم 3501",
+  "title": "الباب الرابع في فهم القرآن وتفسيره بالرأي",
   "idfrom": 3501,
   "idto": 3501,
   "paragraphs": [
@@ -214,5 +214,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1011",
-  "title": "قسم 1011",
+  "title": "المبحث الثالث في بيان أن الإيمان باق مع النوم والغفلة والإغماء",
   "idfrom": 1011,
   "idto": 1011,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

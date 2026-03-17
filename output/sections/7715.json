@@ -1,6 +1,6 @@
 {
   "node_id": "7715",
-  "title": "قسم 7715",
+  "title": "بيان تحريم السؤال من غير ضرورة وآداب الفقير المضطر إليه",
   "idfrom": 7715,
   "idto": 7715,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5696",
-  "title": "قسم 5696",
+  "title": "الأدب الثالث أن يكون مصغيا بأذنه إلى ما يقول القائل",
   "idfrom": 5696,
   "idto": 5696,
   "paragraphs": [
@@ -186,5 +186,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

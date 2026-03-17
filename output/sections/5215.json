@@ -1,6 +1,6 @@
 {
   "node_id": "5215",
-  "title": "قسم 5215",
+  "title": "خاتمه الباب فيه جملا من آداب المعيشة والمجالسة مع أصناف الخلق",
   "idfrom": 5215,
   "idto": 5215,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

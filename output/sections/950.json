@@ -1,6 +1,6 @@
 {
   "node_id": "950",
-  "title": "قسم 950",
+  "title": "البحث الثاني في إطلاق الشرع الترادف بين الإسلام والإيمان",
   "idfrom": 950,
   "idto": 950,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

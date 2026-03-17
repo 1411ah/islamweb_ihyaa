@@ -1,6 +1,6 @@
 {
   "node_id": "7600",
-  "title": "قسم 7600",
+  "title": "بيان حقيقة الخوف",
   "idfrom": 7600,
   "idto": 7600,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

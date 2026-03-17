@@ -1,6 +1,6 @@
 {
   "node_id": "3163",
-  "title": "قسم 3163",
+  "title": "فضيلة المقام بمكة وكراهيته",
   "idfrom": 3163,
   "idto": 3163,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

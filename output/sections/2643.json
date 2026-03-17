@@ -1,6 +1,6 @@
 {
   "node_id": "2643",
-  "title": "قسم 2643",
+  "title": "النوع الثاني زكاة المعشرات",
   "idfrom": 2643,
   "idto": 2643,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

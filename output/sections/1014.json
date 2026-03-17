@@ -1,6 +1,6 @@
 {
   "node_id": "1014",
-  "title": "قسم 1014",
+  "title": "فصل الحرام رزق",
   "idfrom": 1014,
   "idto": 1014,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

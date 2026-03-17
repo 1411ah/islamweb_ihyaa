@@ -1,6 +1,6 @@
 {
   "node_id": "1392",
-  "title": "قسم 1392",
+  "title": "فصل في النية",
   "idfrom": 1392,
   "idto": 1392,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

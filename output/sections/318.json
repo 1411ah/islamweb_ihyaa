@@ -1,6 +1,6 @@
 {
   "node_id": "318",
-  "title": "قسم 318",
+  "title": "بيان العلامات الفارقة بين علماء الآخرة وبين علماء السوء",
   "idfrom": 318,
   "idto": 318,
   "paragraphs": [
@@ -154,5 +154,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

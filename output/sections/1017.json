@@ -1,6 +1,6 @@
 {
   "node_id": "1017",
-  "title": "قسم 1017",
+  "title": "فصل في قول الرجل أسألك بحق فلان أو بحق أنبيائك ورسلك",
   "idfrom": 1017,
   "idto": 1017,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

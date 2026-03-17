@@ -1,6 +1,6 @@
 {
   "node_id": "3544",
-  "title": "قسم 3544",
+  "title": "فضيلة مجالس الذكر",
   "idfrom": 3544,
   "idto": 3544,
   "paragraphs": [
@@ -86,5 +86,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

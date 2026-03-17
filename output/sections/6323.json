@@ -1,6 +1,6 @@
 {
   "node_id": "6323",
-  "title": "قسم 6323",
+  "title": "الآفة الرابعة المراء والجدال",
   "idfrom": 6323,
   "idto": 6323,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

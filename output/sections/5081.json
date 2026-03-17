@@ -1,6 +1,6 @@
 {
   "node_id": "5081",
-  "title": "قسم 5081",
+  "title": "بيان الصفات المشروطة فيمن تختار صحبته",
   "idfrom": 5081,
   "idto": 5081,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

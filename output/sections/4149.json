@@ -1,6 +1,6 @@
 {
   "node_id": "4149",
-  "title": "قسم 4149",
+  "title": "فصل يجمع آدابا ومناهي طبية وشرعية في الأطعمة والأكل",
   "idfrom": 4149,
   "idto": 4149,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

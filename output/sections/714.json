@@ -1,6 +1,6 @@
 {
   "node_id": "714",
-  "title": "قسم 714",
+  "title": "الأصل الثامن العلم بأنه تعالى مستو على عرشه",
   "idfrom": 714,
   "idto": 714,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

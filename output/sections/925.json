@@ -1,6 +1,6 @@
 {
   "node_id": "925",
-  "title": "قسم 925",
+  "title": "الأصل السادس أن الجنة والنار",
   "idfrom": 925,
   "idto": 925,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

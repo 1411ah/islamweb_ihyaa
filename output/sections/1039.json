@@ -1,6 +1,6 @@
 {
   "node_id": "1039",
-  "title": "قسم 1039",
+  "title": "الفصل العاشر في ذكر بعض اصطلاحات لفقهائنا الحنفية ينبغي التفطن لها",
   "idfrom": 1039,
   "idto": 1039,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

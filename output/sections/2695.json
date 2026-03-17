@@ -1,6 +1,6 @@
 {
   "node_id": "2695",
-  "title": "قسم 2695",
+  "title": "الواجب في زكاة االفطر",
   "idfrom": 2695,
   "idto": 2695,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

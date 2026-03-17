@@ -1,6 +1,6 @@
 {
   "node_id": "6337",
-  "title": "قسم 6337",
+  "title": "الآفة الثامنة اللعن",
   "idfrom": 6337,
   "idto": 6337,
   "paragraphs": [
@@ -106,5 +106,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

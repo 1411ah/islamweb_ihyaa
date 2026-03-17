@@ -1,6 +1,6 @@
 {
   "node_id": "6576",
-  "title": "قسم 6576",
+  "title": "بيان القدر الواجب في نفي الحسد عن القلب",
   "idfrom": 6576,
   "idto": 6576,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

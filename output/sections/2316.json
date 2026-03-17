@@ -1,6 +1,6 @@
 {
   "node_id": "2316",
-  "title": "قسم 2316",
+  "title": "فصل يستحب للعيد ما يستحب للجمعة من الاغتسال",
   "idfrom": 2316,
   "idto": 2316,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

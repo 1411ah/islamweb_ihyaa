@@ -1,6 +1,6 @@
 {
   "node_id": "5660",
-  "title": "قسم 5660",
+  "title": "بيان حجج القائلين بتحريم السماع والجواب عنها",
   "idfrom": 5660,
   "idto": 5660,
   "paragraphs": [
@@ -242,5 +242,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

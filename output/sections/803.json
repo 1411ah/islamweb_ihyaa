@@ -1,6 +1,6 @@
 {
   "node_id": "803",
-  "title": "قسم 803",
+  "title": "الأصل السادس إنه سبحانه وتعالى متكلم بكلام",
   "idfrom": 803,
   "idto": 803,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

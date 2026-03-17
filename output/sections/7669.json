@@ -1,6 +1,6 @@
 {
   "node_id": "7669",
-  "title": "قسم 7669",
+  "title": "بيان أحوال الصحابة والتابعين والسلف الصالحين في شدة الخوف",
   "idfrom": 7669,
   "idto": 7669,
   "paragraphs": [
@@ -310,5 +310,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

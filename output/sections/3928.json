@@ -1,6 +1,6 @@
 {
   "node_id": "3928",
-  "title": "قسم 3928",
+  "title": "الأسباب الظاهرة التي بها يتيسر بها على قيام الليل",
   "idfrom": 3928,
   "idto": 3928,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

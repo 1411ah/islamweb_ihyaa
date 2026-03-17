@@ -1,6 +1,6 @@
 {
   "node_id": "5187",
-  "title": "قسم 5187",
+  "title": "الحق السابع الوفاء والإخلاص",
   "idfrom": 5187,
   "idto": 5187,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

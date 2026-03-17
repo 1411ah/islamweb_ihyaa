@@ -1,6 +1,6 @@
 {
   "node_id": "5716",
-  "title": "قسم 5716",
+  "title": "الباب الأول في وجوب الأمر بالمعروف والنهي عن المنكر",
   "idfrom": 5716,
   "idto": 5716,
   "paragraphs": [
@@ -318,5 +318,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

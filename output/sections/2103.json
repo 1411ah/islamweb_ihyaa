@@ -1,6 +1,6 @@
 {
   "node_id": "2103",
-  "title": "قسم 2103",
+  "title": "مسألة حكم المسبوق",
   "idfrom": 2103,
   "idto": 2103,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "4598",
-  "title": "قسم 4598",
+  "title": "القسم الأول فيما يعم ضرره وهو أنواع",
   "idfrom": 4598,
   "idto": 4598,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

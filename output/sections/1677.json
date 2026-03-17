@@ -1,6 +1,6 @@
 {
   "node_id": "1677",
-  "title": "قسم 1677",
+  "title": "مما ينبغي أن يحضر في القلب عند كل شرط وركن النية",
   "idfrom": 1677,
   "idto": 1677,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

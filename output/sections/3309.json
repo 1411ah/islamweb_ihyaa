@@ -1,6 +1,6 @@
 {
   "node_id": "3309",
-  "title": "قسم 3309",
+  "title": "الجملة الرابعة في الطواف بالبيت",
   "idfrom": 3309,
   "idto": 3309,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

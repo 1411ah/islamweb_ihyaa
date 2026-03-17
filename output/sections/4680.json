@@ -1,6 +1,6 @@
 {
   "node_id": "4680",
-  "title": "قسم 4680",
+  "title": "فضيلة الحلال ومذمة الحرام",
   "idfrom": 4680,
   "idto": 4680,
   "paragraphs": [
@@ -134,5 +134,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

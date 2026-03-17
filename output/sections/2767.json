@@ -1,6 +1,6 @@
 {
   "node_id": "2767",
-  "title": "قسم 2767",
+  "title": "فصل في زكاة الأوقاص",
   "idfrom": 2767,
   "idto": 2767,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

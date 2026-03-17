@@ -1,6 +1,6 @@
 {
   "node_id": "3334",
-  "title": "قسم 3334",
+  "title": "الدعوات المأثورة في يوم عرفة",
   "idfrom": 3334,
   "idto": 3334,
   "paragraphs": [
@@ -134,5 +134,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3416",
-  "title": "قسم 3416",
+  "title": "بيان الأعمال الباطنة في الحج ووجه الإخلاص في النية",
   "idfrom": 3416,
   "idto": 3416,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

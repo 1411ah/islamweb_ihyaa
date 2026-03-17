@@ -1,6 +1,6 @@
 {
   "node_id": "7432",
-  "title": "قسم 7432",
+  "title": "بيان طريق كشف الغطاء عن الشكر في حق الله تعالى",
   "idfrom": 7432,
   "idto": 7432,
   "paragraphs": [
@@ -158,5 +158,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

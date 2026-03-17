@@ -1,6 +1,6 @@
 {
   "node_id": "1622",
-  "title": "قسم 1622",
+  "title": "من شروط صحة الصلاة الطهارة",
   "idfrom": 1622,
   "idto": 1622,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

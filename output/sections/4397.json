@@ -1,6 +1,6 @@
 {
   "node_id": "4397",
-  "title": "قسم 4397",
+  "title": "الأدب الثاني أن يؤذن في أذن المولود اليمنى",
   "idfrom": 4397,
   "idto": 4397,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

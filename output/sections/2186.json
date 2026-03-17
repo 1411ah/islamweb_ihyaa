@@ -1,6 +1,6 @@
 {
   "node_id": "2186",
-  "title": "قسم 2186",
+  "title": "من السنن الرواتب راتبة العصر",
   "idfrom": 2186,
   "idto": 2186,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

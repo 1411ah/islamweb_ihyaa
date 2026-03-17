@@ -1,6 +1,6 @@
 {
   "node_id": "2636",
-  "title": "قسم 2636",
+  "title": "زكاة الخليطين",
   "idfrom": 2636,
   "idto": 2636,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

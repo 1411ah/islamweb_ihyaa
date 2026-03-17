@@ -1,6 +1,6 @@
 {
   "node_id": "4418",
-  "title": "قسم 4418",
+  "title": "فصل طلاق الحائض",
   "idfrom": 4418,
   "idto": 4418,
   "paragraphs": [
@@ -190,5 +190,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

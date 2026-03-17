@@ -1,6 +1,6 @@
 {
   "node_id": "230",
-  "title": "قسم 230",
+  "title": "بيان القدر المحمود من العلوم المحمودة",
   "idfrom": 230,
   "idto": 230,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

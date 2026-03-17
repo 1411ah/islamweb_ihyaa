@@ -1,6 +1,6 @@
 {
   "node_id": "7443",
-  "title": "قسم 7443",
+  "title": "بيان تمييز ما يحبه الله تعالى عما يكرهه",
   "idfrom": 7443,
   "idto": 7443,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

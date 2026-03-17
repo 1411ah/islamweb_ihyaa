@@ -1,6 +1,6 @@
 {
   "node_id": "7510",
-  "title": "قسم 7510",
+  "title": "الطرف الرابع في نعم الله تعالى في الأصول التي يحصل منها الأطعمة وتصير صالحة",
   "idfrom": 7510,
   "idto": 7510,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

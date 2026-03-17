@@ -1,6 +1,6 @@
 {
   "node_id": "1879",
-  "title": "قسم 1879",
+  "title": "فصل خطبة الجمعة هل هي شرط في صحة الصلاة وركن من أركانها أم لا ؟",
   "idfrom": 1879,
   "idto": 1879,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

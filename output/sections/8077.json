@@ -1,6 +1,6 @@
 {
   "node_id": "8077",
-  "title": "قسم 8077",
+  "title": "بيان معنى الشوق إلى الله تعالى",
   "idfrom": 8077,
   "idto": 8077,
   "paragraphs": [
@@ -138,5 +138,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

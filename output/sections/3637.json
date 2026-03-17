@@ -1,6 +1,6 @@
 {
   "node_id": "3637",
-  "title": "قسم 3637",
+  "title": "دعاء بريدة بن الحصيب الأسلمي",
   "idfrom": 3637,
   "idto": 3637,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

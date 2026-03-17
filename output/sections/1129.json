@@ -1,6 +1,6 @@
 {
   "node_id": "1129",
-  "title": "قسم 1129",
+  "title": "كيفية الوضوء",
   "idfrom": 1129,
   "idto": 1129,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

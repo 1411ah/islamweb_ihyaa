@@ -1,6 +1,6 @@
 {
   "node_id": "4958",
-  "title": "قسم 4958",
+  "title": "فصل في عدم المجيء إلى السلاطين",
   "idfrom": 4958,
   "idto": 4958,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

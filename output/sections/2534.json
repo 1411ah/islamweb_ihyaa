@@ -1,6 +1,6 @@
 {
   "node_id": "2534",
-  "title": "قسم 2534",
+  "title": "صلاة التسبيح",
   "idfrom": 2534,
   "idto": 2534,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

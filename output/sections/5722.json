@@ -1,6 +1,6 @@
 {
   "node_id": "5722",
-  "title": "قسم 5722",
+  "title": "شروط المحتسب",
   "idfrom": 5722,
   "idto": 5722,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

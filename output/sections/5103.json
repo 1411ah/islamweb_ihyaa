@@ -1,6 +1,6 @@
 {
   "node_id": "5103",
-  "title": "قسم 5103",
+  "title": "الحق الأول في المال",
   "idfrom": 5103,
   "idto": 5103,
   "paragraphs": [
@@ -130,5 +130,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

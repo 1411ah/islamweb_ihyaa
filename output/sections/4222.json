@@ -1,6 +1,6 @@
 {
   "node_id": "4222",
-  "title": "قسم 4222",
+  "title": "الفائدة الأولى حصول الولد ذكرا كان أو أنثى",
   "idfrom": 4222,
   "idto": 4222,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

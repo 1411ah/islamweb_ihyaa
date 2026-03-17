@@ -1,6 +1,6 @@
 {
   "node_id": "865",
-  "title": "قسم 865",
+  "title": "الأصل الثامن أن معرفة الله سبحانه واجبة",
   "idfrom": 865,
   "idto": 865,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

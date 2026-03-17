@@ -1,6 +1,6 @@
 {
   "node_id": "6450",
-  "title": "قسم 6450",
+  "title": "بيان ما على الممدوح",
   "idfrom": 6450,
   "idto": 6450,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

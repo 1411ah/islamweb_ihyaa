@@ -1,6 +1,6 @@
 {
   "node_id": "4653",
-  "title": "قسم 4653",
+  "title": "اتقاء مواقع الشبهات ومظان الريب",
   "idfrom": 4653,
   "idto": 4653,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5827",
-  "title": "قسم 5827",
+  "title": "مواعظ الخلفاء والملوك",
   "idfrom": 5827,
   "idto": 5827,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

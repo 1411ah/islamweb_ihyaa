@@ -1,6 +1,6 @@
 {
   "node_id": "1033",
-  "title": "قسم 1033",
+  "title": "الفصل الرابع الخلاف الواقع بين الناس في الأديان والمذاهب",
   "idfrom": 1033,
   "idto": 1033,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

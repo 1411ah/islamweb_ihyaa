@@ -1,6 +1,6 @@
 {
   "node_id": "6360",
-  "title": "قسم 6360",
+  "title": "الآفة الثانية عشرة إفشاء السر",
   "idfrom": 6360,
   "idto": 6360,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

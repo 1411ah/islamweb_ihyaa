@@ -1,6 +1,6 @@
 {
   "node_id": "2870",
-  "title": "قسم 2870",
+  "title": "الصفة الأولى طلب الأتقياء الأخفياء المعرضين",
   "idfrom": 2870,
   "idto": 2870,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

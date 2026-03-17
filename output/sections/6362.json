@@ -1,6 +1,6 @@
 {
   "node_id": "6362",
-  "title": "قسم 6362",
+  "title": "الآفة الثالثة عشرة الوعد الكاذب",
   "idfrom": 6362,
   "idto": 6362,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

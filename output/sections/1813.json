@@ -1,6 +1,6 @@
 {
   "node_id": "1813",
-  "title": "قسم 1813",
+  "title": "فصل من أدرك الإمام في الركوع",
   "idfrom": 1813,
   "idto": 1813,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

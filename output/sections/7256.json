@@ -1,6 +1,6 @@
 {
   "node_id": "7256",
-  "title": "قسم 7256",
+  "title": "فصل في بيان ما تعظم به الصغائر من الذنوب",
   "idfrom": 7256,
   "idto": 7256,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

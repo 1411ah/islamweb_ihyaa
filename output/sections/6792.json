@@ -1,6 +1,6 @@
 {
   "node_id": "6792",
-  "title": "قسم 6792",
+  "title": "بيان سبب كون الجاه محبوبا بالطبع",
   "idfrom": 6792,
   "idto": 6792,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

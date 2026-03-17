@@ -1,6 +1,6 @@
 {
   "node_id": "2813",
-  "title": "قسم 2813",
+  "title": "من الشروط الظاهرة لأداء الزكاة استيعاب الأصناف المستحقين للزكاة",
   "idfrom": 2813,
   "idto": 2813,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "921",
-  "title": "قسم 921",
+  "title": "الأصل الخامس الصراط",
   "idfrom": 921,
   "idto": 921,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

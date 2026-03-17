@@ -1,6 +1,6 @@
 {
   "node_id": "3165",
-  "title": "قسم 3165",
+  "title": "أجور دور مكة",
   "idfrom": 3165,
   "idto": 3165,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

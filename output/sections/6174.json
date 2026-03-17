@@ -1,6 +1,6 @@
 {
   "node_id": "6174",
-  "title": "قسم 6174",
+  "title": "بيان علامات حسن الخلق",
   "idfrom": 6174,
   "idto": 6174,
   "paragraphs": [
@@ -370,5 +370,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "433",
-  "title": "قسم 433",
+  "title": "ترجمة إمام السنة أبي الحسن الأشعري",
   "idfrom": 433,
   "idto": 433,
   "paragraphs": [
@@ -190,5 +190,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "99",
-  "title": "قسم 99",
+  "title": "بيان العلم الذي هو فرض عين",
   "idfrom": 99,
   "idto": 99,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5668",
-  "title": "قسم 5668",
+  "title": "أول درجة السماع فهم المسموع وتنزيله",
   "idfrom": 5668,
   "idto": 5668,
   "paragraphs": [
@@ -454,5 +454,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

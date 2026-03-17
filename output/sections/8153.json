@@ -1,6 +1,6 @@
 {
   "node_id": "8153",
-  "title": "قسم 8153",
+  "title": "بيان جملة من حكايات المحبين وأقوالهم ومكاشفتهم",
   "idfrom": 8153,
   "idto": 8153,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

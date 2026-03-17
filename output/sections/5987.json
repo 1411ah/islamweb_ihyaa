@@ -1,6 +1,6 @@
 {
   "node_id": "5987",
-  "title": "قسم 5987",
+  "title": "بيان معجزاته وآياته الدالة على صدقه",
   "idfrom": 5987,
   "idto": 5987,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

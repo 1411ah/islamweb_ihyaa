@@ -1,6 +1,6 @@
 {
   "node_id": "1388",
-  "title": "قسم 1388",
+  "title": "استقبال القبلة",
   "idfrom": 1388,
   "idto": 1388,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

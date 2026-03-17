@@ -1,6 +1,6 @@
 {
   "node_id": "4739",
-  "title": "قسم 4739",
+  "title": "القسم الأول الحلال المطلق هو الذي انحلت عن ذاته الصفات الموجبة للتحريم في عينه",
   "idfrom": 4739,
   "idto": 4739,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7547",
-  "title": "قسم 7547",
+  "title": "بيان اجتماع الصبر والشكر على شيء واحد",
   "idfrom": 7547,
   "idto": 7547,
   "paragraphs": [
@@ -210,5 +210,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

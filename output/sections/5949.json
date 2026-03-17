@@ -1,6 +1,6 @@
 {
   "node_id": "5949",
-  "title": "قسم 5949",
+  "title": "بيان صورته صلى الله عليه وسلم وخلقته",
   "idfrom": 5949,
   "idto": 5949,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

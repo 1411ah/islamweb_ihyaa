@@ -1,6 +1,6 @@
 {
   "node_id": "6723",
-  "title": "قسم 6723",
+  "title": "حكايات الأسخياء",
   "idfrom": 6723,
   "idto": 6723,
   "paragraphs": [
@@ -238,5 +238,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

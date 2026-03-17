@@ -1,6 +1,6 @@
 {
   "node_id": "2348",
-  "title": "قسم 2348",
+  "title": "السابع المستحب يوم العيد الأضحية بكبش",
   "idfrom": 2348,
   "idto": 2348,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5307",
-  "title": "قسم 5307",
+  "title": "آداب المريض",
   "idfrom": 5307,
   "idto": 5307,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1386",
-  "title": "قسم 1386",
+  "title": "فضيلة المسجد وموضع الصلاة",
   "idfrom": 1386,
   "idto": 1386,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

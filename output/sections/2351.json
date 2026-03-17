@@ -1,6 +1,6 @@
 {
   "node_id": "2351",
-  "title": "قسم 2351",
+  "title": "فصل ما يجب على من أراد الأضحية",
   "idfrom": 2351,
   "idto": 2351,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

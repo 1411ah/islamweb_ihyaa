@@ -1,6 +1,6 @@
 {
   "node_id": "1264",
-  "title": "قسم 1264",
+  "title": "آداب دخول الحمام",
   "idfrom": 1264,
   "idto": 1264,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

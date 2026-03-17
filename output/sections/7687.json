@@ -1,6 +1,6 @@
 {
   "node_id": "7687",
-  "title": "قسم 7687",
+  "title": "بيان فضل خصوص الفقراء من الراضين القانعين والصابرين",
   "idfrom": 7687,
   "idto": 7687,
   "paragraphs": [
@@ -270,5 +270,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

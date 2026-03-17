@@ -1,6 +1,6 @@
 {
   "node_id": "5644",
-  "title": "قسم 5644",
+  "title": "العارض الثاني في الآلة",
   "idfrom": 5644,
   "idto": 5644,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

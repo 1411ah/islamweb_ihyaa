@@ -1,6 +1,6 @@
 {
   "node_id": "7390",
-  "title": "قسم 7390",
+  "title": "بيان دواء الصبر وما يستعان به عليه",
   "idfrom": 7390,
   "idto": 7390,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

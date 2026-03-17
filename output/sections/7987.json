@@ -1,6 +1,6 @@
 {
   "node_id": "7987",
-  "title": "قسم 7987",
+  "title": "الفن الرابع في السعي في إزالة الضرر كمداواة المرضى وأمثاله",
   "idfrom": 7987,
   "idto": 7987,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

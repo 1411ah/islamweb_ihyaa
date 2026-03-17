@@ -1,6 +1,6 @@
 {
   "node_id": "5569",
-  "title": "قسم 5569",
+  "title": "الرخصة الخامسة النفل راكبا على الراحلة",
   "idfrom": 5569,
   "idto": 5569,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "6684",
-  "title": "قسم 6684",
+  "title": "فوائد المال الدنيوية والدينية",
   "idfrom": 6684,
   "idto": 6684,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

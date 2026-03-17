@@ -1,6 +1,6 @@
 {
   "node_id": "402",
-  "title": "قسم 402",
+  "title": "بيان شرف العقل",
   "idfrom": 402,
   "idto": 402,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

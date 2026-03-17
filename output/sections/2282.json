@@ -1,6 +1,6 @@
 {
   "node_id": "2282",
-  "title": "قسم 2282",
+  "title": "صلاة ليلة الخميس",
   "idfrom": 2282,
   "idto": 2282,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

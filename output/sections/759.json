@@ -1,6 +1,6 @@
 {
   "node_id": "759",
-  "title": "قسم 759",
+  "title": "الأصل العاشر العلم بأن الله عز وجل واحد",
   "idfrom": 759,
   "idto": 759,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

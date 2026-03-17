@@ -1,6 +1,6 @@
 {
   "node_id": "7708",
-  "title": "قسم 7708",
+  "title": "بيان آداب الفقير في قبول العطاء إذا جاء من غير سؤال",
   "idfrom": 7708,
   "idto": 7708,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

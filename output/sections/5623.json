@@ -1,6 +1,6 @@
 {
   "node_id": "5623",
-  "title": "قسم 5623",
+  "title": "بيان الدليل على إباحة السماع",
   "idfrom": 5623,
   "idto": 5623,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

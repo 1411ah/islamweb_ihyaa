@@ -1,6 +1,6 @@
 {
   "node_id": "1876",
-  "title": "قسم 1876",
+  "title": "فصل الاقتصار في الخطبة على ذكر خالص لله تعالى",
   "idfrom": 1876,
   "idto": 1876,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

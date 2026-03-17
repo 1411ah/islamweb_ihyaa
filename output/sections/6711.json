@@ -1,6 +1,6 @@
 {
   "node_id": "6711",
-  "title": "قسم 6711",
+  "title": "بيان فضيلة السخاء",
   "idfrom": 6711,
   "idto": 6711,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

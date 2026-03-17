@@ -1,6 +1,6 @@
 {
   "node_id": "3444",
-  "title": "قسم 3444",
+  "title": "ما قيل في ذكر تلاوة الغافلين",
   "idfrom": 3444,
   "idto": 3444,
   "paragraphs": [
@@ -102,5 +102,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

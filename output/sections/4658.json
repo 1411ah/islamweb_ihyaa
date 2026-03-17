@@ -1,6 +1,6 @@
 {
   "node_id": "4658",
-  "title": "قسم 4658",
+  "title": "طلب الحلال فريضة على كل مسلم",
   "idfrom": 4658,
   "idto": 4658,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

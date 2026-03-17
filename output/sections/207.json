@@ -1,6 +1,6 @@
 {
   "node_id": "207",
-  "title": "قسم 207",
+  "title": "اللفظ الرابع الذكر والتذكير",
   "idfrom": 207,
   "idto": 207,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

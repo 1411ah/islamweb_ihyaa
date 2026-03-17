@@ -1,6 +1,6 @@
 {
   "node_id": "2530",
-  "title": "قسم 2530",
+  "title": "صلاة الحاجة",
   "idfrom": 2530,
   "idto": 2530,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

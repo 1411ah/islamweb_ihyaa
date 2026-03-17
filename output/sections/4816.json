@@ -1,6 +1,6 @@
 {
   "node_id": "4816",
-  "title": "قسم 4816",
+  "title": "فصل في الاستحلاف",
   "idfrom": 4816,
   "idto": 4816,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

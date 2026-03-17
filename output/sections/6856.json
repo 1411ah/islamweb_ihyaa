@@ -1,6 +1,6 @@
 {
   "node_id": "6856",
-  "title": "قسم 6856",
+  "title": "بيان ما يحبط العمل من الرياء الخفي والجلي وما لا يحبطه",
   "idfrom": 6856,
   "idto": 6856,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "6692",
-  "title": "قسم 6692",
+  "title": "بيان ذم الحرص والطمع ومدح القناعة واليأس مما في أيدي الناس",
   "idfrom": 6692,
   "idto": 6692,
   "paragraphs": [
@@ -146,5 +146,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

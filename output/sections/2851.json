@@ -1,6 +1,6 @@
 {
   "node_id": "2851",
-  "title": "قسم 2851",
+  "title": "الوظيفة الخامسة أن يفسد صدقته بالمن والأذى",
   "idfrom": 2851,
   "idto": 2851,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

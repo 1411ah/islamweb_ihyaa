@@ -1,6 +1,6 @@
 {
   "node_id": "4244",
-  "title": "قسم 4244",
+  "title": "الفائدة الثالثة ترويح النفس وإيناسها بالمجالسة والنظر والملاعبة",
   "idfrom": 4244,
   "idto": 4244,
   "paragraphs": [
@@ -146,5 +146,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

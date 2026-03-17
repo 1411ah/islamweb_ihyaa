@@ -1,6 +1,6 @@
 {
   "node_id": "1034",
-  "title": "قسم 1034",
+  "title": "الفصل الخامس في ذكر أشياء من أصل الفقه على طريقة المتقدمين",
   "idfrom": 1034,
   "idto": 1034,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

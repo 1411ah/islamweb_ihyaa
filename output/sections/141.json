@@ -1,6 +1,6 @@
 {
   "node_id": "141",
-  "title": "قسم 141",
+  "title": "بيان العلم الذي هو فرض كفاية",
   "idfrom": 141,
   "idto": 141,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

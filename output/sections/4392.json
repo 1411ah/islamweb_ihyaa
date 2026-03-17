@@ -1,6 +1,6 @@
 {
   "node_id": "4392",
-  "title": "قسم 4392",
+  "title": "الأدب العاشر آداب الجماع",
   "idfrom": 4392,
   "idto": 4392,
   "paragraphs": [
@@ -154,5 +154,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

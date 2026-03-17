@@ -1,6 +1,6 @@
 {
   "node_id": "6876",
-  "title": "قسم 6876",
+  "title": "بيان الرخصة في قصد إظهار الطاعات",
   "idfrom": 6876,
   "idto": 6876,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2048",
-  "title": "قسم 2048",
+  "title": "قراءة القرآن يوم الجمعة",
   "idfrom": 2048,
   "idto": 2048,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

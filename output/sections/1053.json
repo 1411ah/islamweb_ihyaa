@@ -1,6 +1,6 @@
 {
   "node_id": "1053",
-  "title": "قسم 1053",
+  "title": "مراتب الطهارة",
   "idfrom": 1053,
   "idto": 1053,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

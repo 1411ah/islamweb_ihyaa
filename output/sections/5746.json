@@ -1,6 +1,6 @@
 {
   "node_id": "5746",
-  "title": "قسم 5746",
+  "title": "أن يكون المنكر موجودا في الحال",
   "idfrom": 5746,
   "idto": 5746,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

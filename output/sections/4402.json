@@ -1,6 +1,6 @@
 {
   "node_id": "4402",
-  "title": "قسم 4402",
+  "title": "الأدب الرابع العقيقة",
   "idfrom": 4402,
   "idto": 4402,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

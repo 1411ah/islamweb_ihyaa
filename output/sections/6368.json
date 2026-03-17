@@ -1,6 +1,6 @@
 {
   "node_id": "6368",
-  "title": "قسم 6368",
+  "title": "الآفة الرابعة عشرة الكذب في القول واليمين",
   "idfrom": 6368,
   "idto": 6368,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

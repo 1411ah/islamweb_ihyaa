@@ -1,6 +1,6 @@
 {
   "node_id": "7070",
-  "title": "قسم 7070",
+  "title": "الصنف الأول أهل العلم والمغترون",
   "idfrom": 7070,
   "idto": 7070,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "748",
-  "title": "قسم 748",
+  "title": "الأصل التاسع العلم بأن الله تعالى مع كونه منزها عن الصورة والمقدار",
   "idfrom": 748,
   "idto": 748,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

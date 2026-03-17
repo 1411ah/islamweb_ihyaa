@@ -1,6 +1,6 @@
 {
   "node_id": "6782",
-  "title": "قسم 6782",
+  "title": "بيان فضيلة الخمول",
   "idfrom": 6782,
   "idto": 6782,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

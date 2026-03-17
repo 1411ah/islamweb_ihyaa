@@ -1,6 +1,6 @@
 {
   "node_id": "1584",
-  "title": "قسم 1584",
+  "title": "بيان اشتراط الخشوع وحضور القلب",
   "idfrom": 1584,
   "idto": 1584,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

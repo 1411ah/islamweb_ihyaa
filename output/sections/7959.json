@@ -1,6 +1,6 @@
 {
   "node_id": "7959",
-  "title": "قسم 7959",
+  "title": "الفن الثاني في التعرض للأسباب بالادخار",
   "idfrom": 7959,
   "idto": 7959,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

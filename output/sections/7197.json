@@ -1,6 +1,6 @@
 {
   "node_id": "7197",
-  "title": "قسم 7197",
+  "title": "فصل في بيان أن التوبة إذا استجمعت شرائطها",
   "idfrom": 7197,
   "idto": 7197,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

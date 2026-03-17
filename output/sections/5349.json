@@ -1,6 +1,6 @@
 {
   "node_id": "5349",
-  "title": "قسم 5349",
+  "title": "حق المملوك",
   "idfrom": 5349,
   "idto": 5349,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

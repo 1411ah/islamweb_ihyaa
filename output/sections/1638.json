@@ -1,6 +1,6 @@
 {
   "node_id": "1638",
-  "title": "قسم 1638",
+  "title": "مما ينبغي أن يحضر في القلب عند كل شرط وركن الأذان",
   "idfrom": 1638,
   "idto": 1638,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

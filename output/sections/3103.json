@@ -1,6 +1,6 @@
 {
   "node_id": "3103",
-  "title": "قسم 3103",
+  "title": "الاعتكاف",
   "idfrom": 3103,
   "idto": 3103,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

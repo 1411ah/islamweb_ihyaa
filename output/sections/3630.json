@@ -1,6 +1,6 @@
 {
   "node_id": "3630",
-  "title": "قسم 3630",
+  "title": "دعاء رسول الله صلى الله عليه وسلم بعد ركعتي الفجر",
   "idfrom": 3630,
   "idto": 3630,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2982",
-  "title": "قسم 2982",
+  "title": "من واجبات الصيام مراقبة أول شهر رمضان",
   "idfrom": 2982,
   "idto": 2982,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

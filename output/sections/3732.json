@@ -1,6 +1,6 @@
 {
   "node_id": "3732",
-  "title": "قسم 3732",
+  "title": "الدعاء عند الاستيقاظ من النوم عند الصباح",
   "idfrom": 3732,
   "idto": 3732,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

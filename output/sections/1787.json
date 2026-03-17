@@ -1,6 +1,6 @@
 {
   "node_id": "1787",
-  "title": "قسم 1787",
+  "title": "أحاديث الإخفاء",
   "idfrom": 1787,
   "idto": 1787,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

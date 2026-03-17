@@ -1,6 +1,6 @@
 {
   "node_id": "2738",
-  "title": "قسم 2738",
+  "title": "فضل معه في زكاة الفطر عما يجب عليه بعض صاع",
   "idfrom": 2738,
   "idto": 2738,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

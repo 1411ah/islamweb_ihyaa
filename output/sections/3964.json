@@ -1,6 +1,6 @@
 {
   "node_id": "3964",
-  "title": "قسم 3964",
+  "title": "الأيام الفاضلة",
   "idfrom": 3964,
   "idto": 3964,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

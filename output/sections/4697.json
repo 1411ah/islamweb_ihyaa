@@ -1,6 +1,6 @@
 {
   "node_id": "4697",
-  "title": "قسم 4697",
+  "title": "القسم الثاني ما يحرم لخلل من جهة إثبات اليد عليه",
   "idfrom": 4697,
   "idto": 4697,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

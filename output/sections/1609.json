@@ -1,6 +1,6 @@
 {
   "node_id": "1609",
-  "title": "قسم 1609",
+  "title": "بيان الدواء النافع في حضور القلب",
   "idfrom": 1609,
   "idto": 1609,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

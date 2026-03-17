@@ -1,6 +1,6 @@
 {
   "node_id": "2365",
-  "title": "قسم 2365",
+  "title": "فصل مسائل منثورة تتعلق بالعيدين",
   "idfrom": 2365,
   "idto": 2365,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

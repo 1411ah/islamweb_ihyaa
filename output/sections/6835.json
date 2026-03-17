@@ -1,6 +1,6 @@
 {
   "node_id": "6835",
-  "title": "قسم 6835",
+  "title": "بيان حقيقة الرياء وما يراءى به",
   "idfrom": 6835,
   "idto": 6835,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

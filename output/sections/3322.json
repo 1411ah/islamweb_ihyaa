@@ -1,6 +1,6 @@
 {
   "node_id": "3322",
-  "title": "قسم 3322",
+  "title": "الجملة السادسة في الوقوف وما قبله",
   "idfrom": 3322,
   "idto": 3322,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

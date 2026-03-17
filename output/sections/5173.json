@@ -1,6 +1,6 @@
 {
   "node_id": "5173",
-  "title": "قسم 5173",
+  "title": "الحق السادس الدعاء الصالح للأخ في حال حياته وبعد مماته",
   "idfrom": 5173,
   "idto": 5173,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1335",
-  "title": "قسم 1335",
+  "title": "فضيلة الأذان",
   "idfrom": 1335,
   "idto": 1335,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

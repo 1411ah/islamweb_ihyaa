@@ -1,6 +1,6 @@
 {
   "node_id": "6080",
-  "title": "قسم 6080",
+  "title": "بيان شواهد الشرع من الكتاب والسنة",
   "idfrom": 6080,
   "idto": 6080,
   "paragraphs": [
@@ -378,5 +378,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

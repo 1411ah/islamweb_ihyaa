@@ -1,6 +1,6 @@
 {
   "node_id": "1348",
-  "title": "قسم 1348",
+  "title": "فضيلة الصلاة المكتوبة",
   "idfrom": 1348,
   "idto": 1348,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

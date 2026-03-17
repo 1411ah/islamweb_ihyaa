@@ -1,6 +1,6 @@
 {
   "node_id": "4714",
-  "title": "قسم 4714",
+  "title": "الدرجة الثانية فأمثلتها كل شبهة لا نوجب اجتنابها",
   "idfrom": 4714,
   "idto": 4714,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

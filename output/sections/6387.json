@@ -1,6 +1,6 @@
 {
   "node_id": "6387",
-  "title": "قسم 6387",
+  "title": "بيان الحذر من الكذب بالمعاريض",
   "idfrom": 6387,
   "idto": 6387,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

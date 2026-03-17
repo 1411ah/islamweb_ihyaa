@@ -1,6 +1,6 @@
 {
   "node_id": "7683",
-  "title": "قسم 7683",
+  "title": "بيان فضيلة الفقر مطلقا",
   "idfrom": 7683,
   "idto": 7683,
   "paragraphs": [
@@ -530,5 +530,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

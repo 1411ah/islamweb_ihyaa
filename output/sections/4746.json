@@ -1,6 +1,6 @@
 {
   "node_id": "4746",
-  "title": "قسم 4746",
+  "title": "القسم الثالث أن يكون الأصل التحريم ولكن طرأ عليه ما أوجب تحليله بظن غالب",
   "idfrom": 4746,
   "idto": 4746,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

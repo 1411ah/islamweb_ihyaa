@@ -1,6 +1,6 @@
 {
   "node_id": "2591",
-  "title": "قسم 2591",
+  "title": "فصل في شروط زكاة الأموال",
   "idfrom": 2591,
   "idto": 2591,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

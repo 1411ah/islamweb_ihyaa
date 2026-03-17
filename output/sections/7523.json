@@ -1,6 +1,6 @@
 {
   "node_id": "7523",
-  "title": "قسم 7523",
+  "title": "الطرف الثامن في بيان نعمة الله تعالى في خلق الملائكة عليهم السلام",
   "idfrom": 7523,
   "idto": 7523,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

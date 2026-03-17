@@ -1,6 +1,6 @@
 {
   "node_id": "3761",
-  "title": "قسم 3761",
+  "title": "بيان أوراد النهار السبعة",
   "idfrom": 3761,
   "idto": 3761,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

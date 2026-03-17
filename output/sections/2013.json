@@ -1,6 +1,6 @@
 {
   "node_id": "2013",
-  "title": "قسم 2013",
+  "title": "فصل من كان بعيدا عن الخطيب لا يسمع ما يقول",
   "idfrom": 2013,
   "idto": 2013,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

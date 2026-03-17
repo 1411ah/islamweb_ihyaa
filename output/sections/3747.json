@@ -1,6 +1,6 @@
 {
   "node_id": "3747",
-  "title": "قسم 3747",
+  "title": "بعض الأدعية مما يبتلى به المريد من الضروريات",
   "idfrom": 3747,
   "idto": 3747,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

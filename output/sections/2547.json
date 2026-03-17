@@ -1,6 +1,6 @@
 {
   "node_id": "2547",
-  "title": "قسم 2547",
+  "title": "فوائد تتعلق بصلاة التسبيح",
   "idfrom": 2547,
   "idto": 2547,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

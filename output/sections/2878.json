@@ -1,6 +1,6 @@
 {
   "node_id": "2878",
-  "title": "قسم 2878",
+  "title": "الصفة الرابعة أن يكون من يعطاه مستترا",
   "idfrom": 2878,
   "idto": 2878,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

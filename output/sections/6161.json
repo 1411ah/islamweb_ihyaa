@@ -1,6 +1,6 @@
 {
   "node_id": "6161",
-  "title": "قسم 6161",
+  "title": "بيان قبول الأخلاق للتغيير بطريق الرياضة",
   "idfrom": 6161,
   "idto": 6161,
   "paragraphs": [
@@ -130,5 +130,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

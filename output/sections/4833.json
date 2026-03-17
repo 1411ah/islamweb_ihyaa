@@ -1,6 +1,6 @@
 {
   "node_id": "4833",
-  "title": "قسم 4833",
+  "title": "الباب الثالث في البحث والسؤال والهجوم والإهمال ومظانهما",
   "idfrom": 4833,
   "idto": 4833,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

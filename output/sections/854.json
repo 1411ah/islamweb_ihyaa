@@ -1,6 +1,6 @@
 {
   "node_id": "854",
-  "title": "قسم 854",
+  "title": "الأصل السابع أنه تعالى يفعل بعباده ما يشاء",
   "idfrom": 854,
   "idto": 854,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

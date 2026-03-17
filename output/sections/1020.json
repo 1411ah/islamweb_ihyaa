@@ -1,6 +1,6 @@
 {
   "node_id": "1020",
-  "title": "قسم 1020",
+  "title": "خاتمة الفصول ذكرت فيها عقيدة",
   "idfrom": 1020,
   "idto": 1020,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7354",
-  "title": "قسم 7354",
+  "title": "بيان كون الصبر نصف الإيمان",
   "idfrom": 7354,
   "idto": 7354,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

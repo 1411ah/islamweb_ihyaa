@@ -1,6 +1,6 @@
 {
   "node_id": "1810",
-  "title": "قسم 1810",
+  "title": "يخفف الإمام الركوع والسجود",
   "idfrom": 1810,
   "idto": 1810,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

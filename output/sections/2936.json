@@ -1,6 +1,6 @@
 {
   "node_id": "2936",
-  "title": "قسم 2936",
+  "title": "الرابعة أن يتوقى الآخذ مواقع الريبة والاشتباه في مقدار ما يأخذه",
   "idfrom": 2936,
   "idto": 2936,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

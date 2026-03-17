@@ -1,6 +1,6 @@
 {
   "node_id": "6472",
-  "title": "قسم 6472",
+  "title": "بيان حقيقة الغضب",
   "idfrom": 6472,
   "idto": 6472,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

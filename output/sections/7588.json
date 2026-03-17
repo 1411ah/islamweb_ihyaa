@@ -1,6 +1,6 @@
 {
   "node_id": "7588",
-  "title": "قسم 7588",
+  "title": "الفن الثاني استقراء الآيات",
   "idfrom": 7588,
   "idto": 7588,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

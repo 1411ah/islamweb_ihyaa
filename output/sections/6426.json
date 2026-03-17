@@ -1,6 +1,6 @@
 {
   "node_id": "6426",
-  "title": "قسم 6426",
+  "title": "بيان الأعذار المرخصة في الغيبة",
   "idfrom": 6426,
   "idto": 6426,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

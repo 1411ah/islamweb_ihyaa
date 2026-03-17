@@ -1,6 +1,6 @@
 {
   "node_id": "3730",
-  "title": "قسم 3730",
+  "title": "الدعاء عند النوم",
   "idfrom": 3730,
   "idto": 3730,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

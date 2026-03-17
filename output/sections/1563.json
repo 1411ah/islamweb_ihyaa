@@ -1,6 +1,6 @@
 {
   "node_id": "1563",
-  "title": "قسم 1563",
+  "title": "السنن من الأذكار",
   "idfrom": 1563,
   "idto": 1563,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

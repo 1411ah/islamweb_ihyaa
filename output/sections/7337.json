@@ -1,6 +1,6 @@
 {
   "node_id": "7337",
-  "title": "قسم 7337",
+  "title": "بيان فضيلة الصبر",
   "idfrom": 7337,
   "idto": 7337,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

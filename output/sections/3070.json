@@ -1,6 +1,6 @@
 {
   "node_id": "3070",
-  "title": "قسم 3070",
+  "title": "تعجيل الإفطار",
   "idfrom": 3070,
   "idto": 3070,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1648",
-  "title": "قسم 1648",
+  "title": "مما ينبغي أن يحضر في القلب عند كل شرط وركن الاعتدال قائما",
   "idfrom": 1648,
   "idto": 1648,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7624",
-  "title": "قسم 7624",
+  "title": "بيان أن الأفضل هو غلبة الخوف أو غلبة الرجاء أو اعتدالهما",
   "idfrom": 7624,
   "idto": 7624,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

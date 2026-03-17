@@ -1,6 +1,6 @@
 {
   "node_id": "8061",
-  "title": "قسم 8061",
+  "title": "بيان السبب في زيادة الفضل في الآخرة على المعرفة في الدنيا",
   "idfrom": 8061,
   "idto": 8061,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1350",
-  "title": "قسم 1350",
+  "title": "فضيلة إتمام الأركان",
   "idfrom": 1350,
   "idto": 1350,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

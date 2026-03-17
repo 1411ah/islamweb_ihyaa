@@ -1,6 +1,6 @@
 {
   "node_id": "2375",
-  "title": "قسم 2375",
+  "title": "صلاة التراويح",
   "idfrom": 2375,
   "idto": 2375,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

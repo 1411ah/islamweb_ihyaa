@@ -1,6 +1,6 @@
 {
   "node_id": "4413",
-  "title": "قسم 4413",
+  "title": "فصل في الطلاق يكون بدعيا وسنيا وواجبا ومكروها",
   "idfrom": 4413,
   "idto": 4413,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

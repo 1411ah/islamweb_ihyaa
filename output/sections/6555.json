@@ -1,6 +1,6 @@
 {
   "node_id": "6555",
-  "title": "قسم 6555",
+  "title": "بيان أسباب الحسد والمنافسة",
   "idfrom": 6555,
   "idto": 6555,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

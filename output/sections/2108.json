@@ -1,6 +1,6 @@
 {
   "node_id": "2108",
-  "title": "قسم 2108",
+  "title": "مسألة حكم من رأى على ثوبه نجاسة في الصلاة",
   "idfrom": 2108,
   "idto": 2108,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

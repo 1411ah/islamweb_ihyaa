@@ -1,6 +1,6 @@
 {
   "node_id": "1434",
-  "title": "قسم 1434",
+  "title": "الركوع ولواحقه",
   "idfrom": 1434,
   "idto": 1434,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

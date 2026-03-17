@@ -1,6 +1,6 @@
 {
   "node_id": "5375",
-  "title": "قسم 5375",
+  "title": "حجج المائلين إلى المخالطة والمصاحبة ووجه ضعفها في الاحتجاج",
   "idfrom": 5375,
   "idto": 5375,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

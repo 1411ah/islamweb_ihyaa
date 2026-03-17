@@ -1,6 +1,6 @@
 {
   "node_id": "7989",
-  "title": "قسم 7989",
+  "title": "بيان أن ترك التداوي قد يحمد في بعض الأحوال",
   "idfrom": 7989,
   "idto": 7989,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

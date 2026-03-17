@@ -1,6 +1,6 @@
 {
   "node_id": "7689",
-  "title": "قسم 7689",
+  "title": "بيان فضيلة الفقر على الغنى",
   "idfrom": 7689,
   "idto": 7689,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

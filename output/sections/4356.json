@@ -1,6 +1,6 @@
 {
   "node_id": "4356",
-  "title": "قسم 4356",
+  "title": "الأدب الثاني حسن الخلق معهن",
   "idfrom": 4356,
   "idto": 4356,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

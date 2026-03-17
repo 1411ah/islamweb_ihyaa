@@ -1,6 +1,6 @@
 {
   "node_id": "6768",
-  "title": "قسم 6768",
+  "title": "بيان ذم الغنى ومدح الفقر",
   "idfrom": 6768,
   "idto": 6768,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

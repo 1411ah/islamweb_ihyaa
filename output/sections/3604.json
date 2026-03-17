@@ -1,6 +1,6 @@
 {
   "node_id": "3604",
-  "title": "قسم 3604",
+  "title": "بعض آداب للدعاء وشروط لم يذكرها المصنف",
   "idfrom": 3604,
   "idto": 3604,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "511",
-  "title": "قسم 511",
+  "title": "توحيد الأفعال",
   "idfrom": 511,
   "idto": 511,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

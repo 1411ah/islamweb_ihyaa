@@ -1,6 +1,6 @@
 {
   "node_id": "2866",
-  "title": "قسم 2866",
+  "title": "الوظيفة السابعة أن ينتقي من ماله ما يخرجه صدقة لله",
   "idfrom": 2866,
   "idto": 2866,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

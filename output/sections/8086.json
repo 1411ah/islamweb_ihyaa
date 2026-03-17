@@ -1,6 +1,6 @@
 {
   "node_id": "8086",
-  "title": "قسم 8086",
+  "title": "القول في علامات محبة العبد لله تعالى",
   "idfrom": 8086,
   "idto": 8086,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

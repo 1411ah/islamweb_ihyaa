@@ -1,6 +1,6 @@
 {
   "node_id": "7299",
-  "title": "قسم 7299",
+  "title": "فصل في بيان ما ينبغي أن يبادر إليه التائب",
   "idfrom": 7299,
   "idto": 7299,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

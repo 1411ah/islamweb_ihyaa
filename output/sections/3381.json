@@ -1,6 +1,6 @@
 {
   "node_id": "3381",
-  "title": "قسم 3381",
+  "title": "الجملة العاشرة في زيارة مسجد المدينة وآداب الزيارة",
   "idfrom": 3381,
   "idto": 3381,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

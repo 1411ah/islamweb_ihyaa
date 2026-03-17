@@ -1,6 +1,6 @@
 {
   "node_id": "2845",
-  "title": "قسم 2845",
+  "title": "الوظيفة الثالثة الإسرار بالزكاة",
   "idfrom": 2845,
   "idto": 2845,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

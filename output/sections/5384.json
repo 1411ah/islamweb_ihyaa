@@ -1,6 +1,6 @@
 {
   "node_id": "5384",
-  "title": "قسم 5384",
+  "title": "ذكر حجج المائلين إلى تفضيل العزلة ووجه ضعفها",
   "idfrom": 5384,
   "idto": 5384,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

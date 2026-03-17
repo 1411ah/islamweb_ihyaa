@@ -1,6 +1,6 @@
 {
   "node_id": "4966",
-  "title": "قسم 4966",
+  "title": "الحالة الثالثة أن يدخل عليك السلطان الظالم زائرا",
   "idfrom": 4966,
   "idto": 4966,
   "paragraphs": [
@@ -298,5 +298,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

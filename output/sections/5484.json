@@ -1,6 +1,6 @@
 {
   "node_id": "5484",
-  "title": "قسم 5484",
+  "title": "الأدب الرابع أن يصلي قبل سفره صلاة الاستخارة",
   "idfrom": 5484,
   "idto": 5484,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

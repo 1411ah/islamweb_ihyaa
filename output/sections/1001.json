@@ -1,6 +1,6 @@
 {
   "node_id": "1001",
-  "title": "قسم 1001",
+  "title": "المبحث الثالث عن الحكم الشرعي",
   "idfrom": 1001,
   "idto": 1001,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

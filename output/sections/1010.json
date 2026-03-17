@@ -1,6 +1,6 @@
 {
   "node_id": "1010",
-  "title": "قسم 1010",
+  "title": "المبحث الثاني في بيان أن الإيمان مخلوق أو غير مخلوق",
   "idfrom": 1010,
   "idto": 1010,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

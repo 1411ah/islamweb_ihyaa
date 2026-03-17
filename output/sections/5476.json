@@ -1,6 +1,6 @@
 {
   "node_id": "5476",
-  "title": "قسم 5476",
+  "title": "الأدب الأول أن يبدأ برد المظالم",
   "idfrom": 5476,
   "idto": 5476,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

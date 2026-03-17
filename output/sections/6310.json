@@ -1,6 +1,6 @@
 {
   "node_id": "6310",
-  "title": "قسم 6310",
+  "title": "الآفة الأولى الكلام فيما لا يعنيك",
   "idfrom": 6310,
   "idto": 6310,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

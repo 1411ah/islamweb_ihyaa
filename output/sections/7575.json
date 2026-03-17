@@ -1,6 +1,6 @@
 {
   "node_id": "7575",
-  "title": "قسم 7575",
+  "title": "بيان فضيلة الرجاء والترغيب فيه",
   "idfrom": 7575,
   "idto": 7575,
   "paragraphs": [
@@ -150,5 +150,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

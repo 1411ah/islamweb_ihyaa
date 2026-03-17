@@ -1,6 +1,6 @@
 {
   "node_id": "332",
-  "title": "قسم 332",
+  "title": "ومن علات علماء الآخرة أن لا يخالف فعله قوله",
   "idfrom": 332,
   "idto": 332,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

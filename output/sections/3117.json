@@ -1,6 +1,6 @@
 {
   "node_id": "3117",
-  "title": "قسم 3117",
+  "title": "من آداب الصوم كف بقية الجوارح من اليد والرجل عن المكاره",
   "idfrom": 3117,
   "idto": 3117,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

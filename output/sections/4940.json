@@ -1,6 +1,6 @@
 {
   "node_id": "4940",
-  "title": "قسم 4940",
+  "title": "النظر الثاني في قدر المأخوذ وصفة الآخذ",
   "idfrom": 4940,
   "idto": 4940,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

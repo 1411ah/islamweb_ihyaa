@@ -1,6 +1,6 @@
 {
   "node_id": "4049",
-  "title": "قسم 4049",
+  "title": "الباب الثاني فيما يزيد بسبب الاجتماع والمشاركة في الأكل",
   "idfrom": 4049,
   "idto": 4049,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

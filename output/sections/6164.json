@@ -1,6 +1,6 @@
 {
   "node_id": "6164",
-  "title": "قسم 6164",
+  "title": "بيان السبب الذي ينال به حسن الخلق",
   "idfrom": 6164,
   "idto": 6164,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

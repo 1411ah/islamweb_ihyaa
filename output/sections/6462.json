@@ -1,6 +1,6 @@
 {
   "node_id": "6462",
-  "title": "قسم 6462",
+  "title": "الآفة العشرون سؤال العوام عن صفات الله تعالى",
   "idfrom": 6462,
   "idto": 6462,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

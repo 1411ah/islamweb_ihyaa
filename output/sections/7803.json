@@ -1,6 +1,6 @@
 {
   "node_id": "7803",
-  "title": "قسم 7803",
+  "title": "بيان علامات الزهد",
   "idfrom": 7803,
   "idto": 7803,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

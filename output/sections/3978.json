@@ -1,6 +1,6 @@
 {
   "node_id": "3978",
-  "title": "قسم 3978",
+  "title": "القسم الأول في الآداب التي تتقدم على الأكل",
   "idfrom": 3978,
   "idto": 3978,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

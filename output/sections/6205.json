@@ -1,6 +1,6 @@
 {
   "node_id": "6205",
-  "title": "قسم 6205",
+  "title": "بيان شروط الإرادة ومقدمات المجاهدة وتدريج المريد في سلوك سبيل الرياضة",
   "idfrom": 6205,
   "idto": 6205,
   "paragraphs": [
@@ -150,5 +150,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

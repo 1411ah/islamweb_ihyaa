@@ -1,6 +1,6 @@
 {
   "node_id": "5483",
-  "title": "قسم 5483",
+  "title": "الأدب الثالث أن يودع رفقاء الأهل والحضر والأصدقاء",
   "idfrom": 5483,
   "idto": 5483,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

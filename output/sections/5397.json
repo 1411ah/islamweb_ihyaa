@@ -1,6 +1,6 @@
 {
   "node_id": "5397",
-  "title": "قسم 5397",
+  "title": "الفائدة الثانية التخلص بالعزلة عن المعاصي",
   "idfrom": 5397,
   "idto": 5397,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

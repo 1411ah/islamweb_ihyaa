@@ -1,6 +1,6 @@
 {
   "node_id": "5031",
-  "title": "قسم 5031",
+  "title": "بيان فضيلة الألفة والأخوة",
   "idfrom": 5031,
   "idto": 5031,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

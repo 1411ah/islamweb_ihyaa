@@ -1,6 +1,6 @@
 {
   "node_id": "777",
-  "title": "قسم 777",
+  "title": "الأصل الأول العلم بأن الله صانع العالم قادر",
   "idfrom": 777,
   "idto": 777,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

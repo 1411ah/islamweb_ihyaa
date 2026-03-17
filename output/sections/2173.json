@@ -1,6 +1,6 @@
 {
   "node_id": "2173",
-  "title": "قسم 2173",
+  "title": "فصل أدلة أخرى على تأكد الأربع قبل الظهر",
   "idfrom": 2173,
   "idto": 2173,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

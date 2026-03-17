@@ -1,6 +1,6 @@
 {
   "node_id": "2932",
-  "title": "قسم 2932",
+  "title": "الثانية أن يشكر المعطي ويدعو له بالخير ويثني عليه",
   "idfrom": 2932,
   "idto": 2932,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

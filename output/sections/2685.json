@@ -1,6 +1,6 @@
 {
   "node_id": "2685",
-  "title": "قسم 2685",
+  "title": "النوع الخامس الركاز والمعدن",
   "idfrom": 2685,
   "idto": 2685,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

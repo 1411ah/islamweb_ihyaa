@@ -1,6 +1,6 @@
 {
   "node_id": "4255",
-  "title": "قسم 4255",
+  "title": "الفائدة الخامسة مجاهدة النفس ورياضتها بالرعاية والولاية",
   "idfrom": 4255,
   "idto": 4255,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

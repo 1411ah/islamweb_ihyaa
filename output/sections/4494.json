@@ -1,6 +1,6 @@
 {
   "node_id": "4494",
-  "title": "قسم 4494",
+  "title": "الركن الثالث لفظ العقد",
   "idfrom": 4494,
   "idto": 4494,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

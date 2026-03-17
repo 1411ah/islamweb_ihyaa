@@ -1,6 +1,6 @@
 {
   "node_id": "1123",
-  "title": "قسم 1123",
+  "title": "بيان كيفية الاستنجاء",
   "idfrom": 1123,
   "idto": 1123,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5434",
-  "title": "قسم 5434",
+  "title": "الفائدة السابعة التجارب",
   "idfrom": 5434,
   "idto": 5434,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1780",
-  "title": "قسم 1780",
+  "title": "فصل الإسرار بآمين",
   "idfrom": 1780,
   "idto": 1780,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

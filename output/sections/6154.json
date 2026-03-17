@@ -1,6 +1,6 @@
 {
   "node_id": "6154",
-  "title": "قسم 6154",
+  "title": "بيان فضيلة حسن الخلق ومذمة سوء الخلق",
   "idfrom": 6154,
   "idto": 6154,
   "paragraphs": [
@@ -258,5 +258,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

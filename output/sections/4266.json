@@ -1,6 +1,6 @@
 {
   "node_id": "4266",
-  "title": "قسم 4266",
+  "title": "كون الأهل والولد شاغلا له عن الله تعالى وجاذبا إلى طلب الدنيا",
   "idfrom": 4266,
   "idto": 4266,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3160",
-  "title": "قسم 3160",
+  "title": "فضيلة البيت الشريف ومكة",
   "idfrom": 3160,
   "idto": 3160,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

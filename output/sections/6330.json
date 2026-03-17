@@ -1,6 +1,6 @@
 {
   "node_id": "6330",
-  "title": "قسم 6330",
+  "title": "الآفة السابعة الفحش والسب وبذاءة اللسان",
   "idfrom": 6330,
   "idto": 6330,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

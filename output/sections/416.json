@@ -1,6 +1,6 @@
 {
   "node_id": "416",
-  "title": "قسم 416",
+  "title": "بيان حقيقة العقل وأقسامه",
   "idfrom": 416,
   "idto": 416,
   "paragraphs": [
@@ -106,5 +106,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

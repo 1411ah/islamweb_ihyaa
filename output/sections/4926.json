@@ -1,6 +1,6 @@
 {
   "node_id": "4926",
-  "title": "قسم 4926",
+  "title": "الدرجة الثانية هو أن يأخذ مال السلطان",
   "idfrom": 4926,
   "idto": 4926,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

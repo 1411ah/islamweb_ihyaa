@@ -1,6 +1,6 @@
 {
   "node_id": "1569",
-  "title": "قسم 1569",
+  "title": "سجود السهو وترك سنة من سنن الصلاة",
   "idfrom": 1569,
   "idto": 1569,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

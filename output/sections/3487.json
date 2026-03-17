@@ -1,6 +1,6 @@
 {
   "node_id": "3487",
-  "title": "قسم 3487",
+  "title": "الباب الثالث في ذكر أعمال الباطن في تلاوة القرآن",
   "idfrom": 3487,
   "idto": 3487,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

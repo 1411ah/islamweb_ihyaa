@@ -1,6 +1,6 @@
 {
   "node_id": "6158",
-  "title": "قسم 6158",
+  "title": "بيان حقيقة حسن الخلق",
   "idfrom": 6158,
   "idto": 6158,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

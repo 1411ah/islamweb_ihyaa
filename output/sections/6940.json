@@ -1,6 +1,6 @@
 {
   "node_id": "6940",
-  "title": "قسم 6940",
+  "title": "بيان حقيقة الكبر وآفته",
   "idfrom": 6940,
   "idto": 6940,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

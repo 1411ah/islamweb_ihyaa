@@ -1,6 +1,6 @@
 {
   "node_id": "68",
-  "title": "قسم 68",
+  "title": "فضيلة التعلم",
   "idfrom": 68,
   "idto": 68,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

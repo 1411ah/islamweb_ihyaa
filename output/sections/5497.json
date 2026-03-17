@@ -1,6 +1,6 @@
 {
   "node_id": "5497",
-  "title": "قسم 5497",
+  "title": "الأدب الثامن أن يحتاط لنفسه بالنهار",
   "idfrom": 5497,
   "idto": 5497,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

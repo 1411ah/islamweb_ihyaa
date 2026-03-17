@@ -1,6 +1,6 @@
 {
   "node_id": "2803",
-  "title": "قسم 2803",
+  "title": "من الشروط الظاهرة لأداء الزكاة أن لا يخرج بدلا",
   "idfrom": 2803,
   "idto": 2803,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

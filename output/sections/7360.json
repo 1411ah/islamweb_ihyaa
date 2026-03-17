@@ -1,6 +1,6 @@
 {
   "node_id": "7360",
-  "title": "قسم 7360",
+  "title": "بيان أقسام الصبر بحسب اختلاف القوة والضعف",
   "idfrom": 7360,
   "idto": 7360,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

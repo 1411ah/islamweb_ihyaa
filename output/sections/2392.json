@@ -1,6 +1,6 @@
 {
   "node_id": "2392",
-  "title": "قسم 2392",
+  "title": "صلاة الرغائب",
   "idfrom": 2392,
   "idto": 2392,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

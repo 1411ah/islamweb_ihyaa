@@ -1,6 +1,6 @@
 {
   "node_id": "3196",
-  "title": "قسم 3196",
+  "title": "شروط وجوب الحج",
   "idfrom": 3196,
   "idto": 3196,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

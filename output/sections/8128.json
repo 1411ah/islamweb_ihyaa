@@ -1,6 +1,6 @@
 {
   "node_id": "8128",
-  "title": "قسم 8128",
+  "title": "القول في معنى الرضا بقضاء الله تعالى وحقيقته وما ورد في تفضيله",
   "idfrom": 8128,
   "idto": 8128,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3156",
-  "title": "قسم 3156",
+  "title": "فضيلة الحج",
   "idfrom": 3156,
   "idto": 3156,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

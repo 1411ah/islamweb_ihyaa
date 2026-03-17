@@ -1,6 +1,6 @@
 {
   "node_id": "5902",
-  "title": "قسم 5902",
+  "title": "بيان عفوه صلى الله عليه وسلم مع القدرة",
   "idfrom": 5902,
   "idto": 5902,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1934",
-  "title": "قسم 1934",
+  "title": "من آداب يوم الجمعة الغسل",
   "idfrom": 1934,
   "idto": 1934,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

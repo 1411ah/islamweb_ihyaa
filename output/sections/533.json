@@ -1,6 +1,6 @@
 {
   "node_id": "533",
-  "title": "قسم 533",
+  "title": "الميزان وغيره",
   "idfrom": 533,
   "idto": 533,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

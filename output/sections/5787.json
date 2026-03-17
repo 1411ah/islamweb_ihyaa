@@ -1,6 +1,6 @@
 {
   "node_id": "5787",
-  "title": "قسم 5787",
+  "title": "منكرات المساجد",
   "idfrom": 5787,
   "idto": 5787,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "418",
-  "title": "قسم 418",
+  "title": "بيان تفاوت الناس في العقل",
   "idfrom": 418,
   "idto": 418,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

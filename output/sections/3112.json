@@ -1,6 +1,6 @@
 {
   "node_id": "3112",
-  "title": "قسم 3112",
+  "title": "من آداب الصوم غض البصر",
   "idfrom": 3112,
   "idto": 3112,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

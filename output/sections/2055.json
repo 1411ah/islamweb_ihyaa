@@ -1,6 +1,6 @@
 {
   "node_id": "2055",
-  "title": "قسم 2055",
+  "title": "فصل قراءة سورة بعينها يوم الجمعة",
   "idfrom": 2055,
   "idto": 2055,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

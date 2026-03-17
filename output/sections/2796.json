@@ -1,6 +1,6 @@
 {
   "node_id": "2796",
-  "title": "قسم 2796",
+  "title": "فصل تقديم الزكاة قبل الحول",
   "idfrom": 2796,
   "idto": 2796,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

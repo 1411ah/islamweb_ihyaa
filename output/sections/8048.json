@@ -1,6 +1,6 @@
 {
   "node_id": "8048",
-  "title": "قسم 8048",
+  "title": "بيان أن المستحق للمحبة هو الله تعالى",
   "idfrom": 8048,
   "idto": 8048,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "4038",
-  "title": "قسم 4038",
+  "title": "القسم الثالث ما يستحب بعد الطعام",
   "idfrom": 4038,
   "idto": 4038,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

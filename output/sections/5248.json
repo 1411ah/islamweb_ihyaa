@@ -1,6 +1,6 @@
 {
   "node_id": "5248",
-  "title": "قسم 5248",
+  "title": "حقوق المسلم",
   "idfrom": 5248,
   "idto": 5248,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

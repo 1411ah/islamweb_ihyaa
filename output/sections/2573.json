@@ -1,6 +1,6 @@
 {
   "node_id": "2573",
-  "title": "قسم 2573",
+  "title": "حكم الزكاة وفضلها",
   "idfrom": 2573,
   "idto": 2573,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

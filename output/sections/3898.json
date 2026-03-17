@@ -1,6 +1,6 @@
 {
   "node_id": "3898",
-  "title": "قسم 3898",
+  "title": "بيان اختلاف الأوراد باختلاف الأحوال",
   "idfrom": 3898,
   "idto": 3898,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

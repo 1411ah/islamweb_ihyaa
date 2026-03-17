@@ -1,6 +1,6 @@
 {
   "node_id": "1084",
-  "title": "قسم 1084",
+  "title": "الطرف الثاني في المزال به",
   "idfrom": 1084,
   "idto": 1084,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

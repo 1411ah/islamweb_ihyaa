@@ -1,6 +1,6 @@
 {
   "node_id": "2198",
-  "title": "قسم 2198",
+  "title": "من السنن الرواتب راتبة العشاء الآخرة",
   "idfrom": 2198,
   "idto": 2198,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

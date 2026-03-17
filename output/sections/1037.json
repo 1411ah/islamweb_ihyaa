@@ -1,6 +1,6 @@
 {
   "node_id": "1037",
-  "title": "قسم 1037",
+  "title": "الفصل الثامن في معرفة اصطلاح هذه الكتب",
   "idfrom": 1037,
   "idto": 1037,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

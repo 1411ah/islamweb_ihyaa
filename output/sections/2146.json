@@ -1,6 +1,6 @@
 {
   "node_id": "2146",
-  "title": "قسم 2146",
+  "title": "النوافل تنقسم إلى سنن ومستحبات وتطوعات",
   "idfrom": 2146,
   "idto": 2146,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

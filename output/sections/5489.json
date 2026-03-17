@@ -1,6 +1,6 @@
 {
   "node_id": "5489",
-  "title": "قسم 5489",
+  "title": "الأدب السادس أن يرحل من المنزل بكرة في أول النهار",
   "idfrom": 5489,
   "idto": 5489,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

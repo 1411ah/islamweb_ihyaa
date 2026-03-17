@@ -1,6 +1,6 @@
 {
   "node_id": "1746",
-  "title": "قسم 1746",
+  "title": "مراعاة الإمام أوقات الصلوات",
   "idfrom": 1746,
   "idto": 1746,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

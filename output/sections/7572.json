@@ -1,6 +1,6 @@
 {
   "node_id": "7572",
-  "title": "قسم 7572",
+  "title": "بيان حقيقة الرجاء",
   "idfrom": 7572,
   "idto": 7572,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

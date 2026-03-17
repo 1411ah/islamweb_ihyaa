@@ -1,6 +1,6 @@
 {
   "node_id": "7608",
-  "title": "قسم 7608",
+  "title": "بيان درجات الخوف واختلافه في القوة والضعف",
   "idfrom": 7608,
   "idto": 7608,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

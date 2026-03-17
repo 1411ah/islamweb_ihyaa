@@ -1,6 +1,6 @@
 {
   "node_id": "6894",
-  "title": "قسم 6894",
+  "title": "بيان ترك الطاعات خوفا من الرياء ودخول الآفات",
   "idfrom": 6894,
   "idto": 6894,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

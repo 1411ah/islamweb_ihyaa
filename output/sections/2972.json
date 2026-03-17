@@ -1,6 +1,6 @@
 {
   "node_id": "2972",
-  "title": "قسم 2972",
+  "title": "مقدمة",
   "idfrom": 2972,
   "idto": 2972,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

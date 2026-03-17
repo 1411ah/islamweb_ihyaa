@@ -1,6 +1,6 @@
 {
   "node_id": "7680",
-  "title": "قسم 7680",
+  "title": "بيان حقيقة الفقر واختلاف أحوال الفقير وأساميه",
   "idfrom": 7680,
   "idto": 7680,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

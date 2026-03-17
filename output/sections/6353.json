@@ -1,6 +1,6 @@
 {
   "node_id": "6353",
-  "title": "قسم 6353",
+  "title": "الآفة العاشرة المزاح",
   "idfrom": 6353,
   "idto": 6353,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

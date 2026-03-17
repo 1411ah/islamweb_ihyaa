@@ -1,6 +1,6 @@
 {
   "node_id": "6406",
-  "title": "قسم 6406",
+  "title": "بيان أن الغيبة لا تقتصر على اللسان",
   "idfrom": 6406,
   "idto": 6406,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

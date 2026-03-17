@@ -1,6 +1,6 @@
 {
   "node_id": "287",
-  "title": "قسم 287",
+  "title": "الوظيفة السابعة أن تعرف السبب الذي به يدرك شرف العلوم",
   "idfrom": 287,
   "idto": 287,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

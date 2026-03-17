@@ -1,6 +1,6 @@
 {
   "node_id": "342",
-  "title": "قسم 342",
+  "title": "من العلامات المميزة بين علماء الدنيا والآخرة أن تكون عنايته وهمته بتحصيل العلم النافع في الآخرة",
   "idfrom": 342,
   "idto": 342,
   "paragraphs": [
@@ -158,5 +158,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

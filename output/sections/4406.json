@@ -1,6 +1,6 @@
 {
   "node_id": "4406",
-  "title": "قسم 4406",
+  "title": "الثاني عشر الطلاق",
   "idfrom": 4406,
   "idto": 4406,
   "paragraphs": [
@@ -102,5 +102,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

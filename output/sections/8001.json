@@ -1,6 +1,6 @@
 {
   "node_id": "8001",
-  "title": "قسم 8001",
+  "title": "بيان الرد على من قال ترك التداوي أفضل بكل حال",
   "idfrom": 8001,
   "idto": 8001,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

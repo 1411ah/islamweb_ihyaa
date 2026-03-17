@@ -1,6 +1,6 @@
 {
   "node_id": "5757",
-  "title": "قسم 5757",
+  "title": "الركن الرابع نفس الاحتساب",
   "idfrom": 5757,
   "idto": 5757,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

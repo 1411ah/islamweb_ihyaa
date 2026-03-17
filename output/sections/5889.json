@@ -1,6 +1,6 @@
 {
   "node_id": "5889",
-  "title": "قسم 5889",
+  "title": "بيان آدابه وأخلاقه صلى الله عليه وسلم في اللباس",
   "idfrom": 5889,
   "idto": 5889,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

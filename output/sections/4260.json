@@ -1,6 +1,6 @@
 {
   "node_id": "4260",
-  "title": "قسم 4260",
+  "title": "العجز عن طلب الحلال",
   "idfrom": 4260,
   "idto": 4260,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

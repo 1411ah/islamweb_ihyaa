@@ -1,6 +1,6 @@
 {
   "node_id": "4360",
-  "title": "قسم 4360",
+  "title": "الأدب الرابع أن لا ينبسط في الدعابة",
   "idfrom": 4360,
   "idto": 4360,
   "paragraphs": [
@@ -166,5 +166,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

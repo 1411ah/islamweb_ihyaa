@@ -1,6 +1,6 @@
 {
   "node_id": "3281",
-  "title": "قسم 3281",
+  "title": "الجملة الثالثة في آداب دخول مكة إلى الطواف",
   "idfrom": 3281,
   "idto": 3281,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

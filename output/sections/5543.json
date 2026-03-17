@@ -1,6 +1,6 @@
 {
   "node_id": "5543",
-  "title": "قسم 5543",
+  "title": "الباب الثاني في كيفية التيمم",
   "idfrom": 5543,
   "idto": 5543,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

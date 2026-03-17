@@ -1,6 +1,6 @@
 {
   "node_id": "5346",
-  "title": "قسم 5346",
+  "title": "حقوق الوالدين والولد",
   "idfrom": 5346,
   "idto": 5346,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

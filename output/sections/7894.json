@@ -1,6 +1,6 @@
 {
   "node_id": "7894",
-  "title": "قسم 7894",
+  "title": "الفصل الأول في بيان حال التوكل",
   "idfrom": 7894,
   "idto": 7894,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

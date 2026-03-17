@@ -1,6 +1,6 @@
 {
   "node_id": "7409",
-  "title": "قسم 7409",
+  "title": "بيان فضيلة الشكر",
   "idfrom": 7409,
   "idto": 7409,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

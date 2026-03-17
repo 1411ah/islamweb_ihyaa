@@ -1,6 +1,6 @@
 {
   "node_id": "8065",
-  "title": "قسم 8065",
+  "title": "بيان الأسباب المقوية لحب الله تعالى",
   "idfrom": 8065,
   "idto": 8065,
   "paragraphs": [
@@ -138,5 +138,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

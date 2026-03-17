@@ -1,6 +1,6 @@
 {
   "node_id": "1364",
-  "title": "قسم 1364",
+  "title": "فضيلة السجود",
   "idfrom": 1364,
   "idto": 1364,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

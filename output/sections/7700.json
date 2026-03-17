@@ -1,6 +1,6 @@
 {
   "node_id": "7700",
-  "title": "قسم 7700",
+  "title": "بيان آداب الفقير في فقره",
   "idfrom": 7700,
   "idto": 7700,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

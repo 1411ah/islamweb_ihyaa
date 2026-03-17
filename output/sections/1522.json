@@ -1,6 +1,6 @@
 {
   "node_id": "1522",
-  "title": "قسم 1522",
+  "title": "فصل ركنية السلام في الصلاة",
   "idfrom": 1522,
   "idto": 1522,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

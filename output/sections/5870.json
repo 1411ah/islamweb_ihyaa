@@ -1,6 +1,6 @@
 {
   "node_id": "5870",
-  "title": "قسم 5870",
+  "title": "بيان أخلاقه وآدابه في الطعام",
   "idfrom": 5870,
   "idto": 5870,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

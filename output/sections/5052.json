@@ -1,6 +1,6 @@
 {
   "node_id": "5052",
-  "title": "قسم 5052",
+  "title": "بيان معنى الأخوة في الله وتمييزها عن الأخوة في الدنيا",
   "idfrom": 5052,
   "idto": 5052,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

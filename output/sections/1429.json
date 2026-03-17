@@ -1,6 +1,6 @@
 {
   "node_id": "1429",
-  "title": "قسم 1429",
+  "title": "قراءة سورة في الصلاة",
   "idfrom": 1429,
   "idto": 1429,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

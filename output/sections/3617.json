@@ -1,6 +1,6 @@
 {
   "node_id": "3617",
-  "title": "قسم 3617",
+  "title": "فضله صلى الله عليه وسلم",
   "idfrom": 3617,
   "idto": 3617,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

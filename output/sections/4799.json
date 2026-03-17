@@ -1,6 +1,6 @@
 {
   "node_id": "4799",
-  "title": "قسم 4799",
+  "title": "القسم الرابع أن يكون الحل معلوما من قبل",
   "idfrom": 4799,
   "idto": 4799,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

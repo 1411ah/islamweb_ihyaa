@@ -1,6 +1,6 @@
 {
   "node_id": "1026",
-  "title": "قسم 1026",
+  "title": "الفصل الثالث في بيان الأسباب الموجبة للخلاف",
   "idfrom": 1026,
   "idto": 1026,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

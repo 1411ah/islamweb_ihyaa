@@ -1,6 +1,6 @@
 {
   "node_id": "6513",
-  "title": "قسم 6513",
+  "title": "فضيلة كظم الغيظ",
   "idfrom": 6513,
   "idto": 6513,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

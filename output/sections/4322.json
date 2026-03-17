@@ -1,6 +1,6 @@
 {
   "node_id": "4322",
-  "title": "قسم 4322",
+  "title": "موانع النكاح",
   "idfrom": 4322,
   "idto": 4322,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

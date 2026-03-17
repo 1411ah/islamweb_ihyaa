@@ -1,6 +1,6 @@
 {
   "node_id": "6733",
-  "title": "قسم 6733",
+  "title": "بيان ذم البخل",
   "idfrom": 6733,
   "idto": 6733,
   "paragraphs": [
@@ -310,5 +310,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

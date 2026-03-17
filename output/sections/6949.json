@@ -1,6 +1,6 @@
 {
   "node_id": "6949",
-  "title": "قسم 6949",
+  "title": "بيان المتكبر عليه ودرجاته وأقسامه وثمرات الكبر فيه",
   "idfrom": 6949,
   "idto": 6949,
   "paragraphs": [
@@ -198,5 +198,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

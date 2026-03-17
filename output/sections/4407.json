@@ -1,6 +1,6 @@
 {
   "node_id": "4407",
-  "title": "قسم 4407",
+  "title": "فصل في تعريف الخلع",
   "idfrom": 4407,
   "idto": 4407,
   "paragraphs": [
@@ -102,5 +102,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

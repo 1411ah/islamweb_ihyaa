@@ -1,6 +1,6 @@
 {
   "node_id": "4082",
-  "title": "قسم 4082",
+  "title": "آداب الدعوة إلى الطعام",
   "idfrom": 4082,
   "idto": 4082,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

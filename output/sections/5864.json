@@ -1,6 +1,6 @@
 {
   "node_id": "5864",
-  "title": "قسم 5864",
+  "title": "بيان جملة أخرى من أخلاقه",
   "idfrom": 5864,
   "idto": 5864,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3407",
-  "title": "قسم 3407",
+  "title": "بيان دقائق الآداب وهي عشرة",
   "idfrom": 3407,
   "idto": 3407,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

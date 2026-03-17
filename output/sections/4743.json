@@ -1,6 +1,6 @@
 {
   "node_id": "4743",
-  "title": "قسم 4743",
+  "title": "القسم الثاني أن يعرف الحل ويشك في المحرم",
   "idfrom": 4743,
   "idto": 4743,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1757",
-  "title": "قسم 1757",
+  "title": "من واجبات الإمام تسوية الصفوف",
   "idfrom": 1757,
   "idto": 1757,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

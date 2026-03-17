@@ -1,6 +1,6 @@
 {
   "node_id": "5360",
-  "title": "قسم 5360",
+  "title": "اختيار العزلة وتفضيلها على المخالطة",
   "idfrom": 5360,
   "idto": 5360,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

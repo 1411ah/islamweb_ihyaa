@@ -1,6 +1,6 @@
 {
   "node_id": "6446",
-  "title": "قسم 6446",
+  "title": "الآفة الثامنة عشرة المدح",
   "idfrom": 6446,
   "idto": 6446,
   "paragraphs": [
@@ -174,5 +174,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

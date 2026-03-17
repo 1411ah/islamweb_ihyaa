@@ -1,6 +1,6 @@
 {
   "node_id": "2165",
-  "title": "قسم 2165",
+  "title": "من السنن الرواتب راتبة الظهر",
   "idfrom": 2165,
   "idto": 2165,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

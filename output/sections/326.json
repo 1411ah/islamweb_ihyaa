@@ -1,6 +1,6 @@
 {
   "node_id": "326",
-  "title": "قسم 326",
+  "title": "أمثلة في مباينة الدنيا مع الآخرة ومباينة سالكيها",
   "idfrom": 326,
   "idto": 326,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

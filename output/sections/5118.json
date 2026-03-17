@@ -1,6 +1,6 @@
 {
   "node_id": "5118",
-  "title": "قسم 5118",
+  "title": "الحق الثالث على اللسان بالسكوت مرة وبالنطق مرة أخرى",
   "idfrom": 5118,
   "idto": 5118,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

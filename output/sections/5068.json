@@ -1,6 +1,6 @@
 {
   "node_id": "5068",
-  "title": "قسم 5068",
+  "title": "أقسام الفساد في الاعتقاد",
   "idfrom": 5068,
   "idto": 5068,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

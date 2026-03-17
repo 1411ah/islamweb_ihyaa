@@ -1,6 +1,6 @@
 {
   "node_id": "6040",
-  "title": "قسم 6040",
+  "title": "بيان معنى النفس والروح والقلب والعقل",
   "idfrom": 6040,
   "idto": 6040,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

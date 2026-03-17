@@ -1,6 +1,6 @@
 {
   "node_id": "7778",
-  "title": "قسم 7778",
+  "title": "بيان تفصيل الزهد فيما هو من ضروريات الحياة",
   "idfrom": 7778,
   "idto": 7778,
   "paragraphs": [
@@ -158,5 +158,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

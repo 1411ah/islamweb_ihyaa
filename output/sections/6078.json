@@ -1,6 +1,6 @@
 {
   "node_id": "6078",
-  "title": "قسم 6078",
+  "title": "بيان الفرق بين المقامين بمثال محسوس",
   "idfrom": 6078,
   "idto": 6078,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

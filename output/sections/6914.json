@@ -1,6 +1,6 @@
 {
   "node_id": "6914",
-  "title": "قسم 6914",
+  "title": "بيان ما ينبغي للمريد أن يلزم نفسه قبل العمل وبعده وفيه",
   "idfrom": 6914,
   "idto": 6914,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

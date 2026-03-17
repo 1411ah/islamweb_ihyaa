@@ -1,6 +1,6 @@
 {
   "node_id": "4354",
-  "title": "قسم 4354",
+  "title": "الأدب الأول الوليمة",
   "idfrom": 4354,
   "idto": 4354,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

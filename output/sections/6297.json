@@ -1,6 +1,6 @@
 {
   "node_id": "6297",
-  "title": "قسم 6297",
+  "title": "بيان عظيم خطر اللسان وفضيلة الصمت",
   "idfrom": 6297,
   "idto": 6297,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "6811",
-  "title": "قسم 6811",
+  "title": "بيان وجه العلاج لحب المدح وكراهية الذم",
   "idfrom": 6811,
   "idto": 6811,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

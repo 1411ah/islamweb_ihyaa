@@ -1,6 +1,6 @@
 {
   "node_id": "7237",
-  "title": "قسم 7237",
+  "title": "فصل في بيان توزيع الدرجات والدركات في الآخرة على الحسنات والسيئات في الدنيا",
   "idfrom": 7237,
   "idto": 7237,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

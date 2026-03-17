@@ -1,6 +1,6 @@
 {
   "node_id": "1930",
-  "title": "قسم 1930",
+  "title": "من آداب يوم الجمعة الاستعداد",
   "idfrom": 1930,
   "idto": 1930,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

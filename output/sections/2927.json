@@ -1,6 +1,6 @@
 {
   "node_id": "2927",
-  "title": "قسم 2927",
+  "title": "كيفية الصرف إلى مستحقي الزكاة",
   "idfrom": 2927,
   "idto": 2927,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

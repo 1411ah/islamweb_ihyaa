@@ -1,6 +1,6 @@
 {
   "node_id": "5680",
-  "title": "قسم 5680",
+  "title": "المقام الثاني بعد الفهم والتنزيل الوجد",
   "idfrom": 5680,
   "idto": 5680,
   "paragraphs": [
@@ -202,5 +202,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

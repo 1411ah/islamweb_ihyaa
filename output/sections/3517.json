@@ -1,6 +1,6 @@
 {
   "node_id": "3517",
-  "title": "قسم 3517",
+  "title": "فصل في غرائب التفسير",
   "idfrom": 3517,
   "idto": 3517,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

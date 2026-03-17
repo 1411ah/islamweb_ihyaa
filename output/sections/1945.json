@@ -1,6 +1,6 @@
 {
   "node_id": "1945",
-  "title": "قسم 1945",
+  "title": "فصل بيان فوائد أحاديث الباب المذكورة",
   "idfrom": 1945,
   "idto": 1945,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

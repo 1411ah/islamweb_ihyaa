@@ -1,6 +1,6 @@
 {
   "node_id": "7023",
-  "title": "قسم 7023",
+  "title": "بيان أقسام ما به العجب وتفصيل علاجه",
   "idfrom": 7023,
   "idto": 7023,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

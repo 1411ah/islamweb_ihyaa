@@ -1,6 +1,6 @@
 {
   "node_id": "7965",
-  "title": "قسم 7965",
+  "title": "الفن الثالث في بيان مباشرة الأسباب الدافعة للضرر المعرض للخوف",
   "idfrom": 7965,
   "idto": 7965,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

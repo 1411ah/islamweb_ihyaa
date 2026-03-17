@@ -1,6 +1,6 @@
 {
   "node_id": "8028",
-  "title": "قسم 8028",
+  "title": "بيان شواهد الشرع في حب العبد لله تعالى",
   "idfrom": 8028,
   "idto": 8028,
   "paragraphs": [
@@ -150,5 +150,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

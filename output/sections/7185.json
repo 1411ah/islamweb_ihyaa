@@ -1,6 +1,6 @@
 {
   "node_id": "7185",
-  "title": "قسم 7185",
+  "title": "فصل بيان وجوب التوبة على الفور",
   "idfrom": 7185,
   "idto": 7185,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

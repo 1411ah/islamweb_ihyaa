@@ -1,6 +1,6 @@
 {
   "node_id": "2405",
-  "title": "قسم 2405",
+  "title": "صلاة الخسوف والكسوف",
   "idfrom": 2405,
   "idto": 2405,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

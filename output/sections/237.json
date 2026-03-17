@@ -1,6 +1,6 @@
 {
   "node_id": "237",
-  "title": "قسم 237",
+  "title": "شروط التعاون على طلب الحق من الدين",
   "idfrom": 237,
   "idto": 237,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2510",
-  "title": "قسم 2510",
+  "title": "فصل في فروع هذا الباب",
   "idfrom": 2510,
   "idto": 2510,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "49",
-  "title": "قسم 49",
+  "title": "الكلام في فضل العلم",
   "idfrom": 49,
   "idto": 49,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

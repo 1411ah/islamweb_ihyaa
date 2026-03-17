@@ -1,6 +1,6 @@
 {
   "node_id": "2397",
-  "title": "قسم 2397",
+  "title": "صلاة شعبان",
   "idfrom": 2397,
   "idto": 2397,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

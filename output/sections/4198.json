@@ -1,6 +1,6 @@
 {
   "node_id": "4198",
-  "title": "قسم 4198",
+  "title": "الترغيب في النكاح",
   "idfrom": 4198,
   "idto": 4198,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

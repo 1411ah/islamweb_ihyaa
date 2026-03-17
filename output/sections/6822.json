@@ -1,6 +1,6 @@
 {
   "node_id": "6822",
-  "title": "قسم 6822",
+  "title": "بيان ذم الرياء",
   "idfrom": 6822,
   "idto": 6822,
   "paragraphs": [
@@ -222,5 +222,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

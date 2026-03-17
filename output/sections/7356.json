@@ -1,6 +1,6 @@
 {
   "node_id": "7356",
-  "title": "قسم 7356",
+  "title": "بيان الأسامي التي تتجدد للصبر بالإضافة إلى ما عنه الصبر",
   "idfrom": 7356,
   "idto": 7356,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

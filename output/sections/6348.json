@@ -1,6 +1,6 @@
 {
   "node_id": "6348",
-  "title": "قسم 6348",
+  "title": "الآفة التاسعة الغناء والشعر",
   "idfrom": 6348,
   "idto": 6348,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

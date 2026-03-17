@@ -1,6 +1,6 @@
 {
   "node_id": "3957",
-  "title": "قسم 3957",
+  "title": "بيان الليالي الفاضلة",
   "idfrom": 3957,
   "idto": 3957,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

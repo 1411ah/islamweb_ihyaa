@@ -1,6 +1,6 @@
 {
   "node_id": "1742",
-  "title": "قسم 1742",
+  "title": "فصل أيهم يقدم في الإمامة",
   "idfrom": 1742,
   "idto": 1742,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

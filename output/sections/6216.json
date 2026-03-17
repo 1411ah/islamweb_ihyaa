@@ -1,6 +1,6 @@
 {
   "node_id": "6216",
-  "title": "قسم 6216",
+  "title": "بيان فضيلة الجوع وذم الشبع",
   "idfrom": 6216,
   "idto": 6216,
   "paragraphs": [
@@ -190,5 +190,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

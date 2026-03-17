@@ -1,6 +1,6 @@
 {
   "node_id": "3759",
-  "title": "قسم 3759",
+  "title": "استغراق أوقات الليل والنهار في وظائف الأذكار والأفكار",
   "idfrom": 3759,
   "idto": 3759,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

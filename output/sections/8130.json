@@ -1,6 +1,6 @@
 {
   "node_id": "8130",
-  "title": "قسم 8130",
+  "title": "بيان فضيلة الرضا",
   "idfrom": 8130,
   "idto": 8130,
   "paragraphs": [
@@ -298,5 +298,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

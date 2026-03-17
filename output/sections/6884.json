@@ -1,6 +1,6 @@
 {
   "node_id": "6884",
-  "title": "قسم 6884",
+  "title": "بيان الرخصة في كتمان الذنوب وكراهة اطلاع الناس عليه وكراهة ذمهم",
   "idfrom": 6884,
   "idto": 6884,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

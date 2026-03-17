@@ -1,6 +1,6 @@
 {
   "node_id": "6057",
-  "title": "قسم 6057",
+  "title": "بيان مجامع أوصاف القلب وأمثاله",
   "idfrom": 6057,
   "idto": 6057,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

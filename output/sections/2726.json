@@ -1,6 +1,6 @@
 {
   "node_id": "2726",
-  "title": "قسم 2726",
+  "title": "فصل زكاة فطر المكاتب",
   "idfrom": 2726,
   "idto": 2726,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3612",
-  "title": "قسم 3612",
+  "title": "بيان فضيلة الصلاة على رسول الله صلى الله عليه وسلم",
   "idfrom": 3612,
   "idto": 3612,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

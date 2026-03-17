@@ -1,6 +1,6 @@
 {
   "node_id": "6509",
-  "title": "قسم 6509",
+  "title": "بيان علاج الغضب بعد هيجانه",
   "idfrom": 6509,
   "idto": 6509,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

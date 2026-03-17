@@ -1,6 +1,6 @@
 {
   "node_id": "4584",
-  "title": "قسم 4584",
+  "title": "العقد السادس الشركة",
   "idfrom": 4584,
   "idto": 4584,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

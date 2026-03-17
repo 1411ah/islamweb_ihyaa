@@ -1,6 +1,6 @@
 {
   "node_id": "3748",
-  "title": "قسم 3748",
+  "title": "فائدة الدعاء",
   "idfrom": 3748,
   "idto": 3748,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

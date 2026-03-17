@@ -1,6 +1,6 @@
 {
   "node_id": "4431",
-  "title": "قسم 4431",
+  "title": "حقوق الزوج على الزوجة",
   "idfrom": 4431,
   "idto": 4431,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2171",
-  "title": "قسم 2171",
+  "title": "فصل تأكد الأربع قبل الظهر",
   "idfrom": 2171,
   "idto": 2171,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2190",
-  "title": "قسم 2190",
+  "title": "من السنن الرواتب راتبة المغرب",
   "idfrom": 2190,
   "idto": 2190,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

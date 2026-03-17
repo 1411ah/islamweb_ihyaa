@@ -1,6 +1,6 @@
 {
   "node_id": "1902",
-  "title": "قسم 1902",
+  "title": "شروط وجوب صلاة الجمعة",
   "idfrom": 1902,
   "idto": 1902,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

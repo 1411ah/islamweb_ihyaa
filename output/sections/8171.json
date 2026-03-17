@@ -1,6 +1,6 @@
 {
   "node_id": "8171",
-  "title": "قسم 8171",
+  "title": "ذكر ما يتعلق بمقامات المحبة والشوق مما في الشعب للبيهقي وقوت القلوب",
   "idfrom": 8171,
   "idto": 8171,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

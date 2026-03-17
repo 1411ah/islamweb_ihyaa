@@ -1,6 +1,6 @@
 {
   "node_id": "5559",
-  "title": "قسم 5559",
+  "title": "الرخصة الرابعة الجمع بين الصلاتين",
   "idfrom": 5559,
   "idto": 5559,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

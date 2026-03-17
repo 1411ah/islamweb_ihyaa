@@ -1,6 +1,6 @@
 {
   "node_id": "6846",
-  "title": "قسم 6846",
+  "title": "بيان درجات الرياء",
   "idfrom": 6846,
   "idto": 6846,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

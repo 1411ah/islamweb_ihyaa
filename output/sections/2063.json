@@ -1,6 +1,6 @@
 {
   "node_id": "2063",
-  "title": "قسم 2063",
+  "title": "الصلاة إذا دخل المسجد قبل الجلوس يوم الجمعة",
   "idfrom": 2063,
   "idto": 2063,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

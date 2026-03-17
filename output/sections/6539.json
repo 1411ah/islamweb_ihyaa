@@ -1,6 +1,6 @@
 {
   "node_id": "6539",
-  "title": "قسم 6539",
+  "title": "بيان ذم الحسد",
   "idfrom": 6539,
   "idto": 6539,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5108",
-  "title": "قسم 5108",
+  "title": "الحق الثاني في الإعانة بالنفس في قضاء الحاجات والقيام بها قبل السؤال",
   "idfrom": 5108,
   "idto": 5108,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

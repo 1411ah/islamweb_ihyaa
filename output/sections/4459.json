@@ -1,6 +1,6 @@
 {
   "node_id": "4459",
-  "title": "قسم 4459",
+  "title": "الركن الأول العاقد",
   "idfrom": 4459,
   "idto": 4459,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

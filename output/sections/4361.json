@@ -1,6 +1,6 @@
 {
   "node_id": "4361",
-  "title": "قسم 4361",
+  "title": "الأدب الخامس الاعتدال في الغيرة",
   "idfrom": 4361,
   "idto": 4361,
   "paragraphs": [
@@ -162,5 +162,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

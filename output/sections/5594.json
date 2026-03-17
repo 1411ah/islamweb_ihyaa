@@ -1,6 +1,6 @@
 {
   "node_id": "5594",
-  "title": "قسم 5594",
+  "title": "القسم الثاني ما يتجدد من الوظيفة بسبب السفر وهو علم القبلة والأوقات",
   "idfrom": 5594,
   "idto": 5594,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

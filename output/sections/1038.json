@@ -1,6 +1,6 @@
 {
   "node_id": "1038",
-  "title": "قسم 1038",
+  "title": "الفصل التاسع في ذكر أصحاب التخريج والوجوه من المفتين وتفاوت درجاتهم باختلاف الأعصار",
   "idfrom": 1038,
   "idto": 1038,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

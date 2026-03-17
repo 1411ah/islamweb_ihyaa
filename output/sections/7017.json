@@ -1,6 +1,6 @@
 {
   "node_id": "7017",
-  "title": "قسم 7017",
+  "title": "بيان علاج العجب على الجملة",
   "idfrom": 7017,
   "idto": 7017,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2280",
-  "title": "قسم 2280",
+  "title": "صلاة ليلة الأربعاء",
   "idfrom": 2280,
   "idto": 2280,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

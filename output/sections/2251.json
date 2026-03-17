@@ -1,6 +1,6 @@
 {
   "node_id": "2251",
-  "title": "قسم 2251",
+  "title": "من السنن الرواتب صلاة الضحى",
   "idfrom": 2251,
   "idto": 2251,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "4723",
-  "title": "قسم 4723",
+  "title": "الدرجة الثالثة ورع المتقين فالاحتراز عما يتسامح به",
   "idfrom": 4723,
   "idto": 4723,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "6595",
-  "title": "قسم 6595",
+  "title": "بيان ذم الدنيا",
   "idfrom": 6595,
   "idto": 6595,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

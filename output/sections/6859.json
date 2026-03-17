@@ -1,6 +1,6 @@
 {
   "node_id": "6859",
-  "title": "قسم 6859",
+  "title": "بيان دواء الرياء وطريق معالجة القلب فيه",
   "idfrom": 6859,
   "idto": 6859,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

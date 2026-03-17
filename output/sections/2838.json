@@ -1,6 +1,6 @@
 {
   "node_id": "2838",
-  "title": "قسم 2838",
+  "title": "الوظيفة الثانية في وقت الأداء للزكاة المفروضة",
   "idfrom": 2838,
   "idto": 2838,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

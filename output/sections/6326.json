@@ -1,6 +1,6 @@
 {
   "node_id": "6326",
-  "title": "قسم 6326",
+  "title": "الآفة الخامسة الخصومة",
   "idfrom": 6326,
   "idto": 6326,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

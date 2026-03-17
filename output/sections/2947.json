@@ -1,6 +1,6 @@
 {
   "node_id": "2947",
-  "title": "قسم 2947",
+  "title": "بيان فضيلة الصدقة من الأخبار",
   "idfrom": 2947,
   "idto": 2947,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1042",
-  "title": "قسم 1042",
+  "title": "البسملة وخطبة المصنف",
   "idfrom": 1042,
   "idto": 1042,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

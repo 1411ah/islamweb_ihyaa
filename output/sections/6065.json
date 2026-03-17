@@ -1,6 +1,6 @@
 {
   "node_id": "6065",
-  "title": "قسم 6065",
+  "title": "بيان حال القلب بالإضافة إلى أقسام العلوم العقلية والدينية والدنيوية والأخروية",
   "idfrom": 6065,
   "idto": 6065,
   "paragraphs": [
@@ -202,5 +202,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "6070",
-  "title": "قسم 6070",
+  "title": "بيان الفرق بين الإلهام والتعلم والفرق بين طريق",
   "idfrom": 6070,
   "idto": 6070,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

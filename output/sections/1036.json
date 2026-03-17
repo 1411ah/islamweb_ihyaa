@@ -1,6 +1,6 @@
 {
   "node_id": "1036",
-  "title": "قسم 1036",
+  "title": "الفصل السابع في بيان أن الشافعية الآن وقبل الآن عيال على كتبه",
   "idfrom": 1036,
   "idto": 1036,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

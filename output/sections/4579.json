@@ -1,6 +1,6 @@
 {
   "node_id": "4579",
-  "title": "قسم 4579",
+  "title": "أركان القراض",
   "idfrom": 4579,
   "idto": 4579,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

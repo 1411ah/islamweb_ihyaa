@@ -1,6 +1,6 @@
 {
   "node_id": "6276",
-  "title": "قسم 6276",
+  "title": "بيان ما على المريد في ترك التزويج وفعله",
   "idfrom": 6276,
   "idto": 6276,
   "paragraphs": [
@@ -106,5 +106,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

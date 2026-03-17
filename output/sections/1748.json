@@ -1,6 +1,6 @@
 {
   "node_id": "1748",
-  "title": "قسم 1748",
+  "title": "الإخلاص في الإمامة",
   "idfrom": 1748,
   "idto": 1748,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

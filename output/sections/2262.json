@@ -1,6 +1,6 @@
 {
   "node_id": "2262",
-  "title": "قسم 2262",
+  "title": "صلاة يوم الاثنين",
   "idfrom": 2262,
   "idto": 2262,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

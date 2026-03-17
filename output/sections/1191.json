@@ -1,6 +1,6 @@
 {
   "node_id": "1191",
-  "title": "قسم 1191",
+  "title": "كيفية الغسل",
   "idfrom": 1191,
   "idto": 1191,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

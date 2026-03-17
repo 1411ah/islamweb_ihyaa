@@ -1,6 +1,6 @@
 {
   "node_id": "6456",
-  "title": "قسم 6456",
+  "title": "الآفة التاسعة عشرة في الغفلة عن دقائق الخطإ في فحوى الكلام",
   "idfrom": 6456,
   "idto": 6456,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

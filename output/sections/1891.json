@@ -1,6 +1,6 @@
 {
   "node_id": "1891",
-  "title": "قسم 1891",
+  "title": "سنن خطبة الجمعة",
   "idfrom": 1891,
   "idto": 1891,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

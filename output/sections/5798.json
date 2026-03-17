@@ -1,6 +1,6 @@
 {
   "node_id": "5798",
-  "title": "قسم 5798",
+  "title": "منكرات الضيافة",
   "idfrom": 5798,
   "idto": 5798,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

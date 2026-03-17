@@ -1,6 +1,6 @@
 {
   "node_id": "6442",
-  "title": "قسم 6442",
+  "title": "الآفة السابعة عشرة كلام ذي اللسانين",
   "idfrom": 6442,
   "idto": 6442,
   "paragraphs": [
@@ -146,5 +146,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

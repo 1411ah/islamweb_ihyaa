@@ -1,6 +1,6 @@
 {
   "node_id": "3167",
-  "title": "قسم 3167",
+  "title": "فضيلة مدينة رسول الله صلى الله عليه وسلم على سائر البلاد",
   "idfrom": 3167,
   "idto": 3167,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

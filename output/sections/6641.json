@@ -1,6 +1,6 @@
 {
   "node_id": "6641",
-  "title": "قسم 6641",
+  "title": "بيان حقيقة الدنيا وماهيتها في حق العبد",
   "idfrom": 6641,
   "idto": 6641,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

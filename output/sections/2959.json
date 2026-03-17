@@ -1,6 +1,6 @@
 {
   "node_id": "2959",
-  "title": "قسم 2959",
+  "title": "بيان إخفاء الصدقة وإظهارها",
   "idfrom": 2959,
   "idto": 2959,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

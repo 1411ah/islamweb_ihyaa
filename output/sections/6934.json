@@ -1,6 +1,6 @@
 {
   "node_id": "6934",
-  "title": "قسم 6934",
+  "title": "بيان فضيلة التواضع",
   "idfrom": 6934,
   "idto": 6934,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

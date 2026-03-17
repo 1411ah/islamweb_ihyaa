@@ -1,6 +1,6 @@
 {
   "node_id": "1244",
-  "title": "قسم 1244",
+  "title": "القسم الثالث من النظافة",
   "idfrom": 1244,
   "idto": 1244,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

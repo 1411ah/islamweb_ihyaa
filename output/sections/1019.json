@@ -1,6 +1,6 @@
 {
   "node_id": "1019",
-  "title": "قسم 1019",
+  "title": "فصل في تصديق الكاهن بما يخبر به من الغيب كفر",
   "idfrom": 1019,
   "idto": 1019,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3214",
-  "title": "قسم 3214",
+  "title": "الأول من محظورات الإحرام لبس القميص والسراويل والخف والعمامة",
   "idfrom": 3214,
   "idto": 3214,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

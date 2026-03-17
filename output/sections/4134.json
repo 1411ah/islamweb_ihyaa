@@ -1,6 +1,6 @@
 {
   "node_id": "4134",
-  "title": "قسم 4134",
+  "title": "آداب الانصراف بعد الفراغ من الأكل",
   "idfrom": 4134,
   "idto": 4134,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

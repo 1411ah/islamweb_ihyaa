@@ -1,6 +1,6 @@
 {
   "node_id": "7349",
-  "title": "قسم 7349",
+  "title": "بيان حقيقة الصبر ومعناه",
   "idfrom": 7349,
   "idto": 7349,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

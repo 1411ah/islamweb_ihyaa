@@ -1,6 +1,6 @@
 {
   "node_id": "8050",
-  "title": "قسم 8050",
+  "title": "بيان أن أجل اللذات وأعلاها معرفة الله تعالى والنظر إلى وجهه الكريم",
   "idfrom": 8050,
   "idto": 8050,
   "paragraphs": [
@@ -130,5 +130,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

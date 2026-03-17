@@ -1,6 +1,6 @@
 {
   "node_id": "6775",
-  "title": "قسم 6775",
+  "title": "بيان ذم الشهوة وانتشار الصيت",
   "idfrom": 6775,
   "idto": 6775,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

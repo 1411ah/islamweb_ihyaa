@@ -1,6 +1,6 @@
 {
   "node_id": "4651",
-  "title": "قسم 4651",
+  "title": "أن لا يكون شديد الحرص على السوق",
   "idfrom": 4651,
   "idto": 4651,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

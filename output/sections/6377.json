@@ -1,6 +1,6 @@
 {
   "node_id": "6377",
-  "title": "قسم 6377",
+  "title": "بيان ما يرخص فيه من الكذب",
   "idfrom": 6377,
   "idto": 6377,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

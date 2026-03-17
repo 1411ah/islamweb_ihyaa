@@ -1,6 +1,6 @@
 {
   "node_id": "6676",
-  "title": "قسم 6676",
+  "title": "بيان مدح المال والجمع بينه وبين الذم",
   "idfrom": 6676,
   "idto": 6676,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

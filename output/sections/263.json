@@ -1,6 +1,6 @@
 {
   "node_id": "263",
-  "title": "قسم 263",
+  "title": "بيان آفات المناظرة وما يتولد منها",
   "idfrom": 263,
   "idto": 263,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

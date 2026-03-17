@@ -1,6 +1,6 @@
 {
   "node_id": "6104",
-  "title": "قسم 6104",
+  "title": "بيان تفضيل مداخل الشيطان إلى القلب",
   "idfrom": 6104,
   "idto": 6104,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

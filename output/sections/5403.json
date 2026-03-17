@@ -1,6 +1,6 @@
 {
   "node_id": "5403",
-  "title": "قسم 5403",
+  "title": "الفائدة الثالثة الخلاص من الفتن والخصومات بين الناس",
   "idfrom": 5403,
   "idto": 5403,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

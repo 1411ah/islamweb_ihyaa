@@ -1,6 +1,6 @@
 {
   "node_id": "5641",
-  "title": "قسم 5641",
+  "title": "أنواع من الرخص",
   "idfrom": 5641,
   "idto": 5641,
   "paragraphs": [
@@ -78,5 +78,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1421",
-  "title": "قسم 1421",
+  "title": "دعاء الاستفتاح",
   "idfrom": 1421,
   "idto": 1421,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

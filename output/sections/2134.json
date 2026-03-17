@@ -1,6 +1,6 @@
 {
   "node_id": "2134",
-  "title": "قسم 2134",
+  "title": "مسألة متابعة المأموم للإمام",
   "idfrom": 2134,
   "idto": 2134,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

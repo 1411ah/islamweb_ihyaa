@@ -1,6 +1,6 @@
 {
   "node_id": "181",
-  "title": "قسم 181",
+  "title": "بيان علة ذم العلم المذموم",
   "idfrom": 181,
   "idto": 181,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

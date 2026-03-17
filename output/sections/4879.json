@@ -1,6 +1,6 @@
 {
   "node_id": "4879",
-  "title": "قسم 4879",
+  "title": "الباب الرابع في كيفية خروج التائب عن المظالم المالية",
   "idfrom": 4879,
   "idto": 4879,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1371",
-  "title": "قسم 1371",
+  "title": "فضيلة الخشوع",
   "idfrom": 1371,
   "idto": 1371,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1979",
-  "title": "قسم 1979",
+  "title": "فوائد مهمة",
   "idfrom": 1979,
   "idto": 1979,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

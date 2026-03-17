@@ -1,6 +1,6 @@
 {
   "node_id": "6238",
-  "title": "قسم 6238",
+  "title": "الفائدة التاسعة خفة المؤنة",
   "idfrom": 6238,
   "idto": 6238,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

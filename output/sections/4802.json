@@ -1,6 +1,6 @@
 {
   "node_id": "4802",
-  "title": "قسم 4802",
+  "title": "فصل في مسألة متروك التسمية",
   "idfrom": 4802,
   "idto": 4802,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

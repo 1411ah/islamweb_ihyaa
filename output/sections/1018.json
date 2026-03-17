@@ -1,6 +1,6 @@
 {
   "node_id": "1018",
-  "title": "قسم 1018",
+  "title": "فصل في أن القرآن اسم للنظم والمعنى",
   "idfrom": 1018,
   "idto": 1018,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

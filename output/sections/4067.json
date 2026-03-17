@@ -1,6 +1,6 @@
 {
   "node_id": "4067",
-  "title": "قسم 4067",
+  "title": "آداب الدخول على الطعام",
   "idfrom": 4067,
   "idto": 4067,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

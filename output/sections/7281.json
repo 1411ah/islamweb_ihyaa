@@ -1,6 +1,6 @@
 {
   "node_id": "7281",
-  "title": "قسم 7281",
+  "title": "الطبقة الأولى أن يتوب العاصي من جميع ما ارتكبه من المخالفات",
   "idfrom": 7281,
   "idto": 7281,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

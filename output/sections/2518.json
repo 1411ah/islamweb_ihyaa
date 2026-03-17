@@ -1,6 +1,6 @@
 {
   "node_id": "2518",
-  "title": "قسم 2518",
+  "title": "ركعتان عند دخول المنزل وعند الخروج منه",
   "idfrom": 2518,
   "idto": 2518,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

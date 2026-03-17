@@ -1,6 +1,6 @@
 {
   "node_id": "7200",
-  "title": "قسم 7200",
+  "title": "بيان أقسام الذنوب بالإضافة إلى صفات العبد",
   "idfrom": 7200,
   "idto": 7200,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

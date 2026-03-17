@@ -1,6 +1,6 @@
 {
   "node_id": "1035",
-  "title": "قسم 1035",
+  "title": "الفصل السادس إن هذا العلم دين فانظروا عمن تأخذون دينكم",
   "idfrom": 1035,
   "idto": 1035,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

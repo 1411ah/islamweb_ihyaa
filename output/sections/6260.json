@@ -1,6 +1,6 @@
 {
   "node_id": "6260",
-  "title": "قسم 6260",
+  "title": "بيان اختلاف حكم الجوع وفضيلته واختلاف أحوال الناس فيه",
   "idfrom": 6260,
   "idto": 6260,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

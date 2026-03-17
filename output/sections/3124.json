@@ -1,6 +1,6 @@
 {
   "node_id": "3124",
-  "title": "قسم 3124",
+  "title": "من آداب الصوم أن يكون قلبه بعد الإفطار معلقا بالله",
   "idfrom": 3124,
   "idto": 3124,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

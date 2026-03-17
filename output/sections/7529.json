@@ -1,6 +1,6 @@
 {
   "node_id": "7529",
-  "title": "قسم 7529",
+  "title": "بيان السبب الصارف للخلق عن الشكر",
   "idfrom": 7529,
   "idto": 7529,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "891",
-  "title": "قسم 891",
+  "title": "الأصل العاشر أن الله سبحانه وتعالى قد أرسل محمدا صلى الله عليه وسلم إلى الخلق أجمعين بالهدى",
   "idfrom": 891,
   "idto": 891,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

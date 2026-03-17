@@ -1,6 +1,6 @@
 {
   "node_id": "521",
-  "title": "قسم 521",
+  "title": "معنى الكلمة الثانية من الشهادتين وهي الشهادة للرسول",
   "idfrom": 521,
   "idto": 521,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

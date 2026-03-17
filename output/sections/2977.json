@@ -1,6 +1,6 @@
 {
   "node_id": "2977",
-  "title": "قسم 2977",
+  "title": "فضل الصوم",
   "idfrom": 2977,
   "idto": 2977,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

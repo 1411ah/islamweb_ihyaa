@@ -1,6 +1,6 @@
 {
   "node_id": "6176",
-  "title": "قسم 6176",
+  "title": "بيان الطريق في رياضة الصبيان في أول النشو ووجه تأديبهم وتحسين أخلاقهم",
   "idfrom": 6176,
   "idto": 6176,
   "paragraphs": [
@@ -102,5 +102,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

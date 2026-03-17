@@ -1,6 +1,6 @@
 {
   "node_id": "1740",
-  "title": "قسم 1740",
+  "title": "عدم الجمع بين الأذان والإمامة",
   "idfrom": 1740,
   "idto": 1740,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

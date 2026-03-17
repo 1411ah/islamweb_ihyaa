@@ -1,6 +1,6 @@
 {
   "node_id": "6783",
-  "title": "قسم 6783",
+  "title": "بيان ذم حب الجاه",
   "idfrom": 6783,
   "idto": 6783,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

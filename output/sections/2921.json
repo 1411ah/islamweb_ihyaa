@@ -1,6 +1,6 @@
 {
   "node_id": "2921",
-  "title": "قسم 2921",
+  "title": "الصنف السابع من مصارف الزكاة في سبيل الله",
   "idfrom": 2921,
   "idto": 2921,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

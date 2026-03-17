@@ -1,6 +1,6 @@
 {
   "node_id": "3905",
-  "title": "قسم 3905",
+  "title": "فضيلة إحياء ما بين العشاءين",
   "idfrom": 3905,
   "idto": 3905,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1023",
-  "title": "قسم 1023",
+  "title": "الفصل الثاني الفقه في الدين",
   "idfrom": 1023,
   "idto": 1023,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

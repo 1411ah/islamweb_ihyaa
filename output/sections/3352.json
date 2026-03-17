@@ -1,6 +1,6 @@
 {
   "node_id": "3352",
-  "title": "قسم 3352",
+  "title": "الجملة السابعة في ذكر بقية أعمال الحج التي بعد الوقوف بعرفة",
   "idfrom": 3352,
   "idto": 3352,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2150",
-  "title": "قسم 2150",
+  "title": "راتبة الصبح",
   "idfrom": 2150,
   "idto": 2150,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

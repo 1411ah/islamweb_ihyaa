@@ -1,6 +1,6 @@
 {
   "node_id": "3616",
-  "title": "قسم 3616",
+  "title": "فصل صلاة الله على نبيه وعلى المصلين عليه",
   "idfrom": 3616,
   "idto": 3616,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

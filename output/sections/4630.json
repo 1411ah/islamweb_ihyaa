@@ -1,6 +1,6 @@
 {
   "node_id": "4630",
-  "title": "قسم 4630",
+  "title": "الباب الرابع في الإحسان في المعاملة",
   "idfrom": 4630,
   "idto": 4630,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "685",
-  "title": "قسم 685",
+  "title": "الأصل الثالث العلم بأنه تعالى مع كونه أزليا أبديا ليس لوجوده آخر",
   "idfrom": 685,
   "idto": 685,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

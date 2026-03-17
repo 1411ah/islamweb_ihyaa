@@ -1,6 +1,6 @@
 {
   "node_id": "2141",
-  "title": "قسم 2141",
+  "title": "مسألة تسوية الصفوف وفضل الجماعة وفضل الصف الأيمن وغير ذلك",
   "idfrom": 2141,
   "idto": 2141,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

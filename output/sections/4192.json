@@ -1,6 +1,6 @@
 {
   "node_id": "4192",
-  "title": "قسم 4192",
+  "title": "فضل النكاح",
   "idfrom": 4192,
   "idto": 4192,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

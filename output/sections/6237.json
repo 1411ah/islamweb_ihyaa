@@ -1,6 +1,6 @@
 {
   "node_id": "6237",
-  "title": "قسم 6237",
+  "title": "الفائدة الثامنة يستفيد المريد من قلة الأكل صحة البدن",
   "idfrom": 6237,
   "idto": 6237,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

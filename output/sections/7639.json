@@ -1,6 +1,6 @@
 {
   "node_id": "7639",
-  "title": "قسم 7639",
+  "title": "بيان الدواء الذي به يستجلب حال الخوف",
   "idfrom": 7639,
   "idto": 7639,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

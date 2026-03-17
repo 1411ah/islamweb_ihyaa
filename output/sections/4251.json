@@ -1,6 +1,6 @@
 {
   "node_id": "4251",
-  "title": "قسم 4251",
+  "title": "الفائدة الرابعة تفريغ القلب عن ما يشغله من الأمور الظاهرة",
   "idfrom": 4251,
   "idto": 4251,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

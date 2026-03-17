@@ -1,6 +1,6 @@
 {
   "node_id": "7724",
-  "title": "قسم 7724",
+  "title": "بيان أحوال السائلين",
   "idfrom": 7724,
   "idto": 7724,
   "paragraphs": [
@@ -198,5 +198,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

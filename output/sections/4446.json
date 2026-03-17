@@ -1,6 +1,6 @@
 {
   "node_id": "4446",
-  "title": "قسم 4446",
+  "title": "الباب الأول في فضل الكسب والحث عليه",
   "idfrom": 4446,
   "idto": 4446,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

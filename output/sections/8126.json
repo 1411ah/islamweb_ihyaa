@@ -1,6 +1,6 @@
 {
   "node_id": "8126",
-  "title": "قسم 8126",
+  "title": "بيان معنى الانبساط والإدلال الذي تثمره غلبة الأنس",
   "idfrom": 8126,
   "idto": 8126,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

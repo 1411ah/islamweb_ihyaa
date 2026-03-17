@@ -1,6 +1,6 @@
 {
   "node_id": "6619",
-  "title": "قسم 6619",
+  "title": "بيان صفة الدنيا بالأمثلة",
   "idfrom": 6619,
   "idto": 6619,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3059",
-  "title": "قسم 3059",
+  "title": "كفارة الفطر في رمضان",
   "idfrom": 3059,
   "idto": 3059,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

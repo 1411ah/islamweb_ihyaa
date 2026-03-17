@@ -1,6 +1,6 @@
 {
   "node_id": "532",
-  "title": "قسم 532",
+  "title": "البعث والنشور",
   "idfrom": 532,
   "idto": 532,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

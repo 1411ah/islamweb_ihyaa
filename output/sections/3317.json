@@ -1,6 +1,6 @@
 {
   "node_id": "3317",
-  "title": "قسم 3317",
+  "title": "الجملة الخامسة في السعي بين الصفا والمروة",
   "idfrom": 3317,
   "idto": 3317,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

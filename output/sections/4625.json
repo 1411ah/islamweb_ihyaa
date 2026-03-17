@@ -1,6 +1,6 @@
 {
   "node_id": "4625",
-  "title": "قسم 4625",
+  "title": "القسم الثاني ما يخص المعامل",
   "idfrom": 4625,
   "idto": 4625,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

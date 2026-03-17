@@ -1,6 +1,6 @@
 {
   "node_id": "559",
-  "title": "قسم 559",
+  "title": "الفصل الثاني بيان وجه التدريج إلى الإرشاد والهداية وترتيب درجات الاعتقاد",
   "idfrom": 559,
   "idto": 559,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

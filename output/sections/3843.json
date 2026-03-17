@@ -1,6 +1,6 @@
 {
   "node_id": "3843",
-  "title": "قسم 3843",
+  "title": "بيان أوراد الليل وهي خمسة",
   "idfrom": 3843,
   "idto": 3843,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

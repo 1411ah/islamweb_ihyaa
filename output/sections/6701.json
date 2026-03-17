@@ -1,6 +1,6 @@
 {
   "node_id": "6701",
-  "title": "قسم 6701",
+  "title": "بيان علاج الحرص والطمع والدواء الذي تكتسب به صفة القناعة",
   "idfrom": 6701,
   "idto": 6701,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

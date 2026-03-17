@@ -1,6 +1,6 @@
 {
   "node_id": "6172",
-  "title": "قسم 6172",
+  "title": "بيان شواهد النقل من أرباب البصائر",
   "idfrom": 6172,
   "idto": 6172,
   "paragraphs": [
@@ -402,5 +402,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "4062",
-  "title": "قسم 4062",
+  "title": "تقديم الطعام إلى الإخوان",
   "idfrom": 4062,
   "idto": 4062,
   "paragraphs": [
@@ -130,5 +130,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

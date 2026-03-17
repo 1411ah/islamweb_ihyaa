@@ -1,6 +1,6 @@
 {
   "node_id": "1793",
-  "title": "قسم 1793",
+  "title": "للإمام في القيام ثلاث سكتات",
   "idfrom": 1793,
   "idto": 1793,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7513",
-  "title": "قسم 7513",
+  "title": "الطرف السادس في إصلاح الأطعمة",
   "idfrom": 7513,
   "idto": 7513,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

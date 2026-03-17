@@ -1,6 +1,6 @@
 {
   "node_id": "6548",
-  "title": "قسم 6548",
+  "title": "مراتب الحسد",
   "idfrom": 6548,
   "idto": 6548,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "265",
-  "title": "قسم 265",
+  "title": "الوظيفة الأولى تقديم طهارة النفس وتنظيفها عن رذائل الأخلاق",
   "idfrom": 265,
   "idto": 265,
   "paragraphs": [
@@ -86,5 +86,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

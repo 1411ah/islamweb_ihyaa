@@ -1,6 +1,6 @@
 {
   "node_id": "6118",
-  "title": "قسم 6118",
+  "title": "بيان سرعة تقلب وانقسام القلوب في التغير والثبات",
   "idfrom": 6118,
   "idto": 6118,
   "paragraphs": [
@@ -102,5 +102,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

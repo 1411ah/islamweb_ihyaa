@@ -1,6 +1,6 @@
 {
   "node_id": "7474",
-  "title": "قسم 7474",
+  "title": "بيان حقيقة النعمة وأقسامها",
   "idfrom": 7474,
   "idto": 7474,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

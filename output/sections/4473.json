@@ -1,6 +1,6 @@
 {
   "node_id": "4473",
-  "title": "قسم 4473",
+  "title": "الركن الثاني المعقود عليه",
   "idfrom": 4473,
   "idto": 4473,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

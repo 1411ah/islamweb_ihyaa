@@ -1,6 +1,6 @@
 {
   "node_id": "2344",
-  "title": "قسم 2344",
+  "title": "فصل التكبير في صلاة العيد أربعا",
   "idfrom": 2344,
   "idto": 2344,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

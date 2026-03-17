@@ -1,6 +1,6 @@
 {
   "node_id": "5322",
-  "title": "قسم 5322",
+  "title": "حقوق الجوار",
   "idfrom": 5322,
   "idto": 5322,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

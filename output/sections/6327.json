@@ -1,6 +1,6 @@
 {
   "node_id": "6327",
-  "title": "قسم 6327",
+  "title": "الآفة السادسة التقعر في الكلام",
   "idfrom": 6327,
   "idto": 6327,
   "paragraphs": [
@@ -106,5 +106,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

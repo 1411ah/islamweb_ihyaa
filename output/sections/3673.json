@@ -1,6 +1,6 @@
 {
   "node_id": "3673",
-  "title": "قسم 3673",
+  "title": "الدعاء عند الذهاب إلى المسجد",
   "idfrom": 3673,
   "idto": 3673,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

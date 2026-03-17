@@ -1,6 +1,6 @@
 {
   "node_id": "7155",
-  "title": "قسم 7155",
+  "title": "الصنف الرابع أرباب الأموال",
   "idfrom": 7155,
   "idto": 7155,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

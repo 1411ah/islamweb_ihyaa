@@ -1,6 +1,6 @@
 {
   "node_id": "7308",
-  "title": "قسم 7308",
+  "title": "الركن الرابع في بيان السبب الباعث على دواء التوبة وطريق العلاج",
   "idfrom": 7308,
   "idto": 7308,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

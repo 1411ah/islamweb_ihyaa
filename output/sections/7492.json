@@ -1,6 +1,6 @@
 {
   "node_id": "7492",
-  "title": "قسم 7492",
+  "title": "الطرف الثاني في أصناف النعم في خلق الإرادات",
   "idfrom": 7492,
   "idto": 7492,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3461",
-  "title": "قسم 3461",
+  "title": "الأول في حال القارئ وهو أن يكون على أكمل حالات الطهارة",
   "idfrom": 3461,
   "idto": 3461,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

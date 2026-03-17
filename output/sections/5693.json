@@ -1,6 +1,6 @@
 {
   "node_id": "5693",
-  "title": "قسم 5693",
+  "title": "الأدب الأول مراعاة الزمان والمكان والإخوان",
   "idfrom": 5693,
   "idto": 5693,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

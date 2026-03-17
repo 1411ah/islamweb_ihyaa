@@ -1,6 +1,6 @@
 {
   "node_id": "6851",
-  "title": "قسم 6851",
+  "title": "بيان الرياء الخفي الذي هو أخفى من دبيب النمل",
   "idfrom": 6851,
   "idto": 6851,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

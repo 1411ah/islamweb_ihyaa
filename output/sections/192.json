@@ -1,6 +1,6 @@
 {
   "node_id": "192",
-  "title": "قسم 192",
+  "title": "اللفظ الأول الفقه",
   "idfrom": 192,
   "idto": 192,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

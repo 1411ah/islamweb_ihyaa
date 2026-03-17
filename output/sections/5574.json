@@ -1,6 +1,6 @@
 {
   "node_id": "5574",
-  "title": "قسم 5574",
+  "title": "الرخصة السابعة الفطر في الصوم للمسافر",
   "idfrom": 5574,
   "idto": 5574,
   "paragraphs": [
@@ -54,5 +54,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

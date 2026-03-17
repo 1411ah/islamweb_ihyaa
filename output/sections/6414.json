@@ -1,6 +1,6 @@
 {
   "node_id": "6414",
-  "title": "قسم 6414",
+  "title": "بيان العلاج الذي يمنع اللسان من الغيبة",
   "idfrom": 6414,
   "idto": 6414,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

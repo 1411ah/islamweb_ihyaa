@@ -1,6 +1,6 @@
 {
   "node_id": "6432",
-  "title": "قسم 6432",
+  "title": "بيان كفارة الغيبة",
   "idfrom": 6432,
   "idto": 6432,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

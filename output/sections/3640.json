@@ -1,6 +1,6 @@
 {
   "node_id": "3640",
-  "title": "قسم 3640",
+  "title": "دعاء قبيصة بن المخارق الهلالي",
   "idfrom": 3640,
   "idto": 3640,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

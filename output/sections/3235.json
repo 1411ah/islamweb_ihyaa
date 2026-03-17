@@ -1,6 +1,6 @@
 {
   "node_id": "3235",
-  "title": "قسم 3235",
+  "title": "فصل في حلق شعر غيره",
   "idfrom": 3235,
   "idto": 3235,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

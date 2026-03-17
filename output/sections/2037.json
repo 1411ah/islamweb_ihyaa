@@ -1,6 +1,6 @@
 {
   "node_id": "2037",
-  "title": "قسم 2037",
+  "title": "كثرة الصلاة على رسول الله صلى الله عليه وسلم يوم الجمعة",
   "idfrom": 2037,
   "idto": 2037,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

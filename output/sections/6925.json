@@ -1,6 +1,6 @@
 {
   "node_id": "6925",
-  "title": "قسم 6925",
+  "title": "بيان ذم الاختيال وإظهار آثار الكبر في المشي وجر الثياب",
   "idfrom": 6925,
   "idto": 6925,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

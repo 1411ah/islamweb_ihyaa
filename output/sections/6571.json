@@ -1,6 +1,6 @@
 {
   "node_id": "6571",
-  "title": "قسم 6571",
+  "title": "بيان الدواء الذي به ينفى مرض الحسد عن القلب",
   "idfrom": 6571,
   "idto": 6571,
   "paragraphs": [
@@ -138,5 +138,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

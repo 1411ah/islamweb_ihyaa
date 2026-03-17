@@ -1,6 +1,6 @@
 {
   "node_id": "7933",
-  "title": "قسم 7933",
+  "title": "الفن الأول في جلب النافع",
   "idfrom": 7933,
   "idto": 7933,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

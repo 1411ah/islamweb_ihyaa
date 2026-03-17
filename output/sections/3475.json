@@ -1,6 +1,6 @@
 {
   "node_id": "3475",
-  "title": "قسم 3475",
+  "title": "فصل في اعتبار من يتوجه عليه حكم السجود",
   "idfrom": 3475,
   "idto": 3475,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

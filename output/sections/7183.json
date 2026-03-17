@@ -1,6 +1,6 @@
 {
   "node_id": "7183",
-  "title": "قسم 7183",
+  "title": "فصل في بيان وجوب التوبة وفضلها",
   "idfrom": 7183,
   "idto": 7183,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "2887",
-  "title": "قسم 2887",
+  "title": "بيان أسباب الاستحقاق",
   "idfrom": 2887,
   "idto": 2887,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3584",
-  "title": "قسم 3584",
+  "title": "آداب الدعاء",
   "idfrom": 3584,
   "idto": 3584,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

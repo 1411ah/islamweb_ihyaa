@@ -1,6 +1,6 @@
 {
   "node_id": "5148",
-  "title": "قسم 5148",
+  "title": "الحق الرابع على اللسان بالنطق",
   "idfrom": 5148,
   "idto": 5148,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

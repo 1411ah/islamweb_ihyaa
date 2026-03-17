@@ -1,6 +1,6 @@
 {
   "node_id": "7002",
-  "title": "قسم 7002",
+  "title": "بيان الطريق في معالجة الكبر واكتساب التواضع له",
   "idfrom": 7002,
   "idto": 7002,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

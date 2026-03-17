@@ -1,6 +1,6 @@
 {
   "node_id": "5811",
-  "title": "قسم 5811",
+  "title": "الباب الرابع في أمر الأمراء والسلاطين",
   "idfrom": 5811,
   "idto": 5811,
   "paragraphs": [
@@ -334,5 +334,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

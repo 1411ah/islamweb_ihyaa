@@ -1,6 +1,6 @@
 {
   "node_id": "1009",
-  "title": "قسم 1009",
+  "title": "المبحث الأول في بيان ما يتعلق بالإيمان",
   "idfrom": 1009,
   "idto": 1009,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

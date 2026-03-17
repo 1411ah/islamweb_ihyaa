@@ -1,6 +1,6 @@
 {
   "node_id": "3576",
-  "title": "قسم 3576",
+  "title": "فضيلة الدعاء",
   "idfrom": 3576,
   "idto": 3576,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

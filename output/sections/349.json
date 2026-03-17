@@ -1,6 +1,6 @@
 {
   "node_id": "349",
-  "title": "قسم 349",
+  "title": "من العلامات اللازمة لعلماء الآخرة أن يكون منقبضا عن مخالطة السلاطين",
   "idfrom": 349,
   "idto": 349,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

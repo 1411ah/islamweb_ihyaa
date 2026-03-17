@@ -1,6 +1,6 @@
 {
   "node_id": "1845",
-  "title": "قسم 1845",
+  "title": "فضيلة الجمعة",
   "idfrom": 1845,
   "idto": 1845,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

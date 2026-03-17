@@ -1,6 +1,6 @@
 {
   "node_id": "6404",
-  "title": "قسم 6404",
+  "title": "بيان معنى الغيبة وحدها",
   "idfrom": 6404,
   "idto": 6404,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

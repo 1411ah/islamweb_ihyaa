@@ -1,6 +1,6 @@
 {
   "node_id": "7737",
-  "title": "قسم 7737",
+  "title": "بيان حقيقة الزهد",
   "idfrom": 7737,
   "idto": 7737,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

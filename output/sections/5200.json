@@ -1,6 +1,6 @@
 {
   "node_id": "5200",
-  "title": "قسم 5200",
+  "title": "الحق الثامن التخفيف عن الأخ وترك التكلف والتكليف له ومعه",
   "idfrom": 5200,
   "idto": 5200,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

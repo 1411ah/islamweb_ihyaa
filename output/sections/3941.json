@@ -1,6 +1,6 @@
 {
   "node_id": "3941",
-  "title": "قسم 3941",
+  "title": "الأسباب الباطنة التي بها يتيسر بها على قيام الليل",
   "idfrom": 3941,
   "idto": 3941,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

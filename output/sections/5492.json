@@ -1,6 +1,6 @@
 {
   "node_id": "5492",
-  "title": "قسم 5492",
+  "title": "الأدب السابع أن لا ينزل عن دابته حتى يحمي النهار",
   "idfrom": 5492,
   "idto": 5492,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

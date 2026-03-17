@@ -1,6 +1,6 @@
 {
   "node_id": "6470",
-  "title": "قسم 6470",
+  "title": "بيان ذم الغضب",
   "idfrom": 6470,
   "idto": 6470,
   "paragraphs": [
@@ -182,5 +182,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

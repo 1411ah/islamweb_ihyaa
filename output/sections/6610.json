@@ -1,6 +1,6 @@
 {
   "node_id": "6610",
-  "title": "قسم 6610",
+  "title": "بيان المواعظ في ذم الدنيا وصفتها",
   "idfrom": 6610,
   "idto": 6610,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

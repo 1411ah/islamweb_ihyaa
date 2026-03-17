@@ -1,6 +1,6 @@
 {
   "node_id": "8141",
-  "title": "قسم 8141",
+  "title": "بيان أن الدعاء غير مناقض للرضا",
   "idfrom": 8141,
   "idto": 8141,
   "paragraphs": [
@@ -150,5 +150,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

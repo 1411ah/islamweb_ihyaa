@@ -1,6 +1,6 @@
 {
   "node_id": "3263",
-  "title": "قسم 3263",
+  "title": "الجملة الثانية في آداب الإحرام من الميقات",
   "idfrom": 3263,
   "idto": 3263,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

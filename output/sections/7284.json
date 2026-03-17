@@ -1,6 +1,6 @@
 {
   "node_id": "7284",
-  "title": "قسم 7284",
+  "title": "الطبقة الثانية تائب سلك طريق الاستقامة في أمهات الطاعات",
   "idfrom": 7284,
   "idto": 7284,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "656",
-  "title": "قسم 656",
+  "title": "الأصل الأول معرفة وجوده تعالى",
   "idfrom": 656,
   "idto": 656,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

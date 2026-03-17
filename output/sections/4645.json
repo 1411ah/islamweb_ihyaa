@@ -1,6 +1,6 @@
 {
   "node_id": "4645",
-  "title": "قسم 4645",
+  "title": "أن يقصد القيام في صنعته أو تجارته بفرض من فروض الكفايات",
   "idfrom": 4645,
   "idto": 4645,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

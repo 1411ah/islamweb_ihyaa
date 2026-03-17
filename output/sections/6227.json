@@ -1,6 +1,6 @@
 {
   "node_id": "6227",
-  "title": "قسم 6227",
+  "title": "الفائدة الثالثة الانكسار والذل وزوال البطر والفرح",
   "idfrom": 6227,
   "idto": 6227,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

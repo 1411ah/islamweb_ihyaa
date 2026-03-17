@@ -1,6 +1,6 @@
 {
   "node_id": "7176",
-  "title": "قسم 7176",
+  "title": "فصل في بيان حقيقة التوبة وحدها",
   "idfrom": 7176,
   "idto": 7176,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "3950",
-  "title": "قسم 3950",
+  "title": "المرتبة الخامسة أن لا يراعي التقدير",
   "idfrom": 3950,
   "idto": 3950,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

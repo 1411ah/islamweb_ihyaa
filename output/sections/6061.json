@@ -1,6 +1,6 @@
 {
   "node_id": "6061",
-  "title": "قسم 6061",
+  "title": "بيان أمثال القلب بالإضافة إلى العلوم خاصة",
   "idfrom": 6061,
   "idto": 6061,
   "paragraphs": [
@@ -262,5 +262,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

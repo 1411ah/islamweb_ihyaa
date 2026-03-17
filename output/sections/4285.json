@@ -1,6 +1,6 @@
 {
   "node_id": "4285",
-  "title": "قسم 4285",
+  "title": "من آداب النكاح تقديم الخطبة",
   "idfrom": 4285,
   "idto": 4285,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

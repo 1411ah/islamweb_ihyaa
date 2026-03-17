@@ -1,6 +1,6 @@
 {
   "node_id": "5841",
-  "title": "قسم 5841",
+  "title": "بيان جملة من محاسن أخلاقه التي جمعها بعض العلماء والتقطها من الأخبار",
   "idfrom": 5841,
   "idto": 5841,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

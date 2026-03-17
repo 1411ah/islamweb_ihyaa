@@ -1,6 +1,6 @@
 {
   "node_id": "6409",
-  "title": "قسم 6409",
+  "title": "بيان الأسباب الباعثة على الغيبة",
   "idfrom": 6409,
   "idto": 6409,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

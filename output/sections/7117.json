@@ -1,6 +1,6 @@
 {
   "node_id": "7117",
-  "title": "قسم 7117",
+  "title": "الصنف الثاني أرباب العبادة والعمل",
   "idfrom": 7117,
   "idto": 7117,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

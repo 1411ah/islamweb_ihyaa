@@ -1,6 +1,6 @@
 {
   "node_id": "361",
-  "title": "قسم 361",
+  "title": "من علامات علماء الآخرة أن لا يكون متسارعا إلى الفتوى",
   "idfrom": 361,
   "idto": 361,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

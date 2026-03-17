@@ -1,6 +1,6 @@
 {
   "node_id": "2934",
-  "title": "قسم 2934",
+  "title": "الثالثة أن ينظر الآخذ فيما يأخذه فإن لم يكن المأخوذ من حله",
   "idfrom": 2934,
   "idto": 2934,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

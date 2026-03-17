@@ -1,6 +1,6 @@
 {
   "node_id": "3139",
-  "title": "قسم 3139",
+  "title": "فصل في صيام يوم السبت والأحد",
   "idfrom": 3139,
   "idto": 3139,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

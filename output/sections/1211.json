@@ -1,6 +1,6 @@
 {
   "node_id": "1211",
-  "title": "قسم 1211",
+  "title": "الأغسال الواجبة",
   "idfrom": 1211,
   "idto": 1211,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

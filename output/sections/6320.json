@@ -1,6 +1,6 @@
 {
   "node_id": "6320",
-  "title": "قسم 6320",
+  "title": "الآفة الثالثة الخوض في الباطل",
   "idfrom": 6320,
   "idto": 6320,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

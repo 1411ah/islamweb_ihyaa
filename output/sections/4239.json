@@ -1,6 +1,6 @@
 {
   "node_id": "4239",
-  "title": "قسم 4239",
+  "title": "الفائدة الثانية التحصن من وساوس الشيطان",
   "idfrom": 4239,
   "idto": 4239,
   "paragraphs": [
@@ -42,5 +42,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

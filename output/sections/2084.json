@@ -1,6 +1,6 @@
 {
   "node_id": "2084",
-  "title": "قسم 2084",
+  "title": "مسألة حكم خلع النعال في الصلاة",
   "idfrom": 2084,
   "idto": 2084,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7719",
-  "title": "قسم 7719",
+  "title": "بيان مقدار الغنى المحرم للسؤال",
   "idfrom": 7719,
   "idto": 7719,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

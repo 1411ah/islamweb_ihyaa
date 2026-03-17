@@ -1,6 +1,6 @@
 {
   "node_id": "8020",
-  "title": "قسم 8020",
+  "title": "بيان حكم التوكل في إظهار المرض وكتمانه",
   "idfrom": 8020,
   "idto": 8020,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

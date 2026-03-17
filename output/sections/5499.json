@@ -1,6 +1,6 @@
 {
   "node_id": "5499",
-  "title": "قسم 5499",
+  "title": "الأدب التاسع أن يرفق بالدابة",
   "idfrom": 5499,
   "idto": 5499,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

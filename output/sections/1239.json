@@ -1,6 +1,6 @@
 {
   "node_id": "1239",
-  "title": "قسم 1239",
+  "title": "كيفية التيمم",
   "idfrom": 1239,
   "idto": 1239,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

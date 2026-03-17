@@ -1,6 +1,6 @@
 {
   "node_id": "6468",
-  "title": "قسم 6468",
+  "title": "بيان ذم الغضب",
   "idfrom": 6468,
   "idto": 6468,
   "paragraphs": [
@@ -130,5 +130,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

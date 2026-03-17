@@ -1,6 +1,6 @@
 {
   "node_id": "6958",
-  "title": "قسم 6958",
+  "title": "بيان ما به التكبر",
   "idfrom": 6958,
   "idto": 6958,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

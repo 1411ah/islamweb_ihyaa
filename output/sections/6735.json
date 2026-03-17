@@ -1,6 +1,6 @@
 {
   "node_id": "6735",
-  "title": "قسم 6735",
+  "title": "بيان الإيثار وفضله",
   "idfrom": 6735,
   "idto": 6735,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

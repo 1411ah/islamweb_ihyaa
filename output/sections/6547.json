@@ -1,6 +1,6 @@
 {
   "node_id": "6547",
-  "title": "قسم 6547",
+  "title": "بيان حقيقة الحسد وحكمه وأقسامه ومراتبه",
   "idfrom": 6547,
   "idto": 6547,
   "paragraphs": [
@@ -202,5 +202,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

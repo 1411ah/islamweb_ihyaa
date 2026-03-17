@@ -1,6 +1,6 @@
 {
   "node_id": "5414",
-  "title": "قسم 5414",
+  "title": "الفائدة الأولى التعليم والتعلم",
   "idfrom": 5414,
   "idto": 5414,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

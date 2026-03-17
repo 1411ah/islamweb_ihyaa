@@ -1,6 +1,6 @@
 {
   "node_id": "6222",
-  "title": "قسم 6222",
+  "title": "الفائدة الأولى صفاء القلب",
   "idfrom": 6222,
   "idto": 6222,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

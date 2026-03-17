@@ -1,6 +1,6 @@
 {
   "node_id": "6814",
-  "title": "قسم 6814",
+  "title": "بيان علاج كراهية الذم",
   "idfrom": 6814,
   "idto": 6814,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

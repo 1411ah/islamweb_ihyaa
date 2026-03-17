@@ -1,6 +1,6 @@
 {
   "node_id": "3441",
-  "title": "قسم 3441",
+  "title": "فضيلة القرآن",
   "idfrom": 3441,
   "idto": 3441,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

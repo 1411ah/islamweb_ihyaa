@@ -1,6 +1,6 @@
 {
   "node_id": "1015",
-  "title": "قسم 1015",
+  "title": "فصل الدعاء مخ العبادة",
   "idfrom": 1015,
   "idto": 1015,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

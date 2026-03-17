@@ -1,6 +1,6 @@
 {
   "node_id": "4078",
-  "title": "قسم 4078",
+  "title": "فضيلة الضيافة",
   "idfrom": 4078,
   "idto": 4078,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

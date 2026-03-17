@@ -1,6 +1,6 @@
 {
   "node_id": "3539",
-  "title": "قسم 3539",
+  "title": "الأدلة على فضيلة الذكر",
   "idfrom": 3539,
   "idto": 3539,
   "paragraphs": [
@@ -98,5 +98,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

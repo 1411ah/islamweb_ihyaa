@@ -1,6 +1,6 @@
 {
   "node_id": "5220",
-  "title": "قسم 5220",
+  "title": "حقيقة القرابة ودرجاتها",
   "idfrom": 5220,
   "idto": 5220,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

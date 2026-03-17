@@ -1,6 +1,6 @@
 {
   "node_id": "2716",
-  "title": "قسم 2716",
+  "title": "من تؤدى عنه زكاة الفطر",
   "idfrom": 2716,
   "idto": 2716,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

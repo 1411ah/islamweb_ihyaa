@@ -1,6 +1,6 @@
 {
   "node_id": "4985",
-  "title": "قسم 4985",
+  "title": "فصل فيما يناسب لسياق المصنف في هذا الباب مما لم يذكره",
   "idfrom": 4985,
   "idto": 4985,
   "paragraphs": [
@@ -82,5 +82,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

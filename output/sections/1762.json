@@ -1,6 +1,6 @@
 {
   "node_id": "1762",
-  "title": "قسم 1762",
+  "title": "رفع الإمام صوته بتكبيرة الإحرام",
   "idfrom": 1762,
   "idto": 1762,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

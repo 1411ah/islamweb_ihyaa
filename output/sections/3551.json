@@ -1,6 +1,6 @@
 {
   "node_id": "3551",
-  "title": "قسم 3551",
+  "title": "فضيلة التحميد والتسبيح وبقية الأذكار",
   "idfrom": 3551,
   "idto": 3551,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7132",
-  "title": "قسم 7132",
+  "title": "الصنف الثالث المتصوفة",
   "idfrom": 7132,
   "idto": 7132,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

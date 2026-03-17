@@ -1,6 +1,6 @@
 {
   "node_id": "7647",
-  "title": "قسم 7647",
+  "title": "بيان معنى سوء الخاتمة",
   "idfrom": 7647,
   "idto": 7647,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

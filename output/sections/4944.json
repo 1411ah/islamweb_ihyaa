@@ -1,6 +1,6 @@
 {
   "node_id": "4944",
-  "title": "قسم 4944",
+  "title": "الدخول على السلاطين الظلمة وغيرهم",
   "idfrom": 4944,
   "idto": 4944,
   "paragraphs": [
@@ -66,5 +66,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "1464",
-  "title": "قسم 1464",
+  "title": "كيفية السجود في الصلاة",
   "idfrom": 1464,
   "idto": 1464,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

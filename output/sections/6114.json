@@ -1,6 +1,6 @@
 {
   "node_id": "6114",
-  "title": "قسم 6114",
+  "title": "بيان ما يؤخذ به العبد من وساوس القلوب وهمها وخواطرها",
   "idfrom": 6114,
   "idto": 6114,
   "paragraphs": [
@@ -118,5 +118,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

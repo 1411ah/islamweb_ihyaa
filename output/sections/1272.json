@@ -1,6 +1,6 @@
 {
   "node_id": "1272",
-  "title": "قسم 1272",
+  "title": "خصال الفطرة",
   "idfrom": 1272,
   "idto": 1272,
   "paragraphs": [
@@ -62,5 +62,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

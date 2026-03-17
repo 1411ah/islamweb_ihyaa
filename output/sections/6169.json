@@ -1,6 +1,6 @@
 {
   "node_id": "6169",
-  "title": "قسم 6169",
+  "title": "بيان الطريق الذي به يتعرف الإنسان عيوب نفسه",
   "idfrom": 6169,
   "idto": 6169,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

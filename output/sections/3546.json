@@ -1,6 +1,6 @@
 {
   "node_id": "3546",
-  "title": "قسم 3546",
+  "title": "فضيلة التهليل",
   "idfrom": 3546,
   "idto": 3546,
   "paragraphs": [
@@ -138,5 +138,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

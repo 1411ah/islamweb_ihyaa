@@ -1,6 +1,6 @@
 {
   "node_id": "2490",
-  "title": "قسم 2490",
+  "title": "فصل عدد التكبير في صلاة ال",
   "idfrom": 2490,
   "idto": 2490,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

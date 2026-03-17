@@ -1,6 +1,6 @@
 {
   "node_id": "6053",
-  "title": "قسم 6053",
+  "title": "بيان خاصية قلب الإنسان",
   "idfrom": 6053,
   "idto": 6053,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

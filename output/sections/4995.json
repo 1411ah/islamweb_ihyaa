@@ -1,6 +1,6 @@
 {
   "node_id": "4995",
-  "title": "قسم 4995",
+  "title": "الباب السابع ذكر مسائل متفرقة",
   "idfrom": 4995,
   "idto": 4995,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "5500",
-  "title": "قسم 5500",
+  "title": "الأدب العاشر ينبغي له أن يستصحب عدة أشياء في سفره",
   "idfrom": 5500,
   "idto": 5500,
   "paragraphs": [
@@ -114,5 +114,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

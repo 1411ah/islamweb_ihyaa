@@ -1,6 +1,6 @@
 {
   "node_id": "4018",
-  "title": "قسم 4018",
+  "title": "القسم الثاني في آداب حالة الأكل",
   "idfrom": 4018,
   "idto": 4018,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

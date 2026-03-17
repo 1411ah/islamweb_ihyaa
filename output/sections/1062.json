@@ -1,6 +1,6 @@
 {
   "node_id": "1062",
-  "title": "قسم 1062",
+  "title": "الطرف الأول في المزال",
   "idfrom": 1062,
   "idto": 1062,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

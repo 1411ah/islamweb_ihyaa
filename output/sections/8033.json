@@ -1,6 +1,6 @@
 {
   "node_id": "8033",
-  "title": "قسم 8033",
+  "title": "بيان حقيقة المحبة وأسبابها وتحقيق معنى محبة العبد لله تعالى",
   "idfrom": 8033,
   "idto": 8033,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

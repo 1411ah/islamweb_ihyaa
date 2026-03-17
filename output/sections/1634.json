@@ -1,6 +1,6 @@
 {
   "node_id": "1634",
-  "title": "قسم 1634",
+  "title": "من شروط صحة الصلاة النية",
   "idfrom": 1634,
   "idto": 1634,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

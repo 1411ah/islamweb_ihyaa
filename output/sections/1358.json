@@ -1,6 +1,6 @@
 {
   "node_id": "1358",
-  "title": "قسم 1358",
+  "title": "فضيلة الجماعة",
   "idfrom": 1358,
   "idto": 1358,
   "paragraphs": [
@@ -94,5 +94,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

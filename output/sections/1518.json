@@ -1,6 +1,6 @@
 {
   "node_id": "1518",
-  "title": "قسم 1518",
+  "title": "التشهد الثاني في الصلاة",
   "idfrom": 1518,
   "idto": 1518,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

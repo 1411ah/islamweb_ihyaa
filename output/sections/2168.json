@@ -1,6 +1,6 @@
 {
   "node_id": "2168",
-  "title": "قسم 2168",
+  "title": "فصل فيما ورد في طول الأربع قبل الظهر",
   "idfrom": 2168,
   "idto": 2168,
   "paragraphs": [
@@ -46,5 +46,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 6
 }

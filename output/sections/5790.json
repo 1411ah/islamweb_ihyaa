@@ -1,6 +1,6 @@
 {
   "node_id": "5790",
-  "title": "قسم 5790",
+  "title": "منكرات الأسواق",
   "idfrom": 5790,
   "idto": 5790,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

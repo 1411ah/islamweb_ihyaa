@@ -1,6 +1,6 @@
 {
   "node_id": "7554",
-  "title": "قسم 7554",
+  "title": "بيان الأفضل من الصبر والشكر",
   "idfrom": 7554,
   "idto": 7554,
   "paragraphs": [
@@ -122,5 +122,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

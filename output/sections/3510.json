@@ -1,6 +1,6 @@
 {
   "node_id": "3510",
-  "title": "قسم 3510",
+  "title": "فصل ما تحصل في معنى حديث التفسير بالرأي",
   "idfrom": 3510,
   "idto": 3510,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

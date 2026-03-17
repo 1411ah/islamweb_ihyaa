@@ -1,6 +1,6 @@
 {
   "node_id": "4923",
-  "title": "قسم 4923",
+  "title": "الدرجة الأولى أن لا يأخذ من مالهم شيئا أصلا",
   "idfrom": 4923,
   "idto": 4923,
   "paragraphs": [
@@ -142,5 +142,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7054",
-  "title": "قسم 7054",
+  "title": "بيان ذم الغرور",
   "idfrom": 7054,
   "idto": 7054,
   "paragraphs": [
@@ -158,5 +158,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

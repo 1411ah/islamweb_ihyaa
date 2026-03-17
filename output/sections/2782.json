@@ -1,6 +1,6 @@
 {
   "node_id": "2782",
-  "title": "قسم 2782",
+  "title": "فصل شرط صحة أداء زكاة الفطر نية مقارنة للأداء أو لعزل مقدار الواجب أو تصدق بجميع النصاب",
   "idfrom": 2782,
   "idto": 2782,
   "paragraphs": [
@@ -14,5 +14,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

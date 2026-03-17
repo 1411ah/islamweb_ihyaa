@@ -1,6 +1,6 @@
 {
   "node_id": "1548",
-  "title": "قسم 1548",
+  "title": "تمييز الفرائض والسنن",
   "idfrom": 1548,
   "idto": 1548,
   "paragraphs": [
@@ -18,5 +18,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

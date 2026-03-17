@@ -1,6 +1,6 @@
 {
   "node_id": "6318",
-  "title": "قسم 6318",
+  "title": "الآفة الثانية فضول الكلام",
   "idfrom": 6318,
   "idto": 6318,
   "paragraphs": [
@@ -170,5 +170,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

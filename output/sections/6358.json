@@ -1,6 +1,6 @@
 {
   "node_id": "6358",
-  "title": "قسم 6358",
+  "title": "الآفة الحادية عشرة السخرية والاستهزاء",
   "idfrom": 6358,
   "idto": 6358,
   "paragraphs": [
@@ -110,5 +110,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

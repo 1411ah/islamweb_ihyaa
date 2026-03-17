@@ -1,6 +1,6 @@
 {
   "node_id": "1990",
-  "title": "قسم 1990",
+  "title": "فوائد مهمة أخرى",
   "idfrom": 1990,
   "idto": 1990,
   "paragraphs": [
@@ -26,5 +26,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

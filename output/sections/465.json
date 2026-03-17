@@ -1,6 +1,6 @@
 {
   "node_id": "465",
-  "title": "قسم 465",
+  "title": "الفصل الأول في ترجمة عقيدة أهل السنة في كلمتي الشهادة",
   "idfrom": 465,
   "idto": 465,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 3
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "849",
-  "title": "قسم 849",
+  "title": "الأصل الخامس أن يجوز على الله أن يكلف الخلق بما لا يطيقونه",
   "idfrom": 849,
   "idto": 849,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

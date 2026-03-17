@@ -1,6 +1,6 @@
 {
   "node_id": "1183",
-  "title": "قسم 1183",
+  "title": "فضيلة الوضوء",
   "idfrom": 1183,
   "idto": 1183,
   "paragraphs": [
@@ -58,5 +58,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

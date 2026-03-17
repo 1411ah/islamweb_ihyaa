@@ -1,6 +1,6 @@
 {
   "node_id": "4338",
-  "title": "قسم 4338",
+  "title": "كون المرأة حسنة الخلق",
   "idfrom": 4338,
   "idto": 4338,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

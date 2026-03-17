@@ -1,6 +1,6 @@
 {
   "node_id": "5326",
-  "title": "قسم 5326",
+  "title": "حقوق الأقارب والرحم",
   "idfrom": 5326,
   "idto": 5326,
   "paragraphs": [
@@ -34,5 +34,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

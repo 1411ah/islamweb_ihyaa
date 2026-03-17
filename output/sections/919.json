@@ -1,6 +1,6 @@
 {
   "node_id": "919",
-  "title": "قسم 919",
+  "title": "الأصل الرابع الميزان",
   "idfrom": 919,
   "idto": 919,
   "paragraphs": [
@@ -38,5 +38,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

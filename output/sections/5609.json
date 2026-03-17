@@ -1,6 +1,6 @@
 {
   "node_id": "5609",
-  "title": "قسم 5609",
+  "title": "بيان أقاويل العلماء والمتصوفة في تحليل وتحريم السماع",
   "idfrom": 5609,
   "idto": 5609,
   "paragraphs": [
@@ -10,5 +10,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 4
 }

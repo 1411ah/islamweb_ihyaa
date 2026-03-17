@@ -1,6 +1,6 @@
 {
   "node_id": "7975",
-  "title": "قسم 7975",
+  "title": "بيان آداب المتوكلين إذا سرق متاعهم",
   "idfrom": 7975,
   "idto": 7975,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

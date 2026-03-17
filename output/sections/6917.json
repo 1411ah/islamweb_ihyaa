@@ -1,6 +1,6 @@
 {
   "node_id": "6917",
-  "title": "قسم 6917",
+  "title": "بيان ذم الكبر",
   "idfrom": 6917,
   "idto": 6917,
   "paragraphs": [
@@ -138,5 +138,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

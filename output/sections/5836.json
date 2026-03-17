@@ -1,6 +1,6 @@
 {
   "node_id": "5836",
-  "title": "قسم 5836",
+  "title": "بيان تأديب الله تعالى حبيبه وصفيه محمدا صلى الله عليه وسلم بالقرآن",
   "idfrom": 5836,
   "idto": 5836,
   "paragraphs": [
@@ -70,5 +70,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 3
 }

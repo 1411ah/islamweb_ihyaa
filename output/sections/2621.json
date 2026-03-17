@@ -1,6 +1,6 @@
 {
   "node_id": "2621",
-  "title": "قسم 2621",
+  "title": "فصل الزكاة على الدين المجحود",
   "idfrom": 2621,
   "idto": 2621,
   "paragraphs": [
@@ -30,5 +30,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 5
 }

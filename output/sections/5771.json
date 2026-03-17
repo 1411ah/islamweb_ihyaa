@@ -1,6 +1,6 @@
 {
   "node_id": "5771",
-  "title": "قسم 5771",
+  "title": "بيان آداب المحتسب",
   "idfrom": 5771,
   "idto": 5771,
   "paragraphs": [
@@ -50,5 +50,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 4
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "7551",
-  "title": "قسم 7551",
+  "title": "بيان فضل النعمة على البلاء",
   "idfrom": 7551,
   "idto": 7551,
   "paragraphs": [
@@ -126,5 +126,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

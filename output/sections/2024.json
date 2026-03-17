@@ -1,6 +1,6 @@
 {
   "node_id": "2024",
-  "title": "قسم 2024",
+  "title": "حضور مجالس العلم",
   "idfrom": 2024,
   "idto": 2024,
   "paragraphs": [
@@ -90,5 +90,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }

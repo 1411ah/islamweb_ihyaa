@@ -1,6 +1,6 @@
 {
   "node_id": "2153",
-  "title": "قسم 2153",
+  "title": "فصل الأدلة على سنة الفجر",
   "idfrom": 2153,
   "idto": 2153,
   "paragraphs": [
@@ -22,5 +22,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": false
+  "has_hadith": false,
+  "level": 6
 }

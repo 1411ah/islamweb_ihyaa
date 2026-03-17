@@ -1,6 +1,6 @@
 {
   "node_id": "311",
-  "title": "قسم 311",
+  "title": "الوظيفة السادسة أن يقتصر المعلم بالمتعلم على قدر فهمه",
   "idfrom": 311,
   "idto": 311,
   "paragraphs": [
@@ -74,5 +74,6 @@
     }
   ],
   "has_quran": false,
-  "has_hadith": true
+  "has_hadith": true,
+  "level": 5
 }
