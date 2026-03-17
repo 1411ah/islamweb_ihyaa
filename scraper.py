@@ -14,7 +14,7 @@ import json, os, re, time, sys, traceback
 
 BASE_URL = "https://www.islamweb.net"
 BOOK_ID  = 411
-DELAY    = 1.2
+DELAY    = 0.8  # قلّلنا من 1.2 إلى 0.8 → ~1.8 ساعة بدل 2.7
 HEADERS  = {
     "User-Agent":       "Mozilla/5.0 (compatible; research-bot/1.0)",
     "Accept-Language":  "ar,en;q=0.9",
