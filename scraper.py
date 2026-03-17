@@ -211,7 +211,8 @@ def fix_titles():
         if not soup:
             continue
 
-        # اسحب العنوان من breadcrumb
+        # ١. breadcrumb
+        new_title = None
         crumbs = [t for t in soup.find_all(
             lambda t: isinstance(t, Tag) and t.get("itemprop") == "itemListElement"
         )]
@@ -220,10 +221,28 @@ def fix_titles():
             if span:
                 txt = span.get_text(strip=True)
                 if txt and txt not in REPEATED_TEXTS:
-                    sec["title"] = txt
-                    save_json(path, sec)
-                    fixed += 1
-                    print(f"  ✓ {nid} → {txt[:60]}")
+                    new_title = txt
+
+        # ٢. <title> تاق إذا فشل breadcrumb
+        if not new_title:
+            page_title = soup.find("title")
+            if page_title:
+                parts = page_title.get_text().split(" - ")
+                for part in reversed(parts):
+                    part = part.strip()
+                    if (part and
+                        "إسلام ويب" not in part and
+                        "إتحاف" not in part and
+                        "الجزء" not in part and
+                        len(part) > 3):
+                        new_title = part
+                        break
+
+        if new_title:
+            sec["title"] = new_title
+            save_json(path, sec)
+            fixed += 1
+            print(f"  ✓ {nid} → {new_title[:60]}")
 
         time.sleep(0.5)
 
@@ -425,8 +444,10 @@ def fetch_section(item: dict) -> dict | None:
         if not soup:
             return None
 
-    # العنوان الحقيقي من breadcrumb
+    # العنوان من مصادر متعددة بالأولوية
     real_title = title
+
+    # ١. breadcrumb
     crumbs = [t for t in soup.find_all(
         lambda t: isinstance(t, Tag) and t.get("itemprop") == "itemListElement"
     )]
@@ -436,6 +457,23 @@ def fetch_section(item: dict) -> dict | None:
             txt = span.get_text(strip=True)
             if txt and txt not in REPEATED_TEXTS:
                 real_title = txt
+
+    # ٢. <title> تاق الصفحة إذا فشل breadcrumb
+    if real_title.startswith("قسم "):
+        page_title = soup.find("title")
+        if page_title:
+            # صيغة: "إسلام ويب - اسم الكتاب - عنوان الفصل - الجزء رقم1"
+            parts = page_title.get_text().split(" - ")
+            # العنوان هو الجزء قبل الأخير (قبل "الجزء رقم")
+            for part in reversed(parts):
+                part = part.strip()
+                if (part and
+                    "إسلام ويب" not in part and
+                    "إتحاف" not in part and
+                    "الجزء" not in part and
+                    len(part) > 3):
+                    real_title = part
+                    break
 
     paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
