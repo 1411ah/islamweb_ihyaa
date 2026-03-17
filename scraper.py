@@ -204,13 +204,13 @@ def build_toc_from_scan():
 # 3. اصلاح العناوين
 # ================================================================
 def fix_titles():
-    print("=== اصلاح العناوين ===")
+    print("=== اصلاح العناوين ===", flush=True)
     d = "output/sections"
     fixed = 0
     skipped = 0
     files = [f for f in os.listdir(d) if f.endswith(".json")]
     total = len(files)
-    print(f"  اجمالي الملفات: {total}")
+    print(f"  اجمالي: {total}", flush=True)
 
     for i, fname in enumerate(files):
         path = f"{d}/{fname}"
@@ -225,39 +225,37 @@ def fix_titles():
             skipped += 1
             continue
 
-        nid = sec["node_id"]
-        url = (f"{BASE_URL}/ar/library/pageno_redirect.php"
-               f"?part=1&bk_no={BOOK_ID}&pageno={nid}")
+        nid    = sec["node_id"]
+        idfrom = sec.get("idfrom", int(nid))
+        idto   = sec.get("idto",   int(nid))
+
+        # جلب العنوان من الصفحة الحقيقية عبر nindex
+        url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+               f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}"
+               f"&idto={idto}&page=bookpages")
         try:
-            r = SESSION.get(url, timeout=15, allow_redirects=True)
-            final_url = r.url
-            m = re.search(r'/content/\d+/\d+/([^/?]+)', final_url)
-            if m:
-                from urllib.parse import unquote
-                new_title = unquote(m.group(1)).replace("-", " ").strip()
-                if new_title and len(new_title) > 3:
+            soup, _ = fetch(url)
+            if soup:
+                new_title = extract_title(soup, title)
+                if new_title and new_title != title and len(new_title) > 3:
                     sec["title"] = new_title
                     save_json(path, sec)
                     fixed += 1
-                    print(f"  [{i+1}/{total}] {nid}: {new_title[:60]}")
+                    print(f"  [{i+1}/{total}] {nid}: {new_title[:60]}", flush=True)
                 else:
-                    print(f"  [{i+1}/{total}] {nid}: slug فارغ — {final_url}")
-            else:
-                print(f"  [{i+1}/{total}] {nid}: لم يُعثر على slug — {final_url}")
+                    print(f"  [{i+1}/{total}] {nid}: لم يُعثر على عنوان", flush=True)
         except Exception as e:
-            print(f"  [{i+1}/{total}] خطا {nid}: {e}")
+            print(f"  [{i+1}/{total}] خطا {nid}: {e}", flush=True)
 
-        # تقدم كل 100
         if (i + 1) % 100 == 0:
-            print(f"  === تقدم: {i+1}/{total} | اصلح: {fixed} ===")
+            print(f"  === تقدم {i+1}/{total} | اصلح: {fixed} ===", flush=True)
 
-        time.sleep(0.3)
+        time.sleep(0.4)
 
-    print(f"\n=== اكتمل ===")
-    print(f"  اجمالي: {total}")
-    print(f"  عناوين صحيحة مسبقاً: {skipped}")
-    print(f"  تم اصلاحها: {fixed}")
-    print(f"  لم تُصلح: {total - skipped - fixed}")
+    print(f"\n=== اكتمل ===", flush=True)
+    print(f"  صحيحة مسبقاً: {skipped}", flush=True)
+    print(f"  تم اصلاحها: {fixed}", flush=True)
+    print(f"  لم تُصلح: {total - skipped - fixed}", flush=True)
 
 
 # ================================================================
