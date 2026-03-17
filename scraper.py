@@ -12,6 +12,10 @@ import requests
 from bs4 import BeautifulSoup, Tag
 from ebooklib import epub
 import json, os, re, time, sys, traceback
+import functools
+
+# اجبر Python على طباعة فورية
+print = functools.partial(print, flush=True)
 
 BASE_URL = "https://www.islamweb.net"
 BOOK_ID  = 411
