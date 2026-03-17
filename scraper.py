@@ -71,55 +71,10 @@ def has_tashkeel(text: str) -> bool:
 # ══════════════════════════════════════════════════════════════════
 # ١. بناء الفهرس — مع جلب الفصول الداخلية تكرارياً
 # ══════════════════════════════════════════════════════════════════
-def fetch_subtree(node_id: str, idfrom: int, idto: int,
-                  level: int, seen: set) -> list:
-    url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
-           f"?id={node_id}&treeLevel={level}&bookid={BOOK_ID}"
-           f"&page=bookssubtree&searchtext=&showexact=")
-    soup, _ = fetch(url)
-    if not soup:
-        return []
-
-    items = []
-    for el in soup.find_all(["span", "label"]):
-        if not isinstance(el, Tag):
-            continue
-        if "tree_label" not in (el.get("class") or []):
-            continue
-
-        nid  = (el.get("data-id") or "").strip()
-        fr   = el.get("data-idfrom")
-        to   = el.get("data-idto")
-        lvl  = int(el.get("data-level") or level + 1)
-        a_in = el.find("a")
-        text = (a_in.get_text(strip=True) if a_in
-                else el.get_text(strip=True)).strip()
-        text = re.sub(r'(التالي|السابق)', '', text).strip()
-
-        if not nid.isdigit() or not text or not fr or nid in seen:
-            continue
-        seen.add(nid)
-
-        item = {
-            "id":     nid,
-            "idfrom": int(fr),
-            "idto":   int(to) if to else int(fr),
-            "level":  lvl,
-            "text":   text[:120],
-        }
-        items.append(item)
-
-        node_to = int(to) if to else int(fr)
-        if node_to - int(fr) > 1:
-            children = fetch_subtree(nid, int(fr), node_to, lvl, seen)
-            items.extend(children)
-        time.sleep(0.3)
-
-    return items
-
-
 def build_toc() -> list:
     print("=== بناء الفهرس ===")
+
+    # ── المستوى الأول من الصفحة الرئيسية ─────────────────────────
     url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/1/مقدمة"
     soup, _ = fetch(url)
     if not soup:
@@ -135,11 +90,11 @@ def build_toc() -> list:
             continue
         if "tree_label" not in (el.get("class") or []):
             continue
-
         node_id = (el.get("data-id") or "").strip()
         idfrom  = el.get("data-idfrom")
         idto    = el.get("data-idto")
         level   = int(el.get("data-level") or 1)
+        dhref   = el.get("data-href") or ""
         a_inner = el.find("a")
         text    = (a_inner.get_text(strip=True) if a_inner
                    else el.get_text(strip=True)).strip()
@@ -157,33 +112,82 @@ def build_toc() -> list:
             "idto":   int(idto) if idto else int(idfrom),
             "level":  level,
             "text":   text[:120],
+            "dhref":  dhref,
         }
         top_level.append(item)
         toc.append(item)
 
     print(f"  المستوى الأول: {len(top_level)} عنصر")
 
-    for item in top_level:
-        if item["idto"] - item["idfrom"] < 2:
-            continue
-        print(f"  ↳ {item['text'][:45]}...")
-        children = fetch_subtree(
-            item["id"], item["idfrom"], item["idto"],
-            item["level"], seen
-        )
-        toc.extend(children)
-        print(f"    +{len(children)} فصل")
+    # ── جلب الفصول الداخلية من data-href ─────────────────────────
+    def crawl_node(item, depth=0):
+        if depth > 6:
+            return
+        dhref = item.get("dhref","")
+        if not dhref:
+            return
+
+        sub_url = f"{BASE_URL}/ar/library/maktaba/{dhref}"
+        sub_soup, _ = fetch(sub_url)
+        if not sub_soup:
+            return
+
+        # طبع HTML خام للتشخيص (أول 3 عناصر فقط)
+        found = 0
+        for el in sub_soup.find_all(["span","label","a","li"]):
+            if not isinstance(el, Tag):
+                continue
+            nid = (el.get("data-id") or el.get("id") or "").strip()
+            fr  = el.get("data-idfrom")
+            to  = el.get("data-idto")
+            dh  = el.get("data-href") or ""
+            txt = el.get_text(strip=True)[:60]
+            lvl = int(el.get("data-level") or item["level"] + 1)
+
+            if not nid.isdigit() or not fr:
+                continue
+            if nid in seen:
+                continue
+            seen.add(nid)
+
+            child = {
+                "id":     nid,
+                "idfrom": int(fr),
+                "idto":   int(to) if to else int(fr),
+                "level":  lvl,
+                "text":   re.sub(r'(التالي|السابق)', '', txt).strip()[:120],
+                "dhref":  dh,
+            }
+            toc.append(child)
+            found += 1
+
+            if dh and int(to or fr) - int(fr) > 1:
+                time.sleep(0.3)
+                crawl_node(child, depth + 1)
+
+        print(f"  {'  '*depth}↳ {item['text'][:40]} → {found} فصل")
         time.sleep(0.5)
+
+    for item in top_level:
+        if item["idto"] - item["idfrom"] > 1:
+            crawl_node(item)
 
     toc.sort(key=lambda x: x["idfrom"])
 
+    # إزالة التكرار
+    seen_ids, final = set(), []
     for item in toc:
+        if item["id"] not in seen_ids:
+            seen_ids.add(item["id"])
+            final.append(item)
+
+    for item in final:
         indent = "  " * (item["level"] - 1)
         print(f"  {indent}├─ [{item['idfrom']:5d}→{item['idto']:5d}] {item['text'][:50]}")
 
-    save_json("output/toc.json", toc)
-    print(f"\n✓ فهرس كامل: {len(toc)} عنصر")
-    return toc
+    save_json("output/toc.json", final)
+    print(f"\n✓ فهرس كامل: {len(final)} عنصر")
+    return final
 
 
 # ══════════════════════════════════════════════════════════════════
