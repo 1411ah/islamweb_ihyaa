@@ -184,7 +184,50 @@ def build_toc() -> list:
 # ══════════════════════════════════════════════════════════════════
 # ٢. بناء الفهرس الكامل من ملفات sections بعد الـ scan
 # ══════════════════════════════════════════════════════════════════
-def build_toc_from_scan() -> list:
+def fix_titles():
+    """إصلاح العناوين في sections المحفوظة بـ 'قسم N'"""
+    print("=== إصلاح العناوين ===")
+    sections_dir = "output/sections"
+    fixed = 0
+
+    for fname in os.listdir(sections_dir):
+        if not fname.endswith(".json"):
+            continue
+        path = f"{sections_dir}/{fname}"
+        sec  = load_json(path, None)
+        if not sec:
+            continue
+        title = sec.get("title","")
+        if not title.startswith("قسم "):
+            continue  # عنوانه صحيح مسبقاً
+
+        nid    = sec["node_id"]
+        idfrom = sec.get("idfrom", int(nid))
+        idto   = sec.get("idto",   int(nid))
+
+        url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+               f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
+        soup, _ = fetch(url)
+        if not soup:
+            continue
+
+        # اسحب العنوان من breadcrumb
+        crumbs = [t for t in soup.find_all(
+            lambda t: isinstance(t, Tag) and t.get("itemprop") == "itemListElement"
+        )]
+        if crumbs:
+            span = crumbs[-1].find("span", itemprop="name")
+            if span:
+                txt = span.get_text(strip=True)
+                if txt and txt not in REPEATED_TEXTS:
+                    sec["title"] = txt
+                    save_json(path, sec)
+                    fixed += 1
+                    print(f"  ✓ {nid} → {txt[:60]}")
+
+        time.sleep(0.5)
+
+    print(f"\n✅ أُصلح {fixed} عنوان")
     print("=== بناء الفهرس من بيانات الـ scan ===")
     sections_dir = "output/sections"
     if not os.path.exists(sections_dir):
@@ -645,6 +688,9 @@ if __name__ == "__main__":
         phase_scan()
     elif mode == "resume":
         phase_scan()
+    elif mode == "fix":
+        fix_titles()
+        build_toc_from_scan()
     elif mode == "build":
         build_toc_from_scan()
         phase_build()
