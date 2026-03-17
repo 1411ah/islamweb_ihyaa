@@ -11,7 +11,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 340  # أقصى ما يسمح به GitHub Actions مجاناً
+    timeout-minutes: 340
     permissions:
       contents: write
 
@@ -34,8 +34,9 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/toc.json output/valid_nodes.json \
-                  output/scan_progress.json output/sections/ || true
+          git add output/toc.json output/toc_from_scan.json \
+                  output/valid_nodes.json output/scan_progress.json \
+                  output/sections/ || true
           git diff --cached --quiet || \
           git commit -m "[${{ github.event.inputs.mode }}] $(date +'%Y-%m-%d %H:%M')"
           git push
@@ -47,6 +48,7 @@ jobs:
           name: debug-output
           path: |
             output/toc.json
+            output/toc_from_scan.json
             output/valid_nodes.json
             output/scan_progress.json
 
@@ -55,6 +57,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: epub-${{ github.run_number }}
-          name: "إتحاف السادة المتقين #${{ github.run_number }}"
+          name: "اتحاف السادة المتقين #${{ github.run_number }}"
           body: "mode: ${{ github.event.inputs.mode }}"
           files: output/ithaf_alsada.epub
