@@ -486,16 +486,22 @@ def phase_scan(end_id=None):
 # ================================================================
 EPUB_CSS = """
 body      { font-family: 'Traditional Arabic', serif; direction: rtl;
-            text-align: right; line-height: 2.2; margin: 1em 1.5em; }
-h1        { color: #8B0000; border-bottom: 2px solid #8B0000; margin-top: 1.5em; }
-h2        { color: #5A3E1B; margin-top: 1.2em; }
-.quran    { color: #006400; font-size: 1.1em; margin: .8em 0; padding: .5em;
-            border-right: 4px solid #006400; background: #f0fff0; }
+            text-align: right; line-height: 2.2; margin: 1em 1.5em;
+            font-size: 1em; }
+h1        { color: #8B0000; border-bottom: 2px solid #8B0000;
+            margin-top: 1.5em; font-size: 1em; font-weight: bold; }
+h2        { color: #5A3E1B; margin-top: 1.2em;
+            font-size: 1em; font-weight: bold; }
+.quran    { color: #006400; margin: .8em 0; padding: .5em;
+            border-right: 4px solid #006400; background: #f0fff0;
+            font-size: 1em; }
 .hadith   { color: #4B0082; margin: .8em 0; padding: .5em;
-            border-right: 4px solid #4B0082; background: #f5f0ff; }
-.text     { margin: .5em 0; }
-.center   { text-align: center; font-style: italic; margin: 1em 2em; color: #4a0080; }
-.pagebreak{ text-align: center; color: #8B0000; font-size: .85em;
+            border-right: 4px solid #4B0082; background: #f5f0ff;
+            font-size: 1em; }
+.text     { margin: .5em 0; font-size: 1em; }
+.center   { text-align: center; font-style: italic;
+            margin: 1em 2em; color: #4a0080; font-size: 1em; }
+.pagebreak{ text-align: center; color: #8B0000; font-size: 1em;
             border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
             margin: 1em 0; padding: .3em 0; }
 """
@@ -517,6 +523,9 @@ def phase_build():
     book.set_title("اتحاف السادة المتقين بشرح احياء علوم الدين")
     book.set_language("ar")
     book.add_author("مرتضى الزبيدي")
+    # اتجاه التصفح من اليمين لليسار
+    book.set_direction("rtl")
+    book.add_metadata("OPF", "meta", "", {"name": "primary-writing-mode", "content": "horizontal-rl"})
 
     css_item = epub.EpubItem(uid="style", file_name="style/main.css",
                              media_type="text/css", content=EPUB_CSS)
