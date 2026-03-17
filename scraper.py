@@ -74,21 +74,37 @@ def set_tashkeel_cookie():
 def has_tashkeel(text):
     return any("\u064b" <= c <= "\u065f" for c in text[:500])
 
+def normalize(text):
+    """إزالة الهمزات للمقارنة"""
+    return re.sub(r'[إأآا]', 'ا', text or "")
+
 def extract_title(soup, fallback):
+    # ١. breadcrumb
     crumbs = [t for t in soup.find_all(True)
               if isinstance(t, Tag) and t.get("itemprop") == "itemListElement"]
     if crumbs:
         span = crumbs[-1].find("span", itemprop="name")
         if span:
             txt = span.get_text(strip=True)
-            if txt and len(txt) > 3 and "اتحاف" not in txt and "اسلام ويب" not in txt:
+            n = normalize(txt)
+            if (txt and len(txt) > 3
+                    and "اتحاف" not in n
+                    and "اسلام ويب" not in n):
                 return txt
+
+    # ٢. <title> تاق
     pt = soup.find("title")
     if pt:
         for part in reversed(pt.get_text().split(" - ")):
             p = part.strip()
-            if p and len(p) > 3 and "اسلام ويب" not in p and "اتحاف" not in p and "الجزء" not in p and "رقم" not in p:
+            n = normalize(p)
+            if (p and len(p) > 3
+                    and "اسلام ويب" not in n
+                    and "اتحاف" not in n
+                    and "الجزء" not in n
+                    and "رقم" not in n):
                 return p
+
     return fallback
 
 
@@ -227,23 +243,37 @@ def fix_titles():
 
         nid    = sec["node_id"]
         idfrom = sec.get("idfrom", int(nid))
-        idto   = sec.get("idto",   int(nid))
 
-        # جلب العنوان من الصفحة الحقيقية عبر nindex
-        url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
-               f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}"
-               f"&idto={idto}&page=bookpages")
+        # جلب العنوان من URL الكتاب الرئيسي (يحتوي breadcrumb صحيح)
+        url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
         try:
-            soup, _ = fetch(url)
-            if soup:
-                new_title = extract_title(soup, title)
-                if new_title and new_title != title and len(new_title) > 3:
-                    sec["title"] = new_title
-                    save_json(path, sec)
-                    fixed += 1
-                    print(f"  [{i+1}/{total}] {nid}: {new_title[:60]}", flush=True)
-                else:
-                    print(f"  [{i+1}/{total}] {nid}: لم يُعثر على عنوان", flush=True)
+            r = SESSION.get(url, timeout=15, allow_redirects=True)
+            soup = BeautifulSoup(r.text, "lxml")
+
+            # العنوان من <title> تاق
+            pt = soup.find("title")
+            new_title = None
+            if pt:
+                raw = pt.get_text()
+                # صيغة: "اسلام ويب - اسم الكتاب - عنوان الفصل - الجزء رقم1"
+                parts = [p.strip() for p in raw.split(" - ")]
+                for part in reversed(parts):
+                    if (part and len(part) > 3
+                            and "اسلام ويب" not in part
+                            and "اتحاف" not in part
+                            and "الجزء" not in part
+                            and "رقم" not in part):
+                        new_title = part
+                        break
+
+            if new_title:
+                sec["title"] = new_title
+                save_json(path, sec)
+                fixed += 1
+                print(f"  [{i+1}/{total}] {nid}: {new_title[:60]}", flush=True)
+            else:
+                print(f"  [{i+1}/{total}] {nid}: فشل — {r.url}", flush=True)
+
         except Exception as e:
             print(f"  [{i+1}/{total}] خطا {nid}: {e}", flush=True)
 
@@ -254,8 +284,8 @@ def fix_titles():
 
     print(f"\n=== اكتمل ===", flush=True)
     print(f"  صحيحة مسبقاً: {skipped}", flush=True)
-    print(f"  تم اصلاحها: {fixed}", flush=True)
-    print(f"  لم تُصلح: {total - skipped - fixed}", flush=True)
+    print(f"  تم اصلاحها:   {fixed}", flush=True)
+    print(f"  لم تُصلح:     {total - skipped - fixed}", flush=True)
 
 
 # ================================================================
