@@ -11,7 +11,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 340  # أقصى ما يسمح به GitHub Actions مجاناً
     permissions:
       contents: write
 
