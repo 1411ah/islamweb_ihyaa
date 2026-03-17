@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'test | scan | resume | build | full'
+        description: 'test | scan | resume | fix | build | full'
         required: true
         default: 'test'
 
