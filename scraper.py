@@ -611,7 +611,8 @@ def phase_build():
         for item in items:
             if item["id"] not in id_to_ch:
                 continue
-            lnk   = epub.Link(f"s{item['id']}.xhtml", item["text"], f"s{item['id']}")
+            title = item.get("text") or item.get("title") or f"قسم {item['id']}"
+            lnk   = epub.Link(f"s{item['id']}.xhtml", title, f"s{item['id']}")
             lvl   = item.get("level", 1)
             entry = (lnk, [])
             if not stack or lvl == 1:
