@@ -74,25 +74,25 @@ def set_tashkeel_cookie():
 def has_tashkeel(text):
     return any("\u064b" <= c <= "\u065f" for c in text[:500])
 
-def normalize(text):
-    """إزالة الهمزات للمقارنة"""
-    return re.sub(r'[إأآا]', 'ا', text or "")
+def extract_title_and_level(soup, fallback_title, fallback_level=1):
+    """استخرج العنوان والمستوى من breadcrumb"""
+    normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
 
-def extract_title(soup, fallback):
-    # ١. breadcrumb
     crumbs = [t for t in soup.find_all(True)
               if isinstance(t, Tag) and t.get("itemprop") == "itemListElement"]
+
     if crumbs:
+        # المستوى = عدد عناصر breadcrumb (بدون الأول = اسم الكتاب)
+        level = max(1, len(crumbs) - 1)
+        # العنوان = آخر عنصر
         span = crumbs[-1].find("span", itemprop="name")
         if span:
             txt = span.get_text(strip=True)
             n = normalize(txt)
-            if (txt and len(txt) > 3
-                    and "اتحاف" not in n
-                    and "اسلام ويب" not in n):
-                return txt
+            if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
+                return txt, level
 
-    # ٢. <title> تاق
+    # fallback: من <title>
     pt = soup.find("title")
     if pt:
         for part in reversed(pt.get_text().split(" - ")):
@@ -103,9 +103,9 @@ def extract_title(soup, fallback):
                     and "اتحاف" not in n
                     and "الجزء" not in n
                     and "رقم" not in n):
-                return p
+                return p, fallback_level
 
-    return fallback
+    return fallback_title, fallback_level
 
 
 # ================================================================
@@ -209,7 +209,8 @@ def build_toc_from_scan():
             continue
         toc.append({"id": nid, "idfrom": sec.get("idfrom", int(nid)),
                     "idto": sec.get("idto", int(nid)),
-                    "level": tree_map.get(nid, 1),
+                    # أولوية: level في الملف، ثم toc.json، ثم 1
+                    "level": sec.get("level") or tree_map.get(nid, 1),
                     "text": sec.get("title", f"قسم {nid}")})
     save_json("output/toc_from_scan.json", toc)
     print(f"فهرس كامل: {len(toc)}")
@@ -249,30 +250,23 @@ def fix_titles():
         try:
             r = SESSION.get(url, timeout=15, allow_redirects=True)
             soup = BeautifulSoup(r.text, "lxml")
+            old_level = sec.get("level", 1)
+            new_title, new_level = extract_title_and_level(soup, title, old_level)
 
-            # العنوان من <title> تاق
-            pt = soup.find("title")
-            new_title = None
-            if pt:
-                raw = pt.get_text()
-                # صيغة: "اسلام ويب - اسم الكتاب - عنوان الفصل - الجزء رقم1"
-                parts = [p.strip() for p in raw.split(" - ")]
-                for part in reversed(parts):
-                    if (part and len(part) > 3
-                            and "اسلام ويب" not in part
-                            and "اتحاف" not in part
-                            and "الجزء" not in part
-                            and "رقم" not in part):
-                        new_title = part
-                        break
-
-            if new_title:
+            changed = False
+            if new_title and new_title != title and len(new_title) > 3:
                 sec["title"] = new_title
+                changed = True
+            if new_level != old_level:
+                sec["level"] = new_level
+                changed = True
+
+            if changed:
                 save_json(path, sec)
                 fixed += 1
-                print(f"  [{i+1}/{total}] {nid}: {new_title[:60]}", flush=True)
+                print(f"  [{i+1}/{total}] {nid} (L{new_level}): {sec['title'][:55]}", flush=True)
             else:
-                print(f"  [{i+1}/{total}] {nid}: فشل — {r.url}", flush=True)
+                print(f"  [{i+1}/{total}] {nid}: فشل", flush=True)
 
         except Exception as e:
             print(f"  [{i+1}/{total}] خطا {nid}: {e}", flush=True)
@@ -431,7 +425,7 @@ def fetch_section(item):
         if not soup:
             return None
 
-    real_title = extract_title(soup, title)
+    real_title, real_level = extract_title_and_level(soup, title, item.get("level", 1))
     paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
         return None
@@ -439,6 +433,7 @@ def fetch_section(item):
     result = {
         "node_id":    nid,
         "title":      real_title,
+        "level":      real_level,
         "idfrom":     idfrom,
         "idto":       idto,
         "paragraphs": paragraphs,
