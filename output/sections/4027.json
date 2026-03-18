@@ -1,0 +1,31 @@
+{
+  "node_id": "4027",
+  "title": "قسم 4027",
+  "level": 1,
+  "idfrom": 4027,
+  "idto": 4027,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَلْتَقِطُ"
+    },
+    {
+      "kind": "text",
+      "text": "فُتَاتَ الطَّعَامِ"
+    },
+    {
+      "kind": "hadith",
+      "text": "(( قَالَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ : \" مَنْ أَكَلَ مَا يَسْقُطُ مِنَ الْمَائِدَةِ عَاشَ فِي سِعَةٍ وَعُوفِيَ فِي وَلَدِهِ .  ))"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": true
+}

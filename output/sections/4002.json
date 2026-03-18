@@ -1,0 +1,31 @@
+{
+  "node_id": "4002",
+  "title": "قسم 4002",
+  "level": 1,
+  "idfrom": 4002,
+  "idto": 4002,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَنْ"
+    },
+    {
+      "kind": "text",
+      "text": "لَا يَأْكُلَ مِنْ ذُرْوَةِ الْقَصْعَةِ وَلَا مِنْ وَسَطِ الطَّعَامِ بَلْ يَأْكُلُ مِنِ اسْتِدَارَةِ الرَّغِيفِ"
+    },
+    {
+      "kind": "text",
+      "text": "إِلَّا إِذَا قَلَّ: الْخُبْزِ فَيُكْسَرُ الْخُبْزُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
