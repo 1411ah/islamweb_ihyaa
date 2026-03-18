@@ -1,0 +1,23 @@
+{
+  "node_id": "2445",
+  "title": "قسم 2445",
+  "level": 1,
+  "idfrom": 2445,
+  "idto": 2445,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَخْطُبُ خُطْبَتَيْنِ وَبَيْنَهُمَا جِلْسَةٌ خَفِيفَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

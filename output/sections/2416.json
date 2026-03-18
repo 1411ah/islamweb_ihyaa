@@ -1,0 +1,23 @@
+{
+  "node_id": "2416",
+  "title": "قسم 2416",
+  "level": 1,
+  "idfrom": 2416,
+  "idto": 2416,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَخْطُبُ خُطْبَتَيْنِ بَعْدَ الصَّلَاةِ بَيْنَهُمَا جِلْسَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

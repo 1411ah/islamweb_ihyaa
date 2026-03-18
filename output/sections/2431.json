@@ -1,0 +1,27 @@
+{
+  "node_id": "2431",
+  "title": "قسم 2431",
+  "level": 1,
+  "idfrom": 2431,
+  "idto": 2431,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الثَّانِيَةُ"
+    },
+    {
+      "kind": "text",
+      "text": "صَلَاةُ الِاسْتِسْقَاءِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

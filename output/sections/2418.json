@@ -1,0 +1,27 @@
+{
+  "node_id": "2418",
+  "title": "قسم 2418",
+  "level": 1,
+  "idfrom": 2418,
+  "idto": 2418,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَأْمُرُ النَّاسَ بِالصَّدَقَةِ ، وَالْعِتْقِ ، وَالتَّوْبَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَكَذَلِكَ يَفْعَلُ بِخُسُوفِ الْقَمَرِ إِلَّا أَنَّهُ يَجْهَرُ فِيهَا لِأَنَّهَا لَيْلِيَّةٌ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
