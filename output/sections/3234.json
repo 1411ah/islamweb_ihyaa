@@ -1,0 +1,27 @@
+{
+  "node_id": "3234",
+  "title": "قسم 3234",
+  "level": 1,
+  "idfrom": 3234,
+  "idto": 3234,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الثَّالِثُ"
+    },
+    {
+      "kind": "text",
+      "text": "الْحَلْقُ ، وَالْقَلْمُ ، وَفِيهِمَا الْفِدْيَةُ أَعْنِي دَمَ شَاةٍ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
