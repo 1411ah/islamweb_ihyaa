@@ -667,4 +667,4 @@ if __name__ == "__main__":
         build_toc()
         phase_scan()
         build_toc_from_scan()
-        phase_build()
+        phase_build(
