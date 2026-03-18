@@ -1,0 +1,27 @@
+{
+  "node_id": "1481",
+  "title": "قسم 1481",
+  "level": 1,
+  "idfrom": 1481,
+  "idto": 1481,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا يُفَرِّجَ بَيْنَ أَصَابِعَهُمَا بَلْ يَضُمُّهُمَا وَيَضُمُّ الْإِبْهَامَ إِلَيْهِمَا"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ لَمْ يَضُمَّ الْإِبْهَامَ فَلَا بَأْسَ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
