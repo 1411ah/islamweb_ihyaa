@@ -1,0 +1,27 @@
+{
+  "node_id": "2222",
+  "title": "من السنن الرواتب الوتر",
+  "level": 6,
+  "idfrom": 2222,
+  "idto": 2222,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَفِي حَدِيثٍ شَاذٍّ"
+    },
+    {
+      "kind": "text",
+      "text": "سَبْعَ عَشْرَةَ رَكْعَةً"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
