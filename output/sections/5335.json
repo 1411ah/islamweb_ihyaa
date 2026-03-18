@@ -1,0 +1,23 @@
+{
+  "node_id": "5335",
+  "title": "قسم 5335",
+  "level": 1,
+  "idfrom": 5335,
+  "idto": 5335,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيُحْسِنَ اسْمَهُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
