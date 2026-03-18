@@ -1,0 +1,31 @@
+{
+  "node_id": "2605",
+  "title": "قسم 2605",
+  "level": 1,
+  "idfrom": 2605,
+  "idto": 2605,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الرَّابِعُ :"
+    },
+    {
+      "kind": "text",
+      "text": "كَمَالُ الْمِلْكِ وَالتَّصَرُّفِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَتَجِبُ الزَّكَاةُ فِي الْمَاشِيَةِ الْمَرْهُونَةِ لِأَنَّهُ الَّذِي حَجَرَ عَلَى نَفْسِهِ فِيهِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
