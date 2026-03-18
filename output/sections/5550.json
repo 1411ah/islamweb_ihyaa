@@ -1,0 +1,31 @@
+{
+  "node_id": "5550",
+  "title": "قسم 5550",
+  "level": 1,
+  "idfrom": 5550,
+  "idto": 5550,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَوْ"
+    },
+    {
+      "kind": "text",
+      "text": "وَجَدَ مِنَ الْمَاءِ مَا يَكْفِيهِ لِبَعْضِ طَهَارَتِهِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَيَسْتَعْمِلُهُ ثُمَّ لِيَتَيَمَّمْ بَعْدَهُ تَيَمُّمًا تَامًّا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
