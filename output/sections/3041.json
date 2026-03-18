@@ -1,0 +1,27 @@
+{
+  "node_id": "3041",
+  "title": "قسم 3041",
+  "level": 1,
+  "idfrom": 3041,
+  "idto": 3041,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَمَّا"
+    },
+    {
+      "kind": "text",
+      "text": "الْكَفَّارَةُ فَلَا تَجِبُ إِلَّا بِالْجِمَاعِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

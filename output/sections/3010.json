@@ -1,0 +1,31 @@
+{
+  "node_id": "3010",
+  "title": "قسم 3010",
+  "level": 1,
+  "idfrom": 3010,
+  "idto": 3010,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالْحُقْنَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا يَفْسُدُ بِالْفَصْدِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَالْحِجَامَةِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
