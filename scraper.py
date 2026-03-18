@@ -374,20 +374,17 @@ def clean_and_extract(soup):
         br.replace_with("\n")
 
     raw  = container.get_text(separator="\n")
-    seen, paragraphs = set(), []
-    after_break = False  # تتبع: هل نحن مباشرة بعد فاصل؟
+    paragraphs = []
+    after_break = False
 
     for line in raw.splitlines():
         txt = line.strip()
         if len(txt) < 5:
             continue
-        if txt in seen and txt != "[SECTION_BREAK]":
-            continue
         if any(w in txt for w in ["التالي","السابق","فهرس الكتاب","اسلام ويب"]):
             continue
         if re.fullmatch(r"[\[\]\d\s:\.\-،,]+", txt):
             continue
-        seen.add(txt)
 
         # تصنيف النوع
         if txt == "[SECTION_BREAK]":
@@ -406,9 +403,27 @@ def clean_and_extract(soup):
             kind = "hadith"
             after_break = False
         elif after_break and txt.startswith("("):
-            # المتن: فقط النص الأول بعد الفاصل المبدوء بقوس
-            kind = "asl"
+            # قسّم السطر: الأصل (داخل القوس) والحاشية (بعده) في نفس السطر
+            depth, split_pos = 0, -1
+            for ci, ch in enumerate(txt):
+                if ch == "(":
+                    depth += 1
+                elif ch == ")":
+                    depth -= 1
+                    if depth == 0:
+                        split_pos = ci
+                        break
+            if 0 < split_pos < len(txt) - 2:
+                asl_part   = txt[:split_pos + 1].strip()
+                sharh_part = txt[split_pos + 1:].strip()
+                if asl_part:
+                    paragraphs.append({"kind": "asl",  "text": asl_part})
+                if sharh_part:
+                    paragraphs.append({"kind": "text", "text": sharh_part})
+            else:
+                paragraphs.append({"kind": "asl", "text": txt})
             after_break = False
+            continue
         elif len(txt) < 100 and txt.endswith(":"):
             kind = "heading"
             after_break = False
@@ -510,7 +525,8 @@ def phase_scan(end_id=None):
             print(f"  {q} {nid:5d} | {result['title'][:55]}")
             if str(nid) not in valid_set:
                 valid.append({"id": str(nid), "title": result["title"],
-                              "level": item.get("level", 1)})
+                              "level": result["level"],
+                              "idfrom": result["idfrom"]})
                 valid_set.add(str(nid))
         else:
             print(f"    {nid:5d} فارغ")
