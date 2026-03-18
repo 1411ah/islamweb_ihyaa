@@ -1,0 +1,31 @@
+{
+  "node_id": "2120",
+  "title": "قسم 2120",
+  "level": 1,
+  "idfrom": 2120,
+  "idto": 2120,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَإِنْ"
+    },
+    {
+      "kind": "text",
+      "text": "تَذَكَّرَ سُجُودَ السَّهْوِ بَعْدَ خُرُوجِهِ مِنَ الْمَسْجِدِ ،"
+    },
+    {
+      "kind": "text",
+      "text": "أَوْ بَعْدَ طُولِ الْفَصْلِ ، فَقَدْ فَاتَ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
