@@ -1,0 +1,31 @@
+{
+  "node_id": "2921",
+  "title": "قسم 2921",
+  "level": 1,
+  "idfrom": 2921,
+  "idto": 2921,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الصِّنْفُ السَّابِعُ :"
+    },
+    {
+      "kind": "text",
+      "text": "الْغُزَاةُ الَّذِينَ لَيْسَ لَهُمْ مَرْسُومٌ فِي دِيوَانِ الْمُرْتَزِقَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَيُصْرَفُ إِلَيْهِمْ سَهْمٌ وَإِنْ كَانُوا أَغْنِيَاءَ إِعَانَةً لَهُمْ عَلَى الْغَزْوِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
