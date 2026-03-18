@@ -1,0 +1,31 @@
+{
+  "node_id": "7765",
+  "title": "قسم 7765",
+  "level": 1,
+  "idfrom": 7765,
+  "idto": 7765,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَقَدْ ذَكَرْنَا تَفَاصِيلَ دَرَجَاتِ الْوَرَعِ فِي كِتَابِ الْحَلَالِ وَالْحَرَامِ وَذَلِكَ مِنَ الزُّهْدِ ، إِذْ قِيلَ"
+    },
+    {
+      "kind": "text",
+      "text": "(لِمَالِكِ بْنِ أَنَسٍ :)"
+    },
+    {
+      "kind": "text",
+      "text": "مَا الزُّهْدُ ؟ قَالَ : التَّقْوَى"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
