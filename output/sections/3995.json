@@ -1,0 +1,23 @@
+{
+  "node_id": "3995",
+  "title": "قسم 3995",
+  "level": 1,
+  "idfrom": 3995,
+  "idto": 3995,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَأْكُلُ بِالْيُمْنَى"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
