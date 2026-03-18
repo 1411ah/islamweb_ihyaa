@@ -1,0 +1,23 @@
+{
+  "node_id": "1424",
+  "title": "قراءة سورة في الصلاة",
+  "level": 5,
+  "idfrom": 1424,
+  "idto": 1424,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَقْرَأُ السُّورَةَ أَوْ قَدْرَ ثَلَاثِ آيَاتٍ مِنَ الْقُرْآنِ فَمَا فَوْقَهَا"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
