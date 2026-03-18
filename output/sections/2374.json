@@ -1,0 +1,23 @@
+{
+  "node_id": "2374",
+  "title": "قسم 2374",
+  "level": 1,
+  "idfrom": 2374,
+  "idto": 2374,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ كَانَتْ دُونَ الْعِيدَيْنِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

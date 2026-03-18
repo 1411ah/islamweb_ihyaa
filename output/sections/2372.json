@@ -1,0 +1,23 @@
+{
+  "node_id": "2372",
+  "title": "قسم 2372",
+  "level": 1,
+  "idfrom": 2372,
+  "idto": 2372,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَهِيَ سُنَّةٌ مُؤَكَّدَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
