@@ -1,0 +1,31 @@
+{
+  "node_id": "3238",
+  "title": "قسم 3238",
+  "level": 1,
+  "idfrom": 3238,
+  "idto": 3238,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا بَأْسَ"
+    },
+    {
+      "kind": "text",
+      "text": "بِالْكُحْلِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَدُخُولُ الْحَمَّامِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
