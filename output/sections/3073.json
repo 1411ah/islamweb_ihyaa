@@ -1,0 +1,23 @@
+{
+  "node_id": "3073",
+  "title": "قسم 3073",
+  "level": 1,
+  "idfrom": 3073,
+  "idto": 3073,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالْجُودُ فِي شَهْرِ رَمَضَانَ لِمَا سَبَقَ مِنْ فَضَائِلِهِ فِي الزَّكَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

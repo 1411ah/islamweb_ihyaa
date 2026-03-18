@@ -1,0 +1,27 @@
+{
+  "node_id": "3054",
+  "title": "قسم 3054",
+  "level": 1,
+  "idfrom": 3054,
+  "idto": 3054,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَجِبُ الْإِمْسَاكُ إِذَا"
+    },
+    {
+      "kind": "text",
+      "text": "شَهِدَ بِالْهِلَالِ عَدْلٌ وَاحِدٌ يَوْمَ الشَّكِّ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
