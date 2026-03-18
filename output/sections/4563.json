@@ -1,0 +1,27 @@
+{
+  "node_id": "4563",
+  "title": "قسم 4563",
+  "level": 1,
+  "idfrom": 4563,
+  "idto": 4563,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الْعَقْدُ الْخَامِسُ :"
+    },
+    {
+      "kind": "text",
+      "text": "الْقِرَاضُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
