@@ -1,0 +1,23 @@
+{
+  "node_id": "1232",
+  "title": "قسم 1232",
+  "level": 1,
+  "idfrom": 1232,
+  "idto": 1232,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "أَوْ كَانَ بِهِ جِرَاحَةٌ أَوْ مَرَضٌ وَخَافَ مِنَ اسْتِعْمَالِهِ فَسَادَ الْعُضْوِ أَوْ شِدَّةَ الضَّنَا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

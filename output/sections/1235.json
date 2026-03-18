@@ -1,0 +1,23 @@
+{
+  "node_id": "1235",
+  "title": "قسم 1235",
+  "level": 1,
+  "idfrom": 1235,
+  "idto": 1235,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَنْوِي عِنْدَ ذَلِكَ اسْتِبَاحَةَ الصَّلَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

@@ -1,0 +1,23 @@
+{
+  "node_id": "1210",
+  "title": "قسم 1210",
+  "level": 1,
+  "idfrom": 1210,
+  "idto": 1210,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالنِّفَاسِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

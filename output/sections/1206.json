@@ -1,0 +1,23 @@
+{
+  "node_id": "1206",
+  "title": "قسم 1206",
+  "level": 1,
+  "idfrom": 1206,
+  "idto": 1206,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالْتِقَاءِ الْخِتَانَيْنِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
