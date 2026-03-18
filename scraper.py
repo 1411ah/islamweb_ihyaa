@@ -73,11 +73,14 @@ def set_tashkeel_cookie():
 def has_tashkeel(text):
     return any("\u064b" <= c <= "\u065f" for c in text[:3000])
 
-def extract_title_and_level(soup, fallback_title, fallback_level=1):
+def extract_title_and_level(soup, fallback_title, fallback_level=1, debug=False):
     normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
 
+    # محاولة 1: breadcrumb
     crumbs = [t for t in soup.find_all(True)
               if isinstance(t, Tag) and t.get("itemprop") == "itemListElement"]
+    if debug:
+        print(f"    [D] crumbs={len(crumbs)}")
 
     if crumbs:
         level = max(1, len(crumbs) - 1)
@@ -85,12 +88,18 @@ def extract_title_and_level(soup, fallback_title, fallback_level=1):
         if span:
             txt = span.get_text(strip=True)
             n = normalize(txt)
+            if debug:
+                print(f"    [D] breadcrumb txt={txt[:60]}")
             if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
                 return txt, level
 
+    # محاولة 2: <title>
     pt = soup.find("title")
     if pt:
-        for part in reversed(pt.get_text().split(" - ")):
+        raw_title = pt.get_text()
+        if debug:
+            print(f"    [D] <title>={raw_title[:80]}")
+        for part in reversed(raw_title.split(" - ")):
             p = part.strip()
             n = normalize(p)
             if (p and len(p) > 3
@@ -100,6 +109,19 @@ def extract_title_and_level(soup, fallback_title, fallback_level=1):
                     and "رقم" not in n):
                 return p, fallback_level
 
+    # محاولة 3: h1 او h2
+    for tag in ["h1", "h2", "h3"]:
+        el = soup.find(tag)
+        if el and isinstance(el, Tag):
+            txt = el.get_text(strip=True)
+            n = normalize(txt)
+            if debug:
+                print(f"    [D] {tag}={txt[:60]}")
+            if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
+                return txt, fallback_level
+
+    if debug:
+        print(f"    [D] fallback={fallback_title}")
     return fallback_title, fallback_level
 
 
@@ -373,10 +395,10 @@ def clean_and_extract(soup):
     for br in container.find_all("br"):
         br.replace_with("\n")
 
-    raw  = container.get_text(separator="\n")
-    paragraphs = []
-    after_break = False
+    raw = container.get_text(separator="\n")
 
+    # تنقية الأسطر
+    lines = []
     for line in raw.splitlines():
         txt = line.strip()
         if len(txt) < 5:
@@ -385,51 +407,66 @@ def clean_and_extract(soup):
             continue
         if re.fullmatch(r"[\[\]\d\s:\.\-،,]+", txt):
             continue
+        lines.append(txt)
 
-        # تصنيف النوع
+    # حذف التكرار المتتالي فقط
+    deduped = []
+    for line in lines:
+        if not deduped or deduped[-1] != line:
+            deduped.append(line)
+    lines = deduped
+
+    paragraphs = []
+    i = 0
+    while i < len(lines):
+        txt = lines[i]
+        i += 1
+
         if txt == "[SECTION_BREAK]":
-            kind = "break"
-            after_break = True
-        elif txt.startswith("[CENTER]") and txt.endswith("[/CENTER]"):
+            paragraphs.append({"kind": "break", "text": ""})
+
+            # جمع الأصل متعدد الأسطر حتى إغلاق القوس الخارجي
+            if i < len(lines) and lines[i].startswith("("):
+                asl_parts, sharh_remainder, depth = [], "", 0
+                while i < len(lines):
+                    line = lines[i]
+                    found_end = False
+                    for ci, ch in enumerate(line):
+                        if ch == "(":
+                            depth += 1
+                        elif ch == ")":
+                            depth -= 1
+                            if depth == 0:
+                                asl_parts.append(line[:ci + 1])
+                                sharh_remainder = line[ci + 1:].strip()
+                                i += 1
+                                found_end = True
+                                break
+                    if not found_end:
+                        asl_parts.append(line)
+                        i += 1
+                    if found_end:
+                        break
+                if asl_parts:
+                    paragraphs.append({"kind": "asl",
+                                       "text": " ".join(asl_parts).strip()})
+                if sharh_remainder:
+                    paragraphs.append({"kind": "text", "text": sharh_remainder})
+            continue
+
+        # تصنيف عادي
+        if txt.startswith("[CENTER]") and txt.endswith("[/CENTER]"):
             kind = "center"
-            after_break = False
         elif txt.startswith("[") and txt.endswith("]") and "صفحة" in txt:
             kind = "pagebreak"
-            after_break = False
         elif chr(0xFD3E) in txt:
             kind = "quran"
-            after_break = False
         elif "(( " in txt and " ))" in txt:
             kind = "hadith"
-            after_break = False
-        elif after_break and txt.startswith("("):
-            # قسّم السطر: الأصل (داخل القوس) والحاشية (بعده) في نفس السطر
-            depth, split_pos = 0, -1
-            for ci, ch in enumerate(txt):
-                if ch == "(":
-                    depth += 1
-                elif ch == ")":
-                    depth -= 1
-                    if depth == 0:
-                        split_pos = ci
-                        break
-            if 0 < split_pos < len(txt) - 2:
-                asl_part   = txt[:split_pos + 1].strip()
-                sharh_part = txt[split_pos + 1:].strip()
-                if asl_part:
-                    paragraphs.append({"kind": "asl",  "text": asl_part})
-                if sharh_part:
-                    paragraphs.append({"kind": "text", "text": sharh_part})
-            else:
-                paragraphs.append({"kind": "asl", "text": txt})
-            after_break = False
-            continue
         elif len(txt) < 100 and txt.endswith(":"):
             kind = "heading"
-            after_break = False
         else:
             kind = "text"
-            after_break = False
 
         paragraphs.append({"kind": kind, "text": txt})
 
@@ -449,25 +486,46 @@ def fetch_section(item):
     if os.path.exists(cache):
         return load_json(cache, None)
 
-    # المحاولة الاولى: nindex.php
-    url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
-           f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
-    soup, raw = fetch(url)
+    # المحاولة الاولى: nindex.php للمحتوى
+    content_url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
+                   f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
+    soup, raw = fetch(content_url)
 
     # المحاولة الثانية: URL المباشر اذا nindex رجع فارغ
     if not soup or len(raw) < 200 or not BeautifulSoup(raw, "lxml").find(id=["pagebody","pagebody_thaskeel"]):
-        url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{nid}/"
-        soup, raw = fetch(url)
+        content_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
+        soup, raw = fetch(content_url)
         if not soup or len(raw) < 200:
             return None
 
     if not has_tashkeel(raw):
         set_tashkeel_cookie()
-        soup, raw = fetch(url)
+        soup, raw = fetch(content_url)
         if not soup:
             return None
 
-    real_title, real_level = extract_title_and_level(soup, title, item.get("level", 1))
+    # العنوان والمستوى دائماً من URL المباشر (فيه breadcrumb صحيح)
+    title_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
+    if title_url != content_url:
+        title_soup, _ = fetch(title_url)
+    else:
+        title_soup = soup
+    real_title, real_level = extract_title_and_level(
+        title_soup or soup, title, item.get("level", 1),
+        debug=(int(nid) <= 40)  # اطبع تشخيص لأول 40 node
+    )
+
+    # تحقق إضافي: اذا العنوان لا يزال fallback جرب idfrom+1
+    normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
+    if (not real_title or len(real_title) < 4
+            or re.match(r'^قسم \d+$', real_title)
+            or "اتحاف" in normalize(real_title)):
+        alt_soup, _ = fetch(f"{BASE_URL}/ar/library/content/{BOOK_ID}/{int(idfrom)+1}/")
+        if alt_soup:
+            real_title, real_level = extract_title_and_level(
+                alt_soup, title, item.get("level", 1)
+            )
+
     paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
         return None
@@ -559,31 +617,18 @@ EPUB_CSS = """
 body      { font-family: 'Traditional Arabic', serif; direction: rtl;
             text-align: right; line-height: 2.2; margin: 1em 1.5em;
             font-size: 1em; }
-h1        { color: #8B0000; border-bottom: 2px solid #8B0000;
-            margin-top: 1.5em; font-size: 1em; font-weight: bold; }
-h2        { color: #5A3E1B; margin-top: 1.2em;
-            font-size: 1em; font-weight: bold; }
-.quran    { color: #006400; margin: .8em 0; padding: .5em;
-            border-right: 4px solid #006400; background: #f0fff0;
-            font-size: 1em; }
-.hadith   { color: #4B0082; margin: .8em 0; padding: .5em;
-            border-right: 4px solid #4B0082; background: #f5f0ff;
-            font-size: 1em; }
-.text     { margin: .5em 0; font-size: 1em; }
-.center   { text-align: center; font-style: italic;
-            margin: 1em 2em; color: #4a0080; font-size: 1em; }
-.pagebreak{ text-align: center; color: #8B0000; font-size: 1em;
-            border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
-            margin: 1em 0; padding: .3em 0; }
+h1        { font-size: 1.1em; font-weight: bold;
+            margin-top: 1.5em; border-bottom: 1px solid #ccc; }
+h2        { font-size: 1em; font-weight: bold; margin-top: 1.2em; }
+p         { margin: .5em 0; font-size: 1em; }
 .asl      { background: #fef9e7; border-right: 4px solid #c9a227;
-            padding: .6em .8em; margin: .8em 0;
-            color: #3a2a00; font-size: 1em; }
-.section-break { border: none; border-top: 1px dashed #b0a080;
+            padding: .6em .8em; margin: .8em 0; }
+.section-break { border: none; border-top: 1px dashed #ccc;
                  margin: 1em 0; }
-.page-ref      { margin-top: 2em; padding-top: .5em;
-                 border-top: 1px solid #999;
-                 color: #555; font-size: .85em;
-                 width: 50%; direction: rtl; text-align: right; }
+.page-ref { margin-top: 2em; padding-top: .5em;
+            border-top: 1px solid #999;
+            color: #555; font-size: .85em;
+            width: 50%; direction: rtl; text-align: right; }
 """
 
 def phase_build():
@@ -640,17 +685,9 @@ def phase_build():
                 body += f'<p class="asl">{t}</p>\n'
             elif p["kind"] == "center":
                 t2 = t.replace("[CENTER]","").replace("[/CENTER]","")
-                body += f'<p class="center">{t2}</p>\n'
-            elif p["kind"] == "pagebreak":
-                body += f'<p class="pagebreak">{t}</p>\n'
-            elif p["kind"] == "quran":
-                body += f'<p class="quran">{t}</p>\n'
-            elif p["kind"] == "hadith":
-                body += f'<p class="hadith">{t}</p>\n'
-            elif p["kind"] == "heading":
-                body += f"<h2>{t}</h2>\n"
+                body += f'<p style="text-align:center">{t2}</p>\n'
             else:
-                body += f'<p class="text">{t}</p>\n'
+                body += f'<p>{t}</p>\n'
 
         # اجمع كل ارقام الصفحات من داخل الفصل
         page_refs = [p["text"] for p in sec["paragraphs"] if p["kind"] == "pagebreak"]
