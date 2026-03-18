@@ -1,0 +1,27 @@
+{
+  "node_id": "3071",
+  "title": "قسم 3071",
+  "level": 1,
+  "idfrom": 3071,
+  "idto": 3071,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَتَرْكُ"
+    },
+    {
+      "kind": "text",
+      "text": "السِّوَاكِ بَعْدَ الزَّوَالِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

@@ -1,0 +1,23 @@
+{
+  "node_id": "3076",
+  "title": "قسم 3076",
+  "level": 1,
+  "idfrom": 3076,
+  "idto": 3076,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَمُدَارَسَةُ الْقُرْآنِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

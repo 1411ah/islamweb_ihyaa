@@ -1,0 +1,27 @@
+{
+  "node_id": "3069",
+  "title": "قسم 3069",
+  "level": 1,
+  "idfrom": 3069,
+  "idto": 3069,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَتَعْجِيلُ الْفِطْرِ بِالتَّمْرِ أَوِ"
+    },
+    {
+      "kind": "text",
+      "text": "الْمَاءِ قَبْلَ الصَّلَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
