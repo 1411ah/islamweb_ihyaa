@@ -1,0 +1,23 @@
+{
+  "node_id": "5609",
+  "title": "قسم 5609",
+  "level": 1,
+  "idfrom": 5609,
+  "idto": 5609,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَقَالَ قَدْ فَعَلَ ذَلِكَ كَثِيرٌ مِنَ السَّلَفِ الصَّالِحِ صَحَابِيٌّ وَتَابِعِيٌّ بِإِحْسَانٍ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
