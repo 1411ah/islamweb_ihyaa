@@ -1,0 +1,23 @@
+{
+  "node_id": "2445",
+  "title": "فصل صلاة الاستسقاء في جماعة",
+  "level": 6,
+  "idfrom": 2445,
+  "idto": 2445,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَخْطُبُ خُطْبَتَيْنِ وَبَيْنَهُمَا جِلْسَةٌ خَفِيفَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
