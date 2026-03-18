@@ -1,0 +1,31 @@
+{
+  "node_id": "4277",
+  "title": "قسم 4277",
+  "level": 1,
+  "idfrom": 4277,
+  "idto": 4277,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الثَّانِي :"
+    },
+    {
+      "kind": "text",
+      "text": "رِضَا الْمَرْأَةِ إِنْ كَانَتْ ثَيِّبًا بَالِغًا"
+    },
+    {
+      "kind": "text",
+      "text": "أَوْ كَانَتْ بِكْرًا بَالِغًا وَلَكِنْ يُزَوِّجُهَا غَيْرُ الْأَبِ وَالْجَدِّ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

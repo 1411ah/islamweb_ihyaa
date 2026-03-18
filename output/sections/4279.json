@@ -1,0 +1,31 @@
+{
+  "node_id": "4279",
+  "title": "قسم 4279",
+  "level": 1,
+  "idfrom": 4279,
+  "idto": 4279,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الثَّالِثُ"
+    },
+    {
+      "kind": "text",
+      "text": "حُضُورُ شَاهِدَيْنِ ظَاهِرَيِ الْعَدَالَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَإِنْ كَانَا مَسْتُورَيْنِ حَكَمْنَا بِالِانْعِقَادِ لِلْحَاجَةِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
