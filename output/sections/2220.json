@@ -1,0 +1,27 @@
+{
+  "node_id": "2220",
+  "title": "قسم 2220",
+  "level": 1,
+  "idfrom": 2220,
+  "idto": 2220,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالرِّوَايَةُ مُتَرَدِّدَةٌ فِي"
+    },
+    {
+      "kind": "text",
+      "text": "ثَلَاثَ عَشْرَةَ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

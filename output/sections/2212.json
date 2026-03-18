@@ -1,0 +1,23 @@
+{
+  "node_id": "2212",
+  "title": "قسم 2212",
+  "level": 1,
+  "idfrom": 2212,
+  "idto": 2212,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَثَلَاثٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

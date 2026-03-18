@@ -1,0 +1,23 @@
+{
+  "node_id": "2216",
+  "title": "قسم 2216",
+  "level": 1,
+  "idfrom": 2216,
+  "idto": 2216,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَهَكَذَا بِالْأَوْتَارِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
