@@ -1,0 +1,31 @@
+{
+  "node_id": "4515",
+  "title": "قسم 4515",
+  "level": 1,
+  "idfrom": 4515,
+  "idto": 4515,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الثَّانِي :"
+    },
+    {
+      "kind": "text",
+      "text": "أَنْ يُسَلِّمَ رَأْسَ الْمَالِ فِي مَجْلِسِ الْعَقْدِ قَبْلَ التَّفَرُّقِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَلَوْ تَفَرَّقَا قَبْلَ الْقَبْضِ انْفَسَخَ السَّلَمُ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
