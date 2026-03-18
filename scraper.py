@@ -366,6 +366,7 @@ def clean_and_extract(soup):
 
     raw  = container.get_text(separator="\n")
     seen, paragraphs = set(), []
+    after_break = False  # تتبع: هل نحن مباشرة بعد فاصل؟
 
     for line in raw.splitlines():
         txt = line.strip()
@@ -382,20 +383,29 @@ def clean_and_extract(soup):
         # تصنيف النوع
         if txt == "[SECTION_BREAK]":
             kind = "break"
+            after_break = True
         elif txt.startswith("[CENTER]") and txt.endswith("[/CENTER]"):
             kind = "center"
+            after_break = False
         elif txt.startswith("[") and txt.endswith("]") and "صفحة" in txt:
             kind = "pagebreak"
+            after_break = False
         elif chr(0xFD3E) in txt:
             kind = "quran"
+            after_break = False
         elif "(( " in txt and " ))" in txt:
             kind = "hadith"
-        elif re.match(r'^\(.*\)$', txt, re.DOTALL) and len(txt) > 10:
+            after_break = False
+        elif after_break and txt.startswith("("):
+            # المتن: فقط النص الأول بعد الفاصل المبدوء بقوس
             kind = "asl"
+            after_break = False
         elif len(txt) < 100 and txt.endswith(":"):
             kind = "heading"
+            after_break = False
         else:
             kind = "text"
+            after_break = False
 
         paragraphs.append({"kind": kind, "text": txt})
 
@@ -642,8 +652,20 @@ def phase_build():
                 stack.append((lvl, entry))
         return result
 
-    valid_map  = {v["id"]: v for v in valid}
-    toc_items  = [valid_map[t["id"]] for t in toc_data if t["id"] in valid_map]
+    valid_map = {v["id"]: v for v in valid}
+    # ادمج: toc_data للترتيب والمستوى، وأي node ناقصة تُضاف من valid
+    toc_ids_seen = set()
+    toc_items = []
+    for t in toc_data:
+        if t["id"] in valid_map:
+            toc_items.append(valid_map[t["id"]])
+            toc_ids_seen.add(t["id"])
+    # أضف الناقصة بالترتيب
+    for v in valid:
+        if v["id"] not in toc_ids_seen:
+            toc_items.append(v)
+    # رتّب حسب idfrom
+    toc_items.sort(key=lambda x: int(x.get("idfrom", x["id"])))
     book.toc   = build_epub_toc(toc_items) or toc_epub
     book.spine = spine
     book.add_item(epub.EpubNcx())
