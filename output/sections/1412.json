@@ -1,0 +1,23 @@
+{
+  "node_id": "1412",
+  "title": "قسم 1412",
+  "level": 1,
+  "idfrom": 1412,
+  "idto": 1412,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ كَانَ خَلْفَ الْإِمَامِ اخْتَصَرَ إِنْ لَمْ يَكُنْ لِلْإِمَامِ سَكْتَةٌ طَوِيلَةٌ يَقْرَأَ فِيهَا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
