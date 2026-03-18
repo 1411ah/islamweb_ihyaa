@@ -415,11 +415,17 @@ def fetch_section(item):
     if os.path.exists(cache):
         return load_json(cache, None)
 
+    # المحاولة الاولى: nindex.php
     url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
            f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
     soup, raw = fetch(url)
-    if not soup or len(raw) < 200:
-        return None
+
+    # المحاولة الثانية: URL المباشر اذا nindex رجع فارغ
+    if not soup or len(raw) < 200 or not BeautifulSoup(raw, "lxml").find(id=["pagebody","pagebody_thaskeel"]):
+        url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{nid}/"
+        soup, raw = fetch(url)
+        if not soup or len(raw) < 200:
+            return None
 
     if not has_tashkeel(raw):
         set_tashkeel_cookie()
