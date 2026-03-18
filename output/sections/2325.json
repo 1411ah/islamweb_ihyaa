@@ -1,0 +1,23 @@
+{
+  "node_id": "2325",
+  "title": "قسم 2325",
+  "level": 1,
+  "idfrom": 2325,
+  "idto": 2325,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يُنَادِي مُنَادٍ الصَّلَاةَ جَامِعَةً"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
