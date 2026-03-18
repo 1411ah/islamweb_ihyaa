@@ -1,0 +1,23 @@
+{
+  "node_id": "1892",
+  "title": "فصل كيفية الخطابة يوم الجمعة",
+  "level": 4,
+  "idfrom": 1892,
+  "idto": 1892,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَيَخْطُبُ خُطْبَتَيْنِ بَيْنَهُمَا جِلْسَةٌ خَفِيفَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
