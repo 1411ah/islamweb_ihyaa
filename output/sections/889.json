@@ -1,0 +1,23 @@
+{
+  "node_id": "889",
+  "title": "قسم 889",
+  "level": 1,
+  "idfrom": 889,
+  "idto": 889,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَتَسْبِيحُ الْحَصَى"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
