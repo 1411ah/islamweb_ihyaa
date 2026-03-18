@@ -1,0 +1,23 @@
+{
+  "node_id": "1770",
+  "title": "قسم 1770",
+  "level": 1,
+  "idfrom": 1770,
+  "idto": 1770,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَقْرِنُ الْمَأْمُومُ تَأْمِينَهُ بِتَأْمِينِ الْإِمَامِ مَعًا لَا تَعْقِيبًا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

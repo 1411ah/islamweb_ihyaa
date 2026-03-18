@@ -1,0 +1,23 @@
+{
+  "node_id": "1772",
+  "title": "قسم 1772",
+  "level": 1,
+  "idfrom": 1772,
+  "idto": 1772,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَجْهَرُ بِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
