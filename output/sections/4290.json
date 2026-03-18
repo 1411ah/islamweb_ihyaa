@@ -1,0 +1,31 @@
+{
+  "node_id": "4290",
+  "title": "قسم 4290",
+  "level": 1,
+  "idfrom": 4290,
+  "idto": 4290,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلْيَكُنِ"
+    },
+    {
+      "kind": "text",
+      "text": "الصَّدَاقُ"
+    },
+    {
+      "kind": "text",
+      "text": "مَعْلُومًا خَفِيفًا وَالتَّحْمِيدُ قَبْلَ الْخِطْبَةِ أَيْضًا مُسْتَحَبٌّ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
