@@ -1,0 +1,31 @@
+{
+  "node_id": "521",
+  "title": "قسم 521",
+  "level": 1,
+  "idfrom": 521,
+  "idto": 521,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَنَسَخَ بِشَرِيعَتِهِ الشَّرَائِعَ"
+    },
+    {
+      "kind": "text",
+      "text": "إِلَّا مَا قَرَّرَهُ مِنْهَا"
+    },
+    {
+      "kind": "text",
+      "text": "وَفَضَّلَهُ عَلَى سَائِرِ الْأَنْبِيَاءِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
