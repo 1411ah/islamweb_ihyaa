@@ -1,0 +1,23 @@
+{
+  "node_id": "1886",
+  "title": "قسم 1886",
+  "level": 1,
+  "idfrom": 1886,
+  "idto": 1886,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَإِذَا فَرَغَ الْمُؤَذِّنُ قَامَ مُقْبِلًا عَلَى النَّاسِ بِوَجْهِهِ لَا يَلْتَفِتُ يَمِينًا وَلَا شِمَالًا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

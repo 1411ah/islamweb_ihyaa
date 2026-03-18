@@ -1,0 +1,27 @@
+{
+  "node_id": "1889",
+  "title": "قسم 1889",
+  "level": 1,
+  "idfrom": 1889,
+  "idto": 1889,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيُشْغِلُ يَدَيْهِ بِقَائِمِ السَّيْفِ ،"
+    },
+    {
+      "kind": "text",
+      "text": "أَوِ الْعَنَزَةِ وَالْمِنْبَرِ كَيْ لَا يَعْبَثَ بِهِمَا أَوْ يَضَعُ إِحْدَاهُمَا عَلَى الْأُخْرَى ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "1878",
+  "title": "قسم 1878",
+  "level": 1,
+  "idfrom": 1878,
+  "idto": 1878,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَاسْتِمَاعُ الْخُطْبَتَيْنِ وَاجِبٌ"
+    },
+    {
+      "kind": "text",
+      "text": "مِنَ الْأَرْبَعِينَ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
