@@ -1,0 +1,27 @@
+{
+  "node_id": "2840",
+  "title": "قسم 2840",
+  "level": 1,
+  "idfrom": 2840,
+  "idto": 2840,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "أَوْ رَمَضَانَ فَقَد"
+    },
+    {
+      "kind": "hadith",
+      "text": "(( كَانَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَجْوَدَ الْخَلْقِ وَكَانَ فِي رَمَضَانَ، كَالرِّيحِ الْمُرْسَلَةِ لَا يُمْسِكُ فِيهِ شَيْئًا ))"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": true
+}
