@@ -482,7 +482,12 @@ def phase_scan(end_id=None):
     valid_set = set(v["id"] for v in valid)
     toc_map   = {int(t["id"]): t for t in load_json("output/toc.json", [])}
 
-    start = progress["last_id"] + 1
+    # اذا طلب scan من الاول، تجاهل progress القديم
+    if end_id is None or end_id == LAST_ID:
+        start = FIRST_ID
+        progress = {"last_id": FIRST_ID - 1}
+    else:
+        start = progress["last_id"] + 1
     end   = end_id or LAST_ID
     total = end - start + 1
     print(f"=== SCAN {start} الى {end} ({total}) ===")
