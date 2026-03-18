@@ -1,0 +1,31 @@
+{
+  "node_id": "5896",
+  "title": "قسم 5896",
+  "level": 1,
+  "idfrom": 5896,
+  "idto": 5896,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَكَانَ مِنْ خُلُقِهِ"
+    },
+    {
+      "kind": "text",
+      "text": "تَسْمِيَةُ دَوَابِّهِ وَسِلَاحِهِ وَمَتَاعِهِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَكَانَ اسْمُ رَايَتِهِ الْعُقَابَ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
