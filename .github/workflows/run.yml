@@ -11,7 +11,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 350
     permissions:
       contents: write
 
@@ -28,37 +28,23 @@ jobs:
         run: pip install requests beautifulsoup4 lxml ebooklib
 
       - name: Run scraper
-        env:
-          PYTHONUNBUFFERED: "1"
         run: python scraper.py ${{ github.event.inputs.mode }}
 
-      - name: Commit output
+      - name: Commit JSON output
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/toc.json output/toc_from_scan.json \
-                  output/valid_nodes.json output/scan_progress.json \
-                  output/sections/ || true
-          git diff --cached --quiet || \
-          git commit -m "[${{ github.event.inputs.mode }}] $(date +'%Y-%m-%d %H:%M')"
+          git add output/
+          git diff --cached --quiet || git commit -m "[${{ github.event.inputs.mode }}] $(date +'%Y-%m-%d %H:%M')"
           git push
-
-      - name: Upload debug artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug-output
-          path: |
-            output/toc.json
-            output/toc_from_scan.json
-            output/valid_nodes.json
-            output/scan_progress.json
 
       - name: Upload EPUB as Release
         if: hashFiles('output/ithaf_alsada.epub') != ''
         uses: softprops/action-gh-release@v2
         with:
           tag_name: epub-${{ github.run_number }}
-          name: "اتحاف السادة المتقين #${{ github.run_number }}"
-          body: "mode: ${{ github.event.inputs.mode }}"
+          name: "اتحاف السادة المتقين — ${{ github.event.inputs.mode }} #${{ github.run_number }}"
+          body: |
+            ملف EPUB لكتاب اتحاف السادة المتقين بشرح احياء علوم الدين
+            mode: ${{ github.event.inputs.mode }}
           files: output/ithaf_alsada.epub
