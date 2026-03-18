@@ -14,7 +14,7 @@ env:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 360
     permissions:
       contents: write
 
