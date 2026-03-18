@@ -71,7 +71,7 @@ def set_tashkeel_cookie():
     print("cookie التشكيل cval=1")
 
 def has_tashkeel(text):
-    return any("\u064b" <= c <= "\u065f" for c in text[:500])
+    return any("\u064b" <= c <= "\u065f" for c in text[:3000])
 
 def extract_title_and_level(soup, fallback_title, fallback_level=1):
     normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
@@ -308,7 +308,7 @@ def clean_and_extract(soup):
             p.replace_with(f"\n[CENTER]{txt}[/CENTER]\n")
 
     for font in container.find_all("font"):
-        if not isinstance(font, Tag):
+        if not isinstance(font, Tag) or not hasattr(font, 'attrs'):
             continue
         txt   = font.get_text()
         color = font.get("color") or ""
