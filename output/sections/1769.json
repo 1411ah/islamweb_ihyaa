@@ -1,0 +1,23 @@
+{
+  "node_id": "1769",
+  "title": "فصل الإسرار بآمين",
+  "level": 5,
+  "idfrom": 1769,
+  "idto": 1769,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَيَقْرِنُ الْمَأْمُومُ تَأْمِينَهُ بِتَأْمِينِ الْإِمَامِ مَعًا لَا تَعْقِيبًا"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
