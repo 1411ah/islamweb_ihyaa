@@ -713,23 +713,44 @@ def phase_build():
             print(f"  {i}/{len(valid)}")
 
     def build_epub_toc(items):
-        result, stack = [], []
+        def make_entry(item):
+            title = item.get("text") or item.get("title") or f"قسم {item['id']}"
+            href  = f"s{item['id']}.xhtml"
+            return epub.Link(href, title, f"s{item['id']}")
+
+        # بناء شجرة مؤقتة
+        roots = []
+        stack = []  # (level, children_list)
+
         for item in items:
             if item["id"] not in id_to_ch:
                 continue
-            title = item.get("text") or item.get("title") or f"قسم {item['id']}"
-            lnk   = epub.Link(f"s{item['id']}.xhtml", title, f"s{item['id']}")
-            lvl   = item.get("level", 1)
-            entry = (lnk, [])
-            if not stack or lvl == 1:
-                result.append(entry)
-                stack = [(lvl, entry)]
+            lvl  = item.get("level", 1)
+            link = make_entry(item)
+            node = [link, []]  # [link, children]
+
+            if not stack or lvl <= 1:
+                roots.append(node)
+                stack = [(1, roots)]
             else:
+                # اخرج من الـ stack حتى نجد الأب المناسب
                 while len(stack) > 1 and stack[-1][0] >= lvl:
                     stack.pop()
-                stack[-1][1][1].append(entry)
-                stack.append((lvl, entry))
-        return result
+                stack[-1][1].append(node)
+                stack.append((lvl, node[1]))
+
+        # حوّل الشجرة لصيغة ebooklib
+        def to_epub_toc(nodes):
+            result = []
+            for link, children in nodes:
+                if children:
+                    sec = epub.Section(link.title)
+                    result.append((sec, to_epub_toc(children)))
+                else:
+                    result.append(link)
+            return result
+
+        return to_epub_toc(roots)
 
     valid_map = {v["id"]: v for v in valid}
     # ادمج: toc_data للترتيب والمستوى، وأي node ناقصة تُضاف من valid
