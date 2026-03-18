@@ -1,0 +1,23 @@
+{
+  "node_id": "3049",
+  "title": "قسم 3049",
+  "level": 1,
+  "idfrom": 3049,
+  "idto": 3049,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَالْكَفَّارَةُ عِتْقُ رَقَبَةٍ فَإِنْ أَعْسَرَ فَصَوْمُ شَهْرَيْنِ مُتَتَابِعَيْنِ وَإِنْ عَجَزَ فَإِطْعَامُ سِتِّينَ مِسْكِينًا مُدًّا مُدًّا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
