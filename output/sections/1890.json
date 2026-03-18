@@ -1,0 +1,23 @@
+{
+  "node_id": "1890",
+  "title": "قسم 1890",
+  "level": 1,
+  "idfrom": 1890,
+  "idto": 1890,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَخْطُبُ خُطْبَتَيْنِ بَيْنَهُمَا جِلْسَةٌ خَفِيفَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
