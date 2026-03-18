@@ -1,0 +1,31 @@
+{
+  "node_id": "2780",
+  "title": "قسم 2780",
+  "level": 1,
+  "idfrom": 2780,
+  "idto": 2780,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَنِيَّةُ الْوَلِيِّ تَقُومُ مَقَامَ نِيَّةِ الْمَجْنُونِ وَالصَّبِيِّ ."
+    },
+    {
+      "kind": "text",
+      "text": "وَنِيَّةُ السُّلْطَانِ تَقُومُ مَقَامَ نِيَّةِ الْمَالِكِ"
+    },
+    {
+      "kind": "text",
+      "text": "الْمُمْتَنِعِ عَنِ الزَّكَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
