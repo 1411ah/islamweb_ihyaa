@@ -1,0 +1,27 @@
+{
+  "node_id": "5652",
+  "title": "قسم 5652",
+  "level": 1,
+  "idfrom": 5652,
+  "idto": 5652,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ كَانَ فِيهِ"
+    },
+    {
+      "kind": "text",
+      "text": "الْجَلَاجِلُ وَكَالطَّبْلِ وَالشَّاهِينِ وَالضَّرْبِ بِالْقَضِيبِ وَسَائِرِ الْآلَاتِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
