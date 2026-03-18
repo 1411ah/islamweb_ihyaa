@@ -1,0 +1,31 @@
+{
+  "node_id": "2555",
+  "title": "قسم 2555",
+  "level": 1,
+  "idfrom": 2555,
+  "idto": 2555,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَأَمَّا"
+    },
+    {
+      "kind": "text",
+      "text": "نِيَّةُ التَّطَوُّعِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَلَا وَجْهَ لَهَا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

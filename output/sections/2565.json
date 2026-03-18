@@ -1,0 +1,23 @@
+{
+  "node_id": "2565",
+  "title": "قسم 2565",
+  "level": 1,
+  "idfrom": 2565,
+  "idto": 2565,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "كِتَابِ أَسْرَارِ الزَّكَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

@@ -1,0 +1,27 @@
+{
+  "node_id": "2588",
+  "title": "قسم 2588",
+  "level": 1,
+  "idfrom": 2588,
+  "idto": 2588,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا يُشْتَرَطُ الْبُلُوغُ ، بَلْ تَجِبُ فِي مَالِ الصَّبِيِّ وَالْمَجْنُونِ"
+    },
+    {
+      "kind": "text",
+      "text": "هَذَا شَرْطُ مَنْ عَلَيْهِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
