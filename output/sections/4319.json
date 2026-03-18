@@ -1,0 +1,27 @@
+{
+  "node_id": "4319",
+  "title": "قسم 4319",
+  "level": 1,
+  "idfrom": 4319,
+  "idto": 4319,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَكِنَّ"
+    },
+    {
+      "kind": "text",
+      "text": "الْمُحَرِّمَ خَمْسُ رَضَعَاتٍ وَمَا دُونَ ذَلِكَ لَا يُحَرِّمُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
