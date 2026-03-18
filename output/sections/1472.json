@@ -1,0 +1,27 @@
+{
+  "node_id": "1472",
+  "title": "قسم 1472",
+  "level": 1,
+  "idfrom": 1472,
+  "idto": 1472,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَنْ يُجَافِيَ مَرْفِقَيْهِ عَنْ جَنْبَيْهِ وَلَا تَفْعَلُ الْمَرْأَةُ ذَلِكَ"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَنْ يُفَرِّجَ بَيْنَ رِجْلَيْهِ وَلَا تَفْعَلُ الْمَرْأَةُ ذَلِكَ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

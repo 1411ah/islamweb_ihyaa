@@ -1,0 +1,23 @@
+{
+  "node_id": "1491",
+  "title": "قسم 1491",
+  "level": 1,
+  "idfrom": 1491,
+  "idto": 1491,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَسْتَوِي مِنْهَا جَالِسًا جِلْسَةً خَفِيفَةً لِلِاسْتِرَاحَةِ فِي كُلِّ رَكْعَةٍ لَا تَشَهُّدَ عَقِيبَهَا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

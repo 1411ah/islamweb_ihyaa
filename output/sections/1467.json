@@ -1,0 +1,27 @@
+{
+  "node_id": "1467",
+  "title": "قسم 1467",
+  "level": 1,
+  "idfrom": 1467,
+  "idto": 1467,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيُكَبِّرُ عِنْدَ الْهُوِيِّ"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا يَرْفَعُ يَدَيْهِ فِي غَيْرِ الرُّكُوعِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
