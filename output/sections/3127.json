@@ -1,0 +1,23 @@
+{
+  "node_id": "3127",
+  "title": "قسم 3127",
+  "level": 1,
+  "idfrom": 3127,
+  "idto": 3127,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَوْمُ عَاشُورَاءَ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
