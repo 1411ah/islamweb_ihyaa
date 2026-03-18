@@ -1,0 +1,27 @@
+{
+  "node_id": "3718",
+  "title": "قسم 3718",
+  "level": 1,
+  "idfrom": 3718,
+  "idto": 3718,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "فَإِذَا غَزَوْتَ فَقُلِ"
+    },
+    {
+      "kind": "text",
+      "text": ": اللَّهُمَّ أَنْتَ عَضُدِي وَنَصِيرِي وَبِكَ أُقَاتِلُ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
