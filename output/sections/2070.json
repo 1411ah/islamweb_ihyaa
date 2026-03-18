@@ -1,0 +1,27 @@
+{
+  "node_id": "2070",
+  "title": "قسم 2070",
+  "level": 1,
+  "idfrom": 2070,
+  "idto": 2070,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "السَّابِعُ :"
+    },
+    {
+      "kind": "text",
+      "text": "أَنْ يَجْعَلَ يَوْمَ الْجُمُعَةِ لِلْآخِرَةِ فَيَكُفَّ فِيهِ عَنْ جَمِيعِ أَشْغَالِ الدُّنْيَا وَيُكْثِرَ فِيهِ الْأَوْرَادَ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

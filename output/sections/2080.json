@@ -1,0 +1,23 @@
+{
+  "node_id": "2080",
+  "title": "قسم 2080",
+  "level": 1,
+  "idfrom": 2080,
+  "idto": 2080,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ سَقَطَ رِدَاؤُهُ فَلَا يَنْبَغِي أَنْ يُسَوِّيَهُ وَكَذَلِكَ أَطْرَافُ عِمَامَتِهِ فَكُلُّ ذَلِكَ مَكْرُوهٌ إِلَّا لِضَرُورَةٍ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
