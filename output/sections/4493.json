@@ -1,0 +1,31 @@
+{
+  "node_id": "4493",
+  "title": "قسم 4493",
+  "level": 1,
+  "idfrom": 4493,
+  "idto": 4493,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَمَّا"
+    },
+    {
+      "kind": "text",
+      "text": "بَيْعُ الْمِيرَاثِ ، وَالْوَصِيَّةِ ، وَالْوَدِيعَةِ ، وَمَا لَمْ يَكُنِ الْمِلْكُ حَاصِلًا فِيهِ بِمُعَاوَضَةٍ ،"
+    },
+    {
+      "kind": "text",
+      "text": "فَهُوَ جَائِزٌ قَبْلَ الْقَبْضِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
