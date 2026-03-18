@@ -550,6 +550,10 @@ h2        { color: #5A3E1B; margin-top: 1.2em;
             color: #3a2a00; font-size: 1em; }
 .section-break { border: none; border-top: 1px dashed #b0a080;
                  margin: 1em 0; }
+.page-ref      { margin-top: 2em; padding-top: .5em;
+                 border-top: 1px solid #999;
+                 color: #555; font-size: .85em;
+                 width: 50%; direction: rtl; text-align: right; }
 """
 
 def phase_build():
@@ -618,6 +622,14 @@ def phase_build():
             else:
                 body += f'<p class="text">{t}</p>\n'
 
+        # اجمع كل ارقام الصفحات من داخل الفصل
+        page_refs = [p["text"] for p in sec["paragraphs"] if p["kind"] == "pagebreak"]
+        if page_refs:
+            refs_text = " ← ".join(
+                r.replace("[","").replace("]","").strip() for r in page_refs
+            )
+            body += f'<p class="page-ref">المصدر: {refs_text}</p>\n'
+
         ch = epub.EpubHtml(title=sec["title"], file_name=f"s{v['id']}.xhtml", lang="ar")
         ch.content = (
             '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">'
@@ -675,6 +687,20 @@ def phase_build():
     epub.write_epub(out, book)
     size = os.path.getsize(out) / 1024 / 1024
     print(f"EPUB: {out} ({size:.1f} MB) {len(chapters)-1} فصل")
+
+    # تقرير المفقودين
+    built_ids = set(id_to_ch.keys())
+    missing = [v for v in valid if v["id"] not in built_ids]
+    if missing:
+        print(f"\n=== مفقود من EPUB: {len(missing)} ===")
+        for v in missing:
+            sec = load_json(f"output/sections/{v['id']}.json", None)
+            reason = "sections/ مو موجود" if not sec else "paragraphs فارغ"
+            print(f"  {v['id']:5s} | {v.get('title','')[:50]} | {reason}")
+        save_json("output/missing.json", missing)
+        print("  محفوظ في output/missing.json")
+    else:
+        print("لا يوجد مفقودين")
 
 
 # ================================================================
