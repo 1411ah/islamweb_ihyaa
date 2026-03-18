@@ -1,0 +1,27 @@
+{
+  "node_id": "668",
+  "title": "قسم 668",
+  "level": 1,
+  "idfrom": 668,
+  "idto": 668,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَإِذَا ثَبَتَ حُدُوثُهُ كَانَ افْتِقَارُهُ إِلَى الْمُحْدِثِ"
+    },
+    {
+      "kind": "text",
+      "text": "مِنَ الْمُدْرَكَاتِ بِالضَّرُورَةِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
