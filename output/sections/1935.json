@@ -1,0 +1,27 @@
+{
+  "node_id": "1935",
+  "title": "قسم 1935",
+  "level": 1,
+  "idfrom": 1935,
+  "idto": 1935,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "وَبِمَا رُوِيَ أَنَّهُ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ :"
+    },
+    {
+      "kind": "hadith",
+      "text": "(( مَنْ تَوَضَّأَ يَوْمَ الْجُمُعَةِ فَبِهَا وَنِعْمَتْ ، وَمَنِ اغْتَسَلَ ، فَالْغَسْلُ أَفْضَلُ ))"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": true
+}
