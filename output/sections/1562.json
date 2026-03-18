@@ -1,0 +1,39 @@
+{
+  "node_id": "1562",
+  "title": "قسم 1562",
+  "level": 1,
+  "idfrom": 1562,
+  "idto": 1562,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَأَمَّا السُّنَنُ مِنَ الْأَذْكَارِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَدُعَاءُ الِاسْتِفْتَاحِ"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ التَّعَوُّذُ ثُمَّ"
+    },
+    {
+      "kind": "text",
+      "text": "قَوْلُهُ آمِينَ فَإِنَّهُ سُنَّةٌ مُؤَكَّدَةٌ"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ قِرَاءَةُ السُّورَةِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
