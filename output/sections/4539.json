@@ -1,0 +1,31 @@
+{
+  "node_id": "4539",
+  "title": "قسم 4539",
+  "level": 1,
+  "idfrom": 4539,
+  "idto": 4539,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الْعَقْدُ الرَّابِعُ :"
+    },
+    {
+      "kind": "text",
+      "text": "الْإِجَارَةُ ."
+    },
+    {
+      "kind": "text",
+      "text": "وَلَهُ رُكْنَانِ : الْأُجْرَةُ وَالْمَنْفَعَةُ فَأَمَّا الْعَاقِدُ وَاللَّفْظُ فَيُعْتَبَرُ فِيهِ مَا ذَكَرْنَاهُ فِي الْبَيْعِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
