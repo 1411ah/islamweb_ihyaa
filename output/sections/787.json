@@ -1,0 +1,27 @@
+{
+  "node_id": "787",
+  "title": "قسم 787",
+  "level": 1,
+  "idfrom": 787,
+  "idto": 787,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الْأَصْلُ الرَّابِعُ :"
+    },
+    {
+      "kind": "text",
+      "text": "الْعِلْمُ بِكَوْنِهِ تَعَالَى مُرِيدًا لِأَفْعَالِهِ ، فَلَا مَوْجُودَ إِلَّا وَهُوَ مُسْتَنِدٌ إِلَى مَشِيئَتِهِ ، وَصَادِرٌ عَنْ إِرَادَتِهِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
