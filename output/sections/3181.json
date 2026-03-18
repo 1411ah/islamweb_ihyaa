@@ -1,0 +1,27 @@
+{
+  "node_id": "3181",
+  "title": "قسم 3181",
+  "level": 1,
+  "idfrom": 3181,
+  "idto": 3181,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَمَنْ أَرَادَ دُخُولَمَكَّةَلِزِيَارَةٍ أَوْ تِجَارَةٍ وَلَمْ يَكُنْ حَطَّابًا لَزِمَهُ الْإِحْرَامُ"
+    },
+    {
+      "kind": "text",
+      "text": "عَلَى قَوْلٍ ثُمَّ يَتَحَلَّلُ بِعَمَلِ عُمْرَةٍ أَوْ حَجٍّ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
