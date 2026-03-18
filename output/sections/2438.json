@@ -1,0 +1,23 @@
+{
+  "node_id": "2438",
+  "title": "قسم 2438",
+  "level": 1,
+  "idfrom": 2438,
+  "idto": 2438,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَوْ خَرَجَ أَهْلُ الذِّمَّةِ أَيْضًا مُتَمَيِّزِينَ لَمْ يُمْنَعُوا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

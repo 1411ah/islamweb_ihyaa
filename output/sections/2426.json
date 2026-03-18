@@ -1,0 +1,27 @@
+{
+  "node_id": "2426",
+  "title": "قسم 2426",
+  "level": 1,
+  "idfrom": 2426,
+  "idto": 2426,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَمَنْ أَدْرَكَ الرُّكُوعِ الثَّانِي مَعَ الْإِمَامِ فَقَدْ فَاتَتْهُ تِلْكَ الرَّكْعَةُ"
+    },
+    {
+      "kind": "text",
+      "text": "؛ لِأَنَّ الْأَصْلَ هُوَ الرُّكُوعُ الْأَوَّلُ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
