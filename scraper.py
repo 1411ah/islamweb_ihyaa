@@ -14,7 +14,6 @@ from ebooklib import epub
 import json, os, re, time, sys, traceback
 import functools
 
-# اجبر Python على طباعة فورية
 print = functools.partial(print, flush=True)
 
 BASE_URL = "https://www.islamweb.net"
@@ -75,16 +74,13 @@ def has_tashkeel(text):
     return any("\u064b" <= c <= "\u065f" for c in text[:500])
 
 def extract_title_and_level(soup, fallback_title, fallback_level=1):
-    """استخرج العنوان والمستوى من breadcrumb"""
     normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
 
     crumbs = [t for t in soup.find_all(True)
               if isinstance(t, Tag) and t.get("itemprop") == "itemListElement"]
 
     if crumbs:
-        # المستوى = عدد عناصر breadcrumb (بدون الأول = اسم الكتاب)
         level = max(1, len(crumbs) - 1)
-        # العنوان = آخر عنصر
         span = crumbs[-1].find("span", itemprop="name")
         if span:
             txt = span.get_text(strip=True)
@@ -92,7 +88,6 @@ def extract_title_and_level(soup, fallback_title, fallback_level=1):
             if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
                 return txt, level
 
-    # fallback: من <title>
     pt = soup.find("title")
     if pt:
         for part in reversed(pt.get_text().split(" - ")):
@@ -209,7 +204,6 @@ def build_toc_from_scan():
             continue
         toc.append({"id": nid, "idfrom": sec.get("idfrom", int(nid)),
                     "idto": sec.get("idto", int(nid)),
-                    # أولوية: level في الملف، ثم toc.json، ثم 1
                     "level": sec.get("level") or tree_map.get(nid, 1),
                     "text": sec.get("title", f"قسم {nid}")})
     save_json("output/toc_from_scan.json", toc)
@@ -221,13 +215,13 @@ def build_toc_from_scan():
 # 3. اصلاح العناوين
 # ================================================================
 def fix_titles():
-    print("=== اصلاح العناوين ===", flush=True)
+    print("=== اصلاح العناوين ===")
     d = "output/sections"
     fixed = 0
     skipped = 0
     files = [f for f in os.listdir(d) if f.endswith(".json")]
     total = len(files)
-    print(f"  اجمالي: {total}", flush=True)
+    print(f"  اجمالي: {total}")
 
     for i, fname in enumerate(files):
         path = f"{d}/{fname}"
@@ -245,7 +239,6 @@ def fix_titles():
         nid    = sec["node_id"]
         idfrom = sec.get("idfrom", int(nid))
 
-        # جلب العنوان من URL الكتاب الرئيسي (يحتوي breadcrumb صحيح)
         url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
         try:
             r = SESSION.get(url, timeout=15, allow_redirects=True)
@@ -264,22 +257,22 @@ def fix_titles():
             if changed:
                 save_json(path, sec)
                 fixed += 1
-                print(f"  [{i+1}/{total}] {nid} (L{new_level}): {sec['title'][:55]}", flush=True)
+                print(f"  [{i+1}/{total}] {nid} (L{new_level}): {sec['title'][:55]}")
             else:
-                print(f"  [{i+1}/{total}] {nid}: فشل", flush=True)
+                print(f"  [{i+1}/{total}] {nid}: فشل")
 
         except Exception as e:
-            print(f"  [{i+1}/{total}] خطا {nid}: {e}", flush=True)
+            print(f"  [{i+1}/{total}] خطا {nid}: {e}")
 
         if (i + 1) % 100 == 0:
-            print(f"  === تقدم {i+1}/{total} | اصلح: {fixed} ===", flush=True)
+            print(f"  === تقدم {i+1}/{total} | اصلح: {fixed} ===")
 
         time.sleep(0.4)
 
-    print(f"\n=== اكتمل ===", flush=True)
-    print(f"  صحيحة مسبقاً: {skipped}", flush=True)
-    print(f"  تم اصلاحها:   {fixed}", flush=True)
-    print(f"  لم تُصلح:     {total - skipped - fixed}", flush=True)
+    print(f"\n=== اكتمل ===")
+    print(f"  صحيحة مسبقاً: {skipped}")
+    print(f"  تم اصلاحها:   {fixed}")
+    print(f"  لم تُصلح:     {total - skipped - fixed}")
 
 
 # ================================================================
@@ -291,6 +284,10 @@ def clean_and_extract(soup):
     for el in soup.find_all("u", class_=["ul", "ur"]):
         el.decompose()
 
+    # تحويل hashiya_title الى فاصل بدل حذفه
+    for el in soup.find_all("span", class_="hashiya_title"):
+        el.replace_with("\n[SECTION_BREAK]\n")
+
     container = (soup.find(id="pagebody_thaskeel") or
                  soup.find(id="pagebody") or
                  soup.find(class_="bookcontent-dic") or
@@ -298,8 +295,8 @@ def clean_and_extract(soup):
     if not container:
         return [], []
 
-    for sel in ["script","style","noscript",".hashiya_title",
-                ".quranatt",".hadithatt",".namesatt",".mainsubjatt"]:
+    for sel in ["script","style","noscript",".quranatt",".hadithatt",
+                ".namesatt",".mainsubjatt"]:
         for el in container.select(sel):
             el.decompose()
 
@@ -374,7 +371,7 @@ def clean_and_extract(soup):
         txt = line.strip()
         if len(txt) < 5:
             continue
-        if txt in seen:
+        if txt in seen and txt != "[SECTION_BREAK]":
             continue
         if any(w in txt for w in ["التالي","السابق","فهرس الكتاب","اسلام ويب"]):
             continue
@@ -382,7 +379,10 @@ def clean_and_extract(soup):
             continue
         seen.add(txt)
 
-        if txt.startswith("[CENTER]") and txt.endswith("[/CENTER]"):
+        # تصنيف النوع
+        if txt == "[SECTION_BREAK]":
+            kind = "break"
+        elif txt.startswith("[CENTER]") and txt.endswith("[/CENTER]"):
             kind = "center"
         elif txt.startswith("[") and txt.endswith("]") and "صفحة" in txt:
             kind = "pagebreak"
@@ -390,6 +390,8 @@ def clean_and_extract(soup):
             kind = "quran"
         elif "(( " in txt and " ))" in txt:
             kind = "hadith"
+        elif re.match(r'^\(.*\)$', txt, re.DOTALL) and len(txt) > 10:
+            kind = "asl"
         elif len(txt) < 100 and txt.endswith(":"):
             kind = "heading"
         else:
@@ -527,6 +529,11 @@ h2        { color: #5A3E1B; margin-top: 1.2em;
 .pagebreak{ text-align: center; color: #8B0000; font-size: 1em;
             border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;
             margin: 1em 0; padding: .3em 0; }
+.asl      { background: #fef9e7; border-right: 4px solid #c9a227;
+            padding: .6em .8em; margin: .8em 0;
+            color: #3a2a00; font-size: 1em; }
+.section-break { border: none; border-top: 1px dashed #b0a080;
+                 margin: 1em 0; }
 """
 
 def phase_build():
@@ -546,7 +553,6 @@ def phase_build():
     book.set_title("اتحاف السادة المتقين بشرح احياء علوم الدين")
     book.set_language("ar")
     book.add_author("مرتضى الزبيدي")
-    # اتجاه التصفح من اليمين لليسار
     book.set_direction("rtl")
     book.add_metadata("OPF", "meta", "", {"name": "primary-writing-mode", "content": "horizontal-rl"})
 
@@ -575,9 +581,14 @@ def phase_build():
             continue
         title_safe = sec["title"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
         body = f"<h1>{title_safe}</h1>\n"
+
         for p in sec["paragraphs"]:
             t = (p["text"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;"))
-            if p["kind"] == "center":
+            if p["kind"] == "break":
+                body += '<hr class="section-break"/>\n'
+            elif p["kind"] == "asl":
+                body += f'<p class="asl">{t}</p>\n'
+            elif p["kind"] == "center":
                 t2 = t.replace("[CENTER]","").replace("[/CENTER]","")
                 body += f'<p class="center">{t2}</p>\n'
             elif p["kind"] == "pagebreak":
@@ -667,4 +678,4 @@ if __name__ == "__main__":
         build_toc()
         phase_scan()
         build_toc_from_scan()
-        phase_build(
+        phase_build()
