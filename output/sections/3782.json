@@ -1,0 +1,23 @@
+{
+  "node_id": "3782",
+  "title": "قسم 3782",
+  "level": 1,
+  "idfrom": 3782,
+  "idto": 3782,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الرَّابِعَةُ : قَوْلُهُ : سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
