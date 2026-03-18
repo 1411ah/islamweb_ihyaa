@@ -1,0 +1,23 @@
+{
+  "node_id": "475",
+  "title": "قسم 475",
+  "level": 1,
+  "idfrom": 475,
+  "idto": 475,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "قَيُّومٌ ، لَا انْقِطَاعَ لَهُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

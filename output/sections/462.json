@@ -1,0 +1,23 @@
+{
+  "node_id": "462",
+  "title": "قسم 462",
+  "level": 1,
+  "idfrom": 462,
+  "idto": 462,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ذِي الْعَرْشِ الْمَجِيدِ وَالْبَطْشُ الشَّدِيدُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

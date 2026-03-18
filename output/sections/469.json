@@ -1,0 +1,23 @@
+{
+  "node_id": "469",
+  "title": "قسم 469",
+  "level": 1,
+  "idfrom": 469,
+  "idto": 469,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "صَمَدٌ لَا ضِدَّ لَهُ مُنْفَرِدٌ لَا نِدَّ لَهُ وَأَنَّهُ وَاحِدٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
