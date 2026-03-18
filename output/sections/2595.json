@@ -1,0 +1,31 @@
+{
+  "node_id": "2595",
+  "title": "قسم 2595",
+  "level": 1,
+  "idfrom": 2595,
+  "idto": 2595,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الثَّانِي السَّوْمُ"
+    },
+    {
+      "kind": "text",
+      "text": "فَلَا زَكَاةَ فِي مَعْلُوفَةٍ"
+    },
+    {
+      "kind": "text",
+      "text": "وَإذا أُسِيمَتْ فِي وَقْتٍ وَعُلِفَتْ فِي وَقْتٍ تظهر بذلك مُؤْنَتُهَا فَلَا زَكَاةَ فِيهَا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
