@@ -163,15 +163,14 @@ def build_toc():
                      "level": lvl, "text": txt, "dhref": dh}
             toc.append(child)
             found += 1
-            if dh and (int(to or fr) - int(fr)) > 1:
+            if dh and depth < 6:
                 time.sleep(0.3)
                 crawl(child, depth + 1)
         print(f"  {'  '*depth}{item['text'][:40]} {found}")
         time.sleep(0.4)
 
     for item in top:
-        if item["idto"] - item["idfrom"] > 1:
-            crawl(item)
+        crawl(item)
 
     toc.sort(key=lambda x: x["idfrom"])
     seen2, final = set(), []
