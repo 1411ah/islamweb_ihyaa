@@ -141,9 +141,20 @@ def build_toc():
     print(f"  المستوى الاول: {len(top)}")
 
     def crawl(item, depth=0):
-        if depth > 6 or not item.get("dhref"):
+        if depth > 6:
             return
-        ss, _ = fetch(f"{BASE_URL}/ar/library/maktaba/{item['dhref']}")
+        urls = []
+        if item.get("dhref"):
+            urls.append(f"{BASE_URL}/ar/library/maktaba/{item['dhref']}")
+        # URL بديل مباشر للـ node
+        urls.append(f"{BASE_URL}/ar/library/maktaba/nindex.php?id={item['id']}&bookid={BOOK_ID}&idfrom={item['idfrom']}&idto={item['idto']}&page=treechildren")
+
+        ss = None
+        for u in urls:
+            ss, _ = fetch(u)
+            if ss and ss.find_all(["span","label"], attrs={"data-idfrom": True}):
+                break
+
         if not ss:
             return
         found = 0
@@ -163,9 +174,8 @@ def build_toc():
                      "level": lvl, "text": txt, "dhref": dh}
             toc.append(child)
             found += 1
-            if dh and depth < 6:
-                time.sleep(0.3)
-                crawl(child, depth + 1)
+            time.sleep(0.3)
+            crawl(child, depth + 1)
         print(f"  {'  '*depth}{item['text'][:40]} {found}")
         time.sleep(0.4)
 
@@ -307,7 +317,7 @@ def clean_and_extract(soup):
             p.replace_with(f"\n[CENTER]{txt}[/CENTER]\n")
 
     for font in container.find_all("font"):
-        if not isinstance(font, Tag) or not hasattr(font, 'attrs'):
+        if not isinstance(font, Tag) or not font.attrs:
             continue
         txt   = font.get_text()
         color = font.get("color") or ""
