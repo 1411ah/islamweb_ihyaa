@@ -1,0 +1,31 @@
+{
+  "node_id": "1839",
+  "title": "قسم 1839",
+  "level": 1,
+  "idfrom": 1839,
+  "idto": 1839,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الْبَابُ الْخَامِسُ: فِي"
+    },
+    {
+      "kind": "text",
+      "text": "فَضْلِ الْجُمُعَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَآدَابِهَا وَسُنَنِهَا وَشُرُوطِهَا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
