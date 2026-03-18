@@ -1,0 +1,27 @@
+{
+  "node_id": "1280",
+  "title": "قسم 1280",
+  "level": 1,
+  "idfrom": 1280,
+  "idto": 1280,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الرَّابِعُ"
+    },
+    {
+      "kind": "text",
+      "text": "شَعْرُ الْعَانَةِ وَيُسْتَحَبُّ إِزَالَةُ ذَلِكَ إِمَّا بِالْحَلْقِ أَوْ بِالنُّورَةِ وَلَا يَنْبَغِي أَنْ تَتَأَخَّرَ عَنْ أَرْبَعِينَ يَوْمًا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
