@@ -1,0 +1,31 @@
+{
+  "node_id": "4024",
+  "title": "قسم 4024",
+  "level": 1,
+  "idfrom": 4024,
+  "idto": 4024,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الْقِسْمُ الثَّالِثُ :"
+    },
+    {
+      "kind": "text",
+      "text": "مَا يُسْتَحَبُّ بَعْدَ الطَّعَامِ ."
+    },
+    {
+      "kind": "text",
+      "text": "وَهُوَ أَنْ يُمْسِكَ قَبْلَ الشِّبَعِ وَيَلْعَقَ أَصَابِعَهُ ثُمَّ يَمْسَحُ بِالْمَنْدِيلِ ثُمَّ يَغْسِلُهَا"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
