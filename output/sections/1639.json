@@ -1,0 +1,27 @@
+{
+  "node_id": "1639",
+  "title": "قسم 1639",
+  "level": 1,
+  "idfrom": 1639,
+  "idto": 1639,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "إِذْ كَانَ"
+    },
+    {
+      "kind": "text",
+      "text": "قُرَّةُ عَيْنِهِ فِيهَا صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

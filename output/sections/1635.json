@@ -1,0 +1,23 @@
+{
+  "node_id": "1635",
+  "title": "قسم 1635",
+  "level": 1,
+  "idfrom": 1635,
+  "idto": 1635,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالنِّيَّةُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
