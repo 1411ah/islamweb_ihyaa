@@ -1,0 +1,27 @@
+{
+  "node_id": "898",
+  "title": "العقد الخامس القراض",
+  "level": 4,
+  "idfrom": 4562,
+  "idto": 4579,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "الْعَقْدُ الْخَامِسُ :"
+    },
+    {
+      "kind": "text",
+      "text": "الْقِرَاضُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
