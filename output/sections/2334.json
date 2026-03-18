@@ -1,0 +1,23 @@
+{
+  "node_id": "2334",
+  "title": "قسم 2334",
+  "level": 1,
+  "idfrom": 2334,
+  "idto": 2334,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَخْطُبُ خُطْبَتَيْنِ بَيْنَهُمَا جَلْسَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

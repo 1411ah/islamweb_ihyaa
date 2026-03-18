@@ -1,0 +1,23 @@
+{
+  "node_id": "2312",
+  "title": "قسم 2312",
+  "level": 1,
+  "idfrom": 2312,
+  "idto": 2312,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَكَانَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَأْمُرُ بِإِخْرَاجِ الْعَوَاتِقِ وَذَوَاتِ الْخُدُورِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

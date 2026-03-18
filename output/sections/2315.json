@@ -1,0 +1,31 @@
+{
+  "node_id": "2315",
+  "title": "قسم 2315",
+  "level": 1,
+  "idfrom": 2315,
+  "idto": 2315,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الْخَامِسُ يُرَاعِي الْوَقْتَ"
+    },
+    {
+      "kind": "text",
+      "text": "فَوَقْتُ صَلَاةِ الْعِيدِ"
+    },
+    {
+      "kind": "text",
+      "text": "مَا بَيْنَ طُلُوعِ الشَّمْسِ إِلَى الزَّوَالِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
