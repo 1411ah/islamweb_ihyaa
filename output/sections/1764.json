@@ -1,0 +1,27 @@
+{
+  "node_id": "1764",
+  "title": "قسم 1764",
+  "level": 1,
+  "idfrom": 1764,
+  "idto": 1764,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلْيُؤَخِّرِ الْمَأْمُومُ تَكْبِيرَهُ عَنْ تَكْبِيرَةِ الْإِمَامِ"
+    },
+    {
+      "kind": "text",
+      "text": "فَيَبْتَدِئَ بَعْدَ فَرَاغِهِ وَاللَّهُ أَعْلَمُ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
