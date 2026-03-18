@@ -1,0 +1,27 @@
+{
+  "node_id": "1421",
+  "title": "قسم 1421",
+  "level": 1,
+  "idfrom": 1421,
+  "idto": 1421,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَقُولُ : آمِينَ فِي آخِرِ الْفَاتِحَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "وَيَمُدُّهَا مَدًّا وَلَا يَصِلُ آمِينَ بِقَوْلِهِ وَلَا الضَّالِّينَ وَصْلًا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
