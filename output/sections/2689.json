@@ -1,0 +1,27 @@
+{
+  "node_id": "2689",
+  "title": "قسم 2689",
+  "level": 1,
+  "idfrom": 2689,
+  "idto": 2689,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "heading",
+      "text": "النَّوْعُ السَّادِسُ فِي :"
+    },
+    {
+      "kind": "text",
+      "text": "صَدَقَةُ الْفِطْرِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
