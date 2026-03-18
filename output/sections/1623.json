@@ -1,0 +1,23 @@
+{
+  "node_id": "1623",
+  "title": "قسم 1623",
+  "level": 1,
+  "idfrom": 1623,
+  "idto": 1623,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَالطَّهَارَةُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
