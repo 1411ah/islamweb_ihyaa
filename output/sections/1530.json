@@ -1,0 +1,31 @@
+{
+  "node_id": "1530",
+  "title": "قسم 1530",
+  "level": 1,
+  "idfrom": 1530,
+  "idto": 1530,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "الْمَنْهِيَّاتُ ."
+    },
+    {
+      "kind": "hadith",
+      "text": "(( نَهَى رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنِ الصَّفْنِ فِي الصَّلَاةِوَالصَّفْدِ ، ))"
+    },
+    {
+      "kind": "text",
+      "text": "وَقَدْ ذَكَرْنَاهُمَا وَعَنِ الْإِقْعَاءِ ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": true
+}
