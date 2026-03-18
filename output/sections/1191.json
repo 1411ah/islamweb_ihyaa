@@ -1,0 +1,31 @@
+{
+  "node_id": "1191",
+  "title": "قسم 1191",
+  "level": 1,
+  "idfrom": 1191,
+  "idto": 1191,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ"
+    },
+    {
+      "kind": "text",
+      "text": "يَتَوَضَّأُ وُضُوءَهُ لِلصَّلَاةِ"
+    },
+    {
+      "kind": "text",
+      "text": "، كَمَا وَصَفْنَا ."
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
