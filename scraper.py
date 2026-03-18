@@ -73,14 +73,11 @@ def set_tashkeel_cookie():
 def has_tashkeel(text):
     return any("\u064b" <= c <= "\u065f" for c in text[:3000])
 
-def extract_title_and_level(soup, fallback_title, fallback_level=1, debug=False):
+def extract_title_and_level(soup, fallback_title, fallback_level=1):
     normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
 
-    # محاولة 1: breadcrumb
     crumbs = [t for t in soup.find_all(True)
               if isinstance(t, Tag) and t.get("itemprop") == "itemListElement"]
-    if debug:
-        print(f"    [D] crumbs={len(crumbs)}")
 
     if crumbs:
         level = max(1, len(crumbs) - 1)
@@ -88,17 +85,12 @@ def extract_title_and_level(soup, fallback_title, fallback_level=1, debug=False)
         if span:
             txt = span.get_text(strip=True)
             n = normalize(txt)
-            if debug:
-                print(f"    [D] breadcrumb txt={txt[:60]}")
             if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
                 return txt, level
 
-    # محاولة 2: <title>
     pt = soup.find("title")
     if pt:
         raw_title = pt.get_text()
-        if debug:
-            print(f"    [D] <title>={raw_title[:80]}")
         for part in reversed(raw_title.split(" - ")):
             p = part.strip()
             n = normalize(p)
@@ -109,19 +101,14 @@ def extract_title_and_level(soup, fallback_title, fallback_level=1, debug=False)
                     and "رقم" not in n):
                 return p, fallback_level
 
-    # محاولة 3: h1 او h2
     for tag in ["h1", "h2", "h3"]:
         el = soup.find(tag)
         if el and isinstance(el, Tag):
             txt = el.get_text(strip=True)
             n = normalize(txt)
-            if debug:
-                print(f"    [D] {tag}={txt[:60]}")
             if txt and len(txt) > 3 and "اتحاف" not in n and "اسلام ويب" not in n:
                 return txt, fallback_level
 
-    if debug:
-        print(f"    [D] fallback={fallback_title}")
     return fallback_title, fallback_level
 
 
@@ -486,24 +473,37 @@ def fetch_section(item):
     if os.path.exists(cache):
         return load_json(cache, None)
 
-    # طلب واحد فقط: content URL فيه breadcrumb + محتوى
-    url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
-    soup, raw = fetch(url)
+    content_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
+
+    # الصفحة الاولى: content URL يعطي breadcrumb + محتوى معاً
+    soup, raw = fetch(content_url)
     if not soup or len(raw) < 500:
         return None
 
     if not has_tashkeel(raw):
         set_tashkeel_cookie()
-        soup, raw = fetch(url)
+        soup, raw = fetch(content_url)
         if not soup:
             return None
 
     real_title, real_level = extract_title_and_level(
-        soup, title, item.get("level", 1), debug=(int(nid) <= 40)
+        soup, title, item.get("level", 1)
     )
 
-    paragraphs, _ = clean_and_extract(soup)
-    if not paragraphs:
+    # اجمع المحتوى — الصفحة الاولى محفوظة، الباقي يُجلب
+    all_paragraphs = []
+    paras, _ = clean_and_extract(soup)
+    all_paragraphs.extend(paras)
+
+    for page_id in range(idfrom + 1, min(idto + 1, idfrom + 20)):
+        page_soup, _ = fetch(f"{BASE_URL}/ar/library/content/{BOOK_ID}/{page_id}/")
+        if not page_soup:
+            continue
+        paras, _ = clean_and_extract(page_soup)
+        all_paragraphs.extend(paras)
+        time.sleep(0.3)
+
+    if not all_paragraphs:
         return None
 
     result = {
@@ -512,9 +512,9 @@ def fetch_section(item):
         "level":      real_level,
         "idfrom":     idfrom,
         "idto":       idto,
-        "paragraphs": paragraphs,
-        "has_quran":  any(p["kind"] == "quran"  for p in paragraphs),
-        "has_hadith": any(p["kind"] == "hadith" for p in paragraphs),
+        "paragraphs": all_paragraphs,
+        "has_quran":  any(p["kind"] == "quran"  for p in all_paragraphs),
+        "has_hadith": any(p["kind"] == "hadith" for p in all_paragraphs),
     }
     save_json(cache, result)
     return result
