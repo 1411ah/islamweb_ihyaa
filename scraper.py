@@ -20,7 +20,7 @@ BASE_URL = "https://www.islamweb.net"
 BOOK_ID  = 411
 FIRST_ID = 1
 LAST_ID  = 8173
-DELAY    = 0.8
+DELAY    = 0.5
 HEADERS  = {
     "User-Agent":       "Mozilla/5.0 (compatible; research-bot/1.0)",
     "Accept-Language":  "ar,en;q=0.9",
@@ -486,45 +486,21 @@ def fetch_section(item):
     if os.path.exists(cache):
         return load_json(cache, None)
 
-    # المحاولة الاولى: nindex.php للمحتوى
-    content_url = (f"{BASE_URL}/ar/library/maktaba/nindex.php"
-                   f"?id={nid}&bookid={BOOK_ID}&idfrom={idfrom}&idto={idto}&page=bookpages")
-    soup, raw = fetch(content_url)
-
-    # المحاولة الثانية: URL المباشر اذا nindex رجع فارغ
-    if not soup or len(raw) < 200 or not BeautifulSoup(raw, "lxml").find(id=["pagebody","pagebody_thaskeel"]):
-        content_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
-        soup, raw = fetch(content_url)
-        if not soup or len(raw) < 200:
-            return None
+    # طلب واحد فقط: content URL فيه breadcrumb + محتوى
+    url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
+    soup, raw = fetch(url)
+    if not soup or len(raw) < 500:
+        return None
 
     if not has_tashkeel(raw):
         set_tashkeel_cookie()
-        soup, raw = fetch(content_url)
+        soup, raw = fetch(url)
         if not soup:
             return None
 
-    # العنوان والمستوى دائماً من URL المباشر (فيه breadcrumb صحيح)
-    title_url = f"{BASE_URL}/ar/library/content/{BOOK_ID}/{idfrom}/"
-    if title_url != content_url:
-        title_soup, _ = fetch(title_url)
-    else:
-        title_soup = soup
     real_title, real_level = extract_title_and_level(
-        title_soup or soup, title, item.get("level", 1),
-        debug=(int(nid) <= 40)  # اطبع تشخيص لأول 40 node
+        soup, title, item.get("level", 1), debug=(int(nid) <= 40)
     )
-
-    # تحقق إضافي: اذا العنوان لا يزال fallback جرب idfrom+1
-    normalize = lambda t: re.sub(r'[إأآا]', 'ا', t or "")
-    if (not real_title or len(real_title) < 4
-            or re.match(r'^قسم \d+$', real_title)
-            or "اتحاف" in normalize(real_title)):
-        alt_soup, _ = fetch(f"{BASE_URL}/ar/library/content/{BOOK_ID}/{int(idfrom)+1}/")
-        if alt_soup:
-            real_title, real_level = extract_title_and_level(
-                alt_soup, title, item.get("level", 1)
-            )
 
     paragraphs, _ = clean_and_extract(soup)
     if not paragraphs:
