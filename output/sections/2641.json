@@ -1,0 +1,23 @@
+{
+  "node_id": "2641",
+  "title": "قسم 2641",
+  "level": 1,
+  "idfrom": 2641,
+  "idto": 2641,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَلَا يُؤْخَذُ مِنَ الْمَالِ الْأَكُولَةُ وَلَا الْمَاخِضُ وَلَا الرِّبَا وَلَا الْفَحْلُ وَلَا غِرَاءَ الْمَالِ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

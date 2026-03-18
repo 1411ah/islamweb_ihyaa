@@ -1,0 +1,23 @@
+{
+  "node_id": "2603",
+  "title": "قسم 2603",
+  "level": 1,
+  "idfrom": 2603,
+  "idto": 2603,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    },
+    {
+      "kind": "text",
+      "text": "وَمَهْمَا بَاعَ الْمَالَ فِي أَثْنَاءِ الْحَوْلِ أَوْ ذَهَبَ انْقَطَعَ الْحَوْلُ"
+    },
+    {
+      "kind": "break",
+      "text": "[SECTION_BREAK]"
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
