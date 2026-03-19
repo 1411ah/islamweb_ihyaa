@@ -1,0 +1,27 @@
+{
+  "node_id": "2539",
+  "title": "صلاة التسبيح",
+  "level": 6,
+  "idfrom": 2539,
+  "idto": 2539,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "إِذْ وَرَدَ أَنَّ"
+    },
+    {
+      "kind": "text",
+      "text": "صَلَاةَ اللَّيْلِ مَثْنَى مَثْنَى"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
