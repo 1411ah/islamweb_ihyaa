@@ -556,13 +556,16 @@ def phase_scan(end_id=None):
         if result and result["paragraphs"]:
             q = "Q" if result["has_quran"] else ("H" if result["has_hadith"] else "+")
             print(f"  {q} {nid:5d} | L{result['level']} | {result['title'][:50]}")
-            # مفتاح التفرد هو idfrom لا node ID
-            key = str(result["idfrom"])
-            if key not in valid_set:
+            idfrom_key = str(result["idfrom"])
+            title_key  = result["title"].strip()
+            if idfrom_key not in valid_set and title_key not in valid_set:
                 valid.append({"id": str(nid), "title": result["title"],
                               "level": result["level"],
                               "idfrom": result["idfrom"]})
-                valid_set.add(key)
+                valid_set.add(idfrom_key)
+                valid_set.add(title_key)
+            else:
+                print(f"    {nid:5d} مكرر — تخطي")
         else:
             print(f"    {nid:5d} فارغ")
 
