@@ -1,0 +1,27 @@
+{
+  "node_id": "2440",
+  "title": "صلاة الاستسقاء",
+  "level": 6,
+  "idfrom": 2440,
+  "idto": 2440,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "فَإِذَا اجْتَمَعُوا فِي الْمُصَلَّى الْوَاصِلِ مِنَ الصَّحْرَاءِ"
+    },
+    {
+      "kind": "text",
+      "text": "نُودِيَ الصَّلَاةَ جَامِعَةً"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
