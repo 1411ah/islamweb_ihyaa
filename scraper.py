@@ -794,10 +794,9 @@ if __name__ == "__main__":
 
     if mode == "test":
         build_toc()
-        # test يبدأ دايما من الاول بغض النظر عن progress
-        save_json("output/scan_progress.json", {"last_id": FIRST_ID - 1})
+        save_json("output/scan_progress.json", {"last_id": 99})
         save_json("output/valid_nodes.json", [])
-        phase_scan(end_id=FIRST_ID + 29)
+        phase_scan(end_id=130)
         build_toc_from_scan()
         phase_build()
     elif mode == "scan":
