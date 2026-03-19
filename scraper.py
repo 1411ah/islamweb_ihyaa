@@ -303,8 +303,9 @@ def clean_and_extract(soup):
         el.decompose()
 
     # تحويل hashiya_title الى فاصل بدل حذفه
+    from bs4 import NavigableString
     for el in soup.find_all("span", class_="hashiya_title"):
-        el.replace_with("\n[SECTION_BREAK]\n")
+        el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
 
     container = (soup.find(id="pagebody_thaskeel") or
                  soup.find(id="pagebody") or
@@ -557,11 +558,13 @@ def phase_scan(end_id=None):
         if result and result["paragraphs"]:
             q = "Q" if result["has_quran"] else ("H" if result["has_hadith"] else "+")
             print(f"  {q} {nid:5d} | {result['title'][:55]}")
-            if str(nid) not in valid_set:
+            # مفتاح التفرد هو idfrom لا node ID
+            key = str(result["idfrom"])
+            if key not in valid_set:
                 valid.append({"id": str(nid), "title": result["title"],
                               "level": result["level"],
                               "idfrom": result["idfrom"]})
-                valid_set.add(str(nid))
+                valid_set.add(key)
         else:
             print(f"    {nid:5d} فارغ")
 
