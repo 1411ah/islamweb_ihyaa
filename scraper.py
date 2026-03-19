@@ -303,6 +303,14 @@ def clean_and_extract(soup):
         el.decompose()
 
     # تحويل hashiya_title الى فاصل بدل حذفه
+    # تشخيص: اطبع كل الـ spans وclasses الموجودة
+    all_spans = soup.find_all("span", class_=True)
+    classes_found = set()
+    for s in all_spans:
+        for c in (s.get("class") or []):
+            classes_found.add(c)
+    print(f"  [D] span classes: {sorted(classes_found)}")
+
     ht = soup.find_all("span", class_="hashiya_title")
     if not ht:
         print("  [D] hashiya_title: غير موجود")
@@ -547,7 +555,7 @@ def phase_scan(end_id=None):
 
         if result and result["paragraphs"]:
             q = "Q" if result["has_quran"] else ("H" if result["has_hadith"] else "+")
-            print(f"  {q} {nid:5d} | {result['title'][:55]}")
+            print(f"  {q} {nid:5d} | L{result['level']} | {result['title'][:50]}")
             # مفتاح التفرد هو idfrom لا node ID
             key = str(result["idfrom"])
             if key not in valid_set:
