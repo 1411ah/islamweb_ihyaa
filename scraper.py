@@ -313,8 +313,7 @@ def clean_and_extract(soup):
 
     ht = soup.find_all("span", class_="hashiya_title")
     print(f"  [D] hashiya_title: {len(ht)}")
-    for el in ht:
-        el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
+    # لا نستبدل هنا — نؤجل لما بعد تحديد container
 
     container = (soup.find(id="pagebody_thaskeel") or
                  soup.find(id="pagebody") or
@@ -322,6 +321,12 @@ def clean_and_extract(soup):
                  soup.body)
     if not container:
         return [], []
+
+    # الاستبدال داخل container فقط
+    for el in container.find_all("span", class_="hashiya_title"):
+        el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
+    ht_in = container.find_all("span", class_="hashiya_title")  # يجب أن يكون 0
+    print(f"  [D] SECTION_BREAK داخل container: {container.get_text().count('[SECTION_BREAK]')}")
 
     for sel in ["script","style","noscript",".quranatt",".hadithatt",
                 ".namesatt",".mainsubjatt"]:
