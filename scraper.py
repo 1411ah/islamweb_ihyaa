@@ -303,17 +303,15 @@ def clean_and_extract(soup):
         el.decompose()
 
     # تحويل hashiya_title الى فاصل بدل حذفه
-    # تشخيص: اطبع كل الـ spans وclasses الموجودة
     all_spans = soup.find_all("span", class_=True)
     classes_found = set()
     for s in all_spans:
         for c in (s.get("class") or []):
             classes_found.add(c)
-    print(f"  [D] span classes: {sorted(classes_found)}")
 
     ht = soup.find_all("span", class_="hashiya_title")
-    print(f"  [D] hashiya_title: {len(ht)}")
-    # لا نستبدل هنا — نؤجل لما بعد تحديد container
+    for el in ht:
+        el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
 
     container = (soup.find(id="pagebody_thaskeel") or
                  soup.find(id="pagebody") or
@@ -322,11 +320,8 @@ def clean_and_extract(soup):
     if not container:
         return [], []
 
-    # الاستبدال داخل container فقط
     for el in container.find_all("span", class_="hashiya_title"):
         el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
-    ht_in = container.find_all("span", class_="hashiya_title")  # يجب أن يكون 0
-    print(f"  [D] SECTION_BREAK داخل container: {container.get_text().count('[SECTION_BREAK]')}")
 
     for sel in ["script","style","noscript",".quranatt",".hadithatt",
                 ".namesatt",".mainsubjatt"]:
@@ -398,9 +393,6 @@ def clean_and_extract(soup):
         br.replace_with("\n")
 
     raw = container.get_text(separator="\n")
-    # تشخيص: هل SECTION_BREAK موجود في raw؟
-    sb_count = raw.count("[SECTION_BREAK]")
-    print(f"  [D] SECTION_BREAK في raw: {sb_count}")
 
     # تنقية الأسطر
     lines = []
@@ -417,14 +409,12 @@ def clean_and_extract(soup):
             continue
         lines.append(txt)
 
-    # تشخيص: هل SECTION_BREAK وصل لـ lines؟
-    sb_in_lines = lines.count("[SECTION_BREAK]")
-    print(f"  [D] SECTION_BREAK في lines: {sb_in_lines}")
-    if sb_in_lines > 0:
-        for idx, l in enumerate(lines):
-            if l == "[SECTION_BREAK]" and idx + 1 < len(lines):
-                print(f"  [D] بعد BREAK في lines: '{lines[idx+1][:80]}'")
-                break
+    # حذف التكرار المتتالي فقط
+    deduped = []
+    for line in lines:
+        if not deduped or deduped[-1] != line:
+            deduped.append(line)
+    lines = deduped
     for line in lines:
         if not deduped or deduped[-1] != line:
             deduped.append(line)
