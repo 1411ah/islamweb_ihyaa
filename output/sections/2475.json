@@ -1,0 +1,31 @@
+{
+  "node_id": "2475",
+  "title": "صلاة الجنازة",
+  "level": 6,
+  "idfrom": 2475,
+  "idto": 2475,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "الثَّالِثَةُ"
+    },
+    {
+      "kind": "text",
+      "text": "صَلَاةُ الْجَنَائِزِ .وَكَيْفِيَّتُهَا"
+    },
+    {
+      "kind": "text",
+      "text": "مَشْهُورَةٌ ."
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
