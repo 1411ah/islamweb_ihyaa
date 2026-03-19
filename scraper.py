@@ -150,7 +150,7 @@ def build_toc():
     print(f"  المستوى الاول: {len(top)}")
 
     def crawl(item, depth=0):
-        if depth > 6:
+        if depth > 2:  # حد اقصى للعمق
             return
         urls = []
         if item.get("dhref"):
@@ -805,7 +805,6 @@ if __name__ == "__main__":
         build_toc_from_scan()
         phase_build()
     elif mode == "scan":
-        build_toc()
         phase_scan()
     elif mode == "resume":
         phase_scan()
