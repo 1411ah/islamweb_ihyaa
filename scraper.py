@@ -618,6 +618,14 @@ def phase_build():
     if valid and isinstance(valid[0], int):
         valid = [{"id": str(v), "title": f"قسم {v}", "level": 1} for v in valid]
 
+    # ازل التكرار بحسب id
+    seen_ids, deduped = set(), []
+    for v in valid:
+        if v["id"] not in seen_ids:
+            seen_ids.add(v["id"])
+            deduped.append(v)
+    valid = deduped
+
     toc_data = (load_json("output/toc_from_scan.json", None) or
                 load_json("output/toc.json", []))
     print(f"=== BUILD EPUB: {len(valid)} فصل ===")
