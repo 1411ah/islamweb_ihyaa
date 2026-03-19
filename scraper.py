@@ -401,6 +401,9 @@ def clean_and_extract(soup):
     lines = []
     for line in raw.splitlines():
         txt = line.strip()
+        if txt == "[SECTION_BREAK]":
+            lines.append(txt)
+            continue
         if len(txt) < 5:
             continue
         if any(w in txt for w in ["التالي","السابق","فهرس الكتاب","اسلام ويب"]):
