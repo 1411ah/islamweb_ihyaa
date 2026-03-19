@@ -1,0 +1,31 @@
+{
+  "node_id": "1502",
+  "title": "فصل تشهد عمر بن الخطاب",
+  "level": 5,
+  "idfrom": 1502,
+  "idto": 1502,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "التَّشَهُّدُ ."
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ يَتَشَهَّدُ فِي الرَّكْعَةِ الثَّانِيَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "التَّشَهُّدَ الْأَوَّلَ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
