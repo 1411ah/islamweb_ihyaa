@@ -1,0 +1,23 @@
+{
+  "node_id": "1418",
+  "title": "دعاء الاستفتاح",
+  "level": 5,
+  "idfrom": 1418,
+  "idto": 1418,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "بِتَمَامِ تَشْدِيدَاتِهَا وَحُرُوفِهَا وَيَجْتَهِدُ فِي الْفَرْقِ بَيْنَ الضَّادِ وَالظَّاءِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
