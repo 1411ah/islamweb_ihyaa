@@ -1,0 +1,23 @@
+{
+  "node_id": "3127",
+  "title": "صيام يوم عاشوراء",
+  "level": 4,
+  "idfrom": 3127,
+  "idto": 3127,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَيَوْمُ عَاشُورَاءَ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
