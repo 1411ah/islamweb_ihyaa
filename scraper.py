@@ -417,8 +417,14 @@ def clean_and_extract(soup):
             continue
         lines.append(txt)
 
-    # حذف التكرار المتتالي فقط
-    deduped = []
+    # تشخيص: هل SECTION_BREAK وصل لـ lines؟
+    sb_in_lines = lines.count("[SECTION_BREAK]")
+    print(f"  [D] SECTION_BREAK في lines: {sb_in_lines}")
+    if sb_in_lines > 0:
+        for idx, l in enumerate(lines):
+            if l == "[SECTION_BREAK]" and idx + 1 < len(lines):
+                print(f"  [D] بعد BREAK في lines: '{lines[idx+1][:80]}'")
+                break
     for line in lines:
         if not deduped or deduped[-1] != line:
             deduped.append(line)
