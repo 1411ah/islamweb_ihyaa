@@ -655,12 +655,16 @@ def phase_build():
     cover.add_item(css_item)
     book.add_item(cover)
 
-    chapters, spine, toc_epub, id_to_ch = [cover], ["nav", cover], [], {}
+    chapters, spine, toc_epub, id_to_ch, added_files = [cover], ["nav", cover], [], {}, set()
 
     for i, v in enumerate(valid):
         sec = load_json(f"output/sections/{v['id']}.json", None)
         if not sec:
             continue
+        fname = f"s{v['id']}.xhtml"
+        if fname in added_files:
+            continue
+        added_files.add(fname)
         title_safe = sec["title"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
         body = f"<h1>{title_safe}</h1>\n"
 
