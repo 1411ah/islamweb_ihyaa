@@ -1,0 +1,23 @@
+{
+  "node_id": "2372",
+  "title": "صلاة التراويح",
+  "level": 6,
+  "idfrom": 2372,
+  "idto": 2372,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَهِيَ سُنَّةٌ مُؤَكَّدَةٌ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

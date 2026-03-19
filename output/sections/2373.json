@@ -1,0 +1,23 @@
+{
+  "node_id": "2373",
+  "title": "صلاة التراويح",
+  "level": 6,
+  "idfrom": 2373,
+  "idto": 2373,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَإِنْ كَانَتْ دُونَ الْعِيدَيْنِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
