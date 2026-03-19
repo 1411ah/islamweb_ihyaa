@@ -573,7 +573,7 @@ def phase_scan(end_id=None):
         else:
             print(f"    {nid:5d} فارغ")
 
-        if nid % 50 == 0:
+        if nid % 20 == 0:
             progress["last_id"] = nid
             save_json(progress_file, progress)
             save_json(valid_file, valid)
@@ -797,10 +797,11 @@ if __name__ == "__main__":
     set_tashkeel_cookie()
 
     if mode == "test":
-        build_toc()
         save_json("output/scan_progress.json", {"last_id": 499})
         save_json("output/valid_nodes.json", [])
         phase_scan(end_id=510)
+        build_toc_from_scan()
+        phase_build()
         build_toc_from_scan()
         phase_build()
     elif mode == "scan":
