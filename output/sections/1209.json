@@ -1,0 +1,23 @@
+{
+  "node_id": "1209",
+  "title": "الأغسال الواجبة",
+  "level": 5,
+  "idfrom": 1209,
+  "idto": 1209,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَالنِّفَاسِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
