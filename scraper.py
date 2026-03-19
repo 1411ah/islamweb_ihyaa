@@ -557,15 +557,13 @@ def phase_scan(end_id=None):
             q = "Q" if result["has_quran"] else ("H" if result["has_hadith"] else "+")
             print(f"  {q} {nid:5d} | L{result['level']} | {result['title'][:50]}")
             idfrom_key = str(result["idfrom"])
-            title_key  = result["title"].strip()
-            if idfrom_key not in valid_set and title_key not in valid_set:
+            if idfrom_key not in valid_set:
                 valid.append({"id": str(nid), "title": result["title"],
                               "level": result["level"],
                               "idfrom": result["idfrom"]})
                 valid_set.add(idfrom_key)
-                valid_set.add(title_key)
             else:
-                print(f"    {nid:5d} مكرر — تخطي")
+                print(f"    {nid:5d} مكرر idfrom={result['idfrom']} — تخطي")
         else:
             print(f"    {nid:5d} فارغ")
 
@@ -794,9 +792,9 @@ if __name__ == "__main__":
 
     if mode == "test":
         build_toc()
-        save_json("output/scan_progress.json", {"last_id": 99})
+        save_json("output/scan_progress.json", {"last_id": 499})
         save_json("output/valid_nodes.json", [])
-        phase_scan(end_id=130)
+        phase_scan(end_id=510)
         build_toc_from_scan()
         phase_build()
     elif mode == "scan":
