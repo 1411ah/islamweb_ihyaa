@@ -9,7 +9,7 @@ python scraper.py full    <- scan + build
 """
 
 import requests
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, NavigableString
 from ebooklib import epub
 import json, os, re, time, sys, traceback
 import functools
@@ -303,8 +303,10 @@ def clean_and_extract(soup):
         el.decompose()
 
     # تحويل hashiya_title الى فاصل بدل حذفه
-    from bs4 import NavigableString
-    for el in soup.find_all("span", class_="hashiya_title"):
+    ht = soup.find_all("span", class_="hashiya_title")
+    if not ht:
+        print("  [D] hashiya_title: غير موجود")
+    for el in ht:
         el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
 
     container = (soup.find(id="pagebody_thaskeel") or
@@ -491,19 +493,7 @@ def fetch_section(item):
         soup, title, item.get("level", 1)
     )
 
-    # اجمع المحتوى — الصفحة الاولى محفوظة، الباقي يُجلب
-    all_paragraphs = []
-    paras, _ = clean_and_extract(soup)
-    all_paragraphs.extend(paras)
-
-    for page_id in range(idfrom + 1, min(idto + 1, idfrom + 20)):
-        page_soup, _ = fetch(f"{BASE_URL}/ar/library/content/{BOOK_ID}/{page_id}/")
-        if not page_soup:
-            continue
-        paras, _ = clean_and_extract(page_soup)
-        all_paragraphs.extend(paras)
-        time.sleep(0.3)
-
+    all_paragraphs, _ = clean_and_extract(soup)
     if not all_paragraphs:
         return None
 
