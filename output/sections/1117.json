@@ -1,0 +1,27 @@
+{
+  "node_id": "1117",
+  "title": "بيان كيفية الاستنجاء",
+  "level": 4,
+  "idfrom": 1117,
+  "idto": 1117,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَيُدَلِّكُ يَدَهُ بِحَائِطٍ أَوْ بِالْأَرْضِ إِزَالَةً لِلرَّائِحَةِ"
+    },
+    {
+      "kind": "text",
+      "text": "إِنْ بَقِيَتْ ."
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
