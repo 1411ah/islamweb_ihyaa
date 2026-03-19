@@ -393,6 +393,9 @@ def clean_and_extract(soup):
         br.replace_with("\n")
 
     raw = container.get_text(separator="\n")
+    # تشخيص: هل SECTION_BREAK موجود في raw؟
+    sb_count = raw.count("[SECTION_BREAK]")
+    print(f"  [D] SECTION_BREAK في raw: {sb_count}")
 
     # تنقية الأسطر
     lines = []
