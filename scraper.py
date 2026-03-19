@@ -312,8 +312,8 @@ def clean_and_extract(soup):
     print(f"  [D] span classes: {sorted(classes_found)}")
 
     ht = soup.find_all("span", class_="hashiya_title")
-    if not ht:
-        print("  [D] hashiya_title: غير موجود")
+    ht_in_container = container.find_all("span", class_="hashiya_title") if container else []
+    print(f"  [D] hashiya_title: كل={len(ht)} داخل container={len(ht_in_container)}")
     for el in ht:
         el.replace_with(NavigableString("\n[SECTION_BREAK]\n"))
 
