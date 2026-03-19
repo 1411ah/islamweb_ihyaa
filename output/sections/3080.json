@@ -1,0 +1,23 @@
+{
+  "node_id": "3080",
+  "title": "الاعتكاف",
+  "level": 5,
+  "idfrom": 3080,
+  "idto": 3080,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "إِذْ فِيهَا لَيْلَةُ الْقَدْرِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}

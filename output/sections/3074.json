@@ -1,0 +1,23 @@
+{
+  "node_id": "3074",
+  "title": "الجود في شهر رمضان",
+  "level": 5,
+  "idfrom": 3074,
+  "idto": 3074,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "وَالْجُودُ فِي شَهْرِ رَمَضَانَ لِمَا سَبَقَ مِنْ فَضَائِلِهِ فِي الزَّكَاةِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
