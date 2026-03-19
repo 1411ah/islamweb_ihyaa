@@ -1,0 +1,23 @@
+{
+  "node_id": "4575",
+  "title": "أركان القراض",
+  "level": 5,
+  "idfrom": 4575,
+  "idto": 4575,
+  "paragraphs": [
+    {
+      "kind": "break",
+      "text": ""
+    },
+    {
+      "kind": "text",
+      "text": "ثُمَّ مَهْمَا انْعَقَدَ فَالْعَامِلُ وَكِيلٌ فَيَتَصَرَّفُ بِالْغِبْطَةِ تَصَرُّفَ الْوُكَلَاءِ"
+    },
+    {
+      "kind": "break",
+      "text": ""
+    }
+  ],
+  "has_quran": false,
+  "has_hadith": false
+}
